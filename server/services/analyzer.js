@@ -1,7 +1,7 @@
 import Anthropic from '@anthropic-ai/sdk';
-import { TRIAGE_SYSTEM_PROMPT, DEEP_SCAN_SYSTEM_PROMPT, SYNTHESIS_SYSTEM_PROMPT } from './prompts.js';
-import { demoTriage, demoDeepScan, demoSynthesize } from './demo.js';
-import { cliTriage, cliDeepScan, cliSynthesize } from './cli-analyzer.js';
+import { TRIAGE_SYSTEM_PROMPT, DEEP_SCAN_SYSTEM_PROMPT, SYNTHESIS_SYSTEM_PROMPT, PLAN_ANALYSIS_PROMPT } from './prompts.js';
+import { demoTriage, demoDeepScan, demoSynthesize, demoPlanAnalyze } from './demo.js';
+import { cliTriage, cliDeepScan, cliSynthesize, cliPlanAnalyze } from './cli-analyzer.js';
 
 const DEMO_KEY = 'demo';
 const CLI_KEY = 'cli';
@@ -161,5 +161,38 @@ export async function synthesize(flags, apiKey, onUsage) {
         callVolumeNote: '',
       },
     };
+  }
+}
+
+// ──── Plan Analysis ─────────────────────────────────────────
+export async function planAnalyze(planText, planName, apiKey, onUsage) {
+  if (apiKey === DEMO_KEY) return demoPlanAnalyze(planText, planName, onUsage);
+  if (apiKey === CLI_KEY) return cliPlanAnalyze(planText, planName, onUsage);
+  const client = new Anthropic({ apiKey });
+
+  try {
+    const response = await client.messages.create({
+      model: 'claude-opus-4-6-20250514',
+      max_tokens: 8192,
+      system: [
+        { type: 'text', text: PLAN_ANALYSIS_PROMPT, cache_control: { type: 'ephemeral' } },
+      ],
+      messages: [
+        {
+          role: 'user',
+          content: `Analyze this architecture/design document for LLM API cost inefficiency patterns.\n\nDocument: ${planName || 'plan.md'}\n\n${planText}`,
+        },
+      ],
+    });
+
+    if (onUsage) onUsage(response.usage);
+    const text = response.content[0]?.text || '';
+    const parsed = parseJsonResponse(text);
+    return parsed.flags || [];
+  } catch (err) {
+    if (err.status === 401 || err.message?.includes('authentication_error')) {
+      throw new Error('Invalid Anthropic API key. Please check your key and try again.');
+    }
+    throw err;
   }
 }

@@ -3,7 +3,7 @@
 // Deep scan = Sonnet (fast), Synthesis = Opus (quality).
 
 import { spawn } from 'child_process';
-import { TRIAGE_SYSTEM_PROMPT, DEEP_SCAN_SYSTEM_PROMPT, SYNTHESIS_SYSTEM_PROMPT } from './prompts.js';
+import { TRIAGE_SYSTEM_PROMPT, DEEP_SCAN_SYSTEM_PROMPT, SYNTHESIS_SYSTEM_PROMPT, PLAN_ANALYSIS_PROMPT } from './prompts.js';
 
 const delay = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -440,5 +440,21 @@ export async function cliSynthesize(flags, onUsage) {
       topRecommendation: flags[0]?.fix || 'Review the flags below.',
       estimatedSavings: { perInvocationSummary: 'Unable to calculate.', callVolumeNote: '' },
     };
+  }
+}
+
+// ──── Plan Analysis (Sonnet via CLI) ────
+export async function cliPlanAnalyze(planText, planName, onUsage) {
+  if (onUsage) onUsage({ input_tokens: 0, output_tokens: 0 });
+
+  try {
+    const prompt = `${PLAN_ANALYSIS_PROMPT}\n\n---\n\nAnalyze this architecture/design document for LLM API cost inefficiency patterns.\n\nDocument: ${planName || 'plan.md'}\n\n${planText}`;
+
+    const output = await claudeRun(prompt, 'claude-sonnet-4-6');
+    const parsed = parseJsonResponse(output);
+    return parsed.flags || [];
+  } catch (err) {
+    console.error('CLI plan analysis error:', err.message?.slice(0, 120));
+    throw err;
   }
 }

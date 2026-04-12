@@ -12,6 +12,7 @@ export default function App() {
   const [steps, setSteps] = useState([]);
   const [report, setReport] = useState(null);
   const [repoUrl, setRepoUrl] = useState('');
+  const [sourceType, setSourceType] = useState('github');
   const [error, setError] = useState(null);
   const [savedScans, setSavedScans] = useState(() => getSavedScans());
 
@@ -21,7 +22,12 @@ export default function App() {
     setPhase('scanning');
     setSteps([]);
     setReport(null);
-    setRepoUrl(config.url);
+    setSourceType(config.sourceType || 'github');
+    setRepoUrl(
+      config.sourceType === 'plan' ? (config.planName || 'plan.md') :
+      config.sourceType === 'files' ? `${config.files?.length || 0} uploaded file${(config.files?.length || 0) !== 1 ? 's' : ''}` :
+      config.url
+    );
     setError(null);
 
     try {
@@ -77,7 +83,7 @@ export default function App() {
 
         {phase === 'scanning' && (
           <div className="mt-10">
-            <ProgressLog steps={steps} />
+            <ProgressLog steps={steps} sourceType={sourceType} />
           </div>
         )}
 

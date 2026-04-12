@@ -1,6 +1,12 @@
-const PHASE_ORDER = ['fetch', 'structural', 'content', 'keyword', 'triage', 'deepScan', 'synthesis'];
+const PHASE_ORDER = ['fetch', 'structural', 'content', 'keyword', 'triage', 'deepScan', 'parse', 'analysis', 'synthesis'];
 
-export default function ProgressLog({ steps }) {
+const HEADINGS = {
+  github: 'Scanning repository',
+  files: 'Scanning uploaded files',
+  plan: 'Analyzing design document',
+};
+
+export default function ProgressLog({ steps, sourceType }) {
   const phaseMap = new Map();
   for (const step of steps) {
     if (step.done) {
@@ -20,7 +26,9 @@ export default function ProgressLog({ steps }) {
 
   return (
     <div className="bg-white border border-[rgba(0,0,0,0.06)] p-6">
-      <p className="text-[13px] font-medium uppercase tracking-[0.08em] text-[rgba(26,26,26,0.4)] mb-4">Scanning repository</p>
+      <p className="text-[13px] font-medium uppercase tracking-[0.08em] text-[rgba(26,26,26,0.4)] mb-4">
+        {HEADINGS[sourceType] || 'Scanning'}
+      </p>
       <div className="space-y-1.5 font-mono text-sm">
         {display.map((step, i) => {
           const isLast = i === display.length - 1;

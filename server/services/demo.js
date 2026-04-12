@@ -235,3 +235,71 @@ export async function demoSynthesize(flags, onUsage) {
     },
   };
 }
+
+// ──── Plan Analysis (demo mode) ────
+const PLAN_DETECTORS = [
+  {
+    pattern: 'planned-n-plus-one',
+    test: (text) => /for each\s+(document|item|user|message|chunk|file|record|row)/i.test(text) && /api|llm|model|claude|gpt|call/i.test(text),
+    severity: 'critical',
+    title: 'Planned per-item LLM processing (N+1 pattern)',
+    impact: 'Nx cost multiplier where N is the number of items processed individually',
+    fix: 'Batch items into single prompts or use the Batch API instead of per-item calls.',
+  },
+  {
+    pattern: 'unbounded-history',
+    test: (text) => /full (conversation |chat )?history|all messages|complete (conversation|context)/i.test(text) && !/truncat|summariz|window|budget/i.test(text),
+    severity: 'critical',
+    title: 'Unbounded conversation history design',
+    impact: 'O(N^2) cumulative token cost — costs grow quadratically with conversation length',
+    fix: 'Implement a sliding window (keep last K turns) or summarize older messages.',
+  },
+  {
+    pattern: 'expensive-model-choice',
+    test: (text) => /(opus|gpt-4o?|gpt-4-turbo)\b/i.test(text) && /(classif|tag|extract|route|format|yes.no|sentiment)/i.test(text),
+    severity: 'warning',
+    title: 'Expensive model planned for simple task',
+    impact: '3-15x cost premium vs using an appropriate cheaper model',
+    fix: 'Use Haiku or GPT-4o-mini for simple tasks like classification, extraction, and routing.',
+  },
+  {
+    pattern: 'missing-caching-strategy',
+    test: (text) => /(system prompt|same prompt|repeated|every (request|call|turn))/i.test(text) && !/cach/i.test(text),
+    severity: 'warning',
+    title: 'No caching strategy mentioned',
+    impact: 'Repeated system prompt tokens billed at full price on every call',
+    fix: 'Enable Anthropic prompt caching on system prompts and add application-level response caching.',
+  },
+];
+
+export async function demoPlanAnalyze(planText, planName, onUsage) {
+  await delay(200);
+  if (onUsage) onUsage({ input_tokens: 3000, output_tokens: 1000 });
+
+  const flags = [];
+  const lines = planText.split('\n');
+
+  for (const detector of PLAN_DETECTORS) {
+    if (detector.test(planText)) {
+      let line = 1;
+      for (let i = 0; i < lines.length; i++) {
+        if (detector.test(lines[i])) { line = i + 1; break; }
+      }
+      const snippet = lines.slice(Math.max(0, line - 2), line + 2).join('\n');
+      flags.push({
+        pattern: detector.pattern,
+        severity: detector.severity,
+        line,
+        title: detector.title,
+        description: `The plan describes a pattern that will lead to ${detector.severity === 'critical' ? 'significant' : 'unnecessary'} API costs.`,
+        codeSnippet: snippet,
+        impact: detector.impact,
+        fix: detector.fix,
+        savingsRatio: detector.severity === 'critical' ? 'Up to 10x cost reduction' : 'Up to 50% cost reduction',
+        file: planName || 'plan.md',
+      });
+    }
+  }
+
+  return flags;
+}
