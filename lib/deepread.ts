@@ -1,6 +1,9 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { PATTERNS } from "./patterns";
-import type { Finding, PatternId } from "./types";
+import type { Candidate } from "./deepread-client";
+import type { PatternId } from "./types";
+
+export type { Candidate };
 
 export const DEEP_READ = {
   model: process.env.DEEP_READ_MODEL || "claude-sonnet-5-5",
@@ -9,17 +12,6 @@ export const DEEP_READ = {
   maxInputChars: 16000,
   maxTokens: 3000,
 };
-
-export interface Candidate {
-  id: string;
-  pattern: PatternId;
-  file: string;
-  startLine: number;
-  endLine: number;
-  title: string;
-  evidence: string[];
-  code: string;
-}
 
 export interface Verdict {
   id: string;
@@ -80,19 +72,6 @@ const SCHEMA = {
   required: ["summary", "verdicts"],
   additionalProperties: false,
 };
-
-export function candidateFromFinding(f: Finding): Candidate {
-  return {
-    id: f.id,
-    pattern: f.pattern,
-    file: f.file,
-    startLine: f.startLine,
-    endLine: f.endLine,
-    title: f.title,
-    evidence: f.evidence,
-    code: f.snippet.map((l) => (l.n < 0 ? "..." : `${l.n}: ${l.text}`)).join("\n"),
-  };
-}
 
 export function sanitizeCandidates(input: unknown): Candidate[] {
   if (!Array.isArray(input)) return [];

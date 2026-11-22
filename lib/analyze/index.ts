@@ -445,10 +445,6 @@ function detectLoops(c: Ctx, invs: Invocation[], add: Add) {
   }
 }
 
-function argsUnknown(args: string): boolean {
-  return !args.trim() || /\.\.\.|\*\*/.test(args) || /^\s*[\w$.]+\s*$/.test(args);
-}
-
 function objectNear(c: Ctx, s: Site, ident: string): string | undefined {
   const fn = innermost(c.fns, s.start);
   const region = c.p.code.slice(fn ? fn.start : 0, s.start);
