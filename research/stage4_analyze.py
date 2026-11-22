@@ -42,7 +42,8 @@ def item_arrays(task, rows, ids):
         corr = np.array([rows[i]["score"]["correct"] if "score" in rows.get(i, {}) else 0 for i in ids], dtype=float)
         corr_l = np.array([rows[i]["score"]["correct_lenient"] if "score" in rows.get(i, {}) else 0 for i in ids], dtype=float)
         pf = np.array([rows[i]["score"]["parse_fail"] if "score" in rows.get(i, {}) else 1 for i in ids], dtype=float)
-        return {"correct": corr, "correct_lenient": corr_l, "parse_fail": pf}
+        ca = np.array([rows[i]["score"]["correct_all_statements"] if "score" in rows.get(i, {}) else 0 for i in ids], dtype=float)
+        return {"correct": corr, "correct_lenient": corr_l, "parse_fail": pf, "correct_all": ca}
     corr = np.array([rows[i]["score"]["correct"] if "score" in rows.get(i, {}) else 0 for i in ids], dtype=float)
     f1 = np.array([rows[i]["score"]["f1"] if "score" in rows.get(i, {}) else 0 for i in ids], dtype=float)
     return {"correct": corr, "f1": f1}
@@ -63,13 +64,19 @@ def primary(task, a, idx, labels=None):
     return a["correct"][idx].mean()
 
 
+def bal(c, l):
+    return 0.5 * (c[l == 1].mean() + c[l == 0].mean())
+
+
 def secondary(task, a, idx, labels=None):
     if task == "t1":
         return {"untyped_f1": micro_f1(a["utp"][idx].sum(), a["ufp"][idx].sum(), a["ufn"][idx].sum())}
     if task == "t2":
         c, l = a["correct_lenient"][idx], labels[idx]
         return {"accuracy": a["correct"][idx].mean(), "parse_fail_rate": a["parse_fail"][idx].mean(),
-                "balanced_accuracy_lenient_parse": 0.5 * (c[l == 1].mean() + c[l == 0].mean())}
+                "balanced_accuracy_lenient_parse": 0.5 * (c[l == 1].mean() + c[l == 0].mean()),
+                "exploratory_balanced_accuracy_all_statements_rule": bal(a["correct_all"][idx], l),
+                "faithful_recall": a["correct"][idx][l == 1].mean(), "hallucination_recall": a["correct"][idx][l == 0].mean()}
     return {"token_f1": a["f1"][idx].mean()}
 
 
@@ -143,6 +150,12 @@ def analyze(task, split="main"):
             }
             if task in ("t2", "t3"):
                 entry["vs_repo"]["mcnemar"] = mcnemar(a["correct"], base["correct"])
+            if task == "t2":
+                ex = np.array([bal(a["correct_all"][b], labels[b]) - bal(base["correct_all"][b], labels[b]) for b in boot])
+                entry["vs_repo"]["exploratory_all_statements_rule"] = {
+                    "note": "not preregistered: faithful only if every statement scores 1",
+                    "diff": float(bal(a["correct_all"], labels) - bal(base["correct_all"], labels)),
+                    "diff_ci95": [float(np.percentile(ex, 2.5)), float(np.percentile(ex, 97.5))]}
         models[m] = entry
     rc = models[repo]["cost"]["usd_per_call"]
     for m, e in models.items():

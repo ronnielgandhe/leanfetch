@@ -1,28 +1,28 @@
 {
   "cap_usd": 25.0,
-  "total_usd": 3.19509,
+  "total_usd": 5.124057,
   "by_stage": {
     "smoke": 0.000288,
     "classify": 0.011741,
-    "t3": 1.43247,
-    "t2": 1.505314,
-    "t1": 0.245154,
+    "t3": 1.437681,
+    "t2": 2.567495,
+    "t1": 1.10673,
     "defaults_alive": 0.000113
   },
   "by_model": {
-    "gpt-4.1": 0.730622,
-    "gpt-4.1-mini": 0.140462,
-    "gpt-4o-mini": 0.053224,
-    "gpt-5.6-terra": 1.00399,
+    "gpt-4.1": 1.600262,
+    "gpt-4.1-mini": 0.141443,
+    "gpt-4o-mini": 0.053559,
+    "gpt-5.6-terra": 1.06226,
     "gpt-6-luna": 0.060028,
-    "gpt-5-nano": 0.316854,
-    "claude-sonnet-5-5": 0.770746,
-    "claude-haiku-5-5": 0.059441,
-    "gemini-3.1-flash-lite": 0.043898,
-    "gemini-2.5-flash-lite": 0.015816
+    "gpt-5-nano": 0.31994,
+    "claude-sonnet-5-5": 1.635124,
+    "claude-haiku-5-5": 0.114704,
+    "gemini-3.1-flash-lite": 0.100645,
+    "gemini-2.5-flash-lite": 0.036074
   },
-  "calls": 5258,
-  "updated": "2026-11-22T01:28:53",
+  "calls": 6591,
+  "updated": "2026-11-22T01:39:32",
   "recomputed_from_cache": {
     "note": "sum of cost_usd over every cached response; excludes the 5 uncached liveness calls in stage1b (logged in total_usd)",
     "total_usd": 3.1769,

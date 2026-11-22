@@ -1,0 +1,23 @@
+{
+ "text": "{\"statements\": [\"Leon Trotsky created the Order of Maternal Glory.\"], \"statement_scores\": [0]}",
+ "finish": "FinishReason.STOP",
+ "input_tokens": 487,
+ "output_tokens": 22,
+ "reasoning_tokens": 1,
+ "served_model": "gemini-2.5-flash-lite",
+ "latency_s": 0.535,
+ "cost_usd": 5.75e-05,
+ "request": {
+  "model": "gemini-2.5-flash-lite",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Instructions:\nYour task is to judge the faithfulness or groundedness of statements based on context information. First, please extract statements from a provided predicted answer to a question. Second, calculate a faithfulness score for each statement made in the predicted answer. The score is 1 if the statement can be inferred from the provided context or 0 if it cannot be inferred.\n\nGenerate the response in JSON format with the following keys:\n[\"statements\", \"statement_scores\"]\nConsider the instructions and the examples below to determine those values.\n\nExamples:\nInputs:\n{\"questions\": \"What is the capital of Germany and when was it founded?\", \"contexts\": [\"Berlin is the capital of Germany and was founded in 1244.\"], \"predicted_answers\": \"The capital of Germany, Berlin, was founded in the 13th century.\"}\nOutputs:\n{\"statements\": [\"Berlin is the capital of Germany.\", \"Berlin was founded in 1244.\"], \"statement_scores\": [1, 1]}\nInputs:\n{\"questions\": \"What is the capital of France?\", \"contexts\": [\"Berlin is the capital of Germany.\"], \"predicted_answers\": \"Paris\"}\nOutputs:\n{\"statements\": [\"Paris is the capital of France.\"], \"statement_scores\": [0]}\nInputs:\n{\"questions\": \"What is the capital of Italy?\", \"contexts\": [\"Rome is the capital of Italy.\"], \"predicted_answers\": \"Rome is the capital of Italy with more than 4 million inhabitants.\"}\nOutputs:\n{\"statements\": [\"Rome is the capital of Italy.\", \"Rome has more than 4 million inhabitants.\"], \"statement_scores\": [1, 0]}\n\nInputs:\n{\"questions\": Which Soviet revolutionary and political leader created the Order of Maternal Glory?, \"contexts\": ['The Order of Maternal Glory (Russian: \"\u041e\u0440\u0434\u0435\u043d \"\u041c\u0430\u0442\u0435\u0440\u0438\u043d\u0441\u043a\u0430\u044f \u0441\u043b\u0430\u0432\u0430\"\") was a Soviet civilian award created on 8 July 1944 by Joseph Stalin and established with a decision of the Presidium of Supreme Soviet of the USSR.Joseph Vissarionovich Stalin (18 December 1878 \u2013 5 March 1953) was a Georgian-born Soviet revolutionary and political leader.'], \"predicted_answers\": Leon Trotsky, one of Stalin's rivals.}\nOutputs:"
+   }
+  ],
+  "params": {
+   "response_mime_type": "application/json"
+  }
+ },
+ "ts": "2026-11-22T01:34:28"
+}

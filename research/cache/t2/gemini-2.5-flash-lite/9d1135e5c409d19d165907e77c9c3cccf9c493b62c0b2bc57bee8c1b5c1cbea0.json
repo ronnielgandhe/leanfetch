@@ -1,0 +1,23 @@
+{
+ "text": "{\"statements\": [\"Erin Gray played a role in \\\"Three's Company\\\".\"], \"statement_scores\": [0]}",
+ "finish": "FinishReason.STOP",
+ "input_tokens": 579,
+ "output_tokens": 27,
+ "reasoning_tokens": 2,
+ "served_model": "gemini-2.5-flash-lite",
+ "latency_s": 0.564,
+ "cost_usd": 6.87e-05,
+ "request": {
+  "model": "gemini-2.5-flash-lite",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Instructions:\nYour task is to judge the faithfulness or groundedness of statements based on context information. First, please extract statements from a provided predicted answer to a question. Second, calculate a faithfulness score for each statement made in the predicted answer. The score is 1 if the statement can be inferred from the provided context or 0 if it cannot be inferred.\n\nGenerate the response in JSON format with the following keys:\n[\"statements\", \"statement_scores\"]\nConsider the instructions and the examples below to determine those values.\n\nExamples:\nInputs:\n{\"questions\": \"What is the capital of Germany and when was it founded?\", \"contexts\": [\"Berlin is the capital of Germany and was founded in 1244.\"], \"predicted_answers\": \"The capital of Germany, Berlin, was founded in the 13th century.\"}\nOutputs:\n{\"statements\": [\"Berlin is the capital of Germany.\", \"Berlin was founded in 1244.\"], \"statement_scores\": [1, 1]}\nInputs:\n{\"questions\": \"What is the capital of France?\", \"contexts\": [\"Berlin is the capital of Germany.\"], \"predicted_answers\": \"Paris\"}\nOutputs:\n{\"statements\": [\"Paris is the capital of France.\"], \"statement_scores\": [0]}\nInputs:\n{\"questions\": \"What is the capital of Italy?\", \"contexts\": [\"Rome is the capital of Italy.\"], \"predicted_answers\": \"Rome is the capital of Italy with more than 4 million inhabitants.\"}\nOutputs:\n{\"statements\": [\"Rome is the capital of Italy.\", \"Rome has more than 4 million inhabitants.\"], \"statement_scores\": [1, 0]}\n\nInputs:\n{\"questions\": Singer Crystal Gayle\u2019s single, \"Hello I Love You\" was featured in the 1982 movie, \"Six Pack\", starring Kenny Rogers, Diane Lane, and Erin Gray, an American actress, perhaps best known for her roles as Colonel Wilma Deering in the science fiction television series \"Buck Rogers in the 25th Century\" and as Kate Summers-Stratton in what comedy?, \"contexts\": ['When I Dream is the fifth studio album by American country music singer Crystal Gayle. \"Hello I Love You\" was featured in the 1982 movie, \"Six Pack\", starring Kenny Rogers, Erin Gray and Diane Lane.Erin Gray (born January 7, 1950) is an American actress, perhaps best known for her roles as Colonel Wilma Deering in the science fiction television series \"Buck Rogers in the 25th Century\" and as Kate Summers-Stratton in the situation comedy \"Silver Spoons\".'], \"predicted_answers\": Erin Gray played a role in \"Three's Company\".}\nOutputs:"
+   }
+  ],
+  "params": {
+   "response_mime_type": "application/json"
+  }
+ },
+ "ts": "2026-11-22T01:34:29"
+}

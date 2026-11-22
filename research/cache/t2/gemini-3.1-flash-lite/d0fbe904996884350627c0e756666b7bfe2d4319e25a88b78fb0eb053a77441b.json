@@ -1,0 +1,23 @@
+{
+ "text": "{\n  \"statements\": [\"The professional ice hockey right winger served as the alternate captain during the 38th season.\"],\n  \"statement_scores\": [1]\n}",
+ "finish": "FinishReason.STOP",
+ "input_tokens": 505,
+ "output_tokens": 38,
+ "reasoning_tokens": 0,
+ "served_model": "gemini-3.1-flash-lite",
+ "latency_s": 0.867,
+ "cost_usd": 0.00018325,
+ "request": {
+  "model": "gemini-3.1-flash-lite",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Instructions:\nYour task is to judge the faithfulness or groundedness of statements based on context information. First, please extract statements from a provided predicted answer to a question. Second, calculate a faithfulness score for each statement made in the predicted answer. The score is 1 if the statement can be inferred from the provided context or 0 if it cannot be inferred.\n\nGenerate the response in JSON format with the following keys:\n[\"statements\", \"statement_scores\"]\nConsider the instructions and the examples below to determine those values.\n\nExamples:\nInputs:\n{\"questions\": \"What is the capital of Germany and when was it founded?\", \"contexts\": [\"Berlin is the capital of Germany and was founded in 1244.\"], \"predicted_answers\": \"The capital of Germany, Berlin, was founded in the 13th century.\"}\nOutputs:\n{\"statements\": [\"Berlin is the capital of Germany.\", \"Berlin was founded in 1244.\"], \"statement_scores\": [1, 1]}\nInputs:\n{\"questions\": \"What is the capital of France?\", \"contexts\": [\"Berlin is the capital of Germany.\"], \"predicted_answers\": \"Paris\"}\nOutputs:\n{\"statements\": [\"Paris is the capital of France.\"], \"statement_scores\": [0]}\nInputs:\n{\"questions\": \"What is the capital of Italy?\", \"contexts\": [\"Rome is the capital of Italy.\"], \"predicted_answers\": \"Rome is the capital of Italy with more than 4 million inhabitants.\"}\nOutputs:\n{\"statements\": [\"Rome is the capital of Italy.\", \"Rome has more than 4 million inhabitants.\"], \"statement_scores\": [1, 0]}\n\nInputs:\n{\"questions\": In which season the professional ice hockey right winger served as the alternate captain along  with Richard Park  who was drafted seventh overall in the 2006 NHL Entry Draft by the New York Islanders ?, \"contexts\": [\"The 2009-10 New York Islanders season was the 38th season in the franchise's history. Kyle Okposo, Richard Park, Mark Streit and Brendan Witt serve as the team's alternate captains. He was drafted seventh overall in the 2006 NHL Entry Draft by the New York Islanders, for whom he played from 2008 to 2016.\"], \"predicted_answers\": 38th season}\nOutputs:"
+   }
+  ],
+  "params": {
+   "response_mime_type": "application/json"
+  }
+ },
+ "ts": "2026-11-22T01:33:01"
+}

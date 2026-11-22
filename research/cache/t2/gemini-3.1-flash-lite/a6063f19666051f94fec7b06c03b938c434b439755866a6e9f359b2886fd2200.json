@@ -1,0 +1,23 @@
+{
+ "text": "{\n  \"statements\": [\"The Sinclair Broadcast Group-owned Rhode Island NBC affiliate is called WJAR.\"],\n  \"statement_scores\": [1]\n}",
+ "finish": "FinishReason.STOP",
+ "input_tokens": 506,
+ "output_tokens": 34,
+ "reasoning_tokens": 0,
+ "served_model": "gemini-3.1-flash-lite",
+ "latency_s": 0.79,
+ "cost_usd": 0.0001775,
+ "request": {
+  "model": "gemini-3.1-flash-lite",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Instructions:\nYour task is to judge the faithfulness or groundedness of statements based on context information. First, please extract statements from a provided predicted answer to a question. Second, calculate a faithfulness score for each statement made in the predicted answer. The score is 1 if the statement can be inferred from the provided context or 0 if it cannot be inferred.\n\nGenerate the response in JSON format with the following keys:\n[\"statements\", \"statement_scores\"]\nConsider the instructions and the examples below to determine those values.\n\nExamples:\nInputs:\n{\"questions\": \"What is the capital of Germany and when was it founded?\", \"contexts\": [\"Berlin is the capital of Germany and was founded in 1244.\"], \"predicted_answers\": \"The capital of Germany, Berlin, was founded in the 13th century.\"}\nOutputs:\n{\"statements\": [\"Berlin is the capital of Germany.\", \"Berlin was founded in 1244.\"], \"statement_scores\": [1, 1]}\nInputs:\n{\"questions\": \"What is the capital of France?\", \"contexts\": [\"Berlin is the capital of Germany.\"], \"predicted_answers\": \"Paris\"}\nOutputs:\n{\"statements\": [\"Paris is the capital of France.\"], \"statement_scores\": [0]}\nInputs:\n{\"questions\": \"What is the capital of Italy?\", \"contexts\": [\"Rome is the capital of Italy.\"], \"predicted_answers\": \"Rome is the capital of Italy with more than 4 million inhabitants.\"}\nOutputs:\n{\"statements\": [\"Rome is the capital of Italy.\", \"Rome has more than 4 million inhabitants.\"], \"statement_scores\": [1, 0]}\n\nInputs:\n{\"questions\": The NBC-affiliated television station, owned by an American telecommunications company whose founder is Julian Sinclair Smith, called WJAR is more commonly known as what?, \"contexts\": ['WJAR (more commonly known as NBC 10) is the NBC-affiliated television station for the state of Rhode Island and Bristol County, Massachusetts licensed to Providence. Owned by Sinclair Broadcast Group, the station shares studios on Kenney Drive in Cranston with ZGS Communications-owned Telemundo affiliate WRIW-CD.Sinclair Broadcast Group is an American telecommunications company that is owned by the family of company founder Julian Sinclair Smith.'], \"predicted_answers\": The Sinclair Broadcast Group-owned Rhode Island NBC affiliate is called WJAR.}\nOutputs:"
+   }
+  ],
+  "params": {
+   "response_mime_type": "application/json"
+  }
+ },
+ "ts": "2026-11-22T01:33:34"
+}

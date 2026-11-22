@@ -1,0 +1,23 @@
+{
+ "text": "{\"statements\": [\"Genevieve O'Reilly is an Irish actress.\", \"Genevieve O'Reilly is known for her work in the Star Wars franchise.\"], \"statement_scores\": [1, 1]}",
+ "finish": "FinishReason.STOP",
+ "input_tokens": 527,
+ "output_tokens": 43,
+ "reasoning_tokens": 1,
+ "served_model": "gemini-2.5-flash-lite",
+ "latency_s": 0.611,
+ "cost_usd": 6.99e-05,
+ "request": {
+  "model": "gemini-2.5-flash-lite",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Instructions:\nYour task is to judge the faithfulness or groundedness of statements based on context information. First, please extract statements from a provided predicted answer to a question. Second, calculate a faithfulness score for each statement made in the predicted answer. The score is 1 if the statement can be inferred from the provided context or 0 if it cannot be inferred.\n\nGenerate the response in JSON format with the following keys:\n[\"statements\", \"statement_scores\"]\nConsider the instructions and the examples below to determine those values.\n\nExamples:\nInputs:\n{\"questions\": \"What is the capital of Germany and when was it founded?\", \"contexts\": [\"Berlin is the capital of Germany and was founded in 1244.\"], \"predicted_answers\": \"The capital of Germany, Berlin, was founded in the 13th century.\"}\nOutputs:\n{\"statements\": [\"Berlin is the capital of Germany.\", \"Berlin was founded in 1244.\"], \"statement_scores\": [1, 1]}\nInputs:\n{\"questions\": \"What is the capital of France?\", \"contexts\": [\"Berlin is the capital of Germany.\"], \"predicted_answers\": \"Paris\"}\nOutputs:\n{\"statements\": [\"Paris is the capital of France.\"], \"statement_scores\": [0]}\nInputs:\n{\"questions\": \"What is the capital of Italy?\", \"contexts\": [\"Rome is the capital of Italy.\"], \"predicted_answers\": \"Rome is the capital of Italy with more than 4 million inhabitants.\"}\nOutputs:\n{\"statements\": [\"Rome is the capital of Italy.\", \"Rome has more than 4 million inhabitants.\"], \"statement_scores\": [1, 0]}\n\nInputs:\n{\"questions\": Which Irish actress will appear in the play The Ferryman who is known for her work in Star Wars?, \"contexts\": [' The cast will include Paddy Considine, Laura Donnelly (the disappearance of her real-life uncle, Eugene Simons, was the inspiration for Butterworth\\'s plot), Genevieve O\\'Reilly, Br\u00edd Brennan, Fra Fee, John Hodgkinson, Stuart Graham, Gerard Horan, Carla Langley, Des McAleer, Conor MacNeill, Rob Malone, Dearbhla Molloy, Eugene O\\'Hare and Niall Wright.Genevieve O\\'Reilly (born 6 January 1973) is an Irish actress known for her work in the \"Star Wars\" franchise as Mon Mothma, first playing the character in \"\".'], \"predicted_answers\": Genevieve O'Reilly}\nOutputs:"
+   }
+  ],
+  "params": {
+   "response_mime_type": "application/json"
+  }
+ },
+ "ts": "2026-11-22T01:34:27"
+}

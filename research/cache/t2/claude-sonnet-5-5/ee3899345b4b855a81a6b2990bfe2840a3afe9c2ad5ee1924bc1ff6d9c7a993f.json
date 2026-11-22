@@ -1,0 +1,50 @@
+{
+ "text": "{\"statements\":[\"Archduke John of Austria was a member of the House of Bourbon.\"],\"statement_scores\":[0]}",
+ "finish": "end_turn",
+ "input_tokens": 1146,
+ "output_tokens": 42,
+ "reasoning_tokens": null,
+ "served_model": "claude-sonnet-5-5",
+ "latency_s": 1.419,
+ "cost_usd": 0.002712,
+ "request": {
+  "model": "claude-sonnet-5-5",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Instructions:\nYour task is to judge the faithfulness or groundedness of statements based on context information. First, please extract statements from a provided predicted answer to a question. Second, calculate a faithfulness score for each statement made in the predicted answer. The score is 1 if the statement can be inferred from the provided context or 0 if it cannot be inferred.\n\nGenerate the response in JSON format with the following keys:\n[\"statements\", \"statement_scores\"]\nConsider the instructions and the examples below to determine those values.\n\nExamples:\nInputs:\n{\"questions\": \"What is the capital of Germany and when was it founded?\", \"contexts\": [\"Berlin is the capital of Germany and was founded in 1244.\"], \"predicted_answers\": \"The capital of Germany, Berlin, was founded in the 13th century.\"}\nOutputs:\n{\"statements\": [\"Berlin is the capital of Germany.\", \"Berlin was founded in 1244.\"], \"statement_scores\": [1, 1]}\nInputs:\n{\"questions\": \"What is the capital of France?\", \"contexts\": [\"Berlin is the capital of Germany.\"], \"predicted_answers\": \"Paris\"}\nOutputs:\n{\"statements\": [\"Paris is the capital of France.\"], \"statement_scores\": [0]}\nInputs:\n{\"questions\": \"What is the capital of Italy?\", \"contexts\": [\"Rome is the capital of Italy.\"], \"predicted_answers\": \"Rome is the capital of Italy with more than 4 million inhabitants.\"}\nOutputs:\n{\"statements\": [\"Rome is the capital of Italy.\", \"Rome has more than 4 million inhabitants.\"], \"statement_scores\": [1, 0]}\n\nInputs:\n{\"questions\": The Franco-Italian army led by Eug\u00e8ne de Beauharnais was defreated by an Austrian army commanded by a member of what house?, \"contexts\": ['The Battle of Sacile (also known as the Battle of Fontana Fredda) on 16 April 1809 and its companion Clash at Pordenone on 15 April saw an Austrian army commanded by Archduke John of Austria defeat a Franco-Italian army led by Eug\u00e8ne de Beauharnais and force it to retreat.Archduke John of Austria (German: \"Erzherzog Johann Baptist Joseph Fabian Sebastian von \u00d6sterreich\" ; 20 January 1782 \u2013 11 May 1859), a member of the House of Habsburg-Lorraine, was an Austrian field marshal and Imperial regent (\"Reichsverweser\") of the short-lived German Empire during the Revolutions of 1848.'], \"predicted_answers\": Archduke John of Austria was actually a member of the House of Bourbon.}\nOutputs:"
+   }
+  ],
+  "params": {
+   "max_tokens": 16000,
+   "output_config": {
+    "format": {
+     "type": "json_schema",
+     "schema": {
+      "type": "object",
+      "properties": {
+       "statements": {
+        "type": "array",
+        "items": {
+         "type": "string"
+        }
+       },
+       "statement_scores": {
+        "type": "array",
+        "items": {
+         "type": "integer"
+        }
+       }
+      },
+      "required": [
+       "statements",
+       "statement_scores"
+      ],
+      "additionalProperties": false
+     }
+    }
+   }
+  }
+ },
+ "ts": "2026-11-22T01:30:07"
+}

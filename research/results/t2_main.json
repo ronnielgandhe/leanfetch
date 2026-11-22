@@ -1,0 +1,559 @@
+{
+ "task": "t2",
+ "repo": "deepset-ai/haystack",
+ "job": "faithfulness judging",
+ "dataset": "HaluEval QA",
+ "metric": "balanced accuracy",
+ "split": "main",
+ "n": 300,
+ "repo_model": "gpt-5.6-terra",
+ "delta": 0.03,
+ "bootstrap": 10000,
+ "seed": 7,
+ "decision_interval": "99.44%",
+ "verdict": "default is defensible on this job and dataset",
+ "qualifying_alternatives": [],
+ "prices_verified_on": "2026-11-22",
+ "models": {
+  "gpt-4.1": {
+   "primary": 0.71,
+   "primary_ci95": [
+    0.6633333333333333,
+    0.7553816046966733
+   ],
+   "secondary": {
+    "accuracy": 0.71,
+    "parse_fail_rate": 0.0,
+    "balanced_accuracy_lenient_parse": 0.71,
+    "exploratory_balanced_accuracy_all_statements_rule": 0.8,
+    "faithful_recall": 0.9133333333333333,
+    "hallucination_recall": 0.5066666666666667
+   },
+   "cost": {
+    "usd_per_call": 0.0013198133333333334,
+    "usd_per_1k_calls": 1.3198133333333333,
+    "usd_per_1m_calls": 1319.8133333333333,
+    "mean_input_tokens": 478.2133333333333,
+    "mean_output_tokens": 45.42333333333333,
+    "mean_reasoning_tokens": 0.0,
+    "latency_median_s": 0.7015,
+    "latency_p90_s": 0.9404000000000002,
+    "errors": 0,
+    "missing": 0
+   },
+   "vs_repo": {
+    "diff": -0.030000000000000027,
+    "diff_ci95": [
+     -0.0730309587307604,
+     0.01236257743652393
+    ],
+    "diff_ci_decision": [
+     -0.09077253258816777,
+     0.02962067305539396
+    ],
+    "non_inferior": false,
+    "strictly_better": false,
+    "mcnemar": {
+     "b": 17,
+     "c": 26,
+     "p": 0.2220528201560228
+    },
+    "exploratory_all_statements_rule": {
+     "note": "not preregistered: faithful only if every statement scores 1",
+     "diff": -0.033333333333333215,
+     "diff_ci95": [
+      -0.07373012328594615,
+      0.00685986113833392
+     ]
+    },
+    "cost_ratio": 0.6291336430718775,
+    "materially_cheaper": false,
+    "usd_saved_per_1m_calls": 778.0133333333335,
+    "qualifies": false
+   }
+  },
+  "gpt-5.6-terra": {
+   "primary": 0.74,
+   "primary_ci95": [
+    0.6925571774578344,
+    0.7864147349266928
+   ],
+   "secondary": {
+    "accuracy": 0.74,
+    "parse_fail_rate": 0.03,
+    "balanced_accuracy_lenient_parse": 0.74,
+    "exploratory_balanced_accuracy_all_statements_rule": 0.8333333333333333,
+    "faithful_recall": 0.8933333333333333,
+    "hallucination_recall": 0.5866666666666667
+   },
+   "cost": {
+    "usd_per_call": 0.002097826666666667,
+    "usd_per_1k_calls": 2.0978266666666667,
+    "usd_per_1m_calls": 2097.826666666667,
+    "mean_input_tokens": 477.2133333333333,
+    "mean_output_tokens": 95.28333333333333,
+    "mean_reasoning_tokens": 55.81,
+    "latency_median_s": 1.8145,
+    "latency_p90_s": 2.4389000000000003,
+    "errors": 0,
+    "missing": 0
+   }
+  },
+  "gpt-4.1-mini": {
+   "primary": 0.73,
+   "primary_ci95": [
+    0.6850082004296748,
+    0.7735212188261846
+   ],
+   "secondary": {
+    "accuracy": 0.73,
+    "parse_fail_rate": 0.0,
+    "balanced_accuracy_lenient_parse": 0.73,
+    "exploratory_balanced_accuracy_all_statements_rule": 0.8233333333333333,
+    "faithful_recall": 0.94,
+    "hallucination_recall": 0.52
+   },
+   "cost": {
+    "usd_per_call": 0.00024918933333333335,
+    "usd_per_1k_calls": 0.24918933333333335,
+    "usd_per_1m_calls": 249.18933333333334,
+    "mean_input_tokens": 478.2133333333333,
+    "mean_output_tokens": 36.19,
+    "mean_reasoning_tokens": 0.0,
+    "latency_median_s": 0.6325000000000001,
+    "latency_p90_s": 0.8372,
+    "errors": 0,
+    "missing": 0
+   },
+   "vs_repo": {
+    "diff": -0.010000000000000009,
+    "diff_ci95": [
+     -0.05134664629008663,
+     0.030000000000000027
+    ],
+    "diff_ci_decision": [
+     -0.06788127681550928,
+     0.04866254519359081
+    ],
+    "non_inferior": false,
+    "strictly_better": false,
+    "mcnemar": {
+     "b": 18,
+     "c": 21,
+     "p": 0.7492586247608415
+    },
+    "exploratory_all_statements_rule": {
+     "note": "not preregistered: faithful only if every statement scores 1",
+     "diff": -0.010000000000000009,
+     "diff_ci95": [
+      -0.04817626354757091,
+      0.027158933203299113
+     ]
+    },
+    "cost_ratio": 0.11878451985229158,
+    "materially_cheaper": true,
+    "usd_saved_per_1m_calls": 1848.6373333333336,
+    "qualifies": false
+   }
+  },
+  "gpt-4o-mini": {
+   "primary": 0.7133333333333334,
+   "primary_ci95": [
+    0.6723905723905724,
+    0.7545418542372377
+   ],
+   "secondary": {
+    "accuracy": 0.7133333333333334,
+    "parse_fail_rate": 0.0,
+    "balanced_accuracy_lenient_parse": 0.7133333333333334,
+    "exploratory_balanced_accuracy_all_statements_rule": 0.8333333333333334,
+    "faithful_recall": 0.98,
+    "hallucination_recall": 0.44666666666666666
+   },
+   "cost": {
+    "usd_per_call": 9.5932e-05,
+    "usd_per_1k_calls": 0.095932,
+    "usd_per_1m_calls": 95.932,
+    "mean_input_tokens": 478.2133333333333,
+    "mean_output_tokens": 40.333333333333336,
+    "mean_reasoning_tokens": 0.0,
+    "latency_median_s": 0.8254999999999999,
+    "latency_p90_s": 1.2413,
+    "errors": 0,
+    "missing": 0
+   },
+   "vs_repo": {
+    "diff": -0.026666666666666616,
+    "diff_ci95": [
+     -0.0720144844437554,
+     0.020000000000000018
+    ],
+    "diff_ci_decision": [
+     -0.09196250847524735,
+     0.045124908747370004
+    ],
+    "non_inferior": false,
+    "strictly_better": false,
+    "mcnemar": {
+     "b": 23,
+     "c": 31,
+     "p": 0.34089094122009733
+    },
+    "exploratory_all_statements_rule": {
+     "note": "not preregistered: faithful only if every statement scores 1",
+     "diff": 1.1102230246251565e-16,
+     "diff_ci95": [
+      -0.04168408186411392,
+      0.04181738463139146
+     ]
+    },
+    "cost_ratio": 0.04572923088656832,
+    "materially_cheaper": true,
+    "usd_saved_per_1m_calls": 2001.8946666666668,
+    "qualifies": false
+   }
+  },
+  "gpt-6-luna": {
+   "primary": 0.7433333333333334,
+   "primary_ci95": [
+    0.6982314181040119,
+    0.7870553838522587
+   ],
+   "secondary": {
+    "accuracy": 0.7433333333333333,
+    "parse_fail_rate": 0.0,
+    "balanced_accuracy_lenient_parse": 0.7433333333333334,
+    "exploratory_balanced_accuracy_all_statements_rule": 0.8633333333333333,
+    "faithful_recall": 0.9333333333333333,
+    "hallucination_recall": 0.5533333333333333
+   },
+   "cost": {
+    "usd_per_call": 0.00012267133333333333,
+    "usd_per_1k_calls": 0.12267133333333333,
+    "usd_per_1m_calls": 122.67133333333332,
+    "mean_input_tokens": 477.2133333333333,
+    "mean_output_tokens": 149.9,
+    "mean_reasoning_tokens": 110.24666666666667,
+    "latency_median_s": 1.722,
+    "latency_p90_s": 3.2511,
+    "errors": 0,
+    "missing": 0
+   },
+   "vs_repo": {
+    "diff": 0.0033333333333334103,
+    "diff_ci95": [
+     -0.02938080042104026,
+     0.03626426142084428
+    ],
+    "diff_ci_decision": [
+     -0.043333333333333335,
+     0.04991560736032714
+    ],
+    "non_inferior": false,
+    "strictly_better": false,
+    "mcnemar": {
+     "b": 13,
+     "c": 12,
+     "p": 1.0
+    },
+    "exploratory_all_statements_rule": {
+     "note": "not preregistered: faithful only if every statement scores 1",
+     "diff": 0.030000000000000027,
+     "diff_ci95": [
+      -0.00044493882091212466,
+      0.06069202319414973
+     ]
+    },
+    "cost_ratio": 0.05847543807241779,
+    "materially_cheaper": true,
+    "usd_saved_per_1m_calls": 1975.1553333333338,
+    "qualifies": false
+   }
+  },
+  "gpt-5-nano": {
+   "primary": 0.7333333333333334,
+   "primary_ci95": [
+    0.6868746996992292,
+    0.7789235077114538
+   ],
+   "secondary": {
+    "accuracy": 0.7333333333333333,
+    "parse_fail_rate": 0.03666666666666667,
+    "balanced_accuracy_lenient_parse": 0.7333333333333334,
+    "exploratory_balanced_accuracy_all_statements_rule": 0.8200000000000001,
+    "faithful_recall": 0.9133333333333333,
+    "hallucination_recall": 0.5533333333333333
+   },
+   "cost": {
+    "usd_per_call": 0.0008239926666666667,
+    "usd_per_1k_calls": 0.8239926666666667,
+    "usd_per_1m_calls": 823.9926666666667,
+    "mean_input_tokens": 477.2133333333333,
+    "mean_output_tokens": 2000.33,
+    "mean_reasoning_tokens": 1956.2666666666667,
+    "latency_median_s": 9.6075,
+    "latency_p90_s": 17.8585,
+    "errors": 0,
+    "missing": 0
+   },
+   "vs_repo": {
+    "diff": -0.006666666666666599,
+    "diff_ci95": [
+     -0.04982025847046263,
+     0.03659085218323642
+    ],
+    "diff_ci_decision": [
+     -0.0667201187585328,
+     0.0532866958623284
+    ],
+    "non_inferior": false,
+    "strictly_better": false,
+    "mcnemar": {
+     "b": 20,
+     "c": 22,
+     "p": 0.8776143287523155
+    },
+    "exploratory_all_statements_rule": {
+     "note": "not preregistered: faithful only if every statement scores 1",
+     "diff": -0.013333333333333197,
+     "diff_ci95": [
+      -0.049519914651493635,
+      0.02237146415228608
+     ]
+    },
+    "cost_ratio": 0.3927839605432924,
+    "materially_cheaper": true,
+    "usd_saved_per_1m_calls": 1273.834,
+    "qualifies": false
+   }
+  },
+  "claude-sonnet-5-5": {
+   "primary": 0.6866666666666666,
+   "primary_ci95": [
+    0.6420302706448459,
+    0.7305194805194806
+   ],
+   "secondary": {
+    "accuracy": 0.6866666666666666,
+    "parse_fail_rate": 0.0,
+    "balanced_accuracy_lenient_parse": 0.6866666666666666,
+    "exploratory_balanced_accuracy_all_statements_rule": 0.8200000000000001,
+    "faithful_recall": 0.9333333333333333,
+    "hallucination_recall": 0.44
+   },
+   "cost": {
+    "usd_per_call": 0.00288126,
+    "usd_per_1k_calls": 2.88126,
+    "usd_per_1m_calls": 2881.26,
+    "mean_input_tokens": 1025.48,
+    "mean_output_tokens": 83.03,
+    "mean_reasoning_tokens": 0.0,
+    "latency_median_s": 1.5015,
+    "latency_p90_s": 1.7722,
+    "errors": 0,
+    "missing": 0
+   },
+   "vs_repo": {
+    "diff": -0.053333333333333344,
+    "diff_ci95": [
+     -0.09642423501156379,
+     -0.009614455086892836
+    ],
+    "diff_ci_decision": [
+     -0.11427978818986441,
+     0.007873900753648383
+    ],
+    "non_inferior": false,
+    "strictly_better": false,
+    "mcnemar": {
+     "b": 16,
+     "c": 32,
+     "p": 0.0293049467205293
+    },
+    "exploratory_all_statements_rule": {
+     "note": "not preregistered: faithful only if every statement scores 1",
+     "diff": -0.013333333333333197,
+     "diff_ci95": [
+      -0.05399458027564955,
+      0.027037437911735906
+     ]
+    },
+    "cost_ratio": 1.373449983157172,
+    "materially_cheaper": false,
+    "usd_saved_per_1m_calls": -783.4333333333332,
+    "qualifies": false
+   }
+  },
+  "claude-haiku-5-5": {
+   "primary": 0.7,
+   "primary_ci95": [
+    0.6558021994671345,
+    0.7441989608343338
+   ],
+   "secondary": {
+    "accuracy": 0.7,
+    "parse_fail_rate": 0.0,
+    "balanced_accuracy_lenient_parse": 0.7,
+    "exploratory_balanced_accuracy_all_statements_rule": 0.8433333333333333,
+    "faithful_recall": 0.9333333333333333,
+    "hallucination_recall": 0.4666666666666667
+   },
+   "cost": {
+    "usd_per_call": 0.00018419466666666666,
+    "usd_per_1k_calls": 0.18419466666666667,
+    "usd_per_1m_calls": 184.19466666666665,
+    "mean_input_tokens": 1025.48,
+    "mean_output_tokens": 163.29333333333332,
+    "mean_reasoning_tokens": 0.0,
+    "latency_median_s": 1.298,
+    "latency_p90_s": 2.3769,
+    "errors": 0,
+    "missing": 0
+   },
+   "vs_repo": {
+    "diff": -0.040000000000000036,
+    "diff_ci95": [
+     -0.0811709554212938,
+     0.001869685184772651
+    ],
+    "diff_ci_decision": [
+     -0.10051637764184886,
+     0.018412335327393767
+    ],
+    "non_inferior": false,
+    "strictly_better": false,
+    "mcnemar": {
+     "b": 15,
+     "c": 27,
+     "p": 0.08842954698775429
+    },
+    "exploratory_all_statements_rule": {
+     "note": "not preregistered: faithful only if every statement scores 1",
+     "diff": 0.010000000000000009,
+     "diff_ci95": [
+      -0.026274022948207684,
+      0.04649613299192876
+     ]
+    },
+    "cost_ratio": 0.08780261476957103,
+    "materially_cheaper": true,
+    "usd_saved_per_1m_calls": 1913.6320000000003,
+    "qualifies": false
+   }
+  },
+  "gemini-3.1-flash-lite": {
+   "primary": 0.6933333333333334,
+   "primary_ci95": [
+    0.6489414079998389,
+    0.7375207931007514
+   ],
+   "secondary": {
+    "accuracy": 0.6933333333333334,
+    "parse_fail_rate": 0.0,
+    "balanced_accuracy_lenient_parse": 0.6933333333333334,
+    "exploratory_balanced_accuracy_all_statements_rule": 0.8266666666666667,
+    "faithful_recall": 0.94,
+    "hallucination_recall": 0.44666666666666666
+   },
+   "cost": {
+    "usd_per_call": 0.000188415,
+    "usd_per_1k_calls": 0.188415,
+    "usd_per_1m_calls": 188.415,
+    "mean_input_tokens": 492.2,
+    "mean_output_tokens": 43.57666666666667,
+    "mean_reasoning_tokens": 0.0,
+    "latency_median_s": 0.943,
+    "latency_p90_s": 1.1492,
+    "errors": 0,
+    "missing": 0
+   },
+   "vs_repo": {
+    "diff": -0.046666666666666634,
+    "diff_ci95": [
+     -0.08784108419168349,
+     -0.006248848003956117
+    ],
+    "diff_ci_decision": [
+     -0.10500007909754702,
+     0.009440927860900002
+    ],
+    "non_inferior": false,
+    "strictly_better": false,
+    "mcnemar": {
+     "b": 14,
+     "c": 28,
+     "p": 0.04355852192384191
+    },
+    "exploratory_all_statements_rule": {
+     "note": "not preregistered: faithful only if every statement scores 1",
+     "diff": -0.006666666666666599,
+     "diff_ci95": [
+      -0.04256845487870117,
+      0.029113409151905533
+     ]
+    },
+    "cost_ratio": 0.08981437932590552,
+    "materially_cheaper": true,
+    "usd_saved_per_1m_calls": 1909.4116666666669,
+    "qualifies": false
+   }
+  },
+  "gemini-2.5-flash-lite": {
+   "primary": 0.7,
+   "primary_ci95": [
+    0.6549943943856146,
+    0.7439451085072691
+   ],
+   "secondary": {
+    "accuracy": 0.7,
+    "parse_fail_rate": 0.006666666666666667,
+    "balanced_accuracy_lenient_parse": 0.7,
+    "exploratory_balanced_accuracy_all_statements_rule": 0.74,
+    "faithful_recall": 0.9333333333333333,
+    "hallucination_recall": 0.4666666666666667
+   },
+   "cost": {
+    "usd_per_call": 6.6764e-05,
+    "usd_per_1k_calls": 0.066764,
+    "usd_per_1m_calls": 66.764,
+    "mean_input_tokens": 492.2,
+    "mean_output_tokens": 43.86,
+    "mean_reasoning_tokens": 0.5766666666666667,
+    "latency_median_s": 0.638,
+    "latency_p90_s": 0.7465000000000002,
+    "errors": 0,
+    "missing": 0
+   },
+   "vs_repo": {
+    "diff": -0.040000000000000036,
+    "diff_ci95": [
+     -0.08561791417290503,
+     0.005957469758069002
+    ],
+    "diff_ci_decision": [
+     -0.10627859635641924,
+     0.024700044080672258
+    ],
+    "non_inferior": false,
+    "strictly_better": false,
+    "mcnemar": {
+     "b": 20,
+     "c": 32,
+     "p": 0.12634707581392135
+    },
+    "exploratory_all_statements_rule": {
+     "note": "not preregistered: faithful only if every statement scores 1",
+     "diff": -0.09333333333333327,
+     "diff_ci95": [
+      -0.14305000601565482,
+      -0.043950821548087965
+     ]
+    },
+    "cost_ratio": 0.03182531763030946,
+    "materially_cheaper": true,
+    "usd_saved_per_1m_calls": 2031.062666666667,
+    "qualifies": false
+   }
+  }
+ }
+}

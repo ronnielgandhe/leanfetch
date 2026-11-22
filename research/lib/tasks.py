@@ -130,7 +130,7 @@ def parse_haystack(text, lenient=False):
     return d
 
 
-def t2_pred(text, lenient=False):
+def t2_pred(text, lenient=False, threshold=0.5):
     d = parse_haystack(text, lenient)
     if d is None:
         return None
@@ -141,13 +141,15 @@ def t2_pred(text, lenient=False):
         s = sum(float(x) for x in scores) / len(scores)
     except (TypeError, ValueError):
         return None
-    return int(s >= 0.5)
+    return int(s >= threshold)
 
 
 def score_t2(item, out):
     strict = t2_pred(out["text"])
     lenient = t2_pred(out["text"], lenient=True)
-    return {"label": item["label"], "pred": strict, "pred_lenient": lenient,
+    all_ok = t2_pred(out["text"], threshold=1.0)
+    return {"label": item["label"], "pred": strict, "pred_lenient": lenient, "pred_all_statements": all_ok,
+            "correct_all_statements": int(all_ok == item["label"]),
             "correct": int(strict == item["label"]), "correct_lenient": int(lenient == item["label"]), "parse_fail": int(strict is None)}
 
 
