@@ -1,0 +1,27 @@
+{
+ "text": "Nathaniel Starbuck and Bernard Cornwell share a connection to historical military conflicts. Nathaniel Starbuck is a Confederate soldier in the American Civil War, while Bernard Cornwell is an author known for writing historical novels about various wars, including the Napoleonic Wars and the American Civil War. Both are linked through the theme of war and military conflict in their respective contexts.",
+ "finish": "stop",
+ "input_tokens": 432,
+ "output_tokens": 74,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4.1-mini-2025-04-14",
+ "latency_s": 0.793,
+ "cost_usd": 0.00029120000000000003,
+ "request": {
+  "model": "gpt-4.1-mini",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Nathaniel Starbuck\n\nNathaniel Starbuck is a fictional character, Confederate soldier, and the protagonist of British author Bernard Cornwell's (b. 1944), \"\"Starbuck Chronicles\"\" series of novels of historical fiction. Cornwell is also author of several other series of historical fiction such as the \"Richard Sharpe\" novels of the British campaigns in the Peninsular War in Spain during the Napoleonic Wars of the early 19th Century.\n\ntitle: Bernard Cornwell\n\nBernard Cornwell, OBE (born 23 February 1944) is an English author of historical novels and a history of the Waterloo Campaign. He is best known for his novels about Napoleonic Wars rifleman Richard Sharpe. Cornwell has written historical novels primarily of English history in five series and one series of contemporary thriller novels. A feature of his historical novels is an end note on how the novel matches or differs from history, for the re-telling, and what one might see at the modern site of the battles described in the novel. One series of historical novels is set in the American Civil War. He wrote a nonfiction book on the battle of Waterloo, in addition to the fictional story of the famous battle in the Sharpe Series. Two of the historical novel series have been adapted for television; the Sharpe television series by ITV and \"The Last Kingdom\" by BBC. He lives in the US with his wife. He alternates between Cape Cod, Massachusetts and Charleston, South Carolina.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: What type of conflict does Nathaniel Starbuck and Bernard Cornwell have in common?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T00:57:28"
+}

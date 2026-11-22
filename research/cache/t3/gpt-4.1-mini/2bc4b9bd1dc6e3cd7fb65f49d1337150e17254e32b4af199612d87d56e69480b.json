@@ -1,0 +1,27 @@
+{
+ "text": "1986",
+ "finish": "stop",
+ "input_tokens": 256,
+ "output_tokens": 2,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4.1-mini-2025-04-14",
+ "latency_s": 0.392,
+ "cost_usd": 0.0001056,
+ "request": {
+  "model": "gpt-4.1-mini",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Brittany Snow\n\nBrittany Anne Snow (born March 9, 1986) is an American actress, producer, and singer.\n\ntitle: Streak (film)\n\nStreak is a 2008 American coming-of-age short film directed by Demi Moore, written by Kelly Fremon and Allan Loeb, and starring Brittany Snow and Rumer Willis. The film was actress Demi Moore's first film as a director. The plot focuses on a young woman stuck in a life she no longer wants with gym-rat friends and obsessive behavior. To break free, she reaches for fun in an interesting form of expression.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: In what year was the actress who was starred in \"Streak\" with Rumer Willis born?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T00:57:21"
+}

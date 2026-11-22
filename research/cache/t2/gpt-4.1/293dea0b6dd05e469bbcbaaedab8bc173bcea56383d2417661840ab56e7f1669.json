@@ -1,0 +1,26 @@
+{
+ "text": "{\n  \"statements\": [\n    \"Protein phosphorylation was discovered in 1906 by a biochemist named Peter Smith.\",\n    \"Protein phosphorylation was discovered in 1906 at the Rockefeller Institute for Medical Research.\"\n  ],\n  \"statement_scores\": [0, 1]\n}",
+ "finish": "stop",
+ "input_tokens": 506,
+ "output_tokens": 58,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4.1-2025-04-14",
+ "latency_s": 0.502,
+ "cost_usd": 0.001476,
+ "request": {
+  "model": "gpt-4.1",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Instructions:\nYour task is to judge the faithfulness or groundedness of statements based on context information. First, please extract statements from a provided predicted answer to a question. Second, calculate a faithfulness score for each statement made in the predicted answer. The score is 1 if the statement can be inferred from the provided context or 0 if it cannot be inferred.\n\nGenerate the response in JSON format with the following keys:\n[\"statements\", \"statement_scores\"]\nConsider the instructions and the examples below to determine those values.\n\nExamples:\nInputs:\n{\"questions\": \"What is the capital of Germany and when was it founded?\", \"contexts\": [\"Berlin is the capital of Germany and was founded in 1244.\"], \"predicted_answers\": \"The capital of Germany, Berlin, was founded in the 13th century.\"}\nOutputs:\n{\"statements\": [\"Berlin is the capital of Germany.\", \"Berlin was founded in 1244.\"], \"statement_scores\": [1, 1]}\nInputs:\n{\"questions\": \"What is the capital of France?\", \"contexts\": [\"Berlin is the capital of Germany.\"], \"predicted_answers\": \"Paris\"}\nOutputs:\n{\"statements\": [\"Paris is the capital of France.\"], \"statement_scores\": [0]}\nInputs:\n{\"questions\": \"What is the capital of Italy?\", \"contexts\": [\"Rome is the capital of Italy.\"], \"predicted_answers\": \"Rome is the capital of Italy with more than 4 million inhabitants.\"}\nOutputs:\n{\"statements\": [\"Rome is the capital of Italy.\", \"Rome has more than 4 million inhabitants.\"], \"statement_scores\": [1, 0]}\n\nInputs:\n{\"questions\": Protein phosphorylation is a post-translational modification of proteins, was first reported in 1906 by which American biochemist who studied the structure and function of nucleic acids, at the Rockefeller Institute for Medical Research?, \"contexts\": [' Protein phosphorylation was first reported in 1906 by Phoebus Levene at the Rockefeller Institute for Medical Research with the discovery of phosphorylated vitellin.Phoebus Aaron Theodore Levene, M.D. (25 February 1869 \u2013 6 September 1940) was an American biochemist who studied the structure and function of nucleic acids.'], \"predicted_answers\": Protein phosphorylation was discovered in 1906 by a biochemist named Peter Smith, at the Rockefeller Institute for Medical Research.}\nOutputs:"
+   }
+  ],
+  "params": {
+   "response_format": {
+    "type": "json_object"
+   },
+   "seed": 42
+  }
+ },
+ "ts": "2026-11-22T01:09:24"
+}

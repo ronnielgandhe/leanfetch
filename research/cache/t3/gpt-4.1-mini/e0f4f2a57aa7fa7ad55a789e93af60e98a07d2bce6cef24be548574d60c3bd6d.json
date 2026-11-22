@@ -1,0 +1,27 @@
+{
+ "text": "The website surpassed by both Baidu Baike and Hudong.com is run by the Wikimedia Foundation.",
+ "finish": "stop",
+ "input_tokens": 293,
+ "output_tokens": 20,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4.1-mini-2025-04-14",
+ "latency_s": 0.571,
+ "cost_usd": 0.0001492,
+ "request": {
+  "model": "gpt-4.1-mini",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Baidu Baike\n\nBaidu Baike () is a Chinese-language, collaborative, web-based encyclopedia owned and produced by the Chinese search engine Baidu. Its test version was released on 20 April 2006, and within three weeks the encyclopedia had grown to more than 90,000 articles surpassing the number in Chinese Wikipedia. By 2008, Hudong.com had surpassed both in article count, but Baidu Baike later became number one again. The encyclopedia censors its content in accordance with the requirements of the Chinese government.\n\ntitle: Chinese Wikipedia\n\nThe Chinese Wikipedia () is the (Standard) Chinese language edition of Wikipedia. It is run by the Wikimedia Foundation. Started on 11 May 2001, the Chinese Wikipedia currently has about articles and about registered users, of which have administrative privileges.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Who runs the website surpassed by both Baidu Baike and Hudong.com?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T00:57:11"
+}

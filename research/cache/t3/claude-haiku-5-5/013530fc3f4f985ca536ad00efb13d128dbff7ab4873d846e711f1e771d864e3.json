@@ -1,0 +1,27 @@
+{
+ "text": "Mount Everest. George Mallory, the mountaineer whose body Conrad Anker located in 1999, took part in the first three British expeditions to that mountain in the early 1920s.",
+ "finish": "end_turn",
+ "input_tokens": 416,
+ "output_tokens": 61,
+ "reasoning_tokens": null,
+ "served_model": "claude-haiku-5-5",
+ "latency_s": 0.657,
+ "cost_usd": 7.209999999999999e-05,
+ "request": {
+  "model": "claude-haiku-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Conrad Anker\n\nConrad Anker (born November 27, 1962) is an American rock climber, mountaineer, and author. He is famous for his challenging ascents in the high Himalaya and Antarctica. He is the team leader of The North Face climbing team. In 1999 he located George Mallory's body on Everest as a member of a search team looking for the remains of the legendary British climber. He lives in Bozeman, Montana.\n\ntitle: George Mallory\n\nGeorge Herbert Leigh Mallory (18 June 1886 \u2013 8 or 9 June 1924) was an English mountaineer who took part in the first three British expeditions to Mount Everest, in the early 1920s.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Conrad Anker located the body of a mountaineer who took part it the first three British expeditions to which mountain?\nAnswer: "
+   }
+  ],
+  "params": {
+   "max_tokens": 16000
+  }
+ },
+ "ts": "2026-11-22T01:05:28"
+}

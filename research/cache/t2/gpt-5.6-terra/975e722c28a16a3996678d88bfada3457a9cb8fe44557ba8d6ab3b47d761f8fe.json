@@ -1,0 +1,26 @@
+{
+ "text": "{\"statements\":[\"Brisbane is the capital and most populous city in Queensland, Australia, and the third most populous city in Australia.\",\"The Torbreck Home Units are located in Brisbane.\"],\"statement_scores\":[1,1]}",
+ "finish": "stop",
+ "input_tokens": 466,
+ "output_tokens": 84,
+ "reasoning_tokens": 26,
+ "served_model": "gpt-5.6-terra",
+ "latency_s": 1.885,
+ "cost_usd": 0.00194,
+ "request": {
+  "model": "gpt-5.6-terra",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Instructions:\nYour task is to judge the faithfulness or groundedness of statements based on context information. First, please extract statements from a provided predicted answer to a question. Second, calculate a faithfulness score for each statement made in the predicted answer. The score is 1 if the statement can be inferred from the provided context or 0 if it cannot be inferred.\n\nGenerate the response in JSON format with the following keys:\n[\"statements\", \"statement_scores\"]\nConsider the instructions and the examples below to determine those values.\n\nExamples:\nInputs:\n{\"questions\": \"What is the capital of Germany and when was it founded?\", \"contexts\": [\"Berlin is the capital of Germany and was founded in 1244.\"], \"predicted_answers\": \"The capital of Germany, Berlin, was founded in the 13th century.\"}\nOutputs:\n{\"statements\": [\"Berlin is the capital of Germany.\", \"Berlin was founded in 1244.\"], \"statement_scores\": [1, 1]}\nInputs:\n{\"questions\": \"What is the capital of France?\", \"contexts\": [\"Berlin is the capital of Germany.\"], \"predicted_answers\": \"Paris\"}\nOutputs:\n{\"statements\": [\"Paris is the capital of France.\"], \"statement_scores\": [0]}\nInputs:\n{\"questions\": \"What is the capital of Italy?\", \"contexts\": [\"Rome is the capital of Italy.\"], \"predicted_answers\": \"Rome is the capital of Italy with more than 4 million inhabitants.\"}\nOutputs:\n{\"statements\": [\"Rome is the capital of Italy.\", \"Rome has more than 4 million inhabitants.\"], \"statement_scores\": [1, 0]}\n\nInputs:\n{\"questions\": The Torbreck Home Units were the first high-rise and mix-use residential development in Queensland, Australia, one of these heritage-listed home units are located at which capital of and most populous city in the Australian state of Queensland, and the third most populous city in Australia?, \"contexts\": [' These heritage-listed home units are located at 182 Dornoch Terrace, Highgate Hill, Brisbane.Brisbane ( ) is the capital of and most populous city in the Australian state of Queensland, and the third most populous city in Australia.'], \"predicted_answers\": Brisbane}\nOutputs:"
+   }
+  ],
+  "params": {
+   "response_format": {
+    "type": "json_object"
+   },
+   "seed": 42
+  }
+ },
+ "ts": "2026-11-22T01:10:19"
+}

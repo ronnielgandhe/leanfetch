@@ -1,0 +1,26 @@
+{
+ "text": "{\"statements\":[\"The film containing \u201cHeld\u201d on its soundtrack is not directed by Stephen Frears.\"],\"statement_scores\":[0]}",
+ "finish": "stop",
+ "input_tokens": 452,
+ "output_tokens": 222,
+ "reasoning_tokens": 183,
+ "served_model": "gpt-6-luna",
+ "latency_s": 2.763,
+ "cost_usd": 0.0001562,
+ "request": {
+  "model": "gpt-6-luna",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Instructions:\nYour task is to judge the faithfulness or groundedness of statements based on context information. First, please extract statements from a provided predicted answer to a question. Second, calculate a faithfulness score for each statement made in the predicted answer. The score is 1 if the statement can be inferred from the provided context or 0 if it cannot be inferred.\n\nGenerate the response in JSON format with the following keys:\n[\"statements\", \"statement_scores\"]\nConsider the instructions and the examples below to determine those values.\n\nExamples:\nInputs:\n{\"questions\": \"What is the capital of Germany and when was it founded?\", \"contexts\": [\"Berlin is the capital of Germany and was founded in 1244.\"], \"predicted_answers\": \"The capital of Germany, Berlin, was founded in the 13th century.\"}\nOutputs:\n{\"statements\": [\"Berlin is the capital of Germany.\", \"Berlin was founded in 1244.\"], \"statement_scores\": [1, 1]}\nInputs:\n{\"questions\": \"What is the capital of France?\", \"contexts\": [\"Berlin is the capital of Germany.\"], \"predicted_answers\": \"Paris\"}\nOutputs:\n{\"statements\": [\"Paris is the capital of France.\"], \"statement_scores\": [0]}\nInputs:\n{\"questions\": \"What is the capital of Italy?\", \"contexts\": [\"Rome is the capital of Italy.\"], \"predicted_answers\": \"Rome is the capital of Italy with more than 4 million inhabitants.\"}\nOutputs:\n{\"statements\": [\"Rome is the capital of Italy.\", \"Rome has more than 4 million inhabitants.\"], \"statement_scores\": [1, 0]}\n\nInputs:\n{\"questions\": Who was the director of the film which had \"Held\" on its soundtrack?, \"contexts\": ['Held\" was the first single, followed by \"Cold Blooded Old Times\", which later appeared on the \"High Fidelity\" film soundtrack, thereby attracting some attention to Callahan\\'s work.High Fidelity is a 2000 American romantic comedy-drama film directed by Stephen Frears.'], \"predicted_answers\": The film containing \"Held\" on its soundtrack is not directed by Stephen Frears.}\nOutputs:"
+   }
+  ],
+  "params": {
+   "response_format": {
+    "type": "json_object"
+   },
+   "seed": 42
+  }
+ },
+ "ts": "2026-11-22T01:15:12"
+}

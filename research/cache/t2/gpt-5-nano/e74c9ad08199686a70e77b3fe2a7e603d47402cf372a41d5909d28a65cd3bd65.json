@@ -1,0 +1,26 @@
+{
+ "text": "{\n  \"statements\": [\"Botswana\"],\n  \"statement_scores\": [1]\n}",
+ "finish": "stop",
+ "input_tokens": 472,
+ "output_tokens": 476,
+ "reasoning_tokens": 448,
+ "served_model": "gpt-5-nano-2025-08-07",
+ "latency_s": 2.672,
+ "cost_usd": 0.000214,
+ "request": {
+  "model": "gpt-5-nano",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Instructions:\nYour task is to judge the faithfulness or groundedness of statements based on context information. First, please extract statements from a provided predicted answer to a question. Second, calculate a faithfulness score for each statement made in the predicted answer. The score is 1 if the statement can be inferred from the provided context or 0 if it cannot be inferred.\n\nGenerate the response in JSON format with the following keys:\n[\"statements\", \"statement_scores\"]\nConsider the instructions and the examples below to determine those values.\n\nExamples:\nInputs:\n{\"questions\": \"What is the capital of Germany and when was it founded?\", \"contexts\": [\"Berlin is the capital of Germany and was founded in 1244.\"], \"predicted_answers\": \"The capital of Germany, Berlin, was founded in the 13th century.\"}\nOutputs:\n{\"statements\": [\"Berlin is the capital of Germany.\", \"Berlin was founded in 1244.\"], \"statement_scores\": [1, 1]}\nInputs:\n{\"questions\": \"What is the capital of France?\", \"contexts\": [\"Berlin is the capital of Germany.\"], \"predicted_answers\": \"Paris\"}\nOutputs:\n{\"statements\": [\"Paris is the capital of France.\"], \"statement_scores\": [0]}\nInputs:\n{\"questions\": \"What is the capital of Italy?\", \"contexts\": [\"Rome is the capital of Italy.\"], \"predicted_answers\": \"Rome is the capital of Italy with more than 4 million inhabitants.\"}\nOutputs:\n{\"statements\": [\"Rome is the capital of Italy.\", \"Rome has more than 4 million inhabitants.\"], \"statement_scores\": [1, 0]}\n\nInputs:\n{\"questions\": Donald Molosi won an award for his performance as the first President of what country in \"Blue, Black and White\"?, \"contexts\": [' In 2011, Molosi won the Best Short Solo Award at United Solo Theatre Festival for his performance as Seretse Khama in \"Blue, Black and White\".Sir Seretse Goitsebeng Maphiri Khama, GCB, KBE (1 July 1921 \u2013 13 July 1980) was the first President of Botswana, in office from 1966 to 1980.'], \"predicted_answers\": Botswana}\nOutputs:"
+   }
+  ],
+  "params": {
+   "response_format": {
+    "type": "json_object"
+   },
+   "seed": 42
+  }
+ },
+ "ts": "2026-11-22T01:17:59"
+}

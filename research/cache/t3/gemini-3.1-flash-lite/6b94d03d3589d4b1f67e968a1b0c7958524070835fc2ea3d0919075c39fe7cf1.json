@@ -1,0 +1,27 @@
+{
+ "text": "The MGM Grand Las Vegas has 5,124 rooms.",
+ "finish": "FinishReason.STOP",
+ "input_tokens": 381,
+ "output_tokens": 14,
+ "reasoning_tokens": 0,
+ "served_model": "gemini-3.1-flash-lite",
+ "latency_s": 0.975,
+ "cost_usd": 0.00011625,
+ "request": {
+  "model": "gemini-3.1-flash-lite",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Corey I. Sanders\n\nCorey Sanders has served as Chief Operating Officer of MGM Resorts International since June 2010. He oversees operations at the Company\u2019s wholly owned properties, which in Nevada include Bellagio (resort), MGM Grand Las Vegas, Mandalay Bay, The Mirage, New York-New York Hotel and Casino, Monte Carlo Resort and Casino, Luxor Las Vegas, Excalibur Hotel and Casino, Circus Circus Las Vegas, Circus Circus Reno, Gold Strike Jean and Railroad Pass Casino. He also oversees Beau Rivage (Mississippi) in Biloxi and Gold Strike Tunica, both in Mississippi, as well as MGM Grand Detroit.\n\ntitle: MGM Grand Las Vegas\n\nThe MGM Grand Las Vegas (formerly Marina and MGM-Marina) is a hotel and casino located on the Las Vegas Strip in Paradise, Nevada. The MGM Grand is the largest single hotel in the United States with 5,124 rooms. It is also the third-largest hotel complex in the world by number of rooms and second-largest hotel resort complex in the United States behind the combined The Venetian and The Palazzo. When it opened in 1993, the MGM Grand was the largest hotel complex in the world.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: How many rooms does that largest single hotel within the United States that is owned by MGM Resorts International?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T01:06:54"
+}

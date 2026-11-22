@@ -1,0 +1,27 @@
+{
+ "text": "Hong Kong Disneyland was seen as a competitor for Ocean Park Hong Kong and opened on September 12, 2005.",
+ "finish": "FinishReason.STOP",
+ "input_tokens": 521,
+ "output_tokens": 27,
+ "reasoning_tokens": 0,
+ "served_model": "gemini-3.1-flash-lite",
+ "latency_s": 0.811,
+ "cost_usd": 0.00017075,
+ "request": {
+  "model": "gemini-3.1-flash-lite",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Ocean Park Hong Kong\n\nOcean Park Hong Kong, commonly known as Ocean Park, is a marine mammal park, oceanarium, animal theme park and amusement park situated in Wong Chuk Hang and Nam Long Shan in the Southern District of Hong Kong. Opened in 1977 by the then Governor of Hong Kong Sir Murray MacLehose, Ocean Park became popular but by 2005 was unprofitable and widely expected to lose out to the new Hong Kong Disneyland. However, the Park responded with a HK$5.5 billion development plan that saw it expand to over 80 attractions and rides, and steadily grow visitor numbers to 7.6 million in 2014, making it the world's 13th most visited theme park, and the largest theme park in Asia. Half of all visitors now come from mainland China, in growth that parallels rising mainland tourist visitor levels to Hong Kong over the same period. Since this high, visitor numbers have declined to around 6 million in 2016 under the background of declining tourist arrivals in Hong Kong.\n\ntitle: Hong Kong Disneyland\n\nHong Kong Disneyland () is a theme park located on reclaimed land in Penny's Bay, Lantau Island. It is located inside the Hong Kong Disneyland Resort and it is owned and managed by Hong Kong International Theme Parks. It is, together with Ocean Park Hong Kong, one of the two large theme parks in Hong Kong. Hong Kong Disneyland opened to visitors on Monday, 12 September 2005 at 13:00 HKT. Disney attempted to avoid problems of cultural backlash by incorporating Chinese culture, customs, and traditions when designing and building the resort, including adherence to the rules of feng shui. For instance, a bend was put in a walkway near the Hong Kong Disneyland Resort entrance so good qi energy wouldn't flow into the South China Sea.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: What theme park was seen as a competitor for Ocean Park Hong Kong and opened in September 2005?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T01:06:59"
+}

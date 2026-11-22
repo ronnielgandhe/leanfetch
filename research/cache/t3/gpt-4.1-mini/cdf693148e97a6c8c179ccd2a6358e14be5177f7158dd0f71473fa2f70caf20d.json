@@ -1,0 +1,27 @@
+{
+ "text": "The waltz composed in 1844 by \"The Waltz King\" is Sinngedichte, Op. 1.",
+ "finish": "stop",
+ "input_tokens": 381,
+ "output_tokens": 27,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4.1-mini-2025-04-14",
+ "latency_s": 0.779,
+ "cost_usd": 0.0001956,
+ "request": {
+  "model": "gpt-4.1-mini",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Johann Strauss II\n\nJohann Strauss II (October 25, 1825 \u2013 June 3, 1899), also known as Johann Strauss Jr., the Younger, the Son (German: \"Sohn\" ), Johann Baptist Strauss, was an Austrian composer of light music, particularly dance music and operettas. He composed over 500 waltzes, polkas, quadrilles, and other types of dance music, as well as several operettas and a ballet. In his lifetime, he was known as \"The Waltz King\", and was largely then responsible for the popularity of the waltz in Vienna during the 19th century.\n\ntitle: Sinngedichte\n\nSinngedichte (\"Poems of the Senses\" or \"Epigrams\"), Op. 1, is a waltz composed by Johann Strauss II in 1844 for his debut as a composer at Dommayer's Casino in Vienna. The waltz was played along with several other compositions that Strauss had written for the occasion, such as the waltz Gunstwerber and the polka Herzenslust. The waltz was an unprecedented success when first performed, and had to be repeated a record nineteen times.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: What waltz was composed by \"The Waltz King\" in 1844?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T00:57:32"
+}

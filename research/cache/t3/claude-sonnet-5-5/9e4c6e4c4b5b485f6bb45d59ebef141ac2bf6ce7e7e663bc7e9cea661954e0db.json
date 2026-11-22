@@ -1,0 +1,27 @@
+{
+ "text": "Port Macquarie is the larger town. It had a population of 45,698 in June 2016, while Bonny Hills had 2,870 people at the 2011 census. Bonny Hills is also a small town about 30 minutes' drive south of Port Macquarie.",
+ "finish": "end_turn",
+ "input_tokens": 428,
+ "output_tokens": 86,
+ "reasoning_tokens": null,
+ "served_model": "claude-sonnet-5-5",
+ "latency_s": 8.352,
+ "cost_usd": 0.001716,
+ "request": {
+  "model": "claude-sonnet-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Bonny Hills, New South Wales\n\nBonny Hills is a town in New South Wales, Australia about 30 minutes drive south of Port Macquarie. As of the 2011 census, it had a population of 2,870 people.\n\ntitle: Port Macquarie\n\nPort Macquarie is a coastal town in the local government area of Port Macquarie-Hastings. It is located on the Mid North Coast of New South Wales, Australia, about 390 km north of Sydney, and 570 km south of Brisbane. The town is located on the Tasman Sea coast, at the mouth of the Hastings River, and at the eastern end of the Oxley Highway (B56). The town with its suburbs had a population of 45,698 in June 2016.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Which New South Wales town is larger, Port Macquarie or Bonny Hills?\nAnswer: "
+   }
+  ],
+  "params": {
+   "max_tokens": 16000
+  }
+ },
+ "ts": "2026-11-22T01:03:51"
+}

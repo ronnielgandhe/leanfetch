@@ -1,0 +1,25 @@
+{
+ "text": "Emily Bergl was in *Shameless*.",
+ "finish": "stop",
+ "input_tokens": 312,
+ "output_tokens": 29,
+ "reasoning_tokens": 10,
+ "served_model": "gpt-6-luna",
+ "latency_s": 1.085,
+ "cost_usd": 4.57e-05,
+ "request": {
+  "model": "gpt-6-luna",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Emily Bergl\n\nEmily Bergl (born Anne Emily Bergl, 25 April, 1975) is an English-American actress. She is best known for her role as Rachel Lang in the supernatural horror film \"\" (1999), Annie O'Donnell on the ABC television show \"Men in Trees\" (2006\u201308), Beth Young on \"Desperate Housewives\" (2010\u201311), Tammi Bryant on the TNT drama series \"Southland\" (2009\u20132013) and Sammi Slott in \"Shameless\" (2014\u20132015). She also performs as a cabaret singer.\n\ntitle: Shameless (U.S. TV series)\n\nShameless is an American comedy-drama television series which airs on Showtime. It is the remake of the British series of the same name. Set in Chicago, the series is filmed in Los Angeles, with the exterior scenes shot in Chicago.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: What series was Emily Bergl in that is set in Chicago?\nAnswer: "
+   }
+  ],
+  "params": {}
+ },
+ "ts": "2026-11-22T00:58:47"
+}

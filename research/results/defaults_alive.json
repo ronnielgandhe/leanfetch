@@ -1,0 +1,47 @@
+[
+ {
+  "repo": "graphrag",
+  "line": "packages/graphrag/graphrag/config/defaults.py:33",
+  "model": "gpt-4.1",
+  "checked_at": "2026-11-22T00:54:48",
+  "status": "ok",
+  "served_model": "gpt-4.1-2025-04-14",
+  "reply": "OK"
+ },
+ {
+  "repo": "haystack",
+  "line": "haystack/components/generators/chat/openai.py:135",
+  "model": "gpt-5.6-terra",
+  "checked_at": "2026-11-22T00:54:50",
+  "status": "ok",
+  "served_model": "gpt-5.6-terra",
+  "reply": "OK"
+ },
+ {
+  "repo": "llama_index",
+  "line": "llama-index-llms-openai/llama_index/llms/openai/responses.py:105",
+  "model": "gpt-4o-mini",
+  "checked_at": "2026-11-22T00:54:51",
+  "status": "ok",
+  "served_model": "gpt-4o-mini-2024-07-18",
+  "reply": "OK"
+ },
+ {
+  "repo": "llama_index",
+  "line": "llama-index-llms-openai/llama_index/llms/openai/base.py:99",
+  "model": "gpt-3.5-turbo",
+  "checked_at": "2026-11-22T00:54:51",
+  "status": "error",
+  "error_type": "NotFoundError",
+  "error": "Error code: 404 - The model `gpt-3.5-turbo` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations"
+ },
+ {
+  "repo": "llama_index",
+  "line": "llama-index-core/llama_index/core/postprocessor/rankGPT_rerank.py:20",
+  "model": "gpt-3.5-turbo-16k",
+  "checked_at": "2026-11-22T00:54:51",
+  "status": "error",
+  "error_type": "NotFoundError",
+  "error": "Error code: 404 - The model `gpt-3.5-turbo-16k` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations"
+ }
+]

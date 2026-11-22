@@ -75,6 +75,8 @@ def norm_name(s):
     s = s.upper().replace("“", '"').replace("”", '"').replace("’", "'").replace("‘", "'")
     s = re.sub(r"[^\w&.'\- ]", " ", s)
     s = re.sub(r"\s+", " ", s).strip(" .'-\"")
+    s = re.sub(r"\s*'\s*S$", "", s)
+    s = re.sub(r"\s+([.'\-])", r"\1", s).strip(" .'-\"")
     if s.startswith("THE "):
         s = s[4:]
     return s

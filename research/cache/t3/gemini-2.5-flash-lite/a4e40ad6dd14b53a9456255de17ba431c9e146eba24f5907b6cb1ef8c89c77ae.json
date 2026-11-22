@@ -1,0 +1,27 @@
+{
+ "text": "The man who abolished the Consell in 1718 reassumed the throne upon his son's death.",
+ "finish": "FinishReason.STOP",
+ "input_tokens": 438,
+ "output_tokens": 24,
+ "reasoning_tokens": 0,
+ "served_model": "gemini-2.5-flash-lite",
+ "latency_s": 0.787,
+ "cost_usd": 5.3400000000000004e-05,
+ "request": {
+  "model": "gemini-2.5-flash-lite",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Gran i General Consell\n\nThe Gran i General Consell (Catalan: \"Great and General Council\") was the supreme political, administrative, and representative organ of the Kingdom of Majorca. Since the Kingdom of Majorca did not have courts, the Gran i General Consell took over most of the functions they would otherwise have had, including the role of a representative body. The Gran i General Consell evolved from the Catalan municipal councils, especially that of the City of Majorca (present-day Palma de Mallorca. The body that was to become the Gran i General Consell was founded in 1249, and the Consell was abolished on 22 July 1718 by Philip V, empowered by the Nova Planta Decree of Majorca and Ibiza (28 November 1715). At the same time, all other separate Majorcan institutions were dissolved.\n\ntitle: Philip V of Spain\n\nPhilip V (Spanish: \"Felipe V\" , French: \"Philippe\" , Italian: \"Filippo\" ; 19 December 1683 \u2013 9 July 1746) was King of Spain from 1 November 1700 to 15 January 1724, when he abdicated in favour of his son Louis, and from 6 September 1724, when he reassumed the throne upon his son's death, to his own death 9 July 1746.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: What made the man who abolished the Consell in 1718 resume the throne?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T01:08:33"
+}

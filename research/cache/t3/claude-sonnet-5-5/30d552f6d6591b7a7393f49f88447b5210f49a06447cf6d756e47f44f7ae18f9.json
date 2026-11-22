@@ -1,0 +1,27 @@
+{
+ "text": "Said Fazal Akbar was appointed by President Hamid Karzai, who served as President of Afghanistan until 29 September 2014.",
+ "finish": "end_turn",
+ "input_tokens": 523,
+ "output_tokens": 47,
+ "reasoning_tokens": null,
+ "served_model": "claude-sonnet-5-5",
+ "latency_s": 1.543,
+ "cost_usd": 0.001516,
+ "request": {
+  "model": "claude-sonnet-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Hamid Karzai\n\nHamid Karzai (Pashto/Dari: \u200e \u200e \u062d\u0627\u0645\u062f \u06a9\u0631\u0632\u06cc; born 24 December 1957) served as President of Afghanistan for almost ten years, from 7 December 2004 to 29 September 2014. He comes from a politically active family; Karzai's father, uncle and grandfather were all active in Afghan politics and government. Karzai and his father before him, Abdul Ahad Karzai, were each head of the Popalzai tribe of the Durrani tribal confederation.\n\ntitle: Said Fazal Akbar\n\nSaid Fazal Akbar was the first Governor of Kunar province in Afghanistan after the fall of the Taliban in 2001. He was an ex-Mujahideen who was running a clothing store in Oakland, California when he was appointed Governor by President Hamid Karzai. His governorship is chronicled in the book by his son, Hyder Akbar, \"Come Back to Afghanistan, A California Teenager's Story\"\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Said Fazal Akbar was appointed Governor by the President of Afghanistan that served until what day?\nAnswer: "
+   }
+  ],
+  "params": {
+   "max_tokens": 16000
+  }
+ },
+ "ts": "2026-11-22T01:04:18"
+}

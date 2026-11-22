@@ -1,0 +1,27 @@
+{
+ "text": "License to Drive featured Richard Masur, who later served two terms as president of the Screen Actors Guild.",
+ "finish": "stop",
+ "input_tokens": 262,
+ "output_tokens": 21,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4.1-mini-2025-04-14",
+ "latency_s": 0.523,
+ "cost_usd": 0.0001384,
+ "request": {
+  "model": "gpt-4.1-mini",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Richard Masur\n\nRichard Masur (born November 20, 1948) is an American actor who has appeared in more than 80 movies. From 1995 to 1999, he served two terms as president of the Screen Actors Guild (SAG). Masur currently sits on the Corporate Board of the Motion Picture & Television Fund.\n\ntitle: License to Drive\n\nLicense to Drive is a 1988 teen adventure film written by Neil Tolkin and directed by Greg Beeman in his feature film directorial debut. It stars Corey Haim, Corey Feldman, Heather Graham, Carol Kane, Richard Masur, Michael Manasseri and Nina Siemaszko.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: License to Drive featured what future president of the Screen Actors Guild?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T00:57:31"
+}

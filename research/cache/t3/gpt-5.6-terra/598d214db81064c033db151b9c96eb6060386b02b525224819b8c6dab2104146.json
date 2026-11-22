@@ -1,0 +1,25 @@
+{
+ "text": "1966",
+ "finish": "stop",
+ "input_tokens": 405,
+ "output_tokens": 5,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-5.6-terra",
+ "latency_s": 0.942,
+ "cost_usd": 0.00087,
+ "request": {
+  "model": "gpt-5.6-terra",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Gary Anthony Williams\n\nGary Anthony Williams (born March 14, 1966) is an American actor and comedian who provided the voice of Uncle Ruckus on \"The Boondocks\", Yancy Westridge in the video game \"Alpha Protocol\", and Horace Warfield in \"\". He appeared on the television series \"Weeds\", \"Boston Legal\", \"Blue Collar TV\", and as \"Abe\" Kenarban in \"Malcolm in the Middle\". Williams co-founded and is Artistic Director of the L.A. Comedy Shorts film festival in Hollywood, California. He also starred alongside Cedric the Entertainer on the hit TV Land sitcom \"The Soul Man\". Williams is currently a regular on \"Whose Line is it Anyway?\".\n\ntitle: Charlotte's Shorts\n\nCharlotte's Shorts is a 90 minute live performance of Charlotte Dean's short stories. The show has traditionally been cast with current and past Groundlings, such as Tim Bagley, Jim Rash, Jillian Bell, Jordan Black, Gary Anthony Williams, Jonathan Stark, Michael Hitchcock, Andrew Friedman, Daniele Gaither, Mindy Sterling, and Laraine Newman. In 2014, \"Charlotte's Shorts\" was performed at various theaters in Los Angeles, including two shows at The Groundlings Theater. \"Charlotte's Shorts\" is prominently featured in SF Sketchfest and The Hollywood Fringe Festival.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: The actor who appeared on Charlotte's Shorts and Weeds was born in what year?\nAnswer: "
+   }
+  ],
+  "params": {}
+ },
+ "ts": "2026-11-22T00:56:22"
+}

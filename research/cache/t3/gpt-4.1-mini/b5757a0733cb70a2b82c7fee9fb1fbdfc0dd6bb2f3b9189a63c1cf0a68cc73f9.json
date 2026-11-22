@@ -1,0 +1,27 @@
+{
+ "text": "The conditions are known as Hampton's hump and Hampton's line.",
+ "finish": "stop",
+ "input_tokens": 381,
+ "output_tokens": 13,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4.1-mini-2025-04-14",
+ "latency_s": 0.551,
+ "cost_usd": 0.0001732,
+ "request": {
+  "model": "gpt-4.1-mini",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Walter Reed Army Medical Center\n\nThe Walter Reed Army Medical Center (WRAMC) \u2014 known as Walter Reed General Hospital (WRGH) until 1951 \u2014 was the U.S. Army's flagship medical center from 1909 to 2011. Located on 113 acre in Washington, D.C., it served more than 150,000 active and retired personnel from all branches of the military. The center was named after Major Walter Reed (1851\u20131902), an army physician who led the team that confirmed that yellow fever is transmitted by mosquitoes rather than direct contact.\n\ntitle: Aubrey Otis Hampton\n\nAubrey Otis Hampton (1900, Copeville, Texas \u2013 1955) was an American radiologist remembered for describing Hampton's hump and Hampton's line. He graduated from Baylor College of Medicine in 1925, undertook his internship in Dallas and worked at the Massachusetts General Hospital from 1926. He became chief of radiology at Massachusetts General in 1941, serving as chief of radiology at the Walter Reed Army Hospital in Washington, D.C. from 1942 to 1945.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: What is the name of the conditions that the radiologist who served as chief of radiology at the U.S. Army's flagship medical center from 1909 to 2011?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T00:57:11"
+}

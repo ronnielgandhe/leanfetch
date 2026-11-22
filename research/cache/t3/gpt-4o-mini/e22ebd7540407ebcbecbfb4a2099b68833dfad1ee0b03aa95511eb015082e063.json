@@ -1,0 +1,27 @@
+{
+ "text": "Judy Lewis's father was nicknamed \"The King.\"",
+ "finish": "stop",
+ "input_tokens": 376,
+ "output_tokens": 12,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4o-mini-2024-07-18",
+ "latency_s": 0.749,
+ "cost_usd": 6.36e-05,
+ "request": {
+  "model": "gpt-4o-mini",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Clark Gable\n\nWilliam Clark Gable (February 1, 1901 \u2013 November 16, 1960) was an American film actor and military officer, often referred to as \"The King of Hollywood\" or just simply as \"The King\". Gable began his career as a stage actor and appeared as an extra in silent films between 1924 and 1926, and progressed to supporting roles with a few films for Metro-Goldwyn-Mayer in 1931. The next year, he landed his first leading Hollywood role and over the next three decades he became a leading man in more than 60 motion pictures.\n\ntitle: Girl 27\n\nGirl 27 is a 2007 documentary film about the 1937 rape of dancer and sometime movie extra Patricia Douglas (1917-2003) at an M-G-M exhibitors' convention, the front-page news stories that followed, and the studio's subsequent cover-up of the crime. Also covered in the film are a similar assault on singer Eloise Spann and her subsequent suicide, and the better-known scandal involving actress Loretta Young and her \"adopted\" daughter Judy Lewis, the product of her affair with Clark Gable during the production of \"The Call of the Wild\".\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: What was the nickname of Judy Lewis's father?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T00:58:12"
+}

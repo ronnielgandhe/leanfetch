@@ -52,11 +52,14 @@ def _record(stage, model, usd):
         led["by_model"][model] = round(led["by_model"].get(model, 0) + usd, 6)
         led["calls"] += 1
         led["updated"] = time.strftime("%Y-%m-%dT%H:%M:%S")
-        SPEND.write_text(json.dumps(led, indent=2))
+        tmp = SPEND.with_suffix(f".tmp{os.getpid()}")
+        tmp.write_text(json.dumps(led, indent=2))
+        os.replace(tmp, SPEND)
 
 
 def spent():
-    return ledger()["total_usd"]
+    with _lock:
+        return ledger()["total_usd"]
 
 
 def guard(estimate_usd):

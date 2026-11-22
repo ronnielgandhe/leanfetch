@@ -1,0 +1,27 @@
+{
+ "text": "In the Glee episode \"Bad Reputation,\" Sue Sylvester dances to \"Physical,\" a song by Olivia Newton-John.",
+ "finish": "stop",
+ "input_tokens": 513,
+ "output_tokens": 25,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4o-mini-2024-07-18",
+ "latency_s": 0.988,
+ "cost_usd": 9.195e-05,
+ "request": {
+  "model": "gpt-4o-mini",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Bad Reputation (Glee)\n\n\"Bad Reputation\" is the seventeenth episode of the American television series, \"Glee\". The episode premiered on the Fox network on May 4, 2010. It was directed by Elodie Keene, and written by series creator Ian Brennan. In \"Bad Reputation\", cheerleading coach Sue Sylvester (Jane Lynch) is publicly ridiculed when a video of her dancing to Olivia Newton-John's \"Physical\" is posted on YouTube. A salacious list about members of the glee club circulates the school, leading certain members to try to earn themselves a bad reputation. Newton-John guest-stars as herself in the episode, and Molly Shannon makes her first appearance in a recurring role. Following their romance in the episode \"Mash-Up\", club members Rachel (Lea Michele) and Puck (Mark Salling) are reunited, a decision made by the producers due to the unexpected popularity of the pairing.\n\ntitle: Olivia Newton-John\n\nOlivia Newton-John, (born 26 September 1948) is an Australian singer, songwriter, actress, entrepreneur and activist. She is a four-time Grammy award winner who has amassed five number-one and ten other top ten \"Billboard\" Hot 100 singles, and two number-one \"Billboard\" 200 solo albums. Eleven of her singles (including two platinum) and fourteen of her albums (including two platinum and four double platinum) have been certified gold by the RIAA. She has sold an estimated 100 million records worldwide, making her one of the world's best-selling artists of all time. She starred in the musical film \"Grease\", and is one of the most successful in history, with the single You're the One That I Want, with John Travolta, one of the best selling singles.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: In the Glee episode \"Bad Reputation,\" Sue Sylvester dances to this song, by a four-time Grammy winner and star of musical film \"Grease.\"\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T00:58:14"
+}

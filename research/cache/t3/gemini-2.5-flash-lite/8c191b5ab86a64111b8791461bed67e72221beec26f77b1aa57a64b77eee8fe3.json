@@ -1,0 +1,27 @@
+{
+ "text": "The film was made in Rome.",
+ "finish": "FinishReason.STOP",
+ "input_tokens": 376,
+ "output_tokens": 7,
+ "reasoning_tokens": 0,
+ "served_model": "gemini-2.5-flash-lite",
+ "latency_s": 0.535,
+ "cost_usd": 4.04e-05,
+ "request": {
+  "model": "gemini-2.5-flash-lite",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Franco Corelli\n\nFranco Corelli (8 April 1921 \u2013 29 October 2003) was an Italian tenor who had a major international opera career between 1951 and 1976. Associated in particular with the spinto and dramatic tenor roles of the Italian repertory, he was celebrated universally for his powerhouse voice, electrifying top notes, clear timbre, passionate singing and remarkable performances. Dubbed the \"Prince of tenors\", Corelli possessed handsome features and a charismatic stage presence which endeared him to audiences. He had a long and fruitful partnership with the Metropolitan Opera in New York City between 1961 and 1975. He also appeared on the stages of most of the major opera houses in Europe and with opera companies throughout North America.\n\ntitle: Tosca (1956 film)\n\nTosca is a 1956 Italian musical film directed by Carmine Gallone and starring Franca Duval, Afro Poli and Franco Corelli. It is based on the opera \"Tosca\" by Giacomo Puccini. It was made at Cinecitt\u00e0 in Rome.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: In what city did the \"Prince of tenors\" star in a film based on an opera by Giacomo Puccini?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T01:08:28"
+}

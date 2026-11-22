@@ -1,0 +1,25 @@
+{
+ "text": "James G. Kiernan.",
+ "finish": "stop",
+ "input_tokens": 317,
+ "output_tokens": 36,
+ "reasoning_tokens": 21,
+ "served_model": "gpt-5.6-terra",
+ "latency_s": 0.953,
+ "cost_usd": 0.001066,
+ "request": {
+  "model": "gpt-5.6-terra",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Mary MacLane\n\nMary MacLane (May 1, 1881 \u2013 \"c\". August 6, 1929) was a controversial Canadian-born American writer whose frank memoirs helped usher in the confessional style of autobiographical writing. MacLane was known as the \"Wild Woman of Butte\".\n\ntitle: James G. Kiernan\n\nJames G. Kiernan was an American psychologist, prominent in American gay history for the first recorded use of the terms \"heterosexual\" and \"homosexual\" in 1892. Jonathan Ned Katz, historian of the American gay and lesbian experience, cites Kiernan's initial attribution of perversion to the term \"heterosexual.\" Kiernan went on to write of a variety of topics, e.g. Mary MacLane's disciple Viola Larsen, who stole a horse and wrote romantic letters to other girls, as an example of child precocity and possible genius.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Who is the psychologist who wrote about the disciple of the person known as the \"Wild Woman of Buttle\"?\nAnswer: "
+   }
+  ],
+  "params": {}
+ },
+ "ts": "2026-11-22T00:56:22"
+}

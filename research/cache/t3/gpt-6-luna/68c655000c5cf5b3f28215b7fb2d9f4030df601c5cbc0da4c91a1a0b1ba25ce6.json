@@ -1,0 +1,25 @@
+{
+ "text": "Earth.",
+ "finish": "stop",
+ "input_tokens": 239,
+ "output_tokens": 19,
+ "reasoning_tokens": 8,
+ "served_model": "gpt-6-luna",
+ "latency_s": 0.743,
+ "cost_usd": 3.3400000000000005e-05,
+ "request": {
+  "model": "gpt-6-luna",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Jim Betts (politician)\n\nJim Betts is a former member of the Ohio House of Representatives. He ran against incumbent U.S. Senator John Glenn in 1980. He lost and ran in 1982 for Lieutenant Governor.\n\ntitle: John Glenn\n\nJohn Herschel Glenn Jr. (July 18, 1921 \u2013 December 8, 2016) was a United States Marine Corps aviator, engineer, astronaut, and United States Senator from Ohio. In 1962 he became the first American to orbit the Earth, circling it three times.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Jim Betts ran against the first American to orbit what?\nAnswer: "
+   }
+  ],
+  "params": {}
+ },
+ "ts": "2026-11-22T00:59:04"
+}

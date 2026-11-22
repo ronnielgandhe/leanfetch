@@ -1,0 +1,27 @@
+{
+ "text": "The Paddington Bear books first appeared on 13 October 1958, when \"A Bear Called Paddington\" was published.",
+ "finish": "end_turn",
+ "input_tokens": 569,
+ "output_tokens": 40,
+ "reasoning_tokens": null,
+ "served_model": "claude-sonnet-5-5",
+ "latency_s": 8.466,
+ "cost_usd": 0.001538,
+ "request": {
+  "model": "claude-sonnet-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Paddington (TV series)\n\nPaddington is an animated television programme based on the Paddington Bear books by Michael Bond. The series was scripted by Bond himself, and produced by FilmFair London; it was narrated by actor Michael Hordern, who also voices all characters.\n\ntitle: Paddington Bear\n\nPaddington Bear is a fictional character in children's literature. He first appeared on 13 October 1958 in the children's book \"A Bear Called Paddington\" and has been featured in more than twenty books written by English author Michael Bond and illustrated by Peggy Fortnum and other artists. The friendly bear from deepest, darkest Peru\u2014with his old hat, battered suitcase (complete with a secret compartment, enabling it to hold more items than it would appear to), duffel coat and love of marmalade\u2014has become a classic character from English children's literature. Paddington books have been translated into 30 languages across 70 titles and sold more than 30 million copies worldwide. A much loved fictional character in British culture, a Paddington Bear soft toy was chosen by British tunnellers as the first item to pass through to their French counterparts when the two sides of the Channel Tunnel were linked in 1994.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Paddington is a television program based on the books that first appeared on what date?\nAnswer: "
+   }
+  ],
+  "params": {
+   "max_tokens": 16000
+  }
+ },
+ "ts": "2026-11-22T01:03:51"
+}

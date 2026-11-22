@@ -1,0 +1,25 @@
+{
+ "text": "Merovech",
+ "finish": "stop",
+ "input_tokens": 339,
+ "output_tokens": 49,
+ "reasoning_tokens": 37,
+ "served_model": "gpt-6-luna",
+ "latency_s": 1.137,
+ "cost_usd": 5.8399999999999997e-05,
+ "request": {
+  "model": "gpt-6-luna",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Childeric I\n\nChilderic I (French: \"Child\u00e9ric\" , Latin: \"Childericus\" , reconstructed Frankish: \"*Hildir\u012bk\"; 440 \u2013 481/482) was a Merovingian king of the Salian Franks and the father of Clovis I, who would unite the Franks and found the Merovingian dynasty.\n\ntitle: Merovingian dynasty\n\nThe Merovingians ( ) were a Salian Frankish dynasty that ruled the Franks for nearly 300 years in a region known as Francia in Latin, beginning in the middle of the 5th century. Their territory largely corresponded to ancient Gaul as well as the Roman provinces of Raetia, Germania Superior and the southern part of Germania. Childeric I (c. 457 \u2013 481), the son of Merovech, leader of the Salian Franks, founded the Merovingian dynasty, but it was his famous son Clovis I (481\u2013511) who united all of Gaul under Merovingian rule.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: What is the name of the father of Childericus?\nAnswer: "
+   }
+  ],
+  "params": {}
+ },
+ "ts": "2026-11-22T00:59:18"
+}

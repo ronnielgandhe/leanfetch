@@ -1,0 +1,26 @@
+{
+ "text": "{\"statements\":[\"Masjid al-Qiblatayn is in Zeila.\"],\"statement_scores\":[1]}",
+ "finish": "stop",
+ "input_tokens": 574,
+ "output_tokens": 87,
+ "reasoning_tokens": 53,
+ "served_model": "gpt-5.6-terra",
+ "latency_s": 1.771,
+ "cost_usd": 0.002192,
+ "request": {
+  "model": "gpt-5.6-terra",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Instructions:\nYour task is to judge the faithfulness or groundedness of statements based on context information. First, please extract statements from a provided predicted answer to a question. Second, calculate a faithfulness score for each statement made in the predicted answer. The score is 1 if the statement can be inferred from the provided context or 0 if it cannot be inferred.\n\nGenerate the response in JSON format with the following keys:\n[\"statements\", \"statement_scores\"]\nConsider the instructions and the examples below to determine those values.\n\nExamples:\nInputs:\n{\"questions\": \"What is the capital of Germany and when was it founded?\", \"contexts\": [\"Berlin is the capital of Germany and was founded in 1244.\"], \"predicted_answers\": \"The capital of Germany, Berlin, was founded in the 13th century.\"}\nOutputs:\n{\"statements\": [\"Berlin is the capital of Germany.\", \"Berlin was founded in 1244.\"], \"statement_scores\": [1, 1]}\nInputs:\n{\"questions\": \"What is the capital of France?\", \"contexts\": [\"Berlin is the capital of Germany.\"], \"predicted_answers\": \"Paris\"}\nOutputs:\n{\"statements\": [\"Paris is the capital of France.\"], \"statement_scores\": [0]}\nInputs:\n{\"questions\": \"What is the capital of Italy?\", \"contexts\": [\"Rome is the capital of Italy.\"], \"predicted_answers\": \"Rome is the capital of Italy with more than 4 million inhabitants.\"}\nOutputs:\n{\"statements\": [\"Rome is the capital of Italy.\", \"Rome has more than 4 million inhabitants.\"], \"statement_scores\": [1, 0]}\n\nInputs:\n{\"questions\": Masjid al-Qiblatayn, is a mosque in which city, situated in the northwestern Awdal region of Somaliland, officially the Republic of Somaliland, is a self-declared state internationally recognised as an autonomous region of Somalia?, \"contexts\": ['Masjid al-Qiblatayn (Arabic: \u0645\u0633\u062c\u062f \u0627\u0644\u0642\u0628\u0644\u062a\u064a\u0646\\u200e \\u200e ; \"Mosque of the two Qiblas\") is a mosque in Zeila, situated in the northwestern Awdal region of Somaliland.Somaliland (Somali: \"Somaliland\" ; Arabic: \u0635\u0648\u0645\u0627\u0644\u064a\u0644\u0627\u0646\u062f\\u200e \\u200e \"\u1e62\u016bm\u0101l\u012bl\u0101nd \", \u0623\u0631\u0636 \u0627\u0644\u0635\u0648\u0645\u0627\u0644 \"Ar\u1e0d a\u1e63-\u1e62\u016bm\u0101l \"), officially the Republic of Somaliland (Somali: \"Jamhuuriyadda Somaliland\" , Arabic: \u062c\u0645\u0647\u0648\u0631\u064a\u0629 \u0635\u0648\u0645\u0627\u0644\u064a\u0644\u0627\u0646\u062f\\u200e \\u200e \"Jumh\u016br\u012byat \u1e62\u016bm\u0101l\u012bl\u0101nd\"), is a self-declared state internationally recognised as an autonomous region of Somalia.'], \"predicted_answers\": Zeila}\nOutputs:"
+   }
+  ],
+  "params": {
+   "response_format": {
+    "type": "json_object"
+   },
+   "seed": 42
+  }
+ },
+ "ts": "2026-11-22T01:10:30"
+}

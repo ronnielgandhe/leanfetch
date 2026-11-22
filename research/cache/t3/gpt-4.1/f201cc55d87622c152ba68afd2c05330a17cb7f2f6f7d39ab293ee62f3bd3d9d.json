@@ -1,0 +1,27 @@
+{
+ "text": "Orono, Maine",
+ "finish": "stop",
+ "input_tokens": 363,
+ "output_tokens": 4,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4.1-2025-04-14",
+ "latency_s": 0.36,
+ "cost_usd": 0.000758,
+ "request": {
+  "model": "gpt-4.1",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: University of Maine\n\nThe University of Maine (also referred to as UMaine, Maine or UMO) is a public research university in Orono, Maine, United States. The university was established in 1865 as a land grant college and is the flagship university of the University of Maine System. The University of Maine is one of only nine land, sea and space grant institutions in the nation.\n\ntitle: Marchant Glacier\n\nMarchant Glacier ( ) is a glacier, about 7 nmi long, which drains the slopes of Rampart Ridge between Mount Bishop and Mount Potter and flows northwest to the vicinity of Mount Bockheim, in the Royal Society Range, Victoria Land, Antarctica. It was named by the Advisory Committee on Antarctic Names in 1994 after David R. Marchant, a glacial geologist at the University of Maine (and from 1995 at Boston University). In connection with Antarctic field work since 1985, Marchant discovered and used volcanic ashes to infer paleoclimate change and geologic stability in the McMurdo Dry Valleys and map the glacial history of the East Antarctic Ice Sheet.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: The university which David R. Marchant was a member of in 1994 is located in what city?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T00:55:08"
+}

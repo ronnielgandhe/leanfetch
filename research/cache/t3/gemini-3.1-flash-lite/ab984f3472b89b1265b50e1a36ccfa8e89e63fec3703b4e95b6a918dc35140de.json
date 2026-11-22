@@ -1,0 +1,27 @@
+{
+ "text": "Dan Bilzerian",
+ "finish": "FinishReason.STOP",
+ "input_tokens": 256,
+ "output_tokens": 4,
+ "reasoning_tokens": 0,
+ "served_model": "gemini-3.1-flash-lite",
+ "latency_s": 0.792,
+ "cost_usd": 7e-05,
+ "request": {
+  "model": "gemini-3.1-flash-lite",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Dan Bilzerian\n\nDan Brandon Bilzerian (born December 7, 1980) is an American professional poker player.\n\ntitle: Extraction (film)\n\nExtraction is a 2015 American action-thriller film directed by Steven C. Miller and written by Umair Aleem. The film stars Kellan Lutz, Bruce Willis, Gina Carano, D. B. Sweeney, Dan Bilzerian and Steve Coulter. The film was released on December 18, 2015, in a limited release, and through video on demand by Lionsgate Premiere.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Which American professional poker player also starred in the 2015 movie \"Extraction\"?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T01:06:58"
+}

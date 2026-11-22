@@ -1,0 +1,27 @@
+{
+ "text": "The lead of the CBS series \"I Had Three Wives\" played the role of Jesus in \"Godspell.\"",
+ "finish": "stop",
+ "input_tokens": 323,
+ "output_tokens": 23,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4.1-mini-2025-04-14",
+ "latency_s": 0.743,
+ "cost_usd": 0.00016600000000000002,
+ "request": {
+  "model": "gpt-4.1-mini",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Victor Garber\n\nVictor Joseph Garber (born March 16, 1949) is a Canadian actor and singer. He is known for playing Jesus in \"Godspell\", Anthony Hope in \"\", John Wilkes Booth in \"Assassins\", Jack Bristow in the television series \"Alias\", Max in \"Lend Me a Tenor\", Thomas Andrews in James Cameron's \"Titanic\", and Ken Taylor, Canadian Ambassador to Iran, in \"Argo\". He is currently a series regular on \"Legends of Tomorrow\" as Dr. Martin Stein, playing the same role as a guest star on \"The Flash\" and the web series \"Vixen.\n\ntitle: I Had Three Wives\n\nI Had Three Wives is an American comedy-drama television series that aired on CBS from August 14 to September 11, 1985. The series' lead was Victor Garber in his first starring role on television.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: The lead of the CBS series \"I Had Three Wives\" played what role in \"Godspell\"?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T00:56:55"
+}

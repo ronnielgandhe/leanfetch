@@ -1,0 +1,26 @@
+{
+ "text": "{\"statements\": [\"Eight Misbehavin' features a popular convenience store owner.\"], \"statement_scores\": [0]}",
+ "finish": "stop",
+ "input_tokens": 489,
+ "output_tokens": 25,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4o-mini-2024-07-18",
+ "latency_s": 0.612,
+ "cost_usd": 8.834999999999999e-05,
+ "request": {
+  "model": "gpt-4o-mini",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Instructions:\nYour task is to judge the faithfulness or groundedness of statements based on context information. First, please extract statements from a provided predicted answer to a question. Second, calculate a faithfulness score for each statement made in the predicted answer. The score is 1 if the statement can be inferred from the provided context or 0 if it cannot be inferred.\n\nGenerate the response in JSON format with the following keys:\n[\"statements\", \"statement_scores\"]\nConsider the instructions and the examples below to determine those values.\n\nExamples:\nInputs:\n{\"questions\": \"What is the capital of Germany and when was it founded?\", \"contexts\": [\"Berlin is the capital of Germany and was founded in 1244.\"], \"predicted_answers\": \"The capital of Germany, Berlin, was founded in the 13th century.\"}\nOutputs:\n{\"statements\": [\"Berlin is the capital of Germany.\", \"Berlin was founded in 1244.\"], \"statement_scores\": [1, 1]}\nInputs:\n{\"questions\": \"What is the capital of France?\", \"contexts\": [\"Berlin is the capital of Germany.\"], \"predicted_answers\": \"Paris\"}\nOutputs:\n{\"statements\": [\"Paris is the capital of France.\"], \"statement_scores\": [0]}\nInputs:\n{\"questions\": \"What is the capital of Italy?\", \"contexts\": [\"Rome is the capital of Italy.\"], \"predicted_answers\": \"Rome is the capital of Italy with more than 4 million inhabitants.\"}\nOutputs:\n{\"statements\": [\"Rome is the capital of Italy.\", \"Rome has more than 4 million inhabitants.\"], \"statement_scores\": [1, 0]}\n\nInputs:\n{\"questions\": Eight Misbehavin' features the immigrant proprietor of Kwik-E-Mart, who is of what nationality?, \"contexts\": [' In the episode, after Manjula gives birth to octuplets that were the result of fertility drugs, she and Apu unintentionally allow a zookeeper to exploit their babies in exchange for help after corporate sponsors abandon them for a mom that has given birth to nonuplets. He is the Indian immigrant proprietor of the Kwik-E-Mart, a popular convenience store in Springfield, and is well known for his catchphrase, \"Thank you, come again.\"'], \"predicted_answers\": Eight Misbehavin' features a popular convenience store owner.}\nOutputs:"
+   }
+  ],
+  "params": {
+   "response_format": {
+    "type": "json_object"
+   },
+   "seed": 42
+  }
+ },
+ "ts": "2026-11-22T01:13:08"
+}

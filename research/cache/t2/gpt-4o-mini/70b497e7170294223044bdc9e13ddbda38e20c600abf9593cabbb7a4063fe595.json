@@ -1,0 +1,26 @@
+{
+ "text": "{\"statements\": [\"Marie Cornish was born in Wellington, New South Wales.\", \"Wellington is 362 km from Sydney.\"], \"statement_scores\": [1, 1]}",
+ "finish": "stop",
+ "input_tokens": 486,
+ "output_tokens": 38,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4o-mini-2024-07-18",
+ "latency_s": 1.062,
+ "cost_usd": 9.57e-05,
+ "request": {
+  "model": "gpt-4o-mini",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Instructions:\nYour task is to judge the faithfulness or groundedness of statements based on context information. First, please extract statements from a provided predicted answer to a question. Second, calculate a faithfulness score for each statement made in the predicted answer. The score is 1 if the statement can be inferred from the provided context or 0 if it cannot be inferred.\n\nGenerate the response in JSON format with the following keys:\n[\"statements\", \"statement_scores\"]\nConsider the instructions and the examples below to determine those values.\n\nExamples:\nInputs:\n{\"questions\": \"What is the capital of Germany and when was it founded?\", \"contexts\": [\"Berlin is the capital of Germany and was founded in 1244.\"], \"predicted_answers\": \"The capital of Germany, Berlin, was founded in the 13th century.\"}\nOutputs:\n{\"statements\": [\"Berlin is the capital of Germany.\", \"Berlin was founded in 1244.\"], \"statement_scores\": [1, 1]}\nInputs:\n{\"questions\": \"What is the capital of France?\", \"contexts\": [\"Berlin is the capital of Germany.\"], \"predicted_answers\": \"Paris\"}\nOutputs:\n{\"statements\": [\"Paris is the capital of France.\"], \"statement_scores\": [0]}\nInputs:\n{\"questions\": \"What is the capital of Italy?\", \"contexts\": [\"Rome is the capital of Italy.\"], \"predicted_answers\": \"Rome is the capital of Italy with more than 4 million inhabitants.\"}\nOutputs:\n{\"statements\": [\"Rome is the capital of Italy.\", \"Rome has more than 4 million inhabitants.\"], \"statement_scores\": [1, 0]}\n\nInputs:\n{\"questions\": How far from Sydney was Marie Cornish born at?, \"contexts\": ['Marie Cornish (born 1 October 1956 in Wellington, New South Wales) is an Australian former cricket player.<ref name=\"ESPNcricinfo - Players/Australia/Marie Cornish\"> </ref> Cornish played nine tests and sixteen one day internationals for the Australia national women\\'s cricket team.Wellington is a town in inland New South Wales, Australia, located at the junction of the Macquarie and Bell Rivers. The town is 362 km from Sydney on the Great Western Highway and Mitchell Highway.'], \"predicted_answers\": 362 km}\nOutputs:"
+   }
+  ],
+  "params": {
+   "response_format": {
+    "type": "json_object"
+   },
+   "seed": 42
+  }
+ },
+ "ts": "2026-11-22T01:12:48"
+}

@@ -1,0 +1,27 @@
+{
+ "text": "The Incredibles",
+ "finish": "FinishReason.STOP",
+ "input_tokens": 238,
+ "output_tokens": 4,
+ "reasoning_tokens": 0,
+ "served_model": "gemini-2.5-flash-lite",
+ "latency_s": 0.468,
+ "cost_usd": 2.54e-05,
+ "request": {
+  "model": "gemini-2.5-flash-lite",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Jack-Jack Attack\n\nJack-Jack Attack is a 2005 computer animated short film produced by Pixar based on their film \"The Incredibles\", and directed by Brad Bird.\n\ntitle: Brad Bird\n\nPhillip Bradley \"Brad\" Bird (born September 24, 1957) is an American director, screenwriter, animator, producer and occasional voice actor, known for animated and live-action films.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: A 2005 computer animated short film by Pixar, and directed by an American director that was born in 1957, is based on what film?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T01:07:51"
+}

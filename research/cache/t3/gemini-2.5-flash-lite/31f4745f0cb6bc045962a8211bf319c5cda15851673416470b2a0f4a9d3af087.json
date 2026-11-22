@@ -1,0 +1,27 @@
+{
+ "text": "Club",
+ "finish": "FinishReason.STOP",
+ "input_tokens": 327,
+ "output_tokens": 1,
+ "reasoning_tokens": 0,
+ "served_model": "gemini-2.5-flash-lite",
+ "latency_s": 0.506,
+ "cost_usd": 3.31e-05,
+ "request": {
+  "model": "gemini-2.5-flash-lite",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Club (magazine)\n\nClub is a monthly American pornographic magazine which is a spin-off publication of the United Kingdom's \"Club International\". \"Club\" features sexually oriented articles, video reviews, and pictorials that include hardcore pornography, masturbation, dildo usage, and lesbianism.\n\ntitle: Magna Publishing Group\n\nMagna Publishing Group, or Magna Publishing Group, Inc., is a publishing company headquartered in Paramus, New Jersey. Founded in 1975, the company publishes a number of magazine titles and is one of the largest publishers of pornographic magazines in the United States with titles such as Club, Swank, Genesis, Gallery, Gent, as well as \"nearly 60 total adult titles\". The Company has only 1 to 10 employees. On December 22, 2015 Magna Publishing Group was purchased by 1-800-PHONESEX for an undisclosed amount.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Which one of Magna Publishing Group's tiles is a spinoff of the UK's Club International?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T01:07:45"
+}

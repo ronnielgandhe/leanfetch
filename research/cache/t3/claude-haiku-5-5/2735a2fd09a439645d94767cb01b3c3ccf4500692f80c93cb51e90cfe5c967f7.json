@@ -1,0 +1,27 @@
+{
+ "text": "Both breeds have been used for hunting, though in different ways. The Kanni is used mainly for coursing game, while the Chinese Chongqing Dog was originally used for hunting wild boar and rabbits, and is now used mainly to protect families and belongings.",
+ "finish": "end_turn",
+ "input_tokens": 448,
+ "output_tokens": 85,
+ "reasoning_tokens": null,
+ "served_model": "claude-haiku-5-5",
+ "latency_s": 0.684,
+ "cost_usd": 8.730000000000001e-05,
+ "request": {
+  "model": "claude-haiku-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Kanni\n\nThe Kanni, which means maiden, is a rare indigenous South Indian sighthound breed of dog found in the state of Tamil Nadu. The breed is used mainly for coursing game.\n\ntitle: Chinese Chongqing Dog\n\nThe Chinese Chongqing Dog is a rare breed of dog native to the Chongqing city of China. In its early years, it was used for hunting wild boar and rabbits, but it's now used in China to protect families and belongings. They are an ancient, natural breed said to have existed for 2,000 years since the time of the Han Dynasty in Ancient China. After the establishment of the People's Republic of China in 1949, the breed's numbers were greatly reduced, and only people in rural communities still kept it; the breed is still rare, even in China.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Which breed, Chinese Chongqing Dog or Kanni, is used for hunting?\nAnswer: "
+   }
+  ],
+  "params": {
+   "max_tokens": 16000
+  }
+ },
+ "ts": "2026-11-22T01:05:59"
+}

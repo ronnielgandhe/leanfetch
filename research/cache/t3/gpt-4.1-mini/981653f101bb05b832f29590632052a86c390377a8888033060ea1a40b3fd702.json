@@ -1,0 +1,27 @@
+{
+ "text": "The 2015 Pacific Games were held in Port Moresby, Papua New Guinea.",
+ "finish": "stop",
+ "input_tokens": 240,
+ "output_tokens": 18,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4.1-mini-2025-04-14",
+ "latency_s": 0.557,
+ "cost_usd": 0.0001248,
+ "request": {
+  "model": "gpt-4.1-mini",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Kiribati national basketball team\n\nThe Kiribati national basketball team are the basketball side that represent Kiribati in international competitions. They competed at the 2015 Pacific Games, where they finished with an 0-4 record.\n\ntitle: Basketball at the 2015 Pacific Games\n\nBasketball at the 2015 Pacific Games in Port Moresby, Papua New Guinea was held at the BSP Arena and PNG Power Dome on 3\u201312 July 2015.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: What city and nation was the location of the 2015 Pacific Games where the Kiribati national basketball team finished with a 0-4 record?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T00:56:39"
+}

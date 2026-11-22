@@ -1,0 +1,27 @@
+{
+ "text": "The Flatbush Zombies are from the Flatbush section of Brooklyn, New York City.",
+ "finish": "end_turn",
+ "input_tokens": 429,
+ "output_tokens": 33,
+ "reasoning_tokens": null,
+ "served_model": "claude-haiku-5-5",
+ "latency_s": 0.537,
+ "cost_usd": 5.940000000000001e-05,
+ "request": {
+  "model": "claude-haiku-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Flatbush Zombies\n\nFlatbush Zombies (stylized as Flatbush ZOMBiES) is an American hip hop group from the Flatbush section of Brooklyn, New York City, formed in 2010. The group is composed of rappers Meechy Darko, Zombie Juice and Erick Arc Elliott, the latter of whom also serves as their regular record producer. The trio are part of the East Coast hip hop movement known as \"Beast Coast\", which also consists of fellow Brooklyn-based rap groups The Underachievers and Pro Era.\n\ntitle: RedEye to Paris\n\n\"RedEye to Paris\" is a song by Flatbush Zombies, released on March 13, 2015. The song features Skepta.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Where is the American hip hop group, that released the song \"RedEye to Paris\", from?\nAnswer: "
+   }
+  ],
+  "params": {
+   "max_tokens": 16000
+  }
+ },
+ "ts": "2026-11-22T01:05:57"
+}

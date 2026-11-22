@@ -1,0 +1,27 @@
+{
+ "text": "Kris Marshall played the character DI Humphrey Goodman in the television series \"Death in Paradise.\"",
+ "finish": "stop",
+ "input_tokens": 415,
+ "output_tokens": 19,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4o-mini-2024-07-18",
+ "latency_s": 0.713,
+ "cost_usd": 7.365e-05,
+ "request": {
+  "model": "gpt-4o-mini",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Death in Paradise (TV series)\n\nDeath in Paradise is a British-French crime comedy-drama television series created by Robert Thorogood, starring Ben Miller (series 1\u20133), Kris Marshall (series 3\u20136) & Ardal O'Hanlon (series 6\u2013present). The programme is a joint UK and French production filmed on the French Caribbean island of Guadeloupe and broadcast on BBC One in the United Kingdom and France 2 in France. \"Death in Paradise\" has enjoyed high ratings, leading to repeated renewals. A sixth series began broadcasting on 5 January 2017 and aired its finale on 23 February, with the subsequent DVD release occurring three days later on 27 February 2017. The show will return in 2018 for a seventh series.\n\ntitle: Kris Marshall\n\nKristopher \"Kris\" Marshall (born 11 April 1973) is an English actor. He has played Nick Harper in \"My Family\", Colin Frissell in the 2003 film \"Love Actually\", Adam in BT Retail adverts from 2005 until 2011, and Dave in the first series of \"Citizen Khan\" (2012). He played DI Humphrey Goodman in \"Death in Paradise\", taking over the role April 2013 for the show's third series and leaving it in February 2017 in the sixth series.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: The English actor Kris Marshall played which character in the highly rated comedy-drama television series \"Death in Paradise\"?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T00:58:02"
+}

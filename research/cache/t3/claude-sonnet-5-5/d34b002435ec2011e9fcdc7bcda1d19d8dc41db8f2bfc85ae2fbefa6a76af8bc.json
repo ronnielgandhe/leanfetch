@@ -1,0 +1,27 @@
+{
+ "text": "The Order features the Columns of Gediminas (also called the Pillars of Gediminas). The Lithuanian Republic used them as a minor state symbol in the period between World War I and World War II. During that time they appeared on items such as Litas coins and military equipment.",
+ "finish": "end_turn",
+ "input_tokens": 567,
+ "output_tokens": 85,
+ "reasoning_tokens": null,
+ "served_model": "claude-sonnet-5-5",
+ "latency_s": 1.699,
+ "cost_usd": 0.001984,
+ "request": {
+  "model": "claude-sonnet-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Order of the Lithuanian Grand Duke Gediminas\n\nThe Order of the Lithuanian Grand Duke Gediminas is the Lithuanian Presidential Award which was re-instituted to honour the citizens of Lithuania for outstanding performance in civil and public offices. Foreign nationals may also be awarded this Order. The Order of the Lithuanian Grand Duke Gediminas was instituted in 1928. It features the Columns of Gediminas, one of the national symbols of Lithuania.\n\ntitle: Columns of Gediminas\n\nThe Columns of Gediminas or Pillars of Gediminas are one of the earliest symbols of Lithuania and one of its historical coats of arms. They were used in the Grand Duchy of Lithuania, initially as a rulers' personal insignia, a state symbol, and later as a part of heraldic signs of leading aristocracy. During the period between World War I and World War II they were used by the Lithuanian Republic as a minor state symbol, e. g. on Litas coins and military equipment.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: The Order of th elithuanian Grand Duke Gediminas features one of the earliest symbols of Lithuania, that was used by the Lithuanian Republic as a minor state symbol during what period?\nAnswer: "
+   }
+  ],
+  "params": {
+   "max_tokens": 16000
+  }
+ },
+ "ts": "2026-11-22T01:04:43"
+}

@@ -1,0 +1,25 @@
+{
+ "text": "The National Road connected the Potomac and Ohio Rivers.",
+ "finish": "stop",
+ "input_tokens": 287,
+ "output_tokens": 85,
+ "reasoning_tokens": 65,
+ "served_model": "gpt-5.6-terra",
+ "latency_s": 1.624,
+ "cost_usd": 0.001594,
+ "request": {
+  "model": "gpt-5.6-terra",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: National Road\n\nThe National Road (also known as the Cumberland Road) was the first major improved highway in the United States built by the federal government. Built between 1811 and 1837, the 620 mi road connected the Potomac and Ohio Rivers and was a main transport path to the West for thousands of settlers. When rebuilt in the 1830s, it became the second U.S. road surfaced with the macadam process pioneered by Scotsman John Loudon McAdam.\n\ntitle: Mount Echo, West Virginia\n\nMount Echo is an unincorporated community in Ohio County, West Virginia, United States. Mount Echo is located along Little Wheeling Creek on the National Road (U.S. Route 40) near the Pennsylvania state line. It is part of the Wheeling, West Virginia Metropolitan Statistical Area.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Where is the first major improved highway located?\nAnswer: "
+   }
+  ],
+  "params": {}
+ },
+ "ts": "2026-11-22T00:56:26"
+}

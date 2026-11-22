@@ -1,0 +1,27 @@
+{
+ "text": "Carrefour",
+ "finish": "stop",
+ "input_tokens": 445,
+ "output_tokens": 2,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4.1-2025-04-14",
+ "latency_s": 0.566,
+ "cost_usd": 0.000906,
+ "request": {
+  "model": "gpt-4.1",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Carrefour\n\nCarrefour S.A. (] ) is a French multinational retailer headquartered in Boulogne Billancourt, France, in the Hauts-de-Seine Department near Paris. It is one of the largest hypermarket chains in the world (with 1,462 hypermarkets at the end of 2016). Carrefour operates in more than 30 countries, in Europe, the Americas, Asia and Africa. Carrefour means \"crossroads\" and \"public square\" in French. The company is a component of the Euro Stoxx 50 stock market index.\n\ntitle: Jin Jing\n\nJin Jing (Chinese: \u91d1\u6676; Pinyin: J\u012bn J\u012bng; born 1981 in Hefei, Anhui, China) is a Chinese female Paralympic fencer. She was a torchbearer carrying the Olympic torch amid political protests during the 2008 Summer Olympics torch relay in Paris, France. According to \"ABC News\", she fended off protestors who \"threw themselves\" at her; most were wrestled away by French police but at least one reached her wheelchair and tried to wrench the torch away. Jin has gained national fame in China because of the incident, but was attacked on Chinese internet bulletin boards for her stance in the following call to boycott French retailer Carrefour that resulted from public anger toward France. In contrast, Western media concentrated on how the incident involving Jin Jing ignited Chinese nationalism and claimed that the incident was exploited for propaganda purposes by the state media.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Jin Jing is a Chinese female Paralympic fencer who called for a boycott of what retailer whose name means crossroads and public square in French?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T00:54:58"
+}

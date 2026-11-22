@@ -1,0 +1,27 @@
+{
+ "text": "The animal formerly known as the pygmy chimpanzee has concealed ovulation.",
+ "finish": "FinishReason.STOP",
+ "input_tokens": 372,
+ "output_tokens": 14,
+ "reasoning_tokens": 0,
+ "served_model": "gemini-2.5-flash-lite",
+ "latency_s": 0.515,
+ "cost_usd": 4.2800000000000004e-05,
+ "request": {
+  "model": "gemini-2.5-flash-lite",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Bonobo\n\nThe bonobo ( or ; \"Pan paniscus\"), formerly called the pygmy chimpanzee and less often, the dwarf or gracile chimpanzee, is an endangered great ape and one of the two species making up the genus \"Pan\"; the other is \"Pan troglodytes\", or the common chimpanzee. Although the name \"chimpanzee\" is sometimes used to refer to both species together, it is usually understood as referring to the common chimpanzee, whereas \"Pan paniscus\" is usually referred to as the bonobo.\n\ntitle: Concealed ovulation\n\nConcealed ovulation or hidden estrus in a species is the lack of any perceptible change in an adult female (for instance, a change in appearance or scent) when she is \"in heat\" and near ovulation. Some examples of such changes are swelling and redness of the genitalia in baboons and bonobos \"Pan paniscus\", and pheromone release in the feline family. In contrast, the females of humans and a few other species have few external signs of fecundity, making it difficult for a mate to consciously deduce, by means of external signs only, whether or not a female is near ovulation.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: What type of ovulation does the animal formerly known as the pygmy chimpanzee have?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T01:07:52"
+}

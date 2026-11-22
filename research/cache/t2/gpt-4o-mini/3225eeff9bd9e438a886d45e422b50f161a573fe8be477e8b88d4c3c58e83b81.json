@@ -1,0 +1,26 @@
+{
+ "text": "{\n  \"statements\": [\n    \"Daniil Kharms's poetry was heavily influenced by the horrors of trench and gas warfare.\"\n  ],\n  \"statement_scores\": [\n    0\n  ]\n}",
+ "finish": "stop",
+ "input_tokens": 564,
+ "output_tokens": 44,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4o-mini-2024-07-18",
+ "latency_s": 0.725,
+ "cost_usd": 0.000111,
+ "request": {
+  "model": "gpt-4o-mini",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Instructions:\nYour task is to judge the faithfulness or groundedness of statements based on context information. First, please extract statements from a provided predicted answer to a question. Second, calculate a faithfulness score for each statement made in the predicted answer. The score is 1 if the statement can be inferred from the provided context or 0 if it cannot be inferred.\n\nGenerate the response in JSON format with the following keys:\n[\"statements\", \"statement_scores\"]\nConsider the instructions and the examples below to determine those values.\n\nExamples:\nInputs:\n{\"questions\": \"What is the capital of Germany and when was it founded?\", \"contexts\": [\"Berlin is the capital of Germany and was founded in 1244.\"], \"predicted_answers\": \"The capital of Germany, Berlin, was founded in the 13th century.\"}\nOutputs:\n{\"statements\": [\"Berlin is the capital of Germany.\", \"Berlin was founded in 1244.\"], \"statement_scores\": [1, 1]}\nInputs:\n{\"questions\": \"What is the capital of France?\", \"contexts\": [\"Berlin is the capital of Germany.\"], \"predicted_answers\": \"Paris\"}\nOutputs:\n{\"statements\": [\"Paris is the capital of France.\"], \"statement_scores\": [0]}\nInputs:\n{\"questions\": \"What is the capital of Italy?\", \"contexts\": [\"Rome is the capital of Italy.\"], \"predicted_answers\": \"Rome is the capital of Italy with more than 4 million inhabitants.\"}\nOutputs:\n{\"statements\": [\"Rome is the capital of Italy.\", \"Rome has more than 4 million inhabitants.\"], \"statement_scores\": [1, 0]}\n\nInputs:\n{\"questions\": Which poet is known for his war poetry on the horrors of trench and gas warfare: Wilfred Owen or Daniil Kharms?, \"contexts\": ['Wilfred Edward Salter Owen, MC (18 March 1893 \u2013 4 November 1918) was an English poet and soldier, one of the leading poets of the First World War. His war poetry on the horrors of trenches and gas warfare was heavily influenced by his mentor Siegfried Sassoon, and stood in stark contrast both to the public perception of war at the time and to the confidently patriotic verse written by earlier war poets such as Rupert Brooke.Daniil Kharms (Russian: \u0414\u0430\u043d\u0438\u0438\u0301\u043b \u0418\u0432\u0430\u0301\u043d\u043e\u0432\u0438\u0447 \u0425\u0430\u0440\u043c\u0441 ; 30 December [O.S. 17 December] 1905  \u2013 2 February 1942) was an early Soviet-era surrealist and absurdist poet, writer and dramatist.'], \"predicted_answers\": Daniil Kharms's poetry was heavily influenced by the horrors of trench and gas warfare.}\nOutputs:"
+   }
+  ],
+  "params": {
+   "response_format": {
+    "type": "json_object"
+   },
+   "seed": 42
+  }
+ },
+ "ts": "2026-11-22T01:13:34"
+}

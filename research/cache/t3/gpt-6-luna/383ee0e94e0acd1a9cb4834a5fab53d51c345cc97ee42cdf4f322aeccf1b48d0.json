@@ -1,0 +1,25 @@
+{
+ "text": "Khushi Ek Roag is broadcast by ARY Digital, whose parent ARY Group is based in Dubai.",
+ "finish": "stop",
+ "input_tokens": 340,
+ "output_tokens": 56,
+ "reasoning_tokens": 25,
+ "served_model": "gpt-6-luna",
+ "latency_s": 1.085,
+ "cost_usd": 6.2e-05,
+ "request": {
+  "model": "gpt-6-luna",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Khushi Ek Roag\n\nKhushi Ek Roag (or Khushi Aik Roag) (Urdu: \u062e\u0648\u0634\u06cc \u0627\u06cc\u06a9 \u0631\u0648\u06af\u200e ) is a 2012 Pakistani drama serial. Serial is broadcasting on ARY Digital since 11 June 2012. It is directed by \"Mohsin Mirza\" and written by \"Seema Munaf\", starring Yumna Zaidi, Shahood Alvi, Farhan Ally Agha, Naheed Shabbir and Sami Khan.\n\ntitle: ARY Digital\n\nARY Digital (Urdu: \u200e ), a subsidiary of the ARY Group, is a popular Pakistani television network available in Pakistan, the Middle East, North America and Europe. The ARY Group of companies is a Dubai-based holding company founded by a Pakistani businessman, Abdul Razzak Yaqoob (ARY). The network caters to the needs of South Asians, particularly the Pakistani diaspora. The channel is considered to be a pioneer in Pakistani media and broadcasting industry, and has an expanding network of channels, each with an independent focus.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Khushi Ek Roag is broadcast by a company based out of where?\nAnswer: "
+   }
+  ],
+  "params": {}
+ },
+ "ts": "2026-11-22T00:59:06"
+}

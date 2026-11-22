@@ -1,0 +1,27 @@
+{
+ "text": "The Feminine Touch is a drama film starring Delphi Lawrence.",
+ "finish": "stop",
+ "input_tokens": 250,
+ "output_tokens": 12,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4.1-mini-2025-04-14",
+ "latency_s": 0.367,
+ "cost_usd": 0.0001192,
+ "request": {
+  "model": "gpt-4.1-mini",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Delphi Lawrence\n\nDelphi Lawrence (23 March 1932 \u2013 11 April 2002) was an English actress.\n\ntitle: The Feminine Touch (1956 film)\n\nThe Feminine Touch is a 1956 British drama film directed by Pat Jackson and starring George Baker, Belinda Lee and Delphi Lawrence. The film is based on the bestselling novel \"A Lamp Is Heavy\" by Canadian former nurse Sheila Mackay Russell, and consequently it was released as A Lamp Is Heavy in Canada, while it was given the title The Gentle Touch in the United States, when it was released there in December 1957.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: The Feminine Touch is a drama film starring which English actress?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T00:57:36"
+}

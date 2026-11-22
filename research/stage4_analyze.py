@@ -7,6 +7,7 @@ import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parent / "lib"))
 import llm
+import tasks
 
 ROOT = Path(__file__).resolve().parent
 B = 10_000
@@ -23,8 +24,11 @@ META = {
 
 def load(task, split):
     rows = [json.loads(l) for l in (ROOT / "results/raw" / f"{task}_{split}.jsonl").read_text().splitlines() if l.strip()]
+    items = {i["id"]: i for i in tasks.load(tasks.DATA[task], split)}
     by = {}
     for r in rows:
+        if "text" in r:
+            r["score"] = tasks.SCORE[task](items[r["id"]], {"text": r["text"]})
         by.setdefault(r["model"], {})[r["id"]] = r
     return by
 

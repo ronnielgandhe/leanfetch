@@ -1,0 +1,27 @@
+{
+ "text": "The camp was the Jasenovac concentration camp. At least 100 people with the surname Preradovi\u0107 died there. One correction to the question: it was the Military Frontier, not the camp, that straddled the southern borderland of the Habsburg Monarchy. The surname Preradovi\u0107 is traditionally widespread in the territories of that historical Military Frontier.",
+ "finish": "end_turn",
+ "input_tokens": 389,
+ "output_tokens": 111,
+ "reasoning_tokens": null,
+ "served_model": "claude-sonnet-5-5",
+ "latency_s": 5.449,
+ "cost_usd": 0.001888,
+ "request": {
+  "model": "claude-sonnet-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Preradovi\u0107\n\nPreradovi\u0107 () is a Serbian surname, derived from \"Prerad\". The surname is traditionally widespread in territories of the historical Military Frontier. At least 100 individuals with the surname died at the Jasenovac concentration camp. It may refer to:\n\ntitle: Military Frontier\n\nThe Military Frontier was a province straddling the southern borderland of the Habsburg Monarchy and later the Austrian and Austro-Hungarian Empire. It acted as the \"cordon sanitaire\" against incursions from the Ottoman Empire.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: 100 indviduals with the surname 'Preradovic' died at which concentration camp that straddled the southern border of the Hasburg Monarchy?\nAnswer: "
+   }
+  ],
+  "params": {
+   "max_tokens": 16000
+  }
+ },
+ "ts": "2026-11-22T01:04:01"
+}

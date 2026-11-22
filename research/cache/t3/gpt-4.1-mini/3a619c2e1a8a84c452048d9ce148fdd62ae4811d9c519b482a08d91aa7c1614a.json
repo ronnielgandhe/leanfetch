@@ -1,0 +1,27 @@
+{
+ "text": "Eastern Airways' head office is located at Humberside Airport.",
+ "finish": "stop",
+ "input_tokens": 320,
+ "output_tokens": 13,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4.1-mini-2025-04-14",
+ "latency_s": 0.483,
+ "cost_usd": 0.0001488,
+ "request": {
+  "model": "gpt-4.1-mini",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Humberside Airport\n\nHumberside Airport (IATA: HUY, ICAO: EGNJ) is an international airport situated at Kirmington in the Borough of North Lincolnshire, England, 10 NM west of Grimsby and around 15 mi from both Kingston upon Hull and Scunthorpe, on the A18. Humberside Airport was owned by Manchester Airports Group (the largest UK-owned airport group) from 1999 until 1 August 2012, when it was sold to the Eastern Group of companies. North Lincolnshire Council retains a minority of shares in the Airport.\n\ntitle: Eastern Airways\n\nAir Kilroe Limited, trading as Eastern Airways, is a British airline whose head office is at Humberside Airport in Kirmington, North Lincolnshire, England. It operates scheduled domestic and international services and private charter services. Around 800,000 passengers a year are carried on the scheduled route network.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Easter Airways' head office is located at which airport owned by Manchester Airports Group?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T00:57:22"
+}

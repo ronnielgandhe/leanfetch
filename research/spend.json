@@ -1,25 +1,50 @@
 {
   "cap_usd": 25.0,
-  "total_usd": 0.500384,
+  "total_usd": 3.19509,
   "by_stage": {
     "smoke": 0.000288,
     "classify": 0.011741,
-    "t3": 0.08474,
-    "t2": 0.158459,
-    "t1": 0.245154
+    "t3": 1.43247,
+    "t2": 1.505314,
+    "t1": 0.245154,
+    "defaults_alive": 0.000113
   },
   "by_model": {
-    "gpt-4.1": 0.079786,
-    "gpt-4.1-mini": 0.014782,
-    "gpt-4o-mini": 0.005183,
-    "gpt-5.6-terra": 0.137562,
-    "gpt-6-luna": 0.006597,
-    "gpt-5-nano": 0.028458,
-    "claude-sonnet-5-5": 0.190376,
-    "claude-haiku-5-5": 0.023477,
-    "gemini-3.1-flash-lite": 0.010434,
-    "gemini-2.5-flash-lite": 0.003731
+    "gpt-4.1": 0.730622,
+    "gpt-4.1-mini": 0.140462,
+    "gpt-4o-mini": 0.053224,
+    "gpt-5.6-terra": 1.00399,
+    "gpt-6-luna": 0.060028,
+    "gpt-5-nano": 0.316854,
+    "claude-sonnet-5-5": 0.770746,
+    "claude-haiku-5-5": 0.059441,
+    "gemini-3.1-flash-lite": 0.043898,
+    "gemini-2.5-flash-lite": 0.015816
   },
-  "calls": 516,
-  "updated": "2026-11-22T00:53:48"
+  "calls": 5258,
+  "updated": "2026-11-22T01:28:53",
+  "recomputed_from_cache": {
+    "note": "sum of cost_usd over every cached response; excludes the 5 uncached liveness calls in stage1b (logged in total_usd)",
+    "total_usd": 3.1769,
+    "calls": 5226,
+    "by_stage": {
+      "classify": 0.0117,
+      "smoke": 0.0003,
+      "t1": 0.2452,
+      "t2": 1.4872,
+      "t3": 1.4325
+    },
+    "by_model": {
+      "gpt-5.6-terra": 1.0039,
+      "claude-sonnet-5-5": 0.7707,
+      "gpt-4.1": 0.7306,
+      "gpt-5-nano": 0.2988,
+      "gpt-4.1-mini": 0.1405,
+      "gpt-6-luna": 0.06,
+      "claude-haiku-5-5": 0.0594,
+      "gpt-4o-mini": 0.0532,
+      "gemini-3.1-flash-lite": 0.0439,
+      "gemini-2.5-flash-lite": 0.0158
+    }
+  }
 }

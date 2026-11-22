@@ -1,0 +1,25 @@
+{
+ "text": "They speak Norwegian.",
+ "finish": "stop",
+ "input_tokens": 249,
+ "output_tokens": 42,
+ "reasoning_tokens": 29,
+ "served_model": "gpt-5.6-terra",
+ "latency_s": 1.174,
+ "cost_usd": 0.001002,
+ "request": {
+  "model": "gpt-5.6-terra",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Norwegians\n\nNorwegians (Norwegian: \"nordmenn\" ) are a Germanic ethnic group native to Norway. They share a common culture and speak the Norwegian language. Norwegian people and their descendants are found in migrant communities worldwide, notably in the United States, Canada, Australia, Argentina, Chile, Uruguay, Brazil, Mexico, New Zealand, United Kingdom and South Africa.\n\ntitle: Torstein Ellingsen\n\nTorstein Ellingsen (born 7 August 1966) is a Norwegian drummer and music producer, known from a series of album recordings.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: what language did the ethnic group which Torstein Ellingsen was its drumer  speaks \nAnswer: "
+   }
+  ],
+  "params": {}
+ },
+ "ts": "2026-11-22T00:56:17"
+}

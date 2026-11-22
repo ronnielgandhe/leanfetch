@@ -1,0 +1,27 @@
+{
+ "text": "Richard Connell's best known work \"The Hounds of Zaroff\" was also published as \"The Most Dangerous Game.\"",
+ "finish": "stop",
+ "input_tokens": 388,
+ "output_tokens": 25,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4.1-2025-04-14",
+ "latency_s": 0.762,
+ "cost_usd": 0.000976,
+ "request": {
+  "model": "gpt-4.1",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: The Most Dangerous Game\n\n\"The Most Dangerous Game\", also published as \"The Hounds of Zaroff\", is a short story by Richard Connell, first published in \"Collier's\" on January 19, 1924. The story features a big-game hunter from New York City who falls off a yacht and swims to an isolated island in the Caribbean, where he is hunted by a Russian aristocrat. The story is inspired by the big-game hunting safaris in Africa and South America that were particularly fashionable among wealthy Americans in the 1920s.\n\ntitle: Seven Faces\n\nSeven Faces is a 1929 American pre-Code drama film with fantasy elements that was released by Fox Film Corporation in the Fox Movietone sound-on-film system on December 1, 1929. Based upon the piece of short fiction \"A Friend of Napoleon\" which was published in the June 30, 1923, issue of \"The Saturday Evening Post\" magazine by popular writer Richard Connell (whose best known work, \"The Most Dangerous Game\", was filmed three years later), it was directed by Berthold Viertel and stars Paul Muni in his second screen appearance. \"Seven Faces\" is a lost film, with no excerpts from its footage known to exist.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: What was Richard Connell's best known work The Hounds of Zaroff also published as?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T00:55:02"
+}

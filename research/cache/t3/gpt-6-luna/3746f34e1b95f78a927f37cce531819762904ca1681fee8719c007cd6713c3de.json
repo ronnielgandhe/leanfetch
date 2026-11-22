@@ -1,0 +1,25 @@
+{
+ "text": "He was a professional footballer before becoming an actor.",
+ "finish": "stop",
+ "input_tokens": 268,
+ "output_tokens": 31,
+ "reasoning_tokens": 11,
+ "served_model": "gpt-6-luna",
+ "latency_s": 0.994,
+ "cost_usd": 4.23e-05,
+ "request": {
+  "model": "gpt-6-luna",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Vinnie Jones\n\nVincent Peter \"Vinnie\" Jones (born 5 January 1965) is a British actor and former professional footballer who played as a midfielder from 1984 to 1999 notably for Wimbledon, Leeds United, Sheffield United, Chelsea and Wales.\n\ntitle: Lock, Stock and Two Smoking Barrels\n\nLock, Stock and Two Smoking Barrels is a 1998 British crime comedy film written and directed by Guy Ritchie, produced by Matthew Vaughn and starring an ensemble cast featuring Jason Flemyng, Dexter Fletcher, Nick Moran, Jason Statham, Steven Mackintosh, Vinnie Jones, and Sting.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: What career did the British actor born in 1965  and star of Lock, Stock and Two Smoking Barrels have before acting?\nAnswer: "
+   }
+  ],
+  "params": {}
+ },
+ "ts": "2026-11-22T00:59:21"
+}

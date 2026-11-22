@@ -1,0 +1,27 @@
+{
+ "text": "The person who represents the constituency containing Stoke Newington Central belongs to the Labour Party.",
+ "finish": "FinishReason.STOP",
+ "input_tokens": 266,
+ "output_tokens": 17,
+ "reasoning_tokens": 0,
+ "served_model": "gemini-3.1-flash-lite",
+ "latency_s": 0.829,
+ "cost_usd": 9.2e-05,
+ "request": {
+  "model": "gemini-3.1-flash-lite",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Stoke Newington Central (ward)\n\nStoke Newington Central is a ward in the London Borough of Hackney. It corresponds roughly to Stoke Newington in London, UK and forms part of the Hackney North and Stoke Newington constituency of Diane Abbott MP.\n\ntitle: Diane Abbott\n\nDiane Julie Abbott (born 27 September 1953) is a British Labour Party politician who was appointed Shadow Home Secretary in October 2016. She was first elected as the Member of Parliament (MP) for Hackney North and Stoke Newington at the 1987 general election, when she became the first black woman to hold a seat in the House of Commons.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: What party does the person that represents Stoke Newington Central belong to?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T01:07:14"
+}

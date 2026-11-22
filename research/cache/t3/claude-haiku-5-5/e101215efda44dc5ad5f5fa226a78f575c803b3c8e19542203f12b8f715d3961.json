@@ -1,0 +1,27 @@
+{
+ "text": "Yes. Pago Pago International Airport is on Tutuila in American Samoa, an unincorporated territory of the United States. Hoonah Airport is in Hoonah, Alaska, and is a state-owned public-use airport.",
+ "finish": "end_turn",
+ "input_tokens": 420,
+ "output_tokens": 419,
+ "reasoning_tokens": null,
+ "served_model": "claude-haiku-5-5",
+ "latency_s": 2.097,
+ "cost_usd": 0.0002515,
+ "request": {
+  "model": "claude-haiku-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Pago Pago International Airport\n\nPago Pago International Airport (IATA: PPG, ICAO: NSTU, FAA LID: PPG) , also known as Tafuna Airport, is a public airport located 7 miles (11.3 km) southwest of the central business district of Pago Pago, in the village and plains of Tafuna on the island of Tutuila in American Samoa, an unincorporated territory of the United States.\n\ntitle: Hoonah Airport\n\nHoonah Airport (IATA: HNH, ICAO: PAOH, FAA LID: HNH) is a state-owned public-use airport located one nautical mile (2 km) southeast of the central business district of Hoonah, Alaska.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Are Pago Pago International Airport and Hoonah Airport both on American territory?\nAnswer: "
+   }
+  ],
+  "params": {
+   "max_tokens": 16000
+  }
+ },
+ "ts": "2026-11-22T01:06:02"
+}

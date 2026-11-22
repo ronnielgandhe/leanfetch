@@ -1,0 +1,25 @@
+{
+ "text": "MGM Resorts International.",
+ "finish": "stop",
+ "input_tokens": 438,
+ "output_tokens": 142,
+ "reasoning_tokens": 128,
+ "served_model": "gpt-5-nano-2025-08-07",
+ "latency_s": 0.955,
+ "cost_usd": 7.87e-05,
+ "request": {
+  "model": "gpt-5-nano",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: CityCenter\n\nCityCenter (also known as CityCenter Las Vegas) is a 16797000 sqft mixed-use, urban complex on 76 acre located on the Las Vegas Strip in Paradise, Nevada. The project was started by MGM Resorts International; Dubai World became a joint partner during the project's construction phase. It is the largest privately funded construction project in the history of the United States. The project is connected by a people mover system to adjacent MGM properties Monte Carlo Las Vegas and Bellagio Las Vegas. As of 2015, the \"CityCenter\" branding has been largely retired, with the focus instead on the Aria brand of the development's centerpiece property in names such as the \"Aria Express\" (formerly \"CityCenter Tram\") and \"Aria Art Collection\" (formerly \"CityCenter Art Collection\").\n\ntitle: The Harmon\n\nThe Harmon was a highrise building at the CityCenter development in Paradise, Nevada. The tower was designed by Foster + Partners as a non-gaming boutique hotel, and was to be operated by Andrew Sasson's The Light Group upon completion. The building featured an elliptical layout and highly reflective exterior located on the northeast corner of the project at the intersection of Las Vegas Boulevard and Harmon Avenue. Significant construction defects in the building were discovered in 2008, and the project was halted indefinitely. On August 23, 2013, a Clark County court approved the tower's demolition. The dismantling of the tower began in the summer of 2014 and completed in the fall of 2015.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: What company started the urban complex development that included the highrise building, The Harmon?\nAnswer: "
+   }
+  ],
+  "params": {}
+ },
+ "ts": "2026-11-22T01:01:49"
+}

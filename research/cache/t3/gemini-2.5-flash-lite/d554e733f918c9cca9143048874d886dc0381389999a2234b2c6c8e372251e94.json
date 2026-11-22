@@ -1,0 +1,27 @@
+{
+ "text": "Sir Syed University of Engineering and Technology is named after Sir Syed Ahmad Khan.",
+ "finish": "FinishReason.STOP",
+ "input_tokens": 442,
+ "output_tokens": 15,
+ "reasoning_tokens": 0,
+ "served_model": "gemini-2.5-flash-lite",
+ "latency_s": 0.562,
+ "cost_usd": 5.02e-05,
+ "request": {
+  "model": "gemini-2.5-flash-lite",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Manhattan College\n\nManhattan College is a private, independent, Roman Catholic, liberal arts college located in the Bronx, New York City, United States. After originally being established in 1853 by the Brothers of the Christian Schools (De La Salle Christian Brothers) as an academy for day students, Manhattan College was officially incorporated as an institution of higher education through a charter granted by the New York State Board of Regents. In 1922, the College moved from Manhattan to the Riverdale section of the Bronx, roughly 6.4 mi north of its original location on 131st Street in the Manhattanville section of Manhattan. Manhattan College offers undergraduate programs in the arts, business, education, health, engineering, and science. Graduate programs are offered for education, business, and engineering. \"U.S. News & World Report\" lists Manhattan as one of the top 20 colleges in the Regional Universities North category. In addition, Manhattan consistently ranks in the top twenty in surveys that evaluate return on investment. In the 2014\u20132015 Payscale.com College Return on Investment survey, Manhattan placed 15th nationally.\n\ntitle: Sir Syed University of Engineering and Technology\n\nSir Syed University of Engineering and Technology (known as \"SSUET\") is a private research university located in the urban area of Karachi, Sindh, Pakistan. The university is honored in the name of notable 19th-century Muslim reformer and philosopher, Sir Syed Ahmad Khan.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Which school is named after a person, Sir Syed University of Engineering and Technology or Manhattan College? \nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T01:08:25"
+}

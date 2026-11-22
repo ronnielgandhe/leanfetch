@@ -1,0 +1,26 @@
+{
+ "text": "{\n  \"statements\": [\n    \"The films Frankenstein and Bride of Frankenstein are based on the novel by a British author.\"\n  ],\n  \"statement_scores\": [0]\n}",
+ "finish": "stop",
+ "input_tokens": 542,
+ "output_tokens": 37,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4.1-2025-04-14",
+ "latency_s": 0.435,
+ "cost_usd": 0.00138,
+ "request": {
+  "model": "gpt-4.1",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Instructions:\nYour task is to judge the faithfulness or groundedness of statements based on context information. First, please extract statements from a provided predicted answer to a question. Second, calculate a faithfulness score for each statement made in the predicted answer. The score is 1 if the statement can be inferred from the provided context or 0 if it cannot be inferred.\n\nGenerate the response in JSON format with the following keys:\n[\"statements\", \"statement_scores\"]\nConsider the instructions and the examples below to determine those values.\n\nExamples:\nInputs:\n{\"questions\": \"What is the capital of Germany and when was it founded?\", \"contexts\": [\"Berlin is the capital of Germany and was founded in 1244.\"], \"predicted_answers\": \"The capital of Germany, Berlin, was founded in the 13th century.\"}\nOutputs:\n{\"statements\": [\"Berlin is the capital of Germany.\", \"Berlin was founded in 1244.\"], \"statement_scores\": [1, 1]}\nInputs:\n{\"questions\": \"What is the capital of France?\", \"contexts\": [\"Berlin is the capital of Germany.\"], \"predicted_answers\": \"Paris\"}\nOutputs:\n{\"statements\": [\"Paris is the capital of France.\"], \"statement_scores\": [0]}\nInputs:\n{\"questions\": \"What is the capital of Italy?\", \"contexts\": [\"Rome is the capital of Italy.\"], \"predicted_answers\": \"Rome is the capital of Italy with more than 4 million inhabitants.\"}\nOutputs:\n{\"statements\": [\"Rome is the capital of Italy.\", \"Rome has more than 4 million inhabitants.\"], \"statement_scores\": [1, 0]}\n\nInputs:\n{\"questions\": The films Frankenstein and Bride of Frankenstein are based on the novel by which author?, \"contexts\": ['Bride of Frankenstein (advertised as The Bride of Frankenstein) is a 1935 American science-fiction horror film, the first sequel to Universal Pictures\\' 1931 hit \"Frankenstein\". It is considered one of the few sequels to a great film that is even better than the original film on which it is based.Frankenstein is a 1931 American pre-Code horror monster film from Universal Pictures directed by James Whale and adapted from the play by Peggy Webling (which in turn is based on the novel of the same name by Mary Shelley), about a scientist and his assistant who dig up corpses to build a man animated by electricity, but his assistant accidentally gives the creature an abnormal, murderer\\'s brain.'], \"predicted_answers\": The films Frankenstein and Bride of Frankenstein are based on the novel by a British author.}\nOutputs:"
+   }
+  ],
+  "params": {
+   "response_format": {
+    "type": "json_object"
+   },
+   "seed": 42
+  }
+ },
+ "ts": "2026-11-22T01:09:27"
+}

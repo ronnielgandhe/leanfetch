@@ -1,0 +1,27 @@
+{
+ "text": "John DiMaggio voices Shnitzel on \"Chowder,\" a Cartoon Network series created by C. H. Greenblatt.",
+ "finish": "end_turn",
+ "input_tokens": 681,
+ "output_tokens": 46,
+ "reasoning_tokens": null,
+ "served_model": "claude-sonnet-5-5",
+ "latency_s": 1.335,
+ "cost_usd": 0.001822,
+ "request": {
+  "model": "claude-sonnet-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: John DiMaggio\n\nJohn William DiMaggio (born September 4, 1968) is an American voice actor and comedian, known for his gruff voice and for his work as Bender from the television show \"Futurama\", Jake the Dog on \"Adventure Time\", and Marcus Fenix in the hit Xbox video game \"Gears Of War\". Other voice-over roles of his include Dr. Drakken and Motor Ed on \"Kim Possible\", Brother Blood on \"Teen Titans\", Aquaman in \"\", Rico in \"The Penguins of Madagascar\", and Ogre In \"\", Niblet on \"Pound Puppies\", the Scotsman on \"Samurai Jack\", and Shnitzel on \"Chowder\".\n\ntitle: Chowder (TV series)\n\nChowder is an American animated television series created by C. H. Greenblatt for Cartoon Network. The series follows an aspiring young child named Chowder and his day-to-day adventures as an apprentice in Chef Mung Daal's catering company. Although he means well, Chowder often finds himself in predicaments due to his perpetual appetite and his nature as a scatterbrain. It is animated with both traditional animation as well as short stop motion and puppet sequences that are inter-cut into the episodes, and that run over the end credits. Stop motion sequences are produced by Screen Novelties. It is also the first Cartoon Network original series to premiere during Stuart Snyder's tenure as Jim Samples had resigned months before the series premiere.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery:  John DiMaggio voices the character Shnitzel on Cartoon Network series created by who?\nAnswer: "
+   }
+  ],
+  "params": {
+   "max_tokens": 16000
+  }
+ },
+ "ts": "2026-11-22T01:05:17"
+}

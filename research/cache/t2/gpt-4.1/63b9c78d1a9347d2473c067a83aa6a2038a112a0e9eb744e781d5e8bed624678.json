@@ -1,0 +1,26 @@
+{
+ "text": "{\n  \"statements\": [\n    \"Eagle-Eye Cherry originated in Scotland.\",\n    \"Texas originated in Scotland.\",\n    \"Eagle-Eye Cherry and Texas both originated in Scotland.\"\n  ],\n  \"statement_scores\": [0, 1, 0]\n}",
+ "finish": "stop",
+ "input_tokens": 429,
+ "output_tokens": 56,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4.1-2025-04-14",
+ "latency_s": 0.613,
+ "cost_usd": 0.001306,
+ "request": {
+  "model": "gpt-4.1",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Instructions:\nYour task is to judge the faithfulness or groundedness of statements based on context information. First, please extract statements from a provided predicted answer to a question. Second, calculate a faithfulness score for each statement made in the predicted answer. The score is 1 if the statement can be inferred from the provided context or 0 if it cannot be inferred.\n\nGenerate the response in JSON format with the following keys:\n[\"statements\", \"statement_scores\"]\nConsider the instructions and the examples below to determine those values.\n\nExamples:\nInputs:\n{\"questions\": \"What is the capital of Germany and when was it founded?\", \"contexts\": [\"Berlin is the capital of Germany and was founded in 1244.\"], \"predicted_answers\": \"The capital of Germany, Berlin, was founded in the 13th century.\"}\nOutputs:\n{\"statements\": [\"Berlin is the capital of Germany.\", \"Berlin was founded in 1244.\"], \"statement_scores\": [1, 1]}\nInputs:\n{\"questions\": \"What is the capital of France?\", \"contexts\": [\"Berlin is the capital of Germany.\"], \"predicted_answers\": \"Paris\"}\nOutputs:\n{\"statements\": [\"Paris is the capital of France.\"], \"statement_scores\": [0]}\nInputs:\n{\"questions\": \"What is the capital of Italy?\", \"contexts\": [\"Rome is the capital of Italy.\"], \"predicted_answers\": \"Rome is the capital of Italy with more than 4 million inhabitants.\"}\nOutputs:\n{\"statements\": [\"Rome is the capital of Italy.\", \"Rome has more than 4 million inhabitants.\"], \"statement_scores\": [1, 0]}\n\nInputs:\n{\"questions\": Do the band Texas and the singer Eagle-Eye Cherry both originate in Sweden?, \"contexts\": ['Texas are a Scottish pop rock band from Glasgow.Eagle-Eye Lanoo Cherry (born 7 May 1969) is a Swedish musician best known for his hit single \"Save Tonight\".'], \"predicted_answers\": Eagle-Eye Cherry originated in Scotland with Texas.}\nOutputs:"
+   }
+  ],
+  "params": {
+   "response_format": {
+    "type": "json_object"
+   },
+   "seed": 42
+  }
+ },
+ "ts": "2026-11-22T01:09:24"
+}

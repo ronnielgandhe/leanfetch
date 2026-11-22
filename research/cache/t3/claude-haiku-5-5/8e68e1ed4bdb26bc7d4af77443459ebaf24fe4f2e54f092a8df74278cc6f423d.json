@@ -1,0 +1,27 @@
+{
+ "text": "The ethnic group is the **French Canadians**. They trace their ancestry to French colonists who settled in Canada from the 17th century onward. In the Shiners' War (1835 to 1845) in Bytown, they fought against Irish Catholic immigrants, including the \"Shiners,\" who attacked their timber rafts and clashed with them in the streets.",
+ "finish": "end_turn",
+ "input_tokens": 482,
+ "output_tokens": 163,
+ "reasoning_tokens": null,
+ "served_model": "claude-haiku-5-5",
+ "latency_s": 1.025,
+ "cost_usd": 0.00012969999999999998,
+ "request": {
+  "model": "claude-haiku-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: French Canadians\n\nFrench Canadians (also referred to as Franco-Canadians or Canadiens; French: \"Canadien(ne)s fran\u00e7ais(es)\" ) are an ethnic group who trace their ancestry to French colonists who settled in Canada from the 17th century onward. Today, French Canadians constitute the main French-speaking population in Canada, accounting for about 22% of the total population.\n\ntitle: Shiners' War\n\nThe Shiners' War was a conflict between Irish Catholic immigrants and French Canadians in Bytown from 1835 to 1845. The war started when Peter Aylen, a major Irish timber operator, organized a group of Irishmen to attack other timber operations. This group was known as the \"Shiners.\" They attacked French Canadian timber rafts and fought against the French Canadian on the streets of Bytown.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: What is the name of the ethnic group who settled in Canada in the 17th century that participated in a conflict with Irish Catholic immigrants in the Shiners' War?\nAnswer: "
+   }
+  ],
+  "params": {
+   "max_tokens": 16000
+  }
+ },
+ "ts": "2026-11-22T01:05:44"
+}

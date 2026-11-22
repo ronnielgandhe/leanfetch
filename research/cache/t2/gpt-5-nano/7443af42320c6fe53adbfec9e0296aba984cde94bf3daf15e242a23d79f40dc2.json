@@ -1,0 +1,26 @@
+{
+ "text": "{\n  \"statements\": [\"Alexander Razborov is older than Pyotr Novikov.\"],\n  \"statement_scores\": [0]\n}",
+ "finish": "stop",
+ "input_tokens": 500,
+ "output_tokens": 1254,
+ "reasoning_tokens": 1216,
+ "served_model": "gpt-5-nano-2025-08-07",
+ "latency_s": 5.534,
+ "cost_usd": 0.0005266,
+ "request": {
+  "model": "gpt-5-nano",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Instructions:\nYour task is to judge the faithfulness or groundedness of statements based on context information. First, please extract statements from a provided predicted answer to a question. Second, calculate a faithfulness score for each statement made in the predicted answer. The score is 1 if the statement can be inferred from the provided context or 0 if it cannot be inferred.\n\nGenerate the response in JSON format with the following keys:\n[\"statements\", \"statement_scores\"]\nConsider the instructions and the examples below to determine those values.\n\nExamples:\nInputs:\n{\"questions\": \"What is the capital of Germany and when was it founded?\", \"contexts\": [\"Berlin is the capital of Germany and was founded in 1244.\"], \"predicted_answers\": \"The capital of Germany, Berlin, was founded in the 13th century.\"}\nOutputs:\n{\"statements\": [\"Berlin is the capital of Germany.\", \"Berlin was founded in 1244.\"], \"statement_scores\": [1, 1]}\nInputs:\n{\"questions\": \"What is the capital of France?\", \"contexts\": [\"Berlin is the capital of Germany.\"], \"predicted_answers\": \"Paris\"}\nOutputs:\n{\"statements\": [\"Paris is the capital of France.\"], \"statement_scores\": [0]}\nInputs:\n{\"questions\": \"What is the capital of Italy?\", \"contexts\": [\"Rome is the capital of Italy.\"], \"predicted_answers\": \"Rome is the capital of Italy with more than 4 million inhabitants.\"}\nOutputs:\n{\"statements\": [\"Rome is the capital of Italy.\", \"Rome has more than 4 million inhabitants.\"], \"statement_scores\": [1, 0]}\n\nInputs:\n{\"questions\": Who is older, Alexander Razborov or Pyotr Novikov?, \"contexts\": ['Aleksandr Aleksandrovich Razborov (Russian: \u0410\u043b\u0435\u043a\u0441\u0430\u0301\u043d\u0434\u0440 \u0410\u043b\u0435\u043a\u0441\u0430\u0301\u043d\u0434\u0440\u043e\u0432\u0438\u0447 \u0420\u0430\u0437\u0431\u043e\u0301\u0440\u043e\u0432 ; born February 16, 1963), sometimes known as Sasha Razborov, is a Soviet and Russian mathematician and computational theorist.Pyotr Sergeyevich Novikov (Russian: \u041f\u0451\u0442\u0440 \u0421\u0435\u0440\u0433\u0435\u0301\u0435\u0432\u0438\u0447 \u041d\u043e\u0301\u0432\u0438\u043a\u043e\u0432 ; 15 August 1901, Moscow, Russian Empire \u2013 9 January 1975, Moscow, Soviet Union) was a Soviet mathematician.'], \"predicted_answers\": Alexander Razborov is older than Pyotr Novikov.}\nOutputs:"
+   }
+  ],
+  "params": {
+   "response_format": {
+    "type": "json_object"
+   },
+   "seed": 42
+  }
+ },
+ "ts": "2026-11-22T01:28:37"
+}

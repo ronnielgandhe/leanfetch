@@ -1,0 +1,25 @@
+{
+ "text": "Lush Ltd.",
+ "finish": "stop",
+ "input_tokens": 288,
+ "output_tokens": 7,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-5.6-terra",
+ "latency_s": 0.693,
+ "cost_usd": 0.00066,
+ "request": {
+  "model": "gpt-5.6-terra",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Lush (company)\n\nLush Ltd. is a cosmetics retailer headquartered in Poole, Dorset, United Kingdom. The company was founded by Mark Constantine, a trichologist and Liz Weir, a beauty therapist. They met in a hair and beauty salon in Poole, England. A few years later, they decided to branch out and start their own business selling natural hair and beauty products.\n\ntitle: ABQ Uptown\n\nABQ Uptown is an outdoor luxury shopping mall owned by Simon Property Group in Albuquerque, New Mexico. It is one of four malls located in the Albuquerque area, and houses 46 different stores. Its anchor tenants include J.Crew, The North Face, and Lush. The outdoor environment of this mall includes music, lights and seasonal decorations.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: What retailer in ABQ Uptown is headquarted in Poole, Dorset, United Kingdom?\nAnswer: "
+   }
+  ],
+  "params": {}
+ },
+ "ts": "2026-11-22T00:56:33"
+}

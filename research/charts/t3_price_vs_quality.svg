@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="460" viewBox="0 0 760 460">
+<rect width="760" height="460" fill="#FFFFFF"/>
+<text x="70.0" y="28.0" font-family="Manrope, -apple-system, Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#1A1A1A" text-anchor="start">run-llama/llama_index: rag answer</text>
+<text x="70.0" y="48.0" font-family="Manrope, -apple-system, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6B7280" text-anchor="start">HotpotQA distractor (gold paragraphs), n = 300. dots = point estimate, bars = 95% bootstrap ci. black = repo default.</text>
+<line x1="70.0" y1="400.0" x2="730.0" y2="400.0" stroke="#E5E7EB" stroke-width="1"/>
+<text x="62.0" y="404.0" font-family="Manrope, -apple-system, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#6B7280" text-anchor="end">0.65</text>
+<line x1="70.0" y1="345.0" x2="730.0" y2="345.0" stroke="#E5E7EB" stroke-width="1"/>
+<text x="62.0" y="349.0" font-family="Manrope, -apple-system, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#6B7280" text-anchor="end">0.70</text>
+<line x1="70.0" y1="290.0" x2="730.0" y2="290.0" stroke="#E5E7EB" stroke-width="1"/>
+<text x="62.0" y="294.0" font-family="Manrope, -apple-system, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#6B7280" text-anchor="end">0.75</text>
+<line x1="70.0" y1="235.0" x2="730.0" y2="235.0" stroke="#E5E7EB" stroke-width="1"/>
+<text x="62.0" y="239.0" font-family="Manrope, -apple-system, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#6B7280" text-anchor="end">0.80</text>
+<line x1="70.0" y1="180.0" x2="730.0" y2="180.0" stroke="#E5E7EB" stroke-width="1"/>
+<text x="62.0" y="184.0" font-family="Manrope, -apple-system, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#6B7280" text-anchor="end">0.85</text>
+<line x1="70.0" y1="125.0" x2="730.0" y2="125.0" stroke="#E5E7EB" stroke-width="1"/>
+<text x="62.0" y="129.0" font-family="Manrope, -apple-system, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#6B7280" text-anchor="end">0.90</text>
+<line x1="70.0" y1="70.0" x2="730.0" y2="70.0" stroke="#E5E7EB" stroke-width="1"/>
+<text x="62.0" y="74.0" font-family="Manrope, -apple-system, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#6B7280" text-anchor="end">0.95</text>
+<line x1="70.0" y1="70.0" x2="70.0" y2="400.0" stroke="#E5E7EB" stroke-width="1"/>
+<text x="70.0" y="416.0" font-family="Manrope, -apple-system, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#6B7280" text-anchor="middle">$10</text>
+<line x1="290.0" y1="70.0" x2="290.0" y2="400.0" stroke="#E5E7EB" stroke-width="1"/>
+<text x="290.0" y="416.0" font-family="Manrope, -apple-system, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#6B7280" text-anchor="middle">$100</text>
+<line x1="510.0" y1="70.0" x2="510.0" y2="400.0" stroke="#E5E7EB" stroke-width="1"/>
+<text x="510.0" y="416.0" font-family="Manrope, -apple-system, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#6B7280" text-anchor="middle">$1,000</text>
+<line x1="730.0" y1="70.0" x2="730.0" y2="400.0" stroke="#E5E7EB" stroke-width="1"/>
+<text x="730.0" y="416.0" font-family="Manrope, -apple-system, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#6B7280" text-anchor="middle">$10,000</text>
+<line x1="70.0" y1="400.0" x2="730.0" y2="400.0" stroke="#1A1A1A" stroke-width="1"/>
+<line x1="70.0" y1="70.0" x2="70.0" y2="400.0" stroke="#1A1A1A" stroke-width="1"/>
+<text x="400.0" y="446.0" font-family="Manrope, -apple-system, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6B7280" text-anchor="middle">usd per 1 million calls (log scale, measured tokens x list price)</text>
+<text transform="translate(18,235.0) rotate(-90)" font-family="Manrope, -apple-system, Helvetica, Arial, sans-serif" font-size="11" fill="#6B7280" text-anchor="middle">answer containment accuracy</text>
+<line x1="70.0" y1="286.3" x2="730.0" y2="286.3" stroke="#9CA3AF" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="726.0" y="281.3" font-family="Manrope, -apple-system, Helvetica, Arial, sans-serif" font-size="9" font-weight="400" fill="#9CA3AF" text-anchor="end">repo default minus 0.03 (non-inferiority margin)</text>
+<line x1="205.1" y1="356.0" x2="205.1" y2="246.0" stroke="#6B7280" stroke-width="1"/>
+<line x1="201.1" y1="356.0" x2="209.1" y2="356.0" stroke="#6B7280" stroke-width="1"/>
+<line x1="201.1" y1="246.0" x2="209.1" y2="246.0" stroke="#6B7280" stroke-width="1"/>
+<rect x="201.1" y="297.0" width="8" height="8" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1"/>
+<text x="213.1" y="291.0" font-family="Manrope, -apple-system, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#6B7280" text-anchor="start">gemini-2.5-fl</text>
+<line x1="233.7" y1="348.7" x2="233.7" y2="238.7" stroke="#6B7280" stroke-width="1"/>
+<line x1="229.7" y1="348.7" x2="237.7" y2="348.7" stroke="#6B7280" stroke-width="1"/>
+<line x1="229.7" y1="238.7" x2="237.7" y2="238.7" stroke="#6B7280" stroke-width="1"/>
+<rect x="229.7" y="289.7" width="8" height="8" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1"/>
+<text x="241.7" y="271.7" font-family="Manrope, -apple-system, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#6B7280" text-anchor="start">gpt-6-luna</text>
+<line x1="249.7" y1="304.7" x2="249.7" y2="205.7" stroke="#1A1A1A" stroke-width="1"/>
+<line x1="245.7" y1="304.7" x2="253.7" y2="304.7" stroke="#1A1A1A" stroke-width="1"/>
+<line x1="245.7" y1="205.7" x2="253.7" y2="205.7" stroke="#1A1A1A" stroke-width="1"/>
+<rect x="244.7" y="248.3" width="10" height="10" fill="#1A1A1A"/>
+<text x="257.7" y="243.3" font-family="Manrope, -apple-system, Helvetica, Arial, sans-serif" font-size="10" font-weight="600" fill="#1A1A1A" text-anchor="start">gpt-4o-mini</text>
+<line x1="301.1" y1="275.3" x2="301.1" y2="176.3" stroke="#6B7280" stroke-width="1"/>
+<line x1="297.1" y1="275.3" x2="305.1" y2="275.3" stroke="#6B7280" stroke-width="1"/>
+<line x1="297.1" y1="176.3" x2="305.1" y2="176.3" stroke="#6B7280" stroke-width="1"/>
+<rect x="297.1" y="220.0" width="8" height="8" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1"/>
+<text x="309.1" y="214.0" font-family="Manrope, -apple-system, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#6B7280" text-anchor="start">gemini-3.1-fl</text>
+<line x1="307.3" y1="187.3" x2="307.3" y2="110.3" stroke="#6B7280" stroke-width="1"/>
+<line x1="303.3" y1="187.3" x2="311.3" y2="187.3" stroke="#6B7280" stroke-width="1"/>
+<line x1="303.3" y1="110.3" x2="311.3" y2="110.3" stroke="#6B7280" stroke-width="1"/>
+<rect x="303.3" y="143.0" width="8" height="8" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1"/>
+<text x="315.3" y="137.0" font-family="Manrope, -apple-system, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#6B7280" text-anchor="start">haiku-5.5</text>
+<line x1="327.0" y1="345.0" x2="327.0" y2="235.0" stroke="#6B7280" stroke-width="1"/>
+<line x1="323.0" y1="345.0" x2="331.0" y2="345.0" stroke="#6B7280" stroke-width="1"/>
+<line x1="323.0" y1="235.0" x2="331.0" y2="235.0" stroke="#6B7280" stroke-width="1"/>
+<rect x="323.0" y="286.0" width="8" height="8" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1"/>
+<text x="335.0" y="280.0" font-family="Manrope, -apple-system, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#6B7280" text-anchor="start">gpt-5-nano</text>
+<line x1="342.4" y1="268.0" x2="342.4" y2="169.0" stroke="#6B7280" stroke-width="1"/>
+<line x1="338.4" y1="268.0" x2="346.4" y2="268.0" stroke="#6B7280" stroke-width="1"/>
+<line x1="338.4" y1="169.0" x2="346.4" y2="169.0" stroke="#6B7280" stroke-width="1"/>
+<rect x="338.4" y="212.7" width="8" height="8" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1"/>
+<text x="350.4" y="194.7" font-family="Manrope, -apple-system, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#6B7280" text-anchor="start">gpt-4.1-mini</text>
+<line x1="497.2" y1="268.0" x2="497.2" y2="169.0" stroke="#6B7280" stroke-width="1"/>
+<line x1="493.2" y1="268.0" x2="501.2" y2="268.0" stroke="#6B7280" stroke-width="1"/>
+<line x1="493.2" y1="169.0" x2="501.2" y2="169.0" stroke="#6B7280" stroke-width="1"/>
+<rect x="493.2" y="212.7" width="8" height="8" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1"/>
+<text x="505.2" y="206.7" font-family="Manrope, -apple-system, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#6B7280" text-anchor="start">gpt-4.1</text>
+<line x1="508.5" y1="308.3" x2="508.5" y2="202.0" stroke="#6B7280" stroke-width="1"/>
+<line x1="504.5" y1="308.3" x2="512.5" y2="308.3" stroke="#6B7280" stroke-width="1"/>
+<line x1="504.5" y1="202.0" x2="512.5" y2="202.0" stroke="#6B7280" stroke-width="1"/>
+<rect x="504.5" y="249.3" width="8" height="8" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1"/>
+<text x="516.5" y="243.3" font-family="Manrope, -apple-system, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#6B7280" text-anchor="start">gpt-5.6-terra</text>
+<line x1="573.0" y1="202.0" x2="573.0" y2="117.7" stroke="#6B7280" stroke-width="1"/>
+<line x1="569.0" y1="202.0" x2="577.0" y2="202.0" stroke="#6B7280" stroke-width="1"/>
+<line x1="569.0" y1="117.7" x2="577.0" y2="117.7" stroke="#6B7280" stroke-width="1"/>
+<rect x="569.0" y="154.0" width="8" height="8" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1"/>
+<text x="581.0" y="148.0" font-family="Manrope, -apple-system, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#6B7280" text-anchor="start">sonnet-5.5</text>
+</svg>

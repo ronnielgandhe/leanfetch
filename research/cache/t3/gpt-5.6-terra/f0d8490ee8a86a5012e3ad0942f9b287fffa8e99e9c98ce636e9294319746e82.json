@@ -1,0 +1,25 @@
+{
+ "text": "American",
+ "finish": "stop",
+ "input_tokens": 383,
+ "output_tokens": 85,
+ "reasoning_tokens": 75,
+ "served_model": "gpt-5.6-terra",
+ "latency_s": 1.672,
+ "cost_usd": 0.001786,
+ "request": {
+  "model": "gpt-5.6-terra",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Vreni Schneider\n\nVerena \"Vreni\" Schneider (born 26 November 1964) is a retired ski racer from Switzerland. She is the most successful alpine ski racer of her country, the third most successful female ski racer ever (after Lindsey Vonn and Annemarie Moser-Pr\u00f6ll) and was voted \"Swiss Sportswoman of the Century\".\n\ntitle: Lindsey Vonn\n\nLindsey Caroline Vonn ( ) (n\u00e9e Kildow ; born October 18, 1984) is an American World Cup alpine ski racer on the US Ski Team. She has won four World Cup overall championships\u2014one of only two female skiers to do so, along with Annemarie Moser-Pr\u00f6ll\u2014with three consecutive titles in 2008, 2009, and 2010, plus another in 2012. Vonn won the gold medal in downhill at the 2010 Winter Olympics, the first ever in the event for an American woman. She has also won a record eight World Cup season titles in the downhill discipline (2008\u20132013, 2015, 2016), five titles in super-G (2009\u20132012, 2015), and three consecutive titles in the combined (2010\u20132012).\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: What is the nationality of the most successful female ski racer ever?\nAnswer: "
+   }
+  ],
+  "params": {}
+ },
+ "ts": "2026-11-22T00:55:25"
+}

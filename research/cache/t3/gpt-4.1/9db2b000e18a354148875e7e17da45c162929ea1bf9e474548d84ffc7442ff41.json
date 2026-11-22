@@ -1,0 +1,27 @@
+{
+ "text": "Walt Disney Productions",
+ "finish": "stop",
+ "input_tokens": 318,
+ "output_tokens": 4,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4.1-2025-04-14",
+ "latency_s": 0.39,
+ "cost_usd": 0.000668,
+ "request": {
+  "model": "gpt-4.1",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Davy Crockett, King of the Wild Frontier\n\nDavy Crockett, King of the Wild Frontier is a 1955 live-action Walt Disney adventure film starring Fess Parker as Davy Crockett. This film is an edited compilation of the first three stories from the Disney television miniseries \"Davy Crockett\" :\n\ntitle: Herbie Rides Again\n\nHerbie Rides Again is a 1974 American comedy film and a sequel to \"The Love Bug,\" released six years earlier, and the second in a series of films made by Walt Disney Productions starring an anthropomorphic (and quite autonomous) 1963 Volkswagen racing Beetle named Herbie. The movie starred Helen Hayes, Stefanie Powers, Ken Berry, and Keenan Wynn reprising his villainous role as Alonzo Hawk (originated in the films \"The Absent-Minded Professor\" and \"Son of Flubber\").\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Davy Crockett, King of the Wild Frontier:and Herbie Rides Again were both by which company?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T00:54:49"
+}
