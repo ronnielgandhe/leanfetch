@@ -1,0 +1,27 @@
+{
+ "text": "The Ferrari 360 was replaced by the Ferrari F430, which debuted at the 2004 Paris Motor Show.",
+ "finish": "FinishReason.STOP",
+ "input_tokens": 288,
+ "output_tokens": 29,
+ "reasoning_tokens": 0,
+ "served_model": "gemini-3.1-flash-lite",
+ "latency_s": 1.405,
+ "cost_usd": 0.0001155,
+ "request": {
+  "model": "gemini-3.1-flash-lite",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Ferrari 360\n\nThe Ferrari 360 is a two-seater sports car built by Ferrari from 1999 to 2005. It succeeded the Ferrari F355 and was replaced by the Ferrari F430. It is a mid-engined, rear wheel drive V8-powered coupe.\n\ntitle: Ferrari F430\n\nThe Ferrari F430 is a sports car that was produced by the Italian car manufacturer Ferrari from 2004 to 2009. A successor to the Ferrari 360, it debuted at the 2004 Paris Motor Show. Its successor, the Ferrari 458, was unveiled on 28 July 2009.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Ferrari 360 was replaced by the sports car that debuted at what event?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T00:49:23"
+}

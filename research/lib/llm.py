@@ -65,6 +65,11 @@ def guard(estimate_usd):
 
 
 def _client(name):
+    if name == "google":
+        from google import genai
+        from google.genai import types
+        key = os.environ.get("GOOGLE_API_KEY") or os.environ.get("GOOGLE_CLOUD_API_KEY")
+        return genai.Client(api_key=key, http_options=types.HttpOptions(api_version="v1beta"))
     if name in _clients:
         return _clients[name]
     if name == "openai":
@@ -74,9 +79,7 @@ def _client(name):
         import anthropic
         c = anthropic.Anthropic(max_retries=4, timeout=300)
     else:
-        from google import genai
-        key = os.environ.get("GOOGLE_API_KEY") or os.environ.get("GOOGLE_CLOUD_API_KEY")
-        c = genai.Client(api_key=key)
+        raise ValueError(name)
     _clients[name] = c
     return c
 
@@ -127,7 +130,8 @@ def _google(model, messages, params):
         for m in messages if m["role"] != "system"
     ]
     cfg = types.GenerateContentConfig(system_instruction=system, **params)
-    r = _client("google").models.generate_content(model=model, contents=contents, config=cfg)
+    c = _client("google")
+    r = c.models.generate_content(model=model, contents=contents, config=cfg)
     u = r.usage_metadata
     thoughts = u.thoughts_token_count or 0
     return {

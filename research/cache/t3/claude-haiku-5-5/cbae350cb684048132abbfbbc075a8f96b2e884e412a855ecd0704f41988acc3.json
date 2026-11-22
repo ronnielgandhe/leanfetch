@@ -1,0 +1,27 @@
+{
+ "text": "Aeroflot was the Soviet airline monopoly. Today, PJSC Aeroflot-Russian Airlines, the flag carrier of the Russian Federation, operates mainly from its hub at Sheremetyevo International Airport.",
+ "finish": "end_turn",
+ "input_tokens": 501,
+ "output_tokens": 264,
+ "reasoning_tokens": null,
+ "served_model": "claude-haiku-5-5",
+ "latency_s": 1.405,
+ "cost_usd": 0.00018209999999999998,
+ "request": {
+  "model": "claude-haiku-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Babyflot\n\nBabyflot is the informal name given to any airline in the former Soviet Union created from the dissolution of the Soviet airline monopoly Aeroflot in the early 1990s, at the time of the breakup of the Soviet Union. The word is a portmanteau of \"baby\" and \"Aeroflot\", compare Baby Bells.\n\ntitle: Aeroflot\n\nPJSC AeroflotRussian Airlines (Russian: \u041f\u0410\u041e \"\u0410\u044d\u0440\u043e\u0444\u043b\u043e\u0301\u0442-\u0420\u043e\u0441\u0441\u0438\u0301\u0439\u0441\u043a\u0438\u0435 \u0430\u0432\u0438\u0430\u043b\u0438\u0301\u043d\u0438\u0438\" , \"\u041fAO Aeroflot-Rossiyskiye avialinii\" ) (), commonly known as Aeroflot ( or ) (Russian: \u0410\u044d\u0440\u043e\u0444\u043b\u043e\u0442 , English translation: \"air fleet\", ] ), is the flag carrier and largest airline of the Russian Federation. The carrier is an open joint stock company that operates domestic and international passenger and services, mainly from its hub at Sheremetyevo International Airport.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: What airline was a monopoly with a hub at Sheremetyevo International Airport?\nAnswer: "
+   }
+  ],
+  "params": {
+   "max_tokens": 16000
+  }
+ },
+ "ts": "2026-11-22T00:50:25"
+}

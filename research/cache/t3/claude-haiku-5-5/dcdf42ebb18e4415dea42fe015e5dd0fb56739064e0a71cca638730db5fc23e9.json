@@ -1,0 +1,27 @@
+{
+ "text": "The playwright and composer in question, No\u00ebl Coward, was English.",
+ "finish": "end_turn",
+ "input_tokens": 426,
+ "output_tokens": 88,
+ "reasoning_tokens": null,
+ "served_model": "claude-haiku-5-5",
+ "latency_s": 0.801,
+ "cost_usd": 8.659999999999999e-05,
+ "request": {
+  "model": "claude-haiku-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: No\u00ebl Coward\n\nSir No\u00ebl Peirce Coward (16 December 189926 March 1973) was an English playwright, composer, director, actor and singer, known for his wit, flamboyance, and what \"Time\" magazine called \"a sense of personal style, a combination of cheek and chic, pose and poise\".\n\ntitle: Sylvia Cecil\n\nSylvia Cecil (c. 1898 \u2013 c. 1983) was an English singer and actress. She began her career in the Gilbert and Sullivan operas with the D'Oyly Carte Opera Company. She soon moved on to musical comedy, including the musicals of Ivor Novello and No\u00ebl Coward, as well as variety and radio. Her career spanned at least five decades.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Sylvia Cecil performed musicals by the playwright and composer of what nationality?\nAnswer: "
+   }
+  ],
+  "params": {
+   "max_tokens": 16000
+  }
+ },
+ "ts": "2026-11-22T00:50:21"
+}

@@ -1,0 +1,27 @@
+{
+ "text": "The fortified complex built in the heart of Moscow in 1736 is known as the Kremlin Arsenal, which is part of the larger Moscow Kremlin complex.",
+ "finish": "stop",
+ "input_tokens": 363,
+ "output_tokens": 30,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4.1-mini-2025-04-14",
+ "latency_s": 0.625,
+ "cost_usd": 0.0001932,
+ "request": {
+  "model": "gpt-4.1-mini",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Moscow Kremlin\n\nThe Moscow Kremlin (Russian: \u041c\u043e\u0441\u043a\u043e\u0301\u0432\u0441\u043a\u0438\u0439 \u041a\u0440\u0435\u043c\u043b\u044c , \"Moskovskiy Kreml\"; ] ), usually referred to as the Kremlin, is a fortified complex at the heart of Moscow, overlooking the Moskva River to the south, Saint Basil's Cathedral and Red Square to the east, and the Alexander Garden to the west. It is the best known of the kremlins (Russian citadels) and includes five palaces, four cathedrals, and the enclosing Kremlin Wall with Kremlin towers. Also within this complex is the Grand Kremlin Palace.\n\ntitle: Kremlin Arsenal\n\nThe Kremlin Arsenal (Russian: \u0410\u0440\u0441\u0435\u043d\u0430\u043b \u041c\u043e\u0441\u043a\u043e\u0432\u0441\u043a\u043e\u0433\u043e \u041a\u0440\u0435\u043c\u043b\u044f ) is a former armory built within the grounds of the Moscow Kremlin in Russia. Initially constructed in 1736, it has been rebuilt several times. It remains in military use to date, unlike the Kremlin Armoury, another arsenal within the walls of the Moscow Kremlin, which is now a museum. The building is off-limits to tourists, who can view a portion of its short southern fa\u00e7ade upon entering the precincts of the Moscow Kremlin.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: In 1736, a fortified complex was built in the heart of Moscow. What is this complex known as?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T00:49:55"
+}

@@ -1,0 +1,27 @@
+{
+ "text": "\"Moho House\" is an episode of *The Simpsons*, in its twenty-eighth season, which aired from September 25, 2016, to May 21, 2017. So the show had run for 28 seasons by then. It may have had more since, but I can't say how many.",
+ "finish": "end_turn",
+ "input_tokens": 371,
+ "output_tokens": 252,
+ "reasoning_tokens": null,
+ "served_model": "claude-sonnet-5-5",
+ "latency_s": 3.133,
+ "cost_usd": 0.003262,
+ "request": {
+  "model": "claude-sonnet-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Moho House\n\n\"Moho House\" is the twenty first episode of the twenty-eighth season of the animated television series \"The Simpsons\", and the 617th episode of the series overall. It aired in the United States on Fox on May 7, 2017.\n\ntitle: The Simpsons (season 28)\n\nThe twenty-eighth season of the animated television series \"The Simpsons\" began airing on Fox in the United States on September 25, 2016, and ended on May 21, 2017. On May 4, 2015, Fox announced that \"The Simpsons\" had been renewed for season 28.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: How many seasons has a popular tv show had, in which one of the episodes is called Moho House?\nAnswer: "
+   }
+  ],
+  "params": {
+   "max_tokens": 16000
+  }
+ },
+ "ts": "2026-11-22T00:50:18"
+}

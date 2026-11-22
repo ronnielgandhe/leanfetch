@@ -1,0 +1,437 @@
+{
+ "task": "t3",
+ "repo": "run-llama/llama_index",
+ "job": "rag answer",
+ "dataset": "HotpotQA distractor (gold paragraphs)",
+ "metric": "answer containment accuracy",
+ "split": "pilot",
+ "n": 20,
+ "repo_model": "gpt-4o-mini",
+ "delta": 0.03,
+ "bootstrap": 10000,
+ "seed": 7,
+ "decision_interval": "99.44%",
+ "verdict": "default is defensible on this job and dataset",
+ "qualifying_alternatives": [],
+ "prices_verified_on": "2026-11-22",
+ "models": {
+  "gpt-4.1": {
+   "primary": 0.85,
+   "primary_ci95": [
+    0.7,
+    1.0
+   ],
+   "secondary": {
+    "token_f1": 0.3685404725992961
+   },
+   "cost": {
+    "usd_per_call": 0.0007852000000000001,
+    "usd_per_1k_calls": 0.7852000000000001,
+    "usd_per_1m_calls": 785.2000000000002,
+    "mean_input_tokens": 318.2,
+    "mean_output_tokens": 18.6,
+    "mean_reasoning_tokens": 0.0,
+    "latency_median_s": 0.6779999999999999,
+    "latency_p90_s": 1.7969000000000002,
+    "errors": 0,
+    "missing": 0
+   },
+   "vs_repo": {
+    "diff": 0.09999999999999998,
+    "diff_ci95": [
+     0.0,
+     0.25
+    ],
+    "diff_ci_decision": [
+     0.0,
+     0.35
+    ],
+    "non_inferior": true,
+    "strictly_better": false,
+    "mcnemar": {
+     "b": 2,
+     "c": 0,
+     "p": 0.5
+    },
+    "cost_ratio": 13.20551631348806,
+    "materially_cheaper": false,
+    "usd_saved_per_1m_calls": -725.7400000000001,
+    "qualifies": false
+   }
+  },
+  "gpt-5.6-terra": {
+   "primary": 0.8,
+   "primary_ci95": [
+    0.6,
+    0.95
+   ],
+   "secondary": {
+    "token_f1": 0.6218650793650793
+   },
+   "cost": {
+    "usd_per_call": 0.0009631999999999998,
+    "usd_per_1k_calls": 0.9631999999999997,
+    "usd_per_1m_calls": 963.1999999999998,
+    "mean_input_tokens": 317.2,
+    "mean_output_tokens": 27.4,
+    "mean_reasoning_tokens": 14.8,
+    "latency_median_s": 0.9989999999999999,
+    "latency_p90_s": 1.309200000000001,
+    "errors": 0,
+    "missing": 0
+   },
+   "vs_repo": {
+    "diff": 0.050000000000000044,
+    "diff_ci95": [
+     -0.10000000000000009,
+     0.20000000000000007
+    ],
+    "diff_ci_decision": [
+     -0.19999999999999996,
+     0.30000000000000004
+    ],
+    "non_inferior": false,
+    "strictly_better": false,
+    "mcnemar": {
+     "b": 2,
+     "c": 1,
+     "p": 1.0
+    },
+    "cost_ratio": 16.19912546249579,
+    "materially_cheaper": false,
+    "usd_saved_per_1m_calls": -903.7399999999998,
+    "qualifies": false
+   }
+  },
+  "gpt-4.1-mini": {
+   "primary": 0.8,
+   "primary_ci95": [
+    0.6,
+    0.95
+   ],
+   "secondary": {
+    "token_f1": 0.28885453985299187
+   },
+   "cost": {
+    "usd_per_call": 0.00015688,
+    "usd_per_1k_calls": 0.15688,
+    "usd_per_1m_calls": 156.88,
+    "mean_input_tokens": 318.2,
+    "mean_output_tokens": 18.5,
+    "mean_reasoning_tokens": 0.0,
+    "latency_median_s": 0.5509999999999999,
+    "latency_p90_s": 0.6773000000000001,
+    "errors": 0,
+    "missing": 0
+   },
+   "vs_repo": {
+    "diff": 0.050000000000000044,
+    "diff_ci95": [
+     0.0,
+     0.15000000000000002
+    ],
+    "diff_ci_decision": [
+     0.0,
+     0.25
+    ],
+    "non_inferior": true,
+    "strictly_better": false,
+    "mcnemar": {
+     "b": 1,
+     "c": 0,
+     "p": 1.0
+    },
+    "cost_ratio": 2.6384123780692903,
+    "materially_cheaper": false,
+    "usd_saved_per_1m_calls": -97.42,
+    "qualifies": false
+   }
+  },
+  "gpt-4o-mini": {
+   "primary": 0.75,
+   "primary_ci95": [
+    0.55,
+    0.9
+   ],
+   "secondary": {
+    "token_f1": 0.26655857427596563
+   },
+   "cost": {
+    "usd_per_call": 5.946e-05,
+    "usd_per_1k_calls": 0.059460000000000006,
+    "usd_per_1m_calls": 59.46,
+    "mean_input_tokens": 318.2,
+    "mean_output_tokens": 19.55,
+    "mean_reasoning_tokens": 0.0,
+    "latency_median_s": 0.6425000000000001,
+    "latency_p90_s": 0.9516,
+    "errors": 0,
+    "missing": 0
+   }
+  },
+  "gpt-6-luna": {
+   "primary": 0.85,
+   "primary_ci95": [
+    0.7,
+    1.0
+   ],
+   "secondary": {
+    "token_f1": 0.6169455544455544
+   },
+   "cost": {
+    "usd_per_call": 4.8795e-05,
+    "usd_per_1k_calls": 0.048795000000000005,
+    "usd_per_1m_calls": 48.795,
+    "mean_input_tokens": 317.2,
+    "mean_output_tokens": 34.15,
+    "mean_reasoning_tokens": 18.55,
+    "latency_median_s": 0.895,
+    "latency_p90_s": 1.2923000000000002,
+    "errors": 0,
+    "missing": 0
+   },
+   "vs_repo": {
+    "diff": 0.09999999999999998,
+    "diff_ci95": [
+     -0.09999999999999998,
+     0.30000000000000004
+    ],
+    "diff_ci_decision": [
+     -0.15000000000000002,
+     0.3999999999999999
+    ],
+    "non_inferior": false,
+    "strictly_better": false,
+    "mcnemar": {
+     "b": 3,
+     "c": 1,
+     "p": 0.625
+    },
+    "cost_ratio": 0.820635721493441,
+    "materially_cheaper": false,
+    "usd_saved_per_1m_calls": 10.665000000000001,
+    "qualifies": false
+   }
+  },
+  "gpt-5-nano": {
+   "primary": 0.8,
+   "primary_ci95": [
+    0.6,
+    0.95
+   ],
+   "secondary": {
+    "token_f1": 0.6958333333333333
+   },
+   "cost": {
+    "usd_per_call": 0.00012292,
+    "usd_per_1k_calls": 0.12292,
+    "usd_per_1m_calls": 122.92,
+    "mean_input_tokens": 317.2,
+    "mean_output_tokens": 267.65,
+    "mean_reasoning_tokens": 252.8,
+    "latency_median_s": 1.7945,
+    "latency_p90_s": 2.2590000000000003,
+    "errors": 0,
+    "missing": 0
+   },
+   "vs_repo": {
+    "diff": 0.050000000000000044,
+    "diff_ci95": [
+     0.0,
+     0.15000000000000002
+    ],
+    "diff_ci_decision": [
+     0.0,
+     0.20000000000000007
+    ],
+    "non_inferior": true,
+    "strictly_better": false,
+    "mcnemar": {
+     "b": 1,
+     "c": 0,
+     "p": 1.0
+    },
+    "cost_ratio": 2.0672721157080387,
+    "materially_cheaper": false,
+    "usd_saved_per_1m_calls": -63.459999999999994,
+    "qualifies": false
+   }
+  },
+  "claude-sonnet-5-5": {
+   "primary": 0.95,
+   "primary_ci95": [
+    0.85,
+    1.0
+   ],
+   "secondary": {
+    "token_f1": 0.14062947745933585
+   },
+   "cost": {
+    "usd_per_call": 0.001939368421052632,
+    "usd_per_1k_calls": 1.9393684210526319,
+    "usd_per_1m_calls": 1939.368421052632,
+    "mean_input_tokens": 506.0,
+    "mean_output_tokens": 92.73684210526316,
+    "mean_reasoning_tokens": 0.0,
+    "latency_median_s": 2.058,
+    "latency_p90_s": 3.2586,
+    "errors": 1,
+    "missing": 0
+   },
+   "vs_repo": {
+    "diff": 0.19999999999999996,
+    "diff_ci95": [
+     0.04999999999999993,
+     0.4
+    ],
+    "diff_ci_decision": [
+     0.0,
+     0.49999999999999994
+    ],
+    "non_inferior": true,
+    "strictly_better": false,
+    "mcnemar": {
+     "b": 4,
+     "c": 0,
+     "p": 0.125
+    },
+    "cost_ratio": 32.6163542053924,
+    "materially_cheaper": false,
+    "usd_saved_per_1m_calls": -1879.908421052632,
+    "qualifies": false
+   }
+  },
+  "claude-haiku-5-5": {
+   "primary": 0.95,
+   "primary_ci95": [
+    0.85,
+    1.0
+   ],
+   "secondary": {
+    "token_f1": 0.19862595770479832
+   },
+   "cost": {
+    "usd_per_call": 0.00011245999999999999,
+    "usd_per_1k_calls": 0.11245999999999999,
+    "usd_per_1m_calls": 112.46,
+    "mean_input_tokens": 503.6,
+    "mean_output_tokens": 124.2,
+    "mean_reasoning_tokens": 0.0,
+    "latency_median_s": 0.8895,
+    "latency_p90_s": 1.4292000000000002,
+    "errors": 0,
+    "missing": 0
+   },
+   "vs_repo": {
+    "diff": 0.19999999999999996,
+    "diff_ci95": [
+     0.04999999999999993,
+     0.4
+    ],
+    "diff_ci_decision": [
+     0.0,
+     0.49999999999999994
+    ],
+    "non_inferior": true,
+    "strictly_better": false,
+    "mcnemar": {
+     "b": 4,
+     "c": 0,
+     "p": 0.125
+    },
+    "cost_ratio": 1.8913555331315168,
+    "materially_cheaper": false,
+    "usd_saved_per_1m_calls": -52.999999999999986,
+    "qualifies": false
+   }
+  },
+  "gemini-3.1-flash-lite": {
+   "primary": 0.85,
+   "primary_ci95": [
+    0.7,
+    1.0
+   ],
+   "secondary": {
+    "token_f1": 0.36664595767149943
+   },
+   "cost": {
+    "usd_per_call": 0.0001072875,
+    "usd_per_1k_calls": 0.1072875,
+    "usd_per_1m_calls": 107.2875,
+    "mean_input_tokens": 330.15,
+    "mean_output_tokens": 16.5,
+    "mean_reasoning_tokens": 0.0,
+    "latency_median_s": 0.8855,
+    "latency_p90_s": 1.3961999999999999,
+    "errors": 0,
+    "missing": 0
+   },
+   "vs_repo": {
+    "diff": 0.09999999999999998,
+    "diff_ci95": [
+     0.0,
+     0.25
+    ],
+    "diff_ci_decision": [
+     0.0,
+     0.35
+    ],
+    "non_inferior": true,
+    "strictly_better": false,
+    "mcnemar": {
+     "b": 2,
+     "c": 0,
+     "p": 0.5
+    },
+    "cost_ratio": 1.804364278506559,
+    "materially_cheaper": false,
+    "usd_saved_per_1m_calls": -47.82749999999999,
+    "qualifies": false
+   }
+  },
+  "gemini-2.5-flash-lite": {
+   "primary": 0.75,
+   "primary_ci95": [
+    0.55,
+    0.9
+   ],
+   "secondary": {
+    "token_f1": 0.454890977167192
+   },
+   "cost": {
+    "usd_per_call": 3.869500000000001e-05,
+    "usd_per_1k_calls": 0.03869500000000001,
+    "usd_per_1m_calls": 38.69500000000001,
+    "mean_input_tokens": 330.15,
+    "mean_output_tokens": 14.2,
+    "mean_reasoning_tokens": 0.0,
+    "latency_median_s": 0.5455000000000001,
+    "latency_p90_s": 0.6101,
+    "errors": 0,
+    "missing": 0
+   },
+   "vs_repo": {
+    "diff": 0.0,
+    "diff_ci95": [
+     -0.15000000000000002,
+     0.15000000000000002
+    ],
+    "diff_ci_decision": [
+     -0.20000000000000007,
+     0.20000000000000007
+    ],
+    "non_inferior": false,
+    "strictly_better": false,
+    "mcnemar": {
+     "b": 1,
+     "c": 1,
+     "p": 1.0
+    },
+    "cost_ratio": 0.6507736293306425,
+    "materially_cheaper": false,
+    "usd_saved_per_1m_calls": 20.764999999999993,
+    "qualifies": false
+   }
+  }
+ }
+}

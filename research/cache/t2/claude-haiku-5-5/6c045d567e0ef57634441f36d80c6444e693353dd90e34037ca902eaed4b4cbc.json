@@ -1,0 +1,50 @@
+{
+ "text": "{\"statements\": [\"The dB's have more members than The Brothers Creeggan.\"], \"statement_scores\": [1]}",
+ "finish": "end_turn",
+ "input_tokens": 1035,
+ "output_tokens": 178,
+ "reasoning_tokens": null,
+ "served_model": "claude-haiku-5-5",
+ "latency_s": 3.638,
+ "cost_usd": 0.0001925,
+ "request": {
+  "model": "claude-haiku-5-5",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Instructions:\nYour task is to judge the faithfulness or groundedness of statements based on context information. First, please extract statements from a provided predicted answer to a question. Second, calculate a faithfulness score for each statement made in the predicted answer. The score is 1 if the statement can be inferred from the provided context or 0 if it cannot be inferred.\n\nGenerate the response in JSON format with the following keys:\n[\"statements\", \"statement_scores\"]\nConsider the instructions and the examples below to determine those values.\n\nExamples:\nInputs:\n{\"questions\": \"What is the capital of Germany and when was it founded?\", \"contexts\": [\"Berlin is the capital of Germany and was founded in 1244.\"], \"predicted_answers\": \"The capital of Germany, Berlin, was founded in the 13th century.\"}\nOutputs:\n{\"statements\": [\"Berlin is the capital of Germany.\", \"Berlin was founded in 1244.\"], \"statement_scores\": [1, 1]}\nInputs:\n{\"questions\": \"What is the capital of France?\", \"contexts\": [\"Berlin is the capital of Germany.\"], \"predicted_answers\": \"Paris\"}\nOutputs:\n{\"statements\": [\"Paris is the capital of France.\"], \"statement_scores\": [0]}\nInputs:\n{\"questions\": \"What is the capital of Italy?\", \"contexts\": [\"Rome is the capital of Italy.\"], \"predicted_answers\": \"Rome is the capital of Italy with more than 4 million inhabitants.\"}\nOutputs:\n{\"statements\": [\"Rome is the capital of Italy.\", \"Rome has more than 4 million inhabitants.\"], \"statement_scores\": [1, 0]}\n\nInputs:\n{\"questions\": Does The Brothers Creeggan or The dB's have more members?, \"contexts\": [\"The Brothers Creeggan is a Canadian alternative rock/jazz band composed of Jim Creeggan (upright bass, guitar, bass guitar, vocals), Andy Creeggan (guitar, piano, accordion, percussion, vocals) and Ian McLauchlan (drums).The dB's are an American power pop and jangle pop group who first came into prominence in the late 1970s and 1980s. The band members are Peter Holsapple, Chris Stamey, Will Rigby and Gene Holder.\"], \"predicted_answers\": The dB's}\nOutputs:"
+   }
+  ],
+  "params": {
+   "max_tokens": 16000,
+   "output_config": {
+    "format": {
+     "type": "json_schema",
+     "schema": {
+      "type": "object",
+      "properties": {
+       "statements": {
+        "type": "array",
+        "items": {
+         "type": "string"
+        }
+       },
+       "statement_scores": {
+        "type": "array",
+        "items": {
+         "type": "integer"
+        }
+       }
+      },
+      "required": [
+       "statements",
+       "statement_scores"
+      ],
+      "additionalProperties": false
+     }
+    }
+   }
+  }
+ },
+ "ts": "2026-11-22T00:51:51"
+}
