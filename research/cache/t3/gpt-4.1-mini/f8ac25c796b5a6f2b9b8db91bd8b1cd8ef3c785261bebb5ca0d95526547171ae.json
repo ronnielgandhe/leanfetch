@@ -1,0 +1,27 @@
+{
+ "text": "The original line of the railroad William Howard worked for ran from the port of Baltimore west to Sandy Hook in the state of Maryland.",
+ "finish": "stop",
+ "input_tokens": 393,
+ "output_tokens": 26,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4.1-mini-2025-04-14",
+ "latency_s": 0.716,
+ "cost_usd": 0.0001988,
+ "request": {
+  "model": "gpt-4.1-mini",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Baltimore and Ohio Railroad\n\nThe Baltimore and Ohio Railroad is the oldest railroad in the United States and the first common carrier railroad. It came into being mostly because the city of Baltimore wanted to compete with the newly constructed Erie Canal (which served New York City) and another canal being proposed by Pennsylvania, which would have connected Philadelphia and Pittsburgh. At first this railroad was located entirely in the state of Maryland with an original line from the port of Baltimore west to Sandy Hook. At this point to continue westward, it had to cross into Virginia (now West Virginia) over the Potomac River, adjacent to the confluence of the Potomac and Shenandoah rivers. From there it passed through Virginia from Harpers Ferry to a point just west of the junction of Patterson Creek and the North Branch Potomac River where it crossed back into Maryland to reach Cumberland. From there it was extended to the Ohio River at Wheeling and a few years later also to Parkersburg, West Virginia.\n\ntitle: William Howard (engineer)\n\nWilliam Howard (1793\u20131834) was an American mechanical engineer who was one of the first to work for the Baltimore and Ohio Railroad. When the railroad built its first cars using friction bearings first developed by Ross Winans, Howard made his own design and patented it on November 2, 1828.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Where was the original line of the railroad William Howard worked for?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T00:57:07"
+}

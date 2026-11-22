@@ -1,0 +1,25 @@
+{
+ "text": "Margery Williams.",
+ "finish": "stop",
+ "input_tokens": 332,
+ "output_tokens": 269,
+ "reasoning_tokens": 256,
+ "served_model": "gpt-5-nano-2025-08-07",
+ "latency_s": 1.762,
+ "cost_usd": 0.0001242,
+ "request": {
+  "model": "gpt-5-nano",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: The First Easter Rabbit\n\nThe First Easter Rabbit is a 1976 animated Easter television special that premiered on April 9 on NBC, later airing on CBS. Created by Rankin/Bass, it tells the story of the Easter Bunny's origin and is loosely based on \"The Velveteen Rabbit\", a children's book by Margery Williams. Burl Ives did the narration of this special which also featured the song \"Easter Parade\". After 1964's \"Rudolph the Red-Nosed Reindeer\", this is the second Rankin/Bass special to be narrated by Burl Ives.\n\ntitle: The Velveteen Rabbit\n\nThe Velveteen Rabbit (or How Toys Become Real) is a children's book written by Margery Williams (also known as Margery Williams Bianco) and illustrated by William Nicholson. It chronicles the story of a stuffed rabbit and his desire to become real, through the love of his owner. The book was first published in 1922 and has been republished many times since.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Which author influenced the animated Easter television special \"The First Easter Rabbit\"? \nAnswer: "
+   }
+  ],
+  "params": {}
+ },
+ "ts": "2026-11-22T01:00:05"
+}

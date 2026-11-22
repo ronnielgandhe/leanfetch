@@ -1,0 +1,27 @@
+{
+ "text": "The pioneer who has a park dedicated to him near Lexington, North Carolina is famous for his exploration and settlement of what is now Kentucky, blazing the Wilderness Road through the Cumberland Gap, and founding one of the first American settlements west of the Appalachian Mountains.",
+ "finish": "stop",
+ "input_tokens": 411,
+ "output_tokens": 50,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4.1-mini-2025-04-14",
+ "latency_s": 0.717,
+ "cost_usd": 0.00024440000000000003,
+ "request": {
+  "model": "gpt-4.1-mini",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Boone's Cave Park\n\nBoone's Cave Park is a 110-acre county park located near Lexington, North Carolina It was established in 1909 by the Daniel Boone Memorial Association. It is named after American pioneer Daniel Boone.\n\ntitle: Daniel Boone\n\nDaniel Boone (November 2, 1734 [O.S. October 22] September 26, 1820) was an American pioneer, explorer, woodsman, and frontiersman, whose frontier exploits made him one of the first folk heroes of the United States. Boone is most famous for his exploration and settlement of what is now Kentucky, which was then part of Virginia but on the other side of the mountains from the settled areas. As a young adult, Boone supplemented his farm income by hunting and trapping game, and selling their pelts in the fur market. Through this occupational interest, Boone first learned the easy routes to the area. Despite some resistance from American Indian tribes such as the Shawnee, in 1775, Boone blazed his Wilderness Road through the Cumberland Gap in the Appalachian Mountains from North Carolina and Tennessee into Kentucky. There, he founded the village of Boonesborough, Kentucky, one of the first American settlements west of the Appalachians. Before the end of the 18th century, more than 200,000 Americans migrated to Kentucky/Virginia by following the route marked by Boone.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: What is the pioneer who has a park dedicated to him near Lexington, North Carolina famous for?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T00:57:02"
+}

@@ -1,0 +1,26 @@
+{
+ "text": "{\"error\": \"Please provide the actual input data with fields: \\\"questions\\\", \\\"contexts\\\", and \\\"predicted_answers\\\". I will extract the statements from the predicted answer and compute a [1, 0] faithfulness score for each statement based on the given contexts.\"}",
+ "finish": "stop",
+ "input_tokens": 477,
+ "output_tokens": 450,
+ "reasoning_tokens": 384,
+ "served_model": "gpt-5-nano-2025-08-07",
+ "latency_s": 2.373,
+ "cost_usd": 0.00020385,
+ "request": {
+  "model": "gpt-5-nano",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Instructions:\nYour task is to judge the faithfulness or groundedness of statements based on context information. First, please extract statements from a provided predicted answer to a question. Second, calculate a faithfulness score for each statement made in the predicted answer. The score is 1 if the statement can be inferred from the provided context or 0 if it cannot be inferred.\n\nGenerate the response in JSON format with the following keys:\n[\"statements\", \"statement_scores\"]\nConsider the instructions and the examples below to determine those values.\n\nExamples:\nInputs:\n{\"questions\": \"What is the capital of Germany and when was it founded?\", \"contexts\": [\"Berlin is the capital of Germany and was founded in 1244.\"], \"predicted_answers\": \"The capital of Germany, Berlin, was founded in the 13th century.\"}\nOutputs:\n{\"statements\": [\"Berlin is the capital of Germany.\", \"Berlin was founded in 1244.\"], \"statement_scores\": [1, 1]}\nInputs:\n{\"questions\": \"What is the capital of France?\", \"contexts\": [\"Berlin is the capital of Germany.\"], \"predicted_answers\": \"Paris\"}\nOutputs:\n{\"statements\": [\"Paris is the capital of France.\"], \"statement_scores\": [0]}\nInputs:\n{\"questions\": \"What is the capital of Italy?\", \"contexts\": [\"Rome is the capital of Italy.\"], \"predicted_answers\": \"Rome is the capital of Italy with more than 4 million inhabitants.\"}\nOutputs:\n{\"statements\": [\"Rome is the capital of Italy.\", \"Rome has more than 4 million inhabitants.\"], \"statement_scores\": [1, 0]}\n\nInputs:\n{\"questions\": Who was better known for their acting in film than for their work in theater, Amanda Lovejoy Street or Gene Saks?, \"contexts\": ['Amanda Lovejoy Street is an American actress best known for her work in \"How to Cheat\", an award-winning feature film. An inductee of the American Theater Hall of Fame, his acting career beginning with a debut on Broadway in 1949. As a director, he was nominated for seven Tony Awards, winning three for his direction of \"I Love My Wife\", \"Brighton Beach Memoirs\" and \"Biloxi Blues\".'], \"predicted_answers\": Amanda Lovejoy Street}\nOutputs:"
+   }
+  ],
+  "params": {
+   "response_format": {
+    "type": "json_object"
+   },
+   "seed": 42
+  }
+ },
+ "ts": "2026-11-22T01:19:54"
+}

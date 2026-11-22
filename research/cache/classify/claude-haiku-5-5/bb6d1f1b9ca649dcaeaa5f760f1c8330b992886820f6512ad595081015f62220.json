@@ -1,0 +1,30 @@
+{
+ "text": "{\"task\": \"summarization\", \"output_format\": \"free_text\", \"benchmark_analogue\": \"none\", \"metric\": \"none\", \"rationale\": \"The prompt asks the model to merge multiple entity descriptions into one comprehensive, length-limited free-text summary, with no standard public benchmark matching this entity-description consolidation job.\"}",
+ "finish": "end_turn",
+ "input_tokens": 497,
+ "output_tokens": 108,
+ "reasoning_tokens": null,
+ "served_model": "claude-haiku-5-5",
+ "latency_s": 0.764,
+ "cost_usd": 0.0001037,
+ "request": {
+  "model": "claude-haiku-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You label LLM prompt templates found in source code by the job the call does. Reply with one JSON object only, no prose, with keys: task (one of ['classification_routing', 'extraction_structured', 'summarization', 'query_rewriting', 'rag_answer', 'code_generation', 'tool_selection', 'grading_judging', 'reranking', 'chat_open_ended', 'other']), output_format (free_text|json|delimited|label|score), benchmark_analogue (one well known public dataset whose task matches this job, or 'none'), metric (the objective metric that dataset uses), rationale (one sentence)."
+   },
+   {
+    "role": "user",
+    "content": "file: packages/graphrag/graphrag/prompts/index/summarize_descriptions.py\nname: SUMMARIZE_PROMPT\nplaceholders: ['max_length', 'entity_name', 'description_list']\n---\n\nYou are a helpful assistant responsible for generating a comprehensive summary of the data provided below.\nGiven one or more entities, and a list of descriptions, all related to the same entity or group of entities.\nPlease concatenate all of these into a single, comprehensive description. Make sure to include information collected from all the descriptions.\nIf the provided descriptions are contradictory, please resolve the contradictions and provide a single, coherent summary.\nMake sure it is written in third person, and include the entity names so we have the full context.\nLimit the final description length to {max_length} words.\n\n#######\n-Data-\nEntities: {entity_name}\nDescription List: {description_list}\n#######\nOutput:\n"
+   }
+  ],
+  "params": {
+   "max_tokens": 2000,
+   "output_config": {
+    "effort": "low"
+   }
+  }
+ },
+ "ts": "2026-11-22T00:44:43"
+}

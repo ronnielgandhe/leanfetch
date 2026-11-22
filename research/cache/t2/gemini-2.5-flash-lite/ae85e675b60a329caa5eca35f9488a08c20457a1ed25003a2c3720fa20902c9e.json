@@ -1,0 +1,23 @@
+{
+ "text": "{\"statements\": [\"Victoria Sinitsina won the 2016 Russian national silver medal.\", \"Victoria Sinitsina danced with another Russian ice dancer born 29 April 1995.\"], \"statement_scores\": [1, 0]}",
+ "finish": "FinishReason.STOP",
+ "input_tokens": 526,
+ "output_tokens": 53,
+ "reasoning_tokens": 0,
+ "served_model": "gemini-2.5-flash-lite",
+ "latency_s": 0.606,
+ "cost_usd": 7.38e-05,
+ "request": {
+  "model": "gemini-2.5-flash-lite",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Instructions:\nYour task is to judge the faithfulness or groundedness of statements based on context information. First, please extract statements from a provided predicted answer to a question. Second, calculate a faithfulness score for each statement made in the predicted answer. The score is 1 if the statement can be inferred from the provided context or 0 if it cannot be inferred.\n\nGenerate the response in JSON format with the following keys:\n[\"statements\", \"statement_scores\"]\nConsider the instructions and the examples below to determine those values.\n\nExamples:\nInputs:\n{\"questions\": \"What is the capital of Germany and when was it founded?\", \"contexts\": [\"Berlin is the capital of Germany and was founded in 1244.\"], \"predicted_answers\": \"The capital of Germany, Berlin, was founded in the 13th century.\"}\nOutputs:\n{\"statements\": [\"Berlin is the capital of Germany.\", \"Berlin was founded in 1244.\"], \"statement_scores\": [1, 1]}\nInputs:\n{\"questions\": \"What is the capital of France?\", \"contexts\": [\"Berlin is the capital of Germany.\"], \"predicted_answers\": \"Paris\"}\nOutputs:\n{\"statements\": [\"Paris is the capital of France.\"], \"statement_scores\": [0]}\nInputs:\n{\"questions\": \"What is the capital of Italy?\", \"contexts\": [\"Rome is the capital of Italy.\"], \"predicted_answers\": \"Rome is the capital of Italy with more than 4 million inhabitants.\"}\nOutputs:\n{\"statements\": [\"Rome is the capital of Italy.\", \"Rome has more than 4 million inhabitants.\"], \"statement_scores\": [1, 0]}\n\nInputs:\n{\"questions\": Who won the 2016 Russian national silver medal with another Russian ice dancer born 29 April 1995?, \"contexts\": ['Victoria Alexandrovna Sinitsina (Russian: \u0412\u0438\u043a\u0442\u043e\u0440\u0438\u044f \u0410\u043b\u0435\u043a\u0441\u0430\u043d\u0434\u0440\u043e\u0432\u043d\u0430 \u0421\u0438\u043d\u0438\u0446\u0438\u043d\u0430 ; born 29 April 1995) is a Russian ice dancer.Nikita Gennadyevich Katsalapov (Russian: \u041d\u0438\u043a\u0438\u0442\u0430 \u0413\u0435\u043d\u043d\u0430\u0434\u044c\u0435\u0432\u0438\u0447 \u041a\u0430\u0446\u0430\u043b\u0430\u043f\u043e\u0432 ; born 10 July 1991) is a Russian ice dancer. With Victoria Sinitsina, he is the 2016 Russian national silver medalist.'], \"predicted_answers\": Victoria Sinitsina won the 2016 Russian national silver medal with another Russian ice dancer born 29 April 1995.}\nOutputs:"
+   }
+  ],
+  "params": {
+   "response_mime_type": "application/json"
+  }
+ },
+ "ts": "2026-11-22T01:34:41"
+}

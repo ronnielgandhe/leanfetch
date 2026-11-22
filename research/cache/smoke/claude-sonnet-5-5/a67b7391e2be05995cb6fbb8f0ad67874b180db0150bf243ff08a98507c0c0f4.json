@@ -1,0 +1,21 @@
+{
+ "text": "OK",
+ "finish": "end_turn",
+ "input_tokens": 18,
+ "output_tokens": 4,
+ "reasoning_tokens": null,
+ "served_model": "claude-sonnet-5-5",
+ "latency_s": 3.027,
+ "cost_usd": 7.6e-05,
+ "request": {
+  "model": "claude-sonnet-5-5",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Reply with the single word OK."
+   }
+  ],
+  "params": {}
+ },
+ "ts": "2026-11-22T00:40:13"
+}

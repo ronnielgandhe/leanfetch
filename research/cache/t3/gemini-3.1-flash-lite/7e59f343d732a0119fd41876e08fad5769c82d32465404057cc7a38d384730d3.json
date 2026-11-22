@@ -1,0 +1,27 @@
+{
+ "text": "The competition is held in Warsaw, Poland.",
+ "finish": "FinishReason.STOP",
+ "input_tokens": 313,
+ "output_tokens": 9,
+ "reasoning_tokens": 0,
+ "served_model": "gemini-3.1-flash-lite",
+ "latency_s": 0.895,
+ "cost_usd": 9.175e-05,
+ "request": {
+  "model": "gemini-3.1-flash-lite",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Lev Oborin\n\nLev Nikolayevich Oborin (Russian: \u041b\u0435\u0432 \u041d\u0438\u043a\u043e\u043b\u0430\u0435\u0432\u0438\u0447 \u041e\u0431\u043e\u0440\u0438\u043d , \"Lev Nikolaevi\u010d Oborin\"; Moscow, 11 September [O.S. 29 August] 1907 Moscow, 5 January 1974) was a Russian pianist. He was the winner of the first International Chopin Piano Competition in 1927.\n\ntitle: International Chopin Piano Competition\n\nThe International Chopin Piano Competition (Polish: \"Mi\u0119dzynarodowy Konkurs Pianistyczny im. Fryderyka Chopina\"), often referred to as the Chopin Competition, is a piano competition held in Warsaw, Poland. It was initiated in 1927 and has been held every five years since 1955. It is one of few competitions devoted entirely to the works of a single composer, in this case, Fr\u00e9d\u00e9ric Chopin.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: The competition Lev Oborin won in 1927 is held in what city?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T01:07:10"
+}

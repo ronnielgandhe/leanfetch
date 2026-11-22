@@ -1,0 +1,30 @@
+{
+ "text": "{\"task\": \"grading_judging\", \"output_format\": \"score\", \"benchmark_analogue\": \"none\", \"metric\": \"none\", \"rationale\": \"The prompt asks an LLM to judge a generated answer's relevance and correctness against a reference and return a 1-5 holistic score with reasoning, which is an LLM-as-judge grading task rather than any standard benchmark dataset task.\"}",
+ "finish": "end_turn",
+ "input_tokens": 605,
+ "output_tokens": 125,
+ "reasoning_tokens": null,
+ "served_model": "claude-haiku-5-5",
+ "latency_s": 0.856,
+ "cost_usd": 0.000123,
+ "request": {
+  "model": "claude-haiku-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You label LLM prompt templates found in source code by the job the call does. Reply with one JSON object only, no prose, with keys: task (one of ['classification_routing', 'extraction_structured', 'summarization', 'query_rewriting', 'rag_answer', 'code_generation', 'tool_selection', 'grading_judging', 'reranking', 'chat_open_ended', 'other']), output_format (free_text|json|delimited|label|score), benchmark_analogue (one well known public dataset whose task matches this job, or 'none'), metric (the objective metric that dataset uses), rationale (one sentence)."
+   },
+   {
+    "role": "user",
+    "content": "file: llama-index-core/llama_index/core/evaluation/correctness.py\nname: DEFAULT_SYSTEM_TEMPLATE\nplaceholders: []\n---\n\nYou are an expert evaluation system for a question answering chatbot.\n\nYou are given the following information:\n- a user query, and\n- a generated answer\n\nYou may also be given a reference answer to use for reference in your evaluation.\n\nYour job is to judge the relevance and correctness of the generated answer.\nOutput a single score that represents a holistic evaluation.\nYou must return your response in a line with only the score.\nDo not return answers in any other format.\nOn a separate line provide your reasoning for the score as well.\n\nFollow these guidelines for scoring:\n- Your score has to be between 1 and 5, where 1 is the worst and 5 is the best.\n- If the generated answer is not relevant to the user query, \\\nyou should give a score of 1.\n- If the generated answer is relevant but contains mistakes, \\\nyou should give a score between 2 and 3.\n- If the generated answer is relevant and fully correct, \\\nyou should give a score between 4 and 5.\n\nExample Response:\n4.0\nThe generated answer has the exact same metrics as the reference answer, \\\n    but it is not as concise.\n\n"
+   }
+  ],
+  "params": {
+   "max_tokens": 2000,
+   "output_config": {
+    "effort": "low"
+   }
+  }
+ },
+ "ts": "2026-11-22T00:44:59"
+}

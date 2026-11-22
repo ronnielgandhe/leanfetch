@@ -1,0 +1,25 @@
+{
+ "text": "The Kansas Jayhawks beat the Missouri Tigers.",
+ "finish": "stop",
+ "input_tokens": 511,
+ "output_tokens": 49,
+ "reasoning_tokens": 31,
+ "served_model": "gpt-6-luna",
+ "latency_s": 1.182,
+ "cost_usd": 7.56e-05,
+ "request": {
+  "model": "gpt-6-luna",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Border War (Kansas\u2013Missouri rivalry)\n\nThe Border War (alternatively, Border Showdown) is the name of the rivalry between athletic teams from the University of Kansas and University of Missouri, the Kansas Jayhawks and the Missouri Tigers respectively. Athletic competition between the two schools began in 1891. From 1907 to 2012 both schools were in the same athletic conference and competed annually in all sports. \"Sports Illustrated\" described the rivalry as the oldest (Division I) rivalry west of the Mississippi River in 2011, but it has been dormant since Missouri departed the Big 12 Conference for the Southeastern Conference on July 1, 2012. Despite overtures from Missouri to continue athletic competition, no further games have been scheduled between the two schools.\n\ntitle: 2008 Kansas Jayhawks football team\n\nThe 2008 Kansas Jayhawks football team (variously \"Kansas\", \"KU\", or the \"Jayhawks\") represented the University of Kansas in the 2008 NCAA Division I FBS football season. It was the school's 119th year of intercollegiate football. The team was looking to continue the success of the prior season in which they lost only a single conference game and went on to win the Orange Bowl. In the ninth week, after defeating Kansas State 52\u201321, the Jayhawks became Bowl eligible for the fourth consecutive year, a school record. Also, for the first time in school history, Kansas made back-to-back appearances in a Bowl game after accepting the invitation to play in the Insight Bowl versus the Minnesota Golden Gophers. The team finished the regular season with a victory over their archrival, the Missouri Tigers (who was then ranked 13th in the BCS Poll), in the Border War. The Jayhawks concluded the season with an 8\u20135 overall record (4\u20134 in the Big 12 Conference).\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Who beat the Missouri Tigers in what is alternatively known as the Border Showdown?\nAnswer: "
+   }
+  ],
+  "params": {}
+ },
+ "ts": "2026-11-22T00:58:55"
+}

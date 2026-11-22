@@ -1,0 +1,27 @@
+{
+ "text": "The Space Shuttle \"Columbia\" launched for the first time on April 12, 1981.",
+ "finish": "FinishReason.STOP",
+ "input_tokens": 404,
+ "output_tokens": 23,
+ "reasoning_tokens": 0,
+ "served_model": "gemini-2.5-flash-lite",
+ "latency_s": 0.548,
+ "cost_usd": 4.9600000000000006e-05,
+ "request": {
+  "model": "gemini-2.5-flash-lite",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Bill Nelson\n\nClarence William Nelson II (born September 29, 1942) is an American politician and a member of the Democratic Party who serves as the senior United States Senator from Florida, in office since 2001. Nelson began his career in the Florida House of Representatives, where he served from 1972 to 1978. He then served in the United States House of Representatives from 1979 to 1991. In January 1986, Nelson became the first sitting member of the United States House of Representatives to fly in space. He flew as a Payload Specialist on the Space Shuttle \"Columbia\".\n\ntitle: Space Shuttle Columbia\n\nSpace Shuttle \"Columbia\" (Orbiter Vehicle Designation: OV-102) was the first space-rated orbiter in NASA's Space Shuttle fleet. It launched for the first time on mission STS-1 on April 12, 1981, the first flight of the Space Shuttle program. Over 22 years of service it completed 27 missions before disintegrating during re-entry near the end of its 28th mission, STS-107 on February 1, 2003, resulting in the deaths of all seven crew members.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Bill Nelson flew as a Payload Specialist on a Space Shuttle launched for the first time in what year?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T01:08:04"
+}

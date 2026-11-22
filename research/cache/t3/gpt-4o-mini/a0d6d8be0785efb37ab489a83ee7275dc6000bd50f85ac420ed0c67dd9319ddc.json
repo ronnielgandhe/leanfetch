@@ -1,0 +1,27 @@
+{
+ "text": "The last king of the Shahiya was Trilochanapala.",
+ "finish": "stop",
+ "input_tokens": 265,
+ "output_tokens": 14,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4o-mini-2024-07-18",
+ "latency_s": 0.485,
+ "cost_usd": 4.815e-05,
+ "request": {
+  "model": "gpt-4o-mini",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Trilochanapala\n\nTrilochanpala was the son of Anandapala and was the last king of the Kabul Shahis. He was assassinated by his own troops at the year of 1021 A.D.\n\ntitle: Kabul Shahi\n\nThe Kabul Shahi dynasties also called Shahiya ruled the Kabul Valley (in eastern Afghanistan) and the old province of Gandhara (northern Pakistan) during the Classical Period of India from the decline of the Kushan Empire in the 3rd century to the early 11th century. They are split into two eras: the Buddhist Turk Shahi and the later Hindu-Shahis with the change-over occurring around 870 CE.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Who was the last king of the Shahiya?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T00:58:19"
+}

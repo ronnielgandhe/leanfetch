@@ -1,0 +1,27 @@
+{
+ "text": "Aughton Park railway station is 11\u00bd miles (19 km) north east of Liverpool Central.",
+ "finish": "stop",
+ "input_tokens": 260,
+ "output_tokens": 20,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4.1-2025-04-14",
+ "latency_s": 0.531,
+ "cost_usd": 0.00068,
+ "request": {
+  "model": "gpt-4.1",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Ormskirk railway station\n\nOrmskirk railway station in Ormskirk, Lancashire, England, is an interchange between Merseyrail services from Liverpool Central and Northern services from Preston on the Ormskirk branch line, 12+3/4 mi northeast of Liverpool. The station building and three arch road bridge are both Grade II listed structures.\n\ntitle: Aughton Park railway station\n\nAughton Park railway station is a railway station in Aughton, Lancashire, England, on the Ormskirk branch of the Northern Line of the Merseyrail network 11\u00bd miles (19 km) north east of Liverpool Central.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Aughton Park railway station is on a branch of the Northern Line how far from Liverpool?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T00:54:43"
+}

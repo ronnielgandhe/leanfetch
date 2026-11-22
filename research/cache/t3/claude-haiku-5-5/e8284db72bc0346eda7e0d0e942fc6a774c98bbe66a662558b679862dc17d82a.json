@@ -1,0 +1,27 @@
+{
+ "text": "Confederate Army General Nathan Bedford Forrest, who was a lieutenant general in the Confederate Army, stayed in the Elliott-Donaldson House in Okolona, Mississippi, by the end of the American Civil War in 1865, where he rested.",
+ "finish": "end_turn",
+ "input_tokens": 416,
+ "output_tokens": 88,
+ "reasoning_tokens": null,
+ "served_model": "claude-haiku-5-5",
+ "latency_s": 0.814,
+ "cost_usd": 8.56e-05,
+ "request": {
+  "model": "claude-haiku-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Nathan Bedford Forrest\n\nNathan Bedford Forrest (July 13, 1821 \u2013 October 29, 1877), called Bedford Forrest in his lifetime, was a lieutenant general in the Confederate Army during the American Civil War.\n\ntitle: Elliott-Donaldson House\n\nThe Elliott-Donaldson House is a historic mansion in Okolona, Mississippi, U.S.. It was built in 1850, a decade prior to the American Civil War of 1861-1865. By the end of the war, in 1865, Confederate States Army General Nathan Bedford Forrest stayed in the house to rest. It has been listed on the National Register of Historic Places since September 15, 1980.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: What lieutenant general stayed in the Elliott-Donaldson House?\nAnswer: "
+   }
+  ],
+  "params": {
+   "max_tokens": 16000
+  }
+ },
+ "ts": "2026-11-22T00:50:23"
+}

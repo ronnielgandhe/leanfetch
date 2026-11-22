@@ -1,0 +1,27 @@
+{
+ "text": "Yes, both Marc Rosset and Max Mirnyi have been professional tennis players.",
+ "finish": "FinishReason.STOP",
+ "input_tokens": 262,
+ "output_tokens": 16,
+ "reasoning_tokens": 0,
+ "served_model": "gemini-3.1-flash-lite",
+ "latency_s": 0.74,
+ "cost_usd": 8.95e-05,
+ "request": {
+  "model": "gemini-3.1-flash-lite",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Marc Rosset\n\nMarc Rosset (born 7 November 1970) is a former professional tennis player from Switzerland who is best remembered for winning the men's singles gold medal at the 1992 Olympic Games. He also won one Grand Slam doubles title at the French Open in 1992 partnering compatriot Jakob Hlasek.\n\ntitle: Max Mirnyi\n\nMaksim \"Max\" Mirnyi (Belarusian: \u041c\u0430\u043a\u0441\u0456\u043c \u041c\u0456\u043a\u0430\u043b\u0430\u0435\u0432\u0456\u0447 \u041c\u0456\u0440\u043d\u044b ] ) (Russian: \u041c\u0430\u043a\u0441\u0438\u043c \u041d\u0438\u043a\u043e\u043b\u0430\u0435\u0432\u0438\u0447 \u041c\u0438\u0440\u043d\u044b\u0439 ] ) (born 6 July 1977, in Minsk) is a Belarusian professional tennis player.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Have Marc Rosset and Max Mirnyi both been professional tennis players?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T01:06:56"
+}

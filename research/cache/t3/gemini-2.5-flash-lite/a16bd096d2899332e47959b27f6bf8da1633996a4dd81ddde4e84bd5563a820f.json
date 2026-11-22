@@ -1,0 +1,27 @@
+{
+ "text": "The venue for the 2014 FIBA Basketball World Cup Final has a capacity of 15,000 people for basketball matches.",
+ "finish": "FinishReason.STOP",
+ "input_tokens": 300,
+ "output_tokens": 31,
+ "reasoning_tokens": 0,
+ "served_model": "gemini-2.5-flash-lite",
+ "latency_s": 0.778,
+ "cost_usd": 4.24e-05,
+ "request": {
+  "model": "gemini-2.5-flash-lite",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Palacio de Deportes de la Comunidad de Madrid\n\nPalacio de Deportes de la Comunidad de Madrid (English: \"Community of Madrid Sports Centre\"), since November 2016 called WiZink Center for sponsorship reasons, is an indoor sporting arena located in Madrid, Spain. Its capacity is 15,000 people for basketball matches and 15,500 for concerts (with standing public ramp).\n\ntitle: 2014 FIBA Basketball World Cup Final\n\nThe 2014 FIBA Basketball World Cup Final was a basketball game that took place on 14 September 2014 at Palacio de Deportes de la Comunidad de Madrid in Madrid, Spain, to determine the winner of the 2014 FIBA Basketball World Cup.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: What is the capacity, for basketball games, of the venue for the 2014 FIBA Basketball World Cup Final ?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T01:08:26"
+}

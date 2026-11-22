@@ -1,0 +1,26 @@
+{
+ "text": "{\"statements\": [\"The father of Charles Lennox Duke of Richmond was not deposed.\"], \"statement_scores\": [0]}",
+ "finish": "stop",
+ "input_tokens": 517,
+ "output_tokens": 27,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4o-mini-2024-07-18",
+ "latency_s": 0.689,
+ "cost_usd": 9.375e-05,
+ "request": {
+  "model": "gpt-4o-mini",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Instructions:\nYour task is to judge the faithfulness or groundedness of statements based on context information. First, please extract statements from a provided predicted answer to a question. Second, calculate a faithfulness score for each statement made in the predicted answer. The score is 1 if the statement can be inferred from the provided context or 0 if it cannot be inferred.\n\nGenerate the response in JSON format with the following keys:\n[\"statements\", \"statement_scores\"]\nConsider the instructions and the examples below to determine those values.\n\nExamples:\nInputs:\n{\"questions\": \"What is the capital of Germany and when was it founded?\", \"contexts\": [\"Berlin is the capital of Germany and was founded in 1244.\"], \"predicted_answers\": \"The capital of Germany, Berlin, was founded in the 13th century.\"}\nOutputs:\n{\"statements\": [\"Berlin is the capital of Germany.\", \"Berlin was founded in 1244.\"], \"statement_scores\": [1, 1]}\nInputs:\n{\"questions\": \"What is the capital of France?\", \"contexts\": [\"Berlin is the capital of Germany.\"], \"predicted_answers\": \"Paris\"}\nOutputs:\n{\"statements\": [\"Paris is the capital of France.\"], \"statement_scores\": [0]}\nInputs:\n{\"questions\": \"What is the capital of Italy?\", \"contexts\": [\"Rome is the capital of Italy.\"], \"predicted_answers\": \"Rome is the capital of Italy with more than 4 million inhabitants.\"}\nOutputs:\n{\"statements\": [\"Rome is the capital of Italy.\", \"Rome has more than 4 million inhabitants.\"], \"statement_scores\": [1, 0]}\n\nInputs:\n{\"questions\": When was the deposition of the father of Charles Lennox Duke of Richmond?, \"contexts\": [\" In 1675, King Charles II created his illegitimate son Charles Lennox Duke of Richmond (created on 9 August 1675) and Duke of Lennox (created on 9 September 1675), and the two Dukedoms have since been held concurrently by Lennox's descendants.Charles II (29 May 1630 \u2013 6 February 1685) was king of England, Scotland and Ireland. He was king of Scotland from 1649 until his deposition in 1651, and king of England, Scotland and Ireland from the restoration of the monarchy in 1660 until his death.\"], \"predicted_answers\": The father of Charles Lennox Duke of Richmond was not deposed.}\nOutputs:"
+   }
+  ],
+  "params": {
+   "response_format": {
+    "type": "json_object"
+   },
+   "seed": 42
+  }
+ },
+ "ts": "2026-11-22T01:13:08"
+}

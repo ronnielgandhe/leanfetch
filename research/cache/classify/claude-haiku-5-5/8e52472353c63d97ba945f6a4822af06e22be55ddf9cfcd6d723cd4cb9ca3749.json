@@ -1,0 +1,30 @@
+{
+ "text": "{\"task\": \"extraction_structured\", \"output_format\": \"json\", \"benchmark_analogue\": \"none\", \"metric\": \"none\", \"rationale\": \"The suffix tells the model how to phrase and attribute extracted memory facts (via an attributed_to field), so it configures a structured fact-extraction step rather than a known public benchmark task.\"}",
+ "finish": "end_turn",
+ "input_tokens": 446,
+ "output_tokens": 250,
+ "reasoning_tokens": null,
+ "served_model": "claude-haiku-5-5",
+ "latency_s": 1.585,
+ "cost_usd": 0.0001696,
+ "request": {
+  "model": "claude-haiku-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You label LLM prompt templates found in source code by the job the call does. Reply with one JSON object only, no prose, with keys: task (one of ['classification_routing', 'extraction_structured', 'summarization', 'query_rewriting', 'rag_answer', 'code_generation', 'tool_selection', 'grading_judging', 'reranking', 'chat_open_ended', 'other']), output_format (free_text|json|delimited|label|score), benchmark_analogue (one well known public dataset whose task matches this job, or 'none'), metric (the objective metric that dataset uses), rationale (one sentence)."
+   },
+   {
+    "role": "user",
+    "content": "file: mem0/configs/prompts.py\nname: AGENT_CONTEXT_SUFFIX\nplaceholders: []\n---\n\n\n## Entity Context\n\nThe primary entity is an AI agent. Frame memories from the agent's perspective:\n- For user-stated facts, frame as agent knowledge: \"Agent was informed that [fact]\" or \"Agent learned that [fact]\"\n- For agent actions, use direct statements: \"Agent recommended [X]\" or \"Agent specializes in [domain]\"\n- For agent configuration or instructions, capture directly: \"Agent is configured to [behavior]\"\n\nThe attributed_to field should still reflect the original source: \"user\" for facts the user stated, \"assistant\" for things the agent said or did.\n"
+   }
+  ],
+  "params": {
+   "max_tokens": 2000,
+   "output_config": {
+    "effort": "low"
+   }
+  }
+ },
+ "ts": "2026-11-22T00:45:25"
+}

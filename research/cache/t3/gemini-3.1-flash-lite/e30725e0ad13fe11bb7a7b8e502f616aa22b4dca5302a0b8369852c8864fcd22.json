@@ -1,0 +1,27 @@
+{
+ "text": "Jaap Speyer was born first.",
+ "finish": "FinishReason.STOP",
+ "input_tokens": 222,
+ "output_tokens": 8,
+ "reasoning_tokens": 0,
+ "served_model": "gemini-3.1-flash-lite",
+ "latency_s": 0.629,
+ "cost_usd": 6.75e-05,
+ "request": {
+  "model": "gemini-3.1-flash-lite",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Bruce Conner\n\nBruce Conner (November 18, 1933 \u2013 July 7, 2008) was an American artist renowned for his work in assemblage, film, drawing, sculpture, painting, collage, and photography, among other disciplines.\n\ntitle: Jaap Speyer\n\nJaap Speyer (1891\u20131952) was a Dutch film director. He was married to the German actress Mia Pankau.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Who was born first, Jaap Speyer or Bruce Conner?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T01:06:51"
+}

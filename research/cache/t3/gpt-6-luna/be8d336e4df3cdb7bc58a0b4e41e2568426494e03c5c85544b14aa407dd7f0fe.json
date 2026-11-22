@@ -1,0 +1,25 @@
+{
+ "text": "2000",
+ "finish": "stop",
+ "input_tokens": 319,
+ "output_tokens": 18,
+ "reasoning_tokens": 7,
+ "served_model": "gpt-6-luna",
+ "latency_s": 0.815,
+ "cost_usd": 4.0900000000000005e-05,
+ "request": {
+  "model": "gpt-6-luna",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Carlo Rovelli\n\nCarlo Rovelli (born 3 May 1956) is an Italian theoretical physicist and writer who has worked in Italy, the United States and since 2000, in France. His work is mainly in the field of quantum gravity, where he is among the founders of the loop quantum gravity theory. He has also worked in the history and philosophy of science. He collaborates regularly with several Italian newspapers, in particular the cultural supplements of \"Il Corriere della Sera\", \"Il Sole 24 Ore\" and \"La Repubblica\".\n\ntitle: Seven Brief Lessons on Physics\n\nSeven Brief Lessons on Physics (Italian: \"\" ) is a short book by the Italian physicist Carlo Rovelli. Originally published in Italian in 2014, the book has been translated into 41 languages. It is an Italian bestseller, with more than 300,000 copies sold in Rovelli's home country.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Seven Brief Lessons on Physics was written by an Italian physicist that has worked in France since what year?\nAnswer: "
+   }
+  ],
+  "params": {}
+ },
+ "ts": "2026-11-22T00:59:17"
+}

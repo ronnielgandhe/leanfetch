@@ -1,0 +1,30 @@
+{
+ "text": "{\"task\": \"code_generation\", \"output_format\": \"delimited\", \"benchmark_analogue\": \"Spider\", \"metric\": \"execution accuracy\", \"rationale\": \"The prompt asks the model to generate a syntactically correct pgvector SQL query from a natural-language question and schema, which matches text-to-SQL code generation evaluated by execution accuracy on Spider.\"}",
+ "finish": "end_turn",
+ "input_tokens": 848,
+ "output_tokens": 122,
+ "reasoning_tokens": null,
+ "served_model": "claude-haiku-5-5",
+ "latency_s": 0.786,
+ "cost_usd": 0.00014580000000000002,
+ "request": {
+  "model": "claude-haiku-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You label LLM prompt templates found in source code by the job the call does. Reply with one JSON object only, no prose, with keys: task (one of ['classification_routing', 'extraction_structured', 'summarization', 'query_rewriting', 'rag_answer', 'code_generation', 'tool_selection', 'grading_judging', 'reranking', 'chat_open_ended', 'other']), output_format (free_text|json|delimited|label|score), benchmark_analogue (one well known public dataset whose task matches this job, or 'none'), metric (the objective metric that dataset uses), rationale (one sentence)."
+   },
+   {
+    "role": "user",
+    "content": "file: llama-index-core/llama_index/core/prompts/default_prompts.py\nname: DEFAULT_TEXT_TO_SQL_PGVECTOR_TMPL\nplaceholders: ['dialect', 'schema', 'query_str']\n---\n\\\nGiven an input question, first create a syntactically correct {dialect} \\\nquery to run, then look at the results of the query and return the answer. \\\nYou can order the results by a relevant column to return the most \\\ninteresting examples in the database.\n\nPay attention to use only the column names that you can see in the schema \\\ndescription. Be careful to not query for columns that do not exist. \\\nPay attention to which column is in which table. Also, qualify column names \\\nwith the table name when needed.\n\nIMPORTANT NOTE: you can use specialized pgvector syntax (`<->`) to do nearest \\\nneighbors/semantic search to a given vector from an embeddings column in the table. \\\nThe embeddings value for a given row typically represents the semantic meaning of that row. \\\nThe vector represents an embedding representation \\\nof the question, given below. Do NOT fill in the vector values directly, but rather specify a \\\n`[query_vector]` placeholder. For instance, some select statement examples below \\\n(the name of the embeddings column is `embedding`):\nSELECT * FROM items ORDER BY embedding <-> '[query_vector]' LIMIT 5;\nSELECT * FROM items WHERE id != 1 ORDER BY embedding <-> (SELECT embedding FROM items WHERE id = 1) LIMIT 5;\nSELECT * FROM items WHERE embedding <-> '[query_vector]' < 5;\n\nYou are required to use the following format, \\\neach taking one line:\n\nQuestion: Question here\nSQLQuery: SQL Query to run\nSQLResult: Result of the SQLQuery\nAnswer: Final answer here\n\nOnly use tables listed below.\n{schema}\n\n\nQuestion: {query_str}\nSQLQuery: \\\n"
+   }
+  ],
+  "params": {
+   "max_tokens": 2000,
+   "output_config": {
+    "effort": "low"
+   }
+  }
+ },
+ "ts": "2026-11-22T00:45:07"
+}

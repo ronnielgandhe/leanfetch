@@ -1,0 +1,50 @@
+{
+  "cap_usd": 25.0,
+  "total_usd": 12.806661,
+  "by_stage": {
+    "smoke": 0.000288,
+    "classify": 0.011741,
+    "t3": 1.437681,
+    "t2": 2.567495,
+    "t1": 8.789333,
+    "defaults_alive": 0.000113
+  },
+  "by_model": {
+    "gpt-4.1": 4.346096,
+    "gpt-4.1-mini": 0.734676,
+    "gpt-4o-mini": 0.232408,
+    "gpt-5.6-terra": 2.908406,
+    "gpt-6-luna": 0.323319,
+    "gpt-5-nano": 1.396108,
+    "claude-sonnet-5-5": 1.635124,
+    "claude-haiku-5-5": 0.566127,
+    "gemini-3.1-flash-lite": 0.494395,
+    "gemini-2.5-flash-lite": 0.169983
+  },
+  "calls": 9016,
+  "updated": "2026-11-22T04:38:25",
+  "recomputed_from_cache": {
+    "note": "sum of cost_usd over every cached response; excludes the 5 uncached liveness calls in stage1b (logged in total_usd)",
+    "total_usd": 12.8065,
+    "calls": 9013,
+    "by_stage": {
+      "classify": 0.0117,
+      "smoke": 0.0003,
+      "t1": 8.7893,
+      "t2": 2.5675,
+      "t3": 1.4377
+    },
+    "by_model": {
+      "gpt-4.1": 4.3461,
+      "gpt-5.6-terra": 2.9083,
+      "claude-sonnet-5-5": 1.6351,
+      "gpt-5-nano": 1.3961,
+      "gpt-4.1-mini": 0.7347,
+      "claude-haiku-5-5": 0.5661,
+      "gemini-3.1-flash-lite": 0.4944,
+      "gpt-6-luna": 0.3233,
+      "gpt-4o-mini": 0.2324,
+      "gemini-2.5-flash-lite": 0.17
+    }
+  }
+}

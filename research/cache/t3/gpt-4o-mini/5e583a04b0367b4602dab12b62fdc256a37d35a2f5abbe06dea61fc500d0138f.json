@@ -1,0 +1,27 @@
+{
+ "text": "The comedian from And There's More was born in Ireland.",
+ "finish": "stop",
+ "input_tokens": 197,
+ "output_tokens": 11,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4o-mini-2024-07-18",
+ "latency_s": 0.563,
+ "cost_usd": 3.615e-05,
+ "request": {
+  "model": "gpt-4o-mini",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: And There's More\n\nAnd There's More is a comedy sketch show starring Jimmy Cricket produced by Central Independent Television for ITV from 1985 till 1988.\n\ntitle: Jimmy Cricket\n\nJames Mulgrew (born 17 October 1945), known professionally as Jimmy Cricket, is an Irish comedian. He currently lives with his family in Rochdale, North West England.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Where was the comedian from And There's More born? \nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T01:37:57"
+}

@@ -1,0 +1,442 @@
+{
+ "repo": "llama_index@99d7433",
+ "filesScanned": 484,
+ "callSites": [
+  {
+   "file": "llama-index-integrations/llms/llama-index-llms-openai/llama_index/llms/openai/base.py",
+   "line": 501,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "llama-index-integrations/llms/llama-index-llms-openai/llama_index/llms/openai/base.py",
+   "line": 508,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "llama-index-integrations/llms/llama-index-llms-openai/llama_index/llms/openai/base.py",
+   "line": 549,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "llama-index-integrations/llms/llama-index-llms-openai/llama_index/llms/openai/base.py",
+   "line": 621,
+   "api": "completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "llama-index-integrations/llms/llama-index-llms-openai/llama_index/llms/openai/base.py",
+   "line": 628,
+   "api": "completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "llama-index-integrations/llms/llama-index-llms-openai/llama_index/llms/openai/base.py",
+   "line": 655,
+   "api": "completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "llama-index-integrations/llms/llama-index-llms-openai/llama_index/llms/openai/base.py",
+   "line": 784,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "llama-index-integrations/llms/llama-index-llms-openai/llama_index/llms/openai/base.py",
+   "line": 789,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "llama-index-integrations/llms/llama-index-llms-openai/llama_index/llms/openai/base.py",
+   "line": 831,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "llama-index-integrations/llms/llama-index-llms-openai/llama_index/llms/openai/base.py",
+   "line": 913,
+   "api": "completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "llama-index-integrations/llms/llama-index-llms-openai/llama_index/llms/openai/base.py",
+   "line": 920,
+   "api": "completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "llama-index-integrations/llms/llama-index-llms-openai/llama_index/llms/openai/base.py",
+   "line": 949,
+   "api": "completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "llama-index-integrations/llms/llama-index-llms-openai/llama_index/llms/openai/responses.py",
+   "line": 542,
+   "api": "responses.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "llama-index-integrations/llms/llama-index-llms-openai/llama_index/llms/openai/responses.py",
+   "line": 706,
+   "api": "responses.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "llama-index-integrations/llms/llama-index-llms-openai/llama_index/llms/openai/responses.py",
+   "line": 793,
+   "api": "responses.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "llama-index-integrations/llms/llama-index-llms-openai/llama_index/llms/openai/responses.py",
+   "line": 824,
+   "api": "responses.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "llama-index-integrations/llms/llama-index-llms-openai/llama_index/llms/openai/responses.py",
+   "line": 981,
+   "api": "responses.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "llama-index-integrations/llms/llama-index-llms-openai/llama_index/llms/openai/responses.py",
+   "line": 1010,
+   "api": "responses.create",
+   "provider": "openai",
+   "kind": "chat"
+  }
+ ],
+ "modelDefaults": [
+  {
+   "file": "llama-index-core/llama_index/core/evaluation/multi_modal/faithfulness.py",
+   "line": 100,
+   "name": "model",
+   "model": "gpt-4.1",
+   "text": "model=\"gpt-4.1\", max_output_tokens=1000"
+  },
+  {
+   "file": "llama-index-core/llama_index/core/evaluation/multi_modal/relevancy.py",
+   "line": 79,
+   "name": "model",
+   "model": "gpt-4.1",
+   "text": "model=\"gpt-4.1\", max_output_tokens=1000"
+  },
+  {
+   "file": "llama-index-core/llama_index/core/postprocessor/rankGPT_rerank.py",
+   "line": 20,
+   "name": "model",
+   "model": "gpt-3.5-turbo-16k",
+   "text": "return OpenAI(model=\"gpt-3.5-turbo-16k\")"
+  },
+  {
+   "file": "llama-index-core/llama_index/core/program/multi_modal_llm_program.py",
+   "line": 64,
+   "name": "model",
+   "model": "gpt-4.1",
+   "text": "multi_modal_llm = OpenAIResponses(model=\"gpt-4.1\", temperature=0)"
+  },
+  {
+   "file": "llama-index-core/llama_index/core/query_engine/multi_modal.py",
+   "line": 88,
+   "name": "model",
+   "model": "gpt-4.1",
+   "text": "model=\"gpt-4.1\", max_output_tokens=1000"
+  },
+  {
+   "file": "llama-index-core/llama_index/core/utils.py",
+   "line": 153,
+   "name": "model_name",
+   "model": "gpt-3.5-turbo",
+   "text": "def get_tokenizer(model_name: str = \"gpt-3.5-turbo\") -> Callable[[str], List]:"
+  },
+  {
+   "file": "llama-index-integrations/llms/llama-index-llms-openai/llama_index/llms/openai/base.py",
+   "line": 99,
+   "name": "DEFAULT_OPENAI_MODEL",
+   "model": "gpt-3.5-turbo",
+   "text": "DEFAULT_OPENAI_MODEL = \"gpt-3.5-turbo\""
+  },
+  {
+   "file": "llama-index-integrations/llms/llama-index-llms-openai/llama_index/llms/openai/base.py",
+   "line": 173,
+   "name": "model",
+   "model": "gpt-3.5-turbo",
+   "text": "llm = OpenAI(model=\"gpt-3.5-turbo\")"
+  },
+  {
+   "file": "llama-index-integrations/llms/llama-index-llms-openai/llama_index/llms/openai/responses.py",
+   "line": 105,
+   "name": "DEFAULT_OPENAI_MODEL",
+   "model": "gpt-4o-mini",
+   "text": "DEFAULT_OPENAI_MODEL = \"gpt-4o-mini\""
+  },
+  {
+   "file": "llama-index-integrations/llms/llama-index-llms-openai/llama_index/llms/openai/responses.py",
+   "line": 182,
+   "name": "model",
+   "model": "gpt-4o-mini",
+   "text": "llm = OpenAIResponses(model=\"gpt-4o-mini\", api_key=\"sk-...\")"
+  },
+  {
+   "file": "llama-index-integrations/llms/llama-index-llms-openai/llama_index/llms/openai/utils.py",
+   "line": 821,
+   "name": "model",
+   "model": "o3-mini",
+   "text": "model=\"o3-mini\",  # hardcode to ensure developer messages are used"
+  }
+ ],
+ "promptTemplates": [
+  {
+   "file": "llama-index-core/llama_index/core/agent/workflow/codeact_agent.py",
+   "line": 25,
+   "name": "DEFAULT_CODE_ACT_PROMPT",
+   "chars": 1811,
+   "placeholders": [
+    "tool_descriptions"
+   ],
+   "head": "You are a helpful AI assistant that can write and execute Python code to solve problems.\n\nYou will be given a task to perform. You should output:\n- Python code wrapped in <execute>...</execute> tags that provides the solution to the task, o",
+   "value": "You are a helpful AI assistant that can write and execute Python code to solve problems.\n\nYou will be given a task to perform. You should output:\n- Python code wrapped in <execute>...</execute> tags that provides the solution to the task, or a step towards the solution. Any output you want to extract from the code should be printed to the console.\n- Text to be shown directly to the user, if you want to ask for more information or provide the final answer.\n- If the previous code execution can be used to respond to the user, then respond directly (typically you want to avoid mentioning anything related to the code execution in your response).\n\n## Response Format:\nExample of proper code format:\n<execute>\nimport math\n\ndef calculate_area(radius):\n    return math.pi * radius**2\n\n# Calculate the area for radius = 5\narea = calculate_area(5)\nprint(f\"The area of the circle is {area:.2f} square units\")\n</execute>\n\nIn addition to the Python Standard Library and any functions you have already written, you can use the following functions:\n{tool_descriptions}\n\nVariables defined at the top level of previous code snippets can be also be referenced in your code.\n\n## Final Answer Guidelines:\n- When providing a final answer, focus on directly answering the user's question\n- Avoid referencing the code you generated unless specifically asked\n- Present the results clearly and concisely as if you computed them directly\n- If relevant, you can briefly mention general methods used, but don't include code snippets in the final answer\n- Structure your response like you're directly answering the user's query, not explaining how you solved it\n\nReminder: Always place your Python code between <execute>...</execute> tags when you want to run code. You can include explanations and other content outside these tags.\n"
+  },
+  {
+   "file": "llama-index-core/llama_index/core/chat_engine/condense_plus_context.py",
+   "line": 42,
+   "name": "DEFAULT_CONTEXT_PROMPT_TEMPLATE",
+   "chars": 489,
+   "placeholders": [
+    "context_str"
+   ],
+   "head": "\n  The following is a friendly conversation between a user and an AI assistant.\n  The assistant is talkative and provides lots of specific details from its context.\n  If the assistant does not know the answer to a question, it truthfully sa",
+   "value": "\n  The following is a friendly conversation between a user and an AI assistant.\n  The assistant is talkative and provides lots of specific details from its context.\n  If the assistant does not know the answer to a question, it truthfully says it\n  does not know.\n\n  Here are the relevant documents for the context:\n\n  {context_str}\n\n  Instruction: Based on the above documents, provide a detailed answer for the user question below.\n  Answer \"don't know\" if not present in the document.\n  "
+  },
+  {
+   "file": "llama-index-core/llama_index/core/chat_engine/condense_plus_context.py",
+   "line": 56,
+   "name": "DEFAULT_CONTEXT_REFINE_PROMPT_TEMPLATE",
+   "chars": 546,
+   "placeholders": [
+    "context_msg",
+    "existing_answer"
+   ],
+   "head": "\n  The following is a friendly conversation between a user and an AI assistant.\n  The assistant is talkative and provides lots of specific details from its context.\n  If the assistant does not know the answer to a question, it truthfully sa",
+   "value": "\n  The following is a friendly conversation between a user and an AI assistant.\n  The assistant is talkative and provides lots of specific details from its context.\n  If the assistant does not know the answer to a question, it truthfully says it\n  does not know.\n\n  Here are the relevant documents for the context:\n\n  {context_msg}\n\n  Existing Answer:\n  {existing_answer}\n\n  Instruction: Refine the existing answer using the provided context to assist the user.\n  If the context isn't helpful, just repeat the existing answer and nothing more.\n  "
+  },
+  {
+   "file": "llama-index-core/llama_index/core/evaluation/correctness.py",
+   "line": 19,
+   "name": "DEFAULT_SYSTEM_TEMPLATE",
+   "chars": 1088,
+   "placeholders": [],
+   "head": "\nYou are an expert evaluation system for a question answering chatbot.\n\nYou are given the following information:\n- a user query, and\n- a generated answer\n\nYou may also be given a reference answer to use for reference in your evaluation.\n\nYo",
+   "value": "\nYou are an expert evaluation system for a question answering chatbot.\n\nYou are given the following information:\n- a user query, and\n- a generated answer\n\nYou may also be given a reference answer to use for reference in your evaluation.\n\nYour job is to judge the relevance and correctness of the generated answer.\nOutput a single score that represents a holistic evaluation.\nYou must return your response in a line with only the score.\nDo not return answers in any other format.\nOn a separate line provide your reasoning for the score as well.\n\nFollow these guidelines for scoring:\n- Your score has to be between 1 and 5, where 1 is the worst and 5 is the best.\n- If the generated answer is not relevant to the user query, \\\nyou should give a score of 1.\n- If the generated answer is relevant but contains mistakes, \\\nyou should give a score between 2 and 3.\n- If the generated answer is relevant and fully correct, \\\nyou should give a score between 4 and 5.\n\nExample Response:\n4.0\nThe generated answer has the exact same metrics as the reference answer, \\\n    but it is not as concise.\n\n"
+  },
+  {
+   "file": "llama-index-core/llama_index/core/extractors/metadata_extractors.py",
+   "line": 253,
+   "name": "DEFAULT_QUESTION_GEN_TMPL",
+   "chars": 360,
+   "placeholders": [
+    "context_str",
+    "num_questions"
+   ],
+   "head": "\\\nHere is the context:\n{context_str}\n\nGiven the contextual information, \\\ngenerate {num_questions} questions this context can provide \\\nspecific answers to which are unlikely to be found elsewhere.\n\nHigher-level summaries of surrounding con",
+   "value": "\\\nHere is the context:\n{context_str}\n\nGiven the contextual information, \\\ngenerate {num_questions} questions this context can provide \\\nspecific answers to which are unlikely to be found elsewhere.\n\nHigher-level summaries of surrounding context may be provided \\\nas well. Try using these summaries to generate better questions \\\nthat this context can answer.\n\n"
+  },
+  {
+   "file": "llama-index-core/llama_index/core/graph_stores/prompts.py",
+   "line": 3,
+   "name": "DEFAULT_CYPHER_TEMPALTE_STR",
+   "chars": 505,
+   "placeholders": [
+    "schema",
+    "question"
+   ],
+   "head": "Task:Generate Cypher statement to query a graph database.\nInstructions:\nUse only the provided relationship types and properties in the schema.\nDo not use any other relationship types or properties that are not provided.\nSchema:\n{schema}\nNot",
+   "value": "Task:Generate Cypher statement to query a graph database.\nInstructions:\nUse only the provided relationship types and properties in the schema.\nDo not use any other relationship types or properties that are not provided.\nSchema:\n{schema}\nNote: Do not include any explanations or apologies in your responses.\nDo not respond to any questions that might ask anything else than for you to construct a Cypher statement.\nDo not include any text except the generated Cypher statement.\n\nThe question is:\n{question}"
+  },
+  {
+   "file": "llama-index-core/llama_index/core/indices/knowledge_graph/retrievers.py",
+   "line": 394,
+   "name": "DEFAULT_SYNONYM_EXPAND_TEMPLATE",
+   "chars": 348,
+   "placeholders": [
+    "max_keywords",
+    "question"
+   ],
+   "head": "\nGenerate synonyms or possible form of keywords up to {max_keywords} in total,\nconsidering possible cases of capitalization, pluralization, common expressions, etc.\nProvide all synonyms of keywords in comma-separated format: 'SYNONYMS: <key",
+   "value": "\nGenerate synonyms or possible form of keywords up to {max_keywords} in total,\nconsidering possible cases of capitalization, pluralization, common expressions, etc.\nProvide all synonyms of keywords in comma-separated format: 'SYNONYMS: <keywords>'\nNote, result should be in one-line with only one 'SYNONYMS: ' prefix\n----\nKEYWORDS: {question}\n----\n"
+  },
+  {
+   "file": "llama-index-core/llama_index/core/indices/vector_store/retrievers/auto_retriever/prompts.py",
+   "line": 18,
+   "name": "PREFIX",
+   "chars": 823,
+   "placeholders": [
+    "schema_str"
+   ],
+   "head": "\\\nYour goal is to structure the user's query to match the request schema provided below.\n\n<< Structured Request Schema >>\nWhen responding use a markdown code snippet with a JSON object formatted in the \\\nfollowing schema:\n\n{schema_str}\n\nThe",
+   "value": "\\\nYour goal is to structure the user's query to match the request schema provided below.\n\n<< Structured Request Schema >>\nWhen responding use a markdown code snippet with a JSON object formatted in the \\\nfollowing schema:\n\n{schema_str}\n\nThe query string should contain only text that is expected to match the contents of \\\ndocuments. Any conditions in the filter should not be mentioned in the query as well.\n\nMake sure that filters only refer to attributes that exist in the data source.\nMake sure that filters take into account the descriptions of attributes.\nMake sure that filters are only used as needed. If there are no filters that should be \\\napplied return [] for the filter value.\\\n\nIf the user's query explicitly mentions number of documents to retrieve, set top_k to \\\nthat number, otherwise do not set top_k.\n\n"
+  },
+  {
+   "file": "llama-index-core/llama_index/core/indices/vector_store/retrievers/auto_retriever/prompts.py",
+   "line": 100,
+   "name": "EXAMPLES",
+   "chars": 367,
+   "placeholders": [
+    "example_query",
+    "example_query_2"
+   ],
+   "head": "\\\n<< Example 1. >>\nData Source:\n```json\n{example_info.model_dump_json(indent=4)}\n```\n\nUser Query:\n{example_query}\n\nStructured Request:\n```json\n{example_output.model_dump_json()}\n\n\n<< Example 2. >>\nData Source:\n```json\n{example_info_2.model_",
+   "value": "\\\n<< Example 1. >>\nData Source:\n```json\n{example_info.model_dump_json(indent=4)}\n```\n\nUser Query:\n{example_query}\n\nStructured Request:\n```json\n{example_output.model_dump_json()}\n\n\n<< Example 2. >>\nData Source:\n```json\n{example_info_2.model_dump_json(indent=4)}\n```\n\nUser Query:\n{example_query_2}\n\nStructured Request:\n```json\n{example_output_2.model_dump_json()}\n\n```\n"
+  },
+  {
+   "file": "llama-index-core/llama_index/core/node_parser/relational/base_element.py",
+   "line": 26,
+   "name": "DEFAULT_SUMMARY_QUERY_STR",
+   "chars": 314,
+   "placeholders": [],
+   "head": "\\\nWhat is this table about? Give a very concise summary (imagine you are adding a new caption and summary for this table), \\\nand output the real/existing table title/caption if context provided.\\\nand output the real/existing table id if con",
+   "value": "\\\nWhat is this table about? Give a very concise summary (imagine you are adding a new caption and summary for this table), \\\nand output the real/existing table title/caption if context provided.\\\nand output the real/existing table id if context provided.\\\nand also output whether or not the table should be kept.\\\n"
+  },
+  {
+   "file": "llama-index-core/llama_index/core/prompts/default_prompts.py",
+   "line": 216,
+   "name": "DEFAULT_TEXT_TO_SQL_PGVECTOR_TMPL",
+   "chars": 1560,
+   "placeholders": [
+    "dialect",
+    "schema",
+    "query_str"
+   ],
+   "head": "\\\nGiven an input question, first create a syntactically correct {dialect} \\\nquery to run, then look at the results of the query and return the answer. \\\nYou can order the results by a relevant column to return the most \\\ninteresting example",
+   "value": "\\\nGiven an input question, first create a syntactically correct {dialect} \\\nquery to run, then look at the results of the query and return the answer. \\\nYou can order the results by a relevant column to return the most \\\ninteresting examples in the database.\n\nPay attention to use only the column names that you can see in the schema \\\ndescription. Be careful to not query for columns that do not exist. \\\nPay attention to which column is in which table. Also, qualify column names \\\nwith the table name when needed.\n\nIMPORTANT NOTE: you can use specialized pgvector syntax (`<->`) to do nearest \\\nneighbors/semantic search to a given vector from an embeddings column in the table. \\\nThe embeddings value for a given row typically represents the semantic meaning of that row. \\\nThe vector represents an embedding representation \\\nof the question, given below. Do NOT fill in the vector values directly, but rather specify a \\\n`[query_vector]` placeholder. For instance, some select statement examples below \\\n(the name of the embeddings column is `embedding`):\nSELECT * FROM items ORDER BY embedding <-> '[query_vector]' LIMIT 5;\nSELECT * FROM items WHERE id != 1 ORDER BY embedding <-> (SELECT embedding FROM items WHERE id = 1) LIMIT 5;\nSELECT * FROM items WHERE embedding <-> '[query_vector]' < 5;\n\nYou are required to use the following format, \\\neach taking one line:\n\nQuestion: Question here\nSQLQuery: SQL Query to run\nSQLResult: Result of the SQLQuery\nAnswer: Final answer here\n\nOnly use tables listed below.\n{schema}\n\n\nQuestion: {query_str}\nSQLQuery: \\\n"
+  },
+  {
+   "file": "llama-index-core/llama_index/core/prompts/system.py",
+   "line": 3,
+   "name": "SHAKESPEARE_WRITING_ASSISTANT",
+   "chars": 533,
+   "placeholders": [],
+   "head": "\\\nYou are a Shakespearean writing assistant who speaks in a Shakespearean style. \\\nYou help people come up with creative ideas and content like stories, poems, \\\nand songs that use Shakespearean style of writing style, including words like ",
+   "value": "\\\nYou are a Shakespearean writing assistant who speaks in a Shakespearean style. \\\nYou help people come up with creative ideas and content like stories, poems, \\\nand songs that use Shakespearean style of writing style, including words like \\\n\"thou\" and \"hath”.\nHere are some example of Shakespeare's style:\n - Romeo, Romeo! Wherefore art thou Romeo?\n - Love looks not with the eyes, but with the mind; and therefore is winged Cupid \\\npainted blind.\n - Shall I compare thee to a summer's day? Thou art more lovely and more temperate.\n"
+  },
+  {
+   "file": "llama-index-core/llama_index/core/prompts/system.py",
+   "line": 15,
+   "name": "IRS_TAX_CHATBOT",
+   "chars": 2329,
+   "placeholders": [],
+   "head": "\\\n•\tYou are an IRS chatbot whose primary goal is to help users with filing their tax \\\nreturns for the 2022 year.\n•\tProvide concise replies that are polite and professional.\n•\tAnswer questions truthfully based on official government informa",
+   "value": "\\\n•\tYou are an IRS chatbot whose primary goal is to help users with filing their tax \\\nreturns for the 2022 year.\n•\tProvide concise replies that are polite and professional.\n•\tAnswer questions truthfully based on official government information, with \\\nconsideration to context provided below on changes for 2022 that can affect \\\ntax refund.\n•\tDo not answer questions that are not related to United States tax procedures and \\\nrespond with \"I can only help with any tax-related questions you may have.\".\n•\tIf you do not know the answer to a question, respond by saying “I do not know the \\\nanswer to your question. You may be able to find your answer at www.irs.gov/faqs”\n\nChanges for 2022 that can affect tax refund:\n•\tChanges in the number of dependents, employment or self-employment income and \\\ndivorce, among other factors, may affect your tax-filing status and refund. \\\nNo additional stimulus payments. Unlike 2020 and 2021, there were no new \\\nstimulus payments for 2022 so taxpayers should not expect to get an \\\nadditional payment.\n•\tSome tax credits return to 2019 levels.  This means that taxpayers will likely \\\nreceive a significantly smaller refund compared with the previous tax year. \\\nChanges include amounts for the Child Tax Credit (CTC), the Earned Income \\\nTax Credit (EITC) and the Child and Dependent Care Credit will revert \\\nto pre-COVID levels.\n•\tFor 2022, the CTC is worth $2,000 for each qualifying child. A child must be \\\nunder age 17 at the end of 2022 to be a qualifying child.For the EITC, eligible \\\ntaxpayers with no children will get $560 for the 2022 tax year.The Child and \\\nDependent Care Credit returns to a maximum of $2,100 in 2022.\n•\tNo above-the-line charitable deductions. During COVID, taxpayers were able to take \\\nup to a $600 charitable donation tax deduction on their tax returns. However, for \\\ntax year 2022, taxpayers who don’t itemize and who take the standard deduction, \\\nwon’t be able to deduct their charitable contributions.\n•\tMore people may be eligible for the Premium Tax Credit. For tax year 2022, \\\ntaxpayers may qualify for temporarily expanded eligibility for the premium \\\ntax credit.\n•\tEligibility rules changed to claim a tax credit for clean vehicles. Review the \\\nchanges under the Inflation Reduction Act of 2022 to qualify for a \\\nClean Vehicle Credit.\n"
+  },
+  {
+   "file": "llama-index-core/llama_index/core/prompts/system.py",
+   "line": 54,
+   "name": "MARKETING_WRITING_ASSISTANT",
+   "chars": 420,
+   "placeholders": [],
+   "head": "\\\nYou are a marketing writing assistant. You help come up with creative content ideas \\\nand content like marketing emails, blog posts, tweets, ad copy and product \\\ndescriptions. You write in a friendly yet professional tone but can tailor ",
+   "value": "\\\nYou are a marketing writing assistant. You help come up with creative content ideas \\\nand content like marketing emails, blog posts, tweets, ad copy and product \\\ndescriptions. You write in a friendly yet professional tone but can tailor \\\nyour writing style that best works for a user-specified audience. \\\nIf you do not know the answer to a question, respond by saying \\\n\"I do not know the answer to your question.\"\n"
+  },
+  {
+   "file": "llama-index-core/llama_index/core/query_engine/flare/answer_inserter.py",
+   "line": 49,
+   "name": "DEFAULT_ANSWER_INSERT_PROMPT_TMPL",
+   "chars": 2686,
+   "placeholders": [
+    "prev_response",
+    "lookahead_response",
+    "query_answer_pairs"
+   ],
+   "head": "\nAn existing 'lookahead response' is given below. The lookahead response\ncontains `[Search(query)]` tags. Some queries have been executed and the\nresponse retrieved. The queries and answers are also given below.\nAlso the previous response (",
+   "value": "\nAn existing 'lookahead response' is given below. The lookahead response\ncontains `[Search(query)]` tags. Some queries have been executed and the\nresponse retrieved. The queries and answers are also given below.\nAlso the previous response (the response before the lookahead response)\nis given below.\nGiven the lookahead template, previous response, and also queries and answers,\nplease 'fill in' the lookahead template with the appropriate answers.\n\nNOTE: Please make sure that the final response grammatically follows\nthe previous response + lookahead template. For example, if the previous\nresponse is \"New York City has a population of \" and the lookahead\ntemplate is \"[Search(What is the population of New York City?)]\", then\nthe final response should be \"8.4 million\".\n\nNOTE: the lookahead template may not be a complete sentence and may\ncontain trailing/leading commas, etc. Please preserve the original\nformatting of the lookahead template if possible.\n\nNOTE:\n\nNOTE: the exception to the above rule is if the answer to a query\nis equivalent to \"I don't know\" or \"I don't have an answer\". In this case,\nmodify the lookahead template to indicate that the answer is not known.\n\nNOTE: the lookahead template may contain multiple `[Search(query)]` tags\n    and only a subset of these queries have been executed.\n    Do not replace the `[Search(query)]` tags that have not been executed.\n\nPrevious Response:\n\n\nLookahead Template:\nRed is for [Search(What is the meaning of Ghana's \\\n    flag being red?)], green for forests, and gold for mineral wealth.\n\nQuery-Answer Pairs:\nQuery: What is the meaning of Ghana's flag being red?\nAnswer: The red represents the blood of those who died in the country's struggle \\\n    for independence\n\nFilled in Answers:\nRed is for the blood of those who died in the country's struggle for independence, \\\n    green for forests, and gold for mineral wealth.\n\nPrevious Response:\nOne of the largest cities in the world\n\nLookahead Template:\n, the city contains a population of [Search(What is the population \\\n    of New York City?)]\n\nQuery-Answer Pairs:\nQuery: What is the population of New York City?\nAnswer: The population of New York City is 8.4 million\n\nSynthesized Response:\n, the city contains a population of 8.4 million\n\nPrevious Response:\nthe city contains a population of\n\nLookahead Template:\n[Search(What is the population of New York City?)]\n\nQuery-Answer Pairs:\nQuery: What is the population of New York City?\nAnswer: The population of New York City is 8.4 million\n\nSynthesized Response:\n8.4 million\n\nPrevious Response:\n{prev_response}\n\nLookahead Template:\n{lookahead_response}\n\nQuery-Answer Pairs:\n{query_answer_pairs}\n\nSynthesized Response:\n"
+  },
+  {
+   "file": "llama-index-core/llama_index/core/query_engine/knowledge_graph_query_engine.py",
+   "line": 28,
+   "name": "DEFAULT_KG_RESPONSE_ANSWER_PROMPT_TMPL",
+   "chars": 341,
+   "placeholders": [
+    "query_str",
+    "kg_query_str",
+    "kg_response_str"
+   ],
+   "head": "\nThe original question is given below.\nThis question has been translated into a Graph Database query.\nBoth the Graph query and the response are given below.\nGiven the Graph Query response, synthesise a response to the original question.\n\nOr",
+   "value": "\nThe original question is given below.\nThis question has been translated into a Graph Database query.\nBoth the Graph query and the response are given below.\nGiven the Graph Query response, synthesise a response to the original question.\n\nOriginal question: {query_str}\nGraph query: {kg_query_str}\nGraph response: {kg_response_str}\nResponse:\n"
+  },
+  {
+   "file": "llama-index-core/llama_index/core/query_engine/sql_join_query_engine.py",
+   "line": 32,
+   "name": "DEFAULT_SQL_JOIN_SYNTHESIS_PROMPT_TMPL",
+   "chars": 683,
+   "placeholders": [
+    "query_str",
+    "sql_query_str",
+    "sql_response_str",
+    "query_engine_query_str",
+    "query_engine_response_str"
+   ],
+   "head": "\nThe original question is given below.\nThis question has been translated into a SQL query. Both the SQL query and \\\nthe response are given below.\nGiven the SQL response, the question has also been transformed into a more \\\ndetailed query,\na",
+   "value": "\nThe original question is given below.\nThis question has been translated into a SQL query. Both the SQL query and \\\nthe response are given below.\nGiven the SQL response, the question has also been transformed into a more \\\ndetailed query,\nand executed against another query engine.\nThe transformed query and query engine response are also given below.\nGiven SQL query, SQL response, transformed query, and query engine response, \\\nplease synthesize a response to the original question.\n\nOriginal question: {query_str}\nSQL query: {sql_query_str}\nSQL response: {sql_response_str}\nTransformed query: {query_engine_query_str}\nQuery engine response: {query_engine_response_str}\nResponse:\n"
+  },
+  {
+   "file": "llama-index-core/llama_index/core/query_engine/sql_join_query_engine.py",
+   "line": 55,
+   "name": "DEFAULT_SQL_AUGMENT_TRANSFORM_PROMPT_TMPL",
+   "chars": 1839,
+   "placeholders": [
+    "query_str",
+    "sql_query_str",
+    "sql_response_str"
+   ],
+   "head": "\n\"The original question is given below.\nThis question has been translated into a SQL query. Both the SQL query and the \\\nresponse are given below.\nThe SQL response either answers the question, or should provide additional context \\\nthat can",
+   "value": "\n\"The original question is given below.\nThis question has been translated into a SQL query. Both the SQL query and the \\\nresponse are given below.\nThe SQL response either answers the question, or should provide additional context \\\nthat can be used to make the question more specific.\nYour job is to come up with a more specific question that needs to be answered to \\\nfully answer the original question, or 'None' if the original question has already \\\nbeen fully answered from the SQL response. Do not create a new question that is \\\nirrelevant to the original question; in that case return None instead.\n\nExamples:\n\nOriginal question: Please give more details about the demographics of the city with \\\nthe highest population.\nSQL query: SELECT city, population FROM cities ORDER BY population DESC LIMIT 1\nSQL response: The city with the highest population is New York City.\nNew question: Can you tell me more about the demographics of New York City?\n\nOriginal question: Please compare the sports environment of cities in North America.\nSQL query: SELECT city_name FROM cities WHERE continent = 'North America' LIMIT 3\nSQL response: The cities in North America are New York, San Francisco, and Toronto.\nNew question: What sports are played in New York, San Francisco, and Toronto?\n\nOriginal question: What is the city with the highest population?\nSQL query: SELECT city, population FROM cities ORDER BY population DESC LIMIT 1\nSQL response: The city with the highest population is New York City.\nNew question: None\n\nOriginal question: What countries are the top 3 ATP players from?\nSQL query: SELECT country FROM players WHERE rank <= 3\nSQL response: The top 3 ATP players are from Serbia, Russia, and Spain.\nNew question: None\n\nOriginal question: {query_str}\nSQL query: {sql_query_str}\nSQL response: {sql_response_str}\nNew question: \"\n"
+  },
+  {
+   "file": "llama-index-core/llama_index/core/query_engine/sql_vector_query_engine.py",
+   "line": 31,
+   "name": "DEFAULT_SQL_VECTOR_SYNTHESIS_PROMPT_TMPL",
+   "chars": 644,
+   "placeholders": [
+    "query_str",
+    "sql_query_str",
+    "sql_response_str",
+    "query_engine_query_str",
+    "query_engine_response_str"
+   ],
+   "head": "\nThe original question is given below.\nThis question has been translated into a SQL query. \\\nBoth the SQL query and the response are given below.\nGiven the SQL response, the question has also been translated into a vector store query.\nThe v",
+   "value": "\nThe original question is given below.\nThis question has been translated into a SQL query. \\\nBoth the SQL query and the response are given below.\nGiven the SQL response, the question has also been translated into a vector store query.\nThe vector store query and response is given below.\nGiven SQL query, SQL response, transformed vector store query, and vector store \\\nresponse, please synthesize a response to the original question.\n\nOriginal question: {query_str}\nSQL query: {sql_query_str}\nSQL response: {sql_response_str}\nTransformed vector store query: {query_engine_query_str}\nVector store response: {query_engine_response_str}\nResponse:\n"
+  },
+  {
+   "file": "llama-index-core/llama_index/core/tools/tool_spec/load_and_search/base.py",
+   "line": 39,
+   "name": "reader_prompt",
+   "chars": 335,
+   "placeholders": [],
+   "head": "\n        Once data has been loaded from {} it can then be read using a natural\n        language query from this function.\n\n        You are required to pass the natural language query argument when calling this endpoint\n\n        Args:\n      ",
+   "value": "\n        Once data has been loaded from {} it can then be read using a natural\n        language query from this function.\n\n        You are required to pass the natural language query argument when calling this endpoint\n\n        Args:\n            query (str): The natural language query used to retreieve information from the index\n    "
+  }
+ ]
+}

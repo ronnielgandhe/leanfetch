@@ -1,0 +1,25 @@
+{
+ "text": "The British Broadcasting Corporation (BBC).",
+ "finish": "stop",
+ "input_tokens": 294,
+ "output_tokens": 10,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-6-luna",
+ "latency_s": 0.558,
+ "cost_usd": 3.44e-05,
+ "request": {
+  "model": "gpt-6-luna",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: BBC\n\nThe British Broadcasting Corporation (BBC) is a British public service broadcaster with its headquarters at Broadcasting House in London. The BBC is the world's oldest national broadcasting organisation and the largest broadcaster in the world by number of employees. It employs over 20,950 staff in total, 16,672 of whom are in public sector broadcasting. The total number of staff is 35,402 when part-time, flexible, and fixed contract staff are included.\n\ntitle: Welsh Rarebit (radio programme)\n\nWelsh Rarebit was a radio variety show broadcast from Cardiff by the BBC between February 1940 and December 1952. The title was taken from that of the Welsh dish of the same name. The show's most lasting legacy remains its closing song, \"We'll Keep a Welcome (in the Hillsides)\".\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: What public service broadcaster with over 20,950 employees, aired the variety show Welsh Rarebit?\nAnswer: "
+   }
+  ],
+  "params": {}
+ },
+ "ts": "2026-11-22T00:58:54"
+}

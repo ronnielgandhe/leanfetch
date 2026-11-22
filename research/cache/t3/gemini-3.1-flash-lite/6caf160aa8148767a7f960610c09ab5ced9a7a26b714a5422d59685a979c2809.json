@@ -1,0 +1,27 @@
+{
+ "text": "The company is based out of Dubai.",
+ "finish": "FinishReason.STOP",
+ "input_tokens": 346,
+ "output_tokens": 8,
+ "reasoning_tokens": 0,
+ "served_model": "gemini-3.1-flash-lite",
+ "latency_s": 0.85,
+ "cost_usd": 9.85e-05,
+ "request": {
+  "model": "gemini-3.1-flash-lite",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Khushi Ek Roag\n\nKhushi Ek Roag (or Khushi Aik Roag) (Urdu: \u062e\u0648\u0634\u06cc \u0627\u06cc\u06a9 \u0631\u0648\u06af\u200e ) is a 2012 Pakistani drama serial. Serial is broadcasting on ARY Digital since 11 June 2012. It is directed by \"Mohsin Mirza\" and written by \"Seema Munaf\", starring Yumna Zaidi, Shahood Alvi, Farhan Ally Agha, Naheed Shabbir and Sami Khan.\n\ntitle: ARY Digital\n\nARY Digital (Urdu: \u200e ), a subsidiary of the ARY Group, is a popular Pakistani television network available in Pakistan, the Middle East, North America and Europe. The ARY Group of companies is a Dubai-based holding company founded by a Pakistani businessman, Abdul Razzak Yaqoob (ARY). The network caters to the needs of South Asians, particularly the Pakistani diaspora. The channel is considered to be a pioneer in Pakistani media and broadcasting industry, and has an expanding network of channels, each with an independent focus.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Khushi Ek Roag is broadcast by a company based out of where?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T01:06:54"
+}

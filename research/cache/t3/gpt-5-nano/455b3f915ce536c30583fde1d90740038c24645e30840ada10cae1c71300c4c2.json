@@ -1,0 +1,25 @@
+{
+ "text": "Fatih Ozmen",
+ "finish": "stop",
+ "input_tokens": 334,
+ "output_tokens": 141,
+ "reasoning_tokens": 128,
+ "served_model": "gpt-5-nano-2025-08-07",
+ "latency_s": 1.149,
+ "cost_usd": 7.310000000000002e-05,
+ "request": {
+  "model": "gpt-5-nano",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Sierra Nevada Corporation\n\nSierra Nevada Corporation (SNC) is an American privately held electronic systems provider and systems integrator specializing in microsatellites, telemedicine, and commercial orbital transportation services. Sierra Nevada Corporation operates under the leadership of Chief Executive Officer, Fatih Ozmen and President, Eren Ozmen. The company contracts with the United States Armed Forces, NASA and private spaceflight companies. It is headquartered in Sparks, Nevada.\n\ntitle: SpaceDev\n\nSpaceDev, a part of the \"Space Systems Business\" of Sierra Nevada Corporation, is prominent for its spaceflight and microsatellite work. It designed and built components for the hybrid rocket motors for Paul Allen's Tier One suborbital SpaceShipOne space program operated by Scaled Composites. It is also developing micro- and nano-satellites, a small expendable launch vehicle, the SpaceDev Streaker, and has designed a piloted suborbital and orbital spaceship of its own, the SpaceDev Dream Chaser, in collaboration with NASA.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Who is the Chief Executive Officer of the corporation that owns Space Dev?\nAnswer: "
+   }
+  ],
+  "params": {}
+ },
+ "ts": "2026-11-22T00:48:38"
+}

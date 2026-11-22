@@ -1,0 +1,27 @@
+{
+ "text": "The nickname \"Buffalo Soldiers\" was given by the Native American tribes who fought the soldiers in the Indian Wars. It was first applied to the 10th Cavalry Regiment, the \"Negro Cavalry\" formed in 1866, and later came to refer to all of the African American regiments formed that year. Thomas Shaw served as a Buffalo Soldier and received the Medal of Honor for his actions in those wars.",
+ "finish": "end_turn",
+ "input_tokens": 496,
+ "output_tokens": 142,
+ "reasoning_tokens": null,
+ "served_model": "claude-sonnet-5-5",
+ "latency_s": 1.773,
+ "cost_usd": 0.002412,
+ "request": {
+  "model": "claude-sonnet-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Thomas Shaw (Medal of Honor)\n\nThomas Shaw (1846 \u2013 June 23, 1895) was a Buffalo Soldier in the United States Army and a recipient of America's highest military decoration \u2013 the Medal of Honor \u2013 for his actions in the Indian Wars of the western United States.\n\ntitle: Buffalo Soldier\n\nBuffalo Soldiers originally were members of the 10th Cavalry Regiment of the United States Army, formed on September 21, 1866, at Fort Leavenworth, Kansas. This nickname was given to the \"Negro Cavalry\" by the Native American tribes they fought in the Indian Wars. The term eventually became synonymous with all of the African American regiments formed in 1866:\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: WHICH GROUP OF PEOPLE NICKNAMED THE US ARMYS REGIMENT \"BUFFALO SOLDIERS\" IN WHICH THOMAS SHAW WON THE MEDAL OF HONOR DURING THE INDIAN WARS?\nAnswer: "
+   }
+  ],
+  "params": {
+   "max_tokens": 16000
+  }
+ },
+ "ts": "2026-11-22T01:04:10"
+}

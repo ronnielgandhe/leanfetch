@@ -1,0 +1,27 @@
+{
+ "text": "The State of Marriage features three lawyers who worked on the marriage equality movement: Mary Bonauto, Susan Murray, and Beth Robinson. Beth Robinson is the one nominated by Governor Peter Shumlin. He nominated her to the Vermont Supreme Court in October 2011, and the Vermont Senate unanimously confirmed her on February 7, 2012.",
+ "finish": "end_turn",
+ "input_tokens": 537,
+ "output_tokens": 129,
+ "reasoning_tokens": null,
+ "served_model": "claude-sonnet-5-5",
+ "latency_s": 1.156,
+ "cost_usd": 0.002364,
+ "request": {
+  "model": "claude-sonnet-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Beth Robinson\n\nBeth Robinson (born March 6, 1965) is an American lawyer and judge from Vermont who serves on the Vermont Supreme Court. Her nomination, made by Governor Peter Shumlin in October 2011, was confirmed by a unanimous vote of the Vermont Senate on February 7, 2012.\n\ntitle: The State of Marriage\n\nThe State of Marriage is a 2015 documentary film about the origins of the marriage equality movement, focusing on the decades of grassroots advocacy by lawyers Mary Bonauto, Susan Murray, and Beth Robinson and the 1999 Vermont Supreme Court case \"Baker v. Vermont\". The film had its world premiere at the 2015 Provincetown International Film Festival on 18 June 2015. It is written and directed by Jeff Kaufman, and produced by Kaufman and Marcia Ross. Funding for the film's post-production and editing work was partially raised through a successful Indiegogo crowdfunding campaign.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: What lawyers were featured in The State of Marriage, with the lawyer nominated by Governor Peter Shumlin?\nAnswer: "
+   }
+  ],
+  "params": {
+   "max_tokens": 16000
+  }
+ },
+ "ts": "2026-11-22T01:03:24"
+}

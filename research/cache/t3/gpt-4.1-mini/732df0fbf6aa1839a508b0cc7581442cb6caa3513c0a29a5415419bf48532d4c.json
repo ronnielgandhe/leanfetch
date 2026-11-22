@@ -1,0 +1,27 @@
+{
+ "text": "Cynthia Mort is American, while George Archainbaud was French-born but worked as an American film and television director.",
+ "finish": "stop",
+ "input_tokens": 265,
+ "output_tokens": 24,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4.1-mini-2025-04-14",
+ "latency_s": 0.52,
+ "cost_usd": 0.0001444,
+ "request": {
+  "model": "gpt-4.1-mini",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Cynthia Mort\n\nCynthia Mort (born June 18, 1956) is an American director, screenwriter, and producer. Mort has worked primarily in television since beginning her career in 1994, writing for the sitcom \"Roseanne\". Her notable works include the HBO series \"Tell Me You Love Me\" as a creator and executive producer, the revenge film \"The Brave One\" (2007) as a screenwriter, and the biopic \"Nina\" (2016) as a director.\n\ntitle: George Archainbaud\n\nGeorge Archainbaud (May 7, 1890 \u2013 February 20, 1959) was a French-born American film and television director.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Are both Cynthia Mort and George Archainbaud American?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T00:56:45"
+}

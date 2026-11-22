@@ -1,0 +1,30 @@
+{
+ "text": "{\"task\": \"rag_answer\", \"output_format\": \"free_text\", \"benchmark_analogue\": \"none\", \"metric\": \"none\", \"rationale\": \"The prompt supplies retrieved data tables as context and asks the model to answer a user question in markdown with inline citations to those records, which is grounded retrieval-augmented answering rather than any standard benchmark task.\"}",
+ "finish": "end_turn",
+ "input_tokens": 1120,
+ "output_tokens": 117,
+ "reasoning_tokens": null,
+ "served_model": "claude-haiku-5-5",
+ "latency_s": 0.805,
+ "cost_usd": 0.0001705,
+ "request": {
+  "model": "claude-haiku-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You label LLM prompt templates found in source code by the job the call does. Reply with one JSON object only, no prose, with keys: task (one of ['classification_routing', 'extraction_structured', 'summarization', 'query_rewriting', 'rag_answer', 'code_generation', 'tool_selection', 'grading_judging', 'reranking', 'chat_open_ended', 'other']), output_format (free_text|json|delimited|label|score), benchmark_analogue (one well known public dataset whose task matches this job, or 'none'), metric (the objective metric that dataset uses), rationale (one sentence)."
+   },
+   {
+    "role": "user",
+    "content": "file: packages/graphrag/graphrag/prompts/query/local_search_system_prompt.py\nname: LOCAL_SEARCH_SYSTEM_PROMPT\nplaceholders: ['response_type', 'context_data']\n---\n\n---Role---\n\nYou are a helpful assistant responding to questions about data in the tables provided.\n\n\n---Goal---\n\nGenerate a response of the target length and format that responds to the user's question, summarizing all information in the input data tables appropriate for the response length and format, and incorporating any relevant general knowledge.\n\nIf you don't know the answer, just say so. Do not make anything up.\n\nPoints supported by data should list their data references as follows:\n\n\"This is an example sentence supported by multiple data references [Data: <dataset name> (record ids); <dataset name> (record ids)].\"\n\nDo not list more than 5 record ids in a single reference. Instead, list the top 5 most relevant record ids and add \"+more\" to indicate that there are more.\n\nFor example:\n\n\"Person X is the owner of Company Y and subject to many allegations of wrongdoing [Data: Sources (15, 16), Reports (1), Entities (5, 7); Relationships (23); Claims (2, 7, 34, 46, 64, +more)].\"\n\nwhere 15, 16, 1, 5, 7, 23, 2, 7, 34, 46, and 64 represent the id (not the index) of the relevant data record.\n\nDo not include information where the supporting evidence for it is not provided.\n\n\n---Target response length and format---\n\n{response_type}\n\n\n---Data tables---\n\n{context_data}\n\n\n---Goal---\n\nGenerate a response of the target length and format that responds to the user's question, summarizing all information in the input data tables appropriate for the response length and format, and incorporating any relevant general knowledge.\n\nIf you don't know the answer, just say so. Do not make anything up.\n\nPoints supported by data should list their data references as follows:\n\n\"This is an example sentence supported by multiple data references [Data: <dataset name> (record ids); <dataset name> (record ids)].\"\n\nDo not list more than 5 record ids in a single reference. Instead, list the top 5 most relevant record ids and add \"+more\" to indicate that there are more.\n\nFor example:\n\n\"Person X is the owner of Company Y and subject to many allegations of wrongdoing [Data: Sources (15, 16), Reports (1), Entities (5, 7); Relationships (23); Claims (2, 7, 34, 46, 64, +more)].\"\n\nwhere 15, 16, 1, 5, 7, 23, 2, 7, 34, 46, and 64 represent the id (not the index) of the relevant data record.\n\nDo not include information where the supporting evidence for it is not provided.\n\n\n---Target response length and format---\n\n{response_type}\n\nAdd sections and commentary to the response as appropriate for the length and format. Style the response in markdown.\n"
+   }
+  ],
+  "params": {
+   "max_tokens": 2000,
+   "output_config": {
+    "effort": "low"
+   }
+  }
+ },
+ "ts": "2026-11-22T00:44:50"
+}

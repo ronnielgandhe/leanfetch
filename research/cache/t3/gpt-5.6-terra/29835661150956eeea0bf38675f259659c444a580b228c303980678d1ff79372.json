@@ -1,0 +1,25 @@
+{
+ "text": "Adelaide Laetitia \u201cAddie\u201d Miethke was pivotal in forming the School of the Air.",
+ "finish": "stop",
+ "input_tokens": 288,
+ "output_tokens": 25,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-5.6-terra",
+ "latency_s": 0.872,
+ "cost_usd": 0.000876,
+ "request": {
+  "model": "gpt-5.6-terra",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: School of the Air\n\nSchool of the Air is a generic term for correspondence schools catering for the primary and early secondary education of children in remote and outback Australia where some or all classes were traditionally conducted by radio, although this is now being replaced by internet technology. In these areas, the school-age population is too small for a conventional school to be viable.\n\ntitle: Adelaide Miethke\n\nAdelaide Laetitia \"Addie\" Miethke, {'1': \", '2': \", '3': \", '4': \"} (8 June 1881 \u2013 4 February 1962), was a South Australian educator and teacher who was pivotal in the formation of the School of the Air using the existing Royal Flying Doctor Service radio network.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Who was the pivotal in the formation of schools catering for the primary and early secondary education of children in remote and outback Australia?\nAnswer: "
+   }
+  ],
+  "params": {}
+ },
+ "ts": "2026-11-22T00:56:07"
+}

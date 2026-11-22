@@ -1,0 +1,27 @@
+{
+ "text": "The species with an extinct subspecies classified as a trogloxene, known from fossils and prehistoric art, is the lion.",
+ "finish": "FinishReason.STOP",
+ "input_tokens": 370,
+ "output_tokens": 25,
+ "reasoning_tokens": 0,
+ "served_model": "gemini-2.5-flash-lite",
+ "latency_s": 0.594,
+ "cost_usd": 4.7e-05,
+ "request": {
+  "model": "gemini-2.5-flash-lite",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Panthera leo spelaea\n\nPanthera leo spelaea or P. spelaea, commonly known as the European or Eurasian cave lion, is an extinct subspecies of lion. It is known from fossils and many examples of prehistoric art.\n\ntitle: Trogloxene\n\nTrogloxenes, also called cave guests, are animal species which live close to caves or at the very entrance of the cave, but cannot live exclusively in a cave. This group consists of both extant animals, such as raccoons, rats, foxes and bears, opiliones (a.k.a. Daddy-Long-Legs) and extinct animals like cave bears, cave lions, cave leopards, and cave hyenas. Indications trusted by geologists and archaeologists combine to show that these animals lived there in the latter part, at least, of the third interglacial epoch, and on through the fourth and last glacial advance, when, although central Europe was free from an ice cap, an almost Arctic climate prevailed, with much rain. This is what is known as the Upper Paleolithic, when humanity in Europe was represented by the Neanderthals.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery:  What species has an extinct subspecies that are classified as Trogloxene and are known from fossils and prehistoric art?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T01:07:53"
+}

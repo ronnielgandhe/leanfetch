@@ -1,0 +1,21 @@
+{
+ "text": "OK",
+ "finish": "end_turn",
+ "input_tokens": 18,
+ "output_tokens": 4,
+ "reasoning_tokens": null,
+ "served_model": "claude-haiku-5-5",
+ "latency_s": 0.504,
+ "cost_usd": 3.7999999999999996e-06,
+ "request": {
+  "model": "claude-haiku-5-5",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Reply with the single word OK."
+   }
+  ],
+  "params": {}
+ },
+ "ts": "2026-11-22T00:40:13"
+}

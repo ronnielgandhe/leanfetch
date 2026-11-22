@@ -1,0 +1,27 @@
+{
+ "text": "What Ever Happened to Baby Jane? came out before \u2026All the Marbles.",
+ "finish": "stop",
+ "input_tokens": 348,
+ "output_tokens": 17,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4.1-2025-04-14",
+ "latency_s": 0.678,
+ "cost_usd": 0.000832,
+ "request": {
+  "model": "gpt-4.1",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: ...All the Marbles\n\n\u2026All the Marbles (reissued as The California Dolls) is a 1981 comedy-drama film about the trials and travails of a female wrestling tag team and their manager. It was directed by Robert Aldrich (his final film) and stars Peter Falk, Vicki Frederick and Laurene Landon. The Pittsburgh Steeler hall of famer \"Mean\" Joe Greene plays himself.\n\ntitle: Robert Aldrich\n\nRobert Burgess Aldrich (August 9, 1918 \u2013 December 5, 1983) was an American film director, writer and producer, notable for such films as \"Vera Cruz\" (1954), \"Kiss Me Deadly\" (1955), \"The Big Knife\" (1955), \"What Ever Happened to Baby Jane?\" (1962), \"Hush\u2026 Hush, Sweet Charlotte\" (1964), \"The Flight of the Phoenix\" (1965), \"The Dirty Dozen\" (1967) and \"The Longest Yard\" (1974).\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: What film came out first, All the Marbles or What Ever Happened to Baby Jane?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T00:54:55"
+}

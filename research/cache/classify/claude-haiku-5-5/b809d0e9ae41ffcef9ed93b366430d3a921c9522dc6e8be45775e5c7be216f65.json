@@ -1,0 +1,30 @@
+{
+ "text": "{\"task\": \"code_generation\", \"output_format\": \"free_text\", \"benchmark_analogue\": \"HumanEval\", \"metric\": \"pass@k (functional correctness of generated code on unit tests)\", \"rationale\": \"The prompt instructs the model to write Python code inside <execute> tags to solve user tasks and then give a direct final answer, which is code generation with execution, so HumanEval-style functional correctness is the closest analogue.\"}",
+ "finish": "end_turn",
+ "input_tokens": 812,
+ "output_tokens": 141,
+ "reasoning_tokens": null,
+ "served_model": "claude-haiku-5-5",
+ "latency_s": 0.898,
+ "cost_usd": 0.0001517,
+ "request": {
+  "model": "claude-haiku-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You label LLM prompt templates found in source code by the job the call does. Reply with one JSON object only, no prose, with keys: task (one of ['classification_routing', 'extraction_structured', 'summarization', 'query_rewriting', 'rag_answer', 'code_generation', 'tool_selection', 'grading_judging', 'reranking', 'chat_open_ended', 'other']), output_format (free_text|json|delimited|label|score), benchmark_analogue (one well known public dataset whose task matches this job, or 'none'), metric (the objective metric that dataset uses), rationale (one sentence)."
+   },
+   {
+    "role": "user",
+    "content": "file: llama-index-core/llama_index/core/agent/workflow/codeact_agent.py\nname: DEFAULT_CODE_ACT_PROMPT\nplaceholders: ['tool_descriptions']\n---\nYou are a helpful AI assistant that can write and execute Python code to solve problems.\n\nYou will be given a task to perform. You should output:\n- Python code wrapped in <execute>...</execute> tags that provides the solution to the task, or a step towards the solution. Any output you want to extract from the code should be printed to the console.\n- Text to be shown directly to the user, if you want to ask for more information or provide the final answer.\n- If the previous code execution can be used to respond to the user, then respond directly (typically you want to avoid mentioning anything related to the code execution in your response).\n\n## Response Format:\nExample of proper code format:\n<execute>\nimport math\n\ndef calculate_area(radius):\n    return math.pi * radius**2\n\n# Calculate the area for radius = 5\narea = calculate_area(5)\nprint(f\"The area of the circle is {area:.2f} square units\")\n</execute>\n\nIn addition to the Python Standard Library and any functions you have already written, you can use the following functions:\n{tool_descriptions}\n\nVariables defined at the top level of previous code snippets can be also be referenced in your code.\n\n## Final Answer Guidelines:\n- When providing a final answer, focus on directly answering the user's question\n- Avoid referencing the code you generated unless specifically asked\n- Present the results clearly and concisely as if you computed them directly\n- If relevant, you can briefly mention general methods used, but don't include code snippets in the final answer\n- Structure your response like you're directly answering the user's query, not explaining how you solved it\n\nReminder: Always place your Python code between <execute>...</execute> tags when you want to run code. You can include explanations and other content outside these tags.\n"
+   }
+  ],
+  "params": {
+   "max_tokens": 2000,
+   "output_config": {
+    "effort": "low"
+   }
+  }
+ },
+ "ts": "2026-11-22T00:44:57"
+}

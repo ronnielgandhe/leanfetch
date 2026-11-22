@@ -1,0 +1,25 @@
+{
+ "text": "Tomorrowland.",
+ "finish": "stop",
+ "input_tokens": 274,
+ "output_tokens": 6,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-5.6-terra",
+ "latency_s": 0.818,
+ "cost_usd": 0.00062,
+ "request": {
+  "model": "gpt-5.6-terra",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Tropical house\n\nTropical house, also known as trop house, is a subgenre of deep house, with elements of dancehall and Balearic house. Artists of the genre are often featured at various summer festivals such as Tomorrowland. The genre was popularized by artists including Thomas Jack, Kygo, Matoma, Lost Frequencies, Seeb and Klingande.\n\ntitle: Bakermat\n\nLodewijk Fluttert (born 8 October 1991), best known by his stage name Bakermat, is a Dutch DJ and music producer from the village of Markelo in Overijssel. His music consists of a mix of electronic, deep and tropical house, techno music produced in a minimalist manner with jazz and soul influences.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: At what summer festival might you find music by Bakermat?\nAnswer: "
+   }
+  ],
+  "params": {}
+ },
+ "ts": "2026-11-22T00:55:42"
+}

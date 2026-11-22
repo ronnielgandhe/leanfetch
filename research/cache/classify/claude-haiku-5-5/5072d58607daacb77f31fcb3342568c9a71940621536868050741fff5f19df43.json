@@ -1,0 +1,30 @@
+{
+ "text": "{\"task\": \"query_rewriting\", \"output_format\": \"free_text\", \"benchmark_analogue\": \"none\", \"metric\": \"none\", \"rationale\": \"The template asks the LLM to generate synthetic questions answerable from a given context, which is question generation for metadata enrichment rather than any standard benchmarked task, so no direct public dataset or metric fits well.\"}",
+ "finish": "end_turn",
+ "input_tokens": 392,
+ "output_tokens": 117,
+ "reasoning_tokens": null,
+ "served_model": "claude-haiku-5-5",
+ "latency_s": 0.861,
+ "cost_usd": 9.77e-05,
+ "request": {
+  "model": "claude-haiku-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You label LLM prompt templates found in source code by the job the call does. Reply with one JSON object only, no prose, with keys: task (one of ['classification_routing', 'extraction_structured', 'summarization', 'query_rewriting', 'rag_answer', 'code_generation', 'tool_selection', 'grading_judging', 'reranking', 'chat_open_ended', 'other']), output_format (free_text|json|delimited|label|score), benchmark_analogue (one well known public dataset whose task matches this job, or 'none'), metric (the objective metric that dataset uses), rationale (one sentence)."
+   },
+   {
+    "role": "user",
+    "content": "file: llama-index-core/llama_index/core/extractors/metadata_extractors.py\nname: DEFAULT_QUESTION_GEN_TMPL\nplaceholders: ['context_str', 'num_questions']\n---\n\\\nHere is the context:\n{context_str}\n\nGiven the contextual information, \\\ngenerate {num_questions} questions this context can provide \\\nspecific answers to which are unlikely to be found elsewhere.\n\nHigher-level summaries of surrounding context may be provided \\\nas well. Try using these summaries to generate better questions \\\nthat this context can answer.\n\n"
+   }
+  ],
+  "params": {
+   "max_tokens": 2000,
+   "output_config": {
+    "effort": "low"
+   }
+  }
+ },
+ "ts": "2026-11-22T00:45:00"
+}

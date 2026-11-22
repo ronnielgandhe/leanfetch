@@ -1,0 +1,50 @@
+{
+ "text": "{\"statements\":[\"The Castle of Buchan is the medieval Scottish castle that was built during the same period as the chapel dedicated to the Virgin Mary.\"],\"statement_scores\":[0]}",
+ "finish": "end_turn",
+ "input_tokens": 1040,
+ "output_tokens": 66,
+ "reasoning_tokens": null,
+ "served_model": "claude-sonnet-5-5",
+ "latency_s": 1.59,
+ "cost_usd": 0.00274,
+ "request": {
+  "model": "claude-sonnet-5-5",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Instructions:\nYour task is to judge the faithfulness or groundedness of statements based on context information. First, please extract statements from a provided predicted answer to a question. Second, calculate a faithfulness score for each statement made in the predicted answer. The score is 1 if the statement can be inferred from the provided context or 0 if it cannot be inferred.\n\nGenerate the response in JSON format with the following keys:\n[\"statements\", \"statement_scores\"]\nConsider the instructions and the examples below to determine those values.\n\nExamples:\nInputs:\n{\"questions\": \"What is the capital of Germany and when was it founded?\", \"contexts\": [\"Berlin is the capital of Germany and was founded in 1244.\"], \"predicted_answers\": \"The capital of Germany, Berlin, was founded in the 13th century.\"}\nOutputs:\n{\"statements\": [\"Berlin is the capital of Germany.\", \"Berlin was founded in 1244.\"], \"statement_scores\": [1, 1]}\nInputs:\n{\"questions\": \"What is the capital of France?\", \"contexts\": [\"Berlin is the capital of Germany.\"], \"predicted_answers\": \"Paris\"}\nOutputs:\n{\"statements\": [\"Paris is the capital of France.\"], \"statement_scores\": [0]}\nInputs:\n{\"questions\": \"What is the capital of Italy?\", \"contexts\": [\"Rome is the capital of Italy.\"], \"predicted_answers\": \"Rome is the capital of Italy with more than 4 million inhabitants.\"}\nOutputs:\n{\"statements\": [\"Rome is the capital of Italy.\", \"Rome has more than 4 million inhabitants.\"], \"statement_scores\": [1, 0]}\n\nInputs:\n{\"questions\": what medieval Scottish castle was build during the same period as the chapel Dedicated to the Virgin Mary?, \"contexts\": [' It was built by William Comyn, jure uxoris Earl of Buchan during the same period as the Castle of Rattray and was \"\"private chapel for the castle\"\" and its residents. \"\"Dedicated to the Virgin Mary\"\" it was possibly constructed after the \"\"drowning of a\"...\" [unknown] \"\"son of Comyn in the well near by.\"\"The Castle of Rattray was a medieval Scottish castle, with multiple variations on its structure over approximately six centuries.'], \"predicted_answers\": The Castle of Buchan}\nOutputs:"
+   }
+  ],
+  "params": {
+   "max_tokens": 16000,
+   "output_config": {
+    "format": {
+     "type": "json_schema",
+     "schema": {
+      "type": "object",
+      "properties": {
+       "statements": {
+        "type": "array",
+        "items": {
+         "type": "string"
+        }
+       },
+       "statement_scores": {
+        "type": "array",
+        "items": {
+         "type": "integer"
+        }
+       }
+      },
+      "required": [
+       "statements",
+       "statement_scores"
+      ],
+      "additionalProperties": false
+     }
+    }
+   }
+  }
+ },
+ "ts": "2026-11-22T01:30:23"
+}

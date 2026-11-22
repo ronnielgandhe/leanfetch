@@ -1,0 +1,50 @@
+{
+ "text": "{\"statements\":[\"Claude Nicollier was an astronaut of the European Space Agency (ESA).\",\"Andr\u00e9 Kuipers was an astronaut of the European Space Agency (ESA).\"],\"statement_scores\":[0,1]}",
+ "finish": "end_turn",
+ "input_tokens": 1001,
+ "output_tokens": 395,
+ "reasoning_tokens": null,
+ "served_model": "claude-sonnet-5-5",
+ "latency_s": 3.821,
+ "cost_usd": 0.005952,
+ "request": {
+  "model": "claude-sonnet-5-5",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Instructions:\nYour task is to judge the faithfulness or groundedness of statements based on context information. First, please extract statements from a provided predicted answer to a question. Second, calculate a faithfulness score for each statement made in the predicted answer. The score is 1 if the statement can be inferred from the provided context or 0 if it cannot be inferred.\n\nGenerate the response in JSON format with the following keys:\n[\"statements\", \"statement_scores\"]\nConsider the instructions and the examples below to determine those values.\n\nExamples:\nInputs:\n{\"questions\": \"What is the capital of Germany and when was it founded?\", \"contexts\": [\"Berlin is the capital of Germany and was founded in 1244.\"], \"predicted_answers\": \"The capital of Germany, Berlin, was founded in the 13th century.\"}\nOutputs:\n{\"statements\": [\"Berlin is the capital of Germany.\", \"Berlin was founded in 1244.\"], \"statement_scores\": [1, 1]}\nInputs:\n{\"questions\": \"What is the capital of France?\", \"contexts\": [\"Berlin is the capital of Germany.\"], \"predicted_answers\": \"Paris\"}\nOutputs:\n{\"statements\": [\"Paris is the capital of France.\"], \"statement_scores\": [0]}\nInputs:\n{\"questions\": \"What is the capital of Italy?\", \"contexts\": [\"Rome is the capital of Italy.\"], \"predicted_answers\": \"Rome is the capital of Italy with more than 4 million inhabitants.\"}\nOutputs:\n{\"statements\": [\"Rome is the capital of Italy.\", \"Rome has more than 4 million inhabitants.\"], \"statement_scores\": [1, 0]}\n\nInputs:\n{\"questions\": Claude Nicollier and Andr\u00e9 Kuipers were both astronauts of which space agency?, \"contexts\": [' During his final spaceflight he participated in a spacewalk, becoming the first European Space Agency astronaut to do so during a Space Shuttle mission (previous ESA astronauts conducted spacewalks aboard \"Mir\", see List of spacewalks and moonwalks 1965\u20131999).Andr\u00e9 Kuipers (] ; born 5 October 1958) is a Dutch physician and ESA astronaut.'], \"predicted_answers\": ESA}\nOutputs:"
+   }
+  ],
+  "params": {
+   "max_tokens": 16000,
+   "output_config": {
+    "format": {
+     "type": "json_schema",
+     "schema": {
+      "type": "object",
+      "properties": {
+       "statements": {
+        "type": "array",
+        "items": {
+         "type": "string"
+        }
+       },
+       "statement_scores": {
+        "type": "array",
+        "items": {
+         "type": "integer"
+        }
+       }
+      },
+      "required": [
+       "statements",
+       "statement_scores"
+      ],
+      "additionalProperties": false
+     }
+    }
+   }
+  }
+ },
+ "ts": "2026-11-22T01:29:49"
+}

@@ -1,0 +1,25 @@
+{
+ "text": "Lambics.",
+ "finish": "stop",
+ "input_tokens": 257,
+ "output_tokens": 141,
+ "reasoning_tokens": 128,
+ "served_model": "gpt-5-nano-2025-08-07",
+ "latency_s": 1.782,
+ "cost_usd": 6.925e-05,
+ "request": {
+  "model": "gpt-5-nano",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Lindemans Brewery\n\nLindemans Brewery (Brouwerij Lindemans) is a Belgian family brewery based in Vlezenbeek, a small town in the Flemish Brabant southwest of Brussels. It produces lambics.\n\ntitle: Vlezenbeek\n\nVlezenbeek is a small town of 3,324 in the Flemish Brabant southwest of Brussels, Belgium. It is part of the municipality Sint-Pieters-Leeuw. It is the home of Neuhaus, an international exporter of fine Belgian chocolate, as well as Lindemans Brewery, a brewery that produces lambics, a distinctly Belgian type of beer.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: What does the brewery that is located in the home of Neuhaus produce?\nAnswer: "
+   }
+  ],
+  "params": {}
+ },
+ "ts": "2026-11-22T01:00:14"
+}

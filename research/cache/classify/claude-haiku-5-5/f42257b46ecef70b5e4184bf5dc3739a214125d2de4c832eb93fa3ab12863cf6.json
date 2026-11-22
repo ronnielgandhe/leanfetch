@@ -1,0 +1,30 @@
+{
+ "text": "{\"task\": \"classification_routing\", \"output_format\": \"label\", \"benchmark_analogue\": \"none\", \"metric\": \"none\", \"rationale\": \"The prompt asks the model to pick the primary language of a text and reply with only the language name, which is a single-label classification whose output routes downstream prompt tuning; language identification benchmarks like FLORES-200 or Tatoeba exist but do not match this exact job closely.\"}",
+ "finish": "end_turn",
+ "input_tokens": 383,
+ "output_tokens": 134,
+ "reasoning_tokens": null,
+ "served_model": "claude-haiku-5-5",
+ "latency_s": 1.033,
+ "cost_usd": 0.00010530000000000001,
+ "request": {
+  "model": "claude-haiku-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You label LLM prompt templates found in source code by the job the call does. Reply with one JSON object only, no prose, with keys: task (one of ['classification_routing', 'extraction_structured', 'summarization', 'query_rewriting', 'rag_answer', 'code_generation', 'tool_selection', 'grading_judging', 'reranking', 'chat_open_ended', 'other']), output_format (free_text|json|delimited|label|score), benchmark_analogue (one well known public dataset whose task matches this job, or 'none'), metric (the objective metric that dataset uses), rationale (one sentence)."
+   },
+   {
+    "role": "user",
+    "content": "file: packages/graphrag/graphrag/prompt_tune/prompt/language.py\nname: DETECT_LANGUAGE_PROMPT\nplaceholders: ['input_text']\n---\n\nYou are an intelligent assistant that helps a human to analyze the information in a text document.\nGiven a sample text, help the user by determining what's the primary language of the provided texts.\nExamples are: \"English\", \"Spanish\", \"Japanese\", \"Portuguese\" among others. Reply ONLY with the language name.\n\nText: {input_text}\nLanguage:"
+   }
+  ],
+  "params": {
+   "max_tokens": 2000,
+   "output_config": {
+    "effort": "low"
+   }
+  }
+ },
+ "ts": "2026-11-22T00:44:34"
+}

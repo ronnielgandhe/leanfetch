@@ -1,0 +1,27 @@
+{
+ "text": "Washington",
+ "finish": "stop",
+ "input_tokens": 429,
+ "output_tokens": 1,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4.1-2025-04-14",
+ "latency_s": 0.726,
+ "cost_usd": 0.000866,
+ "request": {
+  "model": "gpt-4.1",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Kurt Cobain: Montage of Heck\n\nKurt Cobain: Montage of Heck (also billed as Cobain: Montage of Heck) is a 2015 documentary film about Nirvana lead singer Kurt Cobain. The film was directed by Brett Morgen and premiered at the 2015 Sundance Film Festival. It received a limited theatrical release worldwide and premiered on television in the United States on HBO on April 24, 2015. The documentary chronicles the life of Kurt Cobain from his birth in Aberdeen, Washington in 1967, through his troubled early family life and teenage years and rise to fame as front man of Nirvana, up to his death in April 1994 in Seattle at the age of 27.\n\ntitle: Suicide of Kurt Cobain\n\nOn April 8, 1994, Kurt Cobain, the lead singer of the grunge band Nirvana, was found dead at his home, located at 171 Lake Washington Boulevard East in Seattle, Washington. Forensic analysis at the time determined he had killed himself on April 5. The Seattle Police Department incident report states: \"Kurt Cobain was found with a shotgun across his body, had a visible head wound and there was a suicide note discovered nearby.\" The King County Medical Examiner noted puncture wounds on the inside of both the right and left elbow. Prior to his death, Cobain had checked out of a drug rehabilitation facility and had been reported as suicidal by his wife Courtney Love.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Kurt Cobain: Montage of Heck documents the life of Cobain until his suicide in what state?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T00:55:21"
+}

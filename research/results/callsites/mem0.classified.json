@@ -1,0 +1,470 @@
+{
+ "repo": "mem0@fff8a64",
+ "modelDefaults": [
+  {
+   "file": "mem0/llms/anthropic.py",
+   "line": 38,
+   "name": "model",
+   "model": "claude-sonnet-4-6",
+   "text": "self.config.model = \"claude-sonnet-4-6\""
+  },
+  {
+   "file": "mem0/llms/azure_openai.py",
+   "line": 44,
+   "name": "model",
+   "model": "gpt-5-mini",
+   "text": "self.config.model = \"gpt-5-mini\""
+  },
+  {
+   "file": "mem0/llms/azure_openai_structured.py",
+   "line": 22,
+   "name": "model",
+   "model": "gpt-5-mini",
+   "text": "self.config.model = \"gpt-5-mini\""
+  },
+  {
+   "file": "mem0/llms/gemini.py",
+   "line": 37,
+   "name": "model",
+   "model": "gemini-2.0-flash",
+   "text": "self.config.model = \"gemini-2.0-flash\""
+  },
+  {
+   "file": "mem0/llms/litellm.py",
+   "line": 21,
+   "name": "model",
+   "model": "gpt-5-mini",
+   "text": "self.config.model = \"gpt-5-mini\""
+  },
+  {
+   "file": "mem0/llms/openai.py",
+   "line": 40,
+   "name": "model",
+   "model": "gpt-5-mini",
+   "text": "self.config.model = \"gpt-5-mini\""
+  },
+  {
+   "file": "mem0/llms/openai_structured.py",
+   "line": 15,
+   "name": "model",
+   "model": "gpt-5-mini",
+   "text": "self.config.model = \"gpt-5-mini\""
+  }
+ ],
+ "callSites": [
+  {
+   "file": "mem0/embeddings/aws_bedrock.py",
+   "line": 82,
+   "api": "bedrock",
+   "provider": "other",
+   "kind": "chat"
+  },
+  {
+   "file": "mem0/embeddings/azure_openai.py",
+   "line": 55,
+   "api": "embeddings.create",
+   "provider": "openai",
+   "kind": "embed"
+  },
+  {
+   "file": "mem0/embeddings/azure_openai.py",
+   "line": 67,
+   "api": "embeddings.create",
+   "provider": "openai",
+   "kind": "embed"
+  },
+  {
+   "file": "mem0/embeddings/gemini.py",
+   "line": 37,
+   "api": "embed_content",
+   "provider": "google",
+   "kind": "embed"
+  },
+  {
+   "file": "mem0/embeddings/gemini.py",
+   "line": 49,
+   "api": "embed_content",
+   "provider": "google",
+   "kind": "embed"
+  },
+  {
+   "file": "mem0/embeddings/huggingface.py",
+   "line": 42,
+   "api": "embeddings.create",
+   "provider": "openai",
+   "kind": "embed"
+  },
+  {
+   "file": "mem0/embeddings/huggingface.py",
+   "line": 52,
+   "api": "embeddings.create",
+   "provider": "openai",
+   "kind": "embed"
+  },
+  {
+   "file": "mem0/embeddings/langchain.py",
+   "line": 35,
+   "api": "langchain embed_query",
+   "provider": "unknown",
+   "kind": "embed"
+  },
+  {
+   "file": "mem0/embeddings/lmstudio.py",
+   "line": 29,
+   "api": "embeddings.create",
+   "provider": "openai",
+   "kind": "embed"
+  },
+  {
+   "file": "mem0/embeddings/lmstudio.py",
+   "line": 35,
+   "api": "embeddings.create",
+   "provider": "openai",
+   "kind": "embed"
+  },
+  {
+   "file": "mem0/embeddings/openai.py",
+   "line": 55,
+   "api": "embeddings.create",
+   "provider": "openai",
+   "kind": "embed"
+  },
+  {
+   "file": "mem0/embeddings/openai.py",
+   "line": 74,
+   "api": "embeddings.create",
+   "provider": "openai",
+   "kind": "embed"
+  },
+  {
+   "file": "mem0/embeddings/together.py",
+   "line": 30,
+   "api": "embeddings.create",
+   "provider": "openai",
+   "kind": "embed"
+  },
+  {
+   "file": "mem0/embeddings/together.py",
+   "line": 35,
+   "api": "embeddings.create",
+   "provider": "openai",
+   "kind": "embed"
+  },
+  {
+   "file": "mem0/llms/anthropic.py",
+   "line": 140,
+   "api": "messages.create",
+   "provider": "anthropic",
+   "kind": "chat"
+  },
+  {
+   "file": "mem0/llms/aws_bedrock.py",
+   "line": 558,
+   "api": "bedrock",
+   "provider": "anthropic",
+   "kind": "chat"
+  },
+  {
+   "file": "mem0/llms/aws_bedrock.py",
+   "line": 580,
+   "api": "bedrock",
+   "provider": "anthropic",
+   "kind": "chat"
+  },
+  {
+   "file": "mem0/llms/aws_bedrock.py",
+   "line": 626,
+   "api": "bedrock",
+   "provider": "anthropic",
+   "kind": "chat"
+  },
+  {
+   "file": "mem0/llms/aws_bedrock.py",
+   "line": 635,
+   "api": "bedrock",
+   "provider": "anthropic",
+   "kind": "chat"
+  },
+  {
+   "file": "mem0/llms/aws_bedrock.py",
+   "line": 654,
+   "api": "bedrock",
+   "provider": "anthropic",
+   "kind": "chat"
+  },
+  {
+   "file": "mem0/llms/aws_bedrock.py",
+   "line": 712,
+   "api": "bedrock",
+   "provider": "anthropic",
+   "kind": "chat"
+  },
+  {
+   "file": "mem0/llms/aws_bedrock.py",
+   "line": 720,
+   "api": "bedrock",
+   "provider": "anthropic",
+   "kind": "chat"
+  },
+  {
+   "file": "mem0/llms/azure_openai.py",
+   "line": 165,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "mem0/llms/azure_openai_structured.py",
+   "line": 102,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "mem0/llms/deepseek.py",
+   "line": 108,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "mem0/llms/gemini.py",
+   "line": 224,
+   "api": "generate_content",
+   "provider": "google",
+   "kind": "chat"
+  },
+  {
+   "file": "mem0/llms/groq.py",
+   "line": 118,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "mem0/llms/litellm.py",
+   "line": 91,
+   "api": "litellm.completion",
+   "provider": "unknown",
+   "kind": "chat"
+  },
+  {
+   "file": "mem0/llms/lmstudio.py",
+   "line": 113,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "mem0/llms/minimax.py",
+   "line": 113,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "mem0/llms/openai.py",
+   "line": 141,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "mem0/llms/openai_structured.py",
+   "line": 48,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "mem0/llms/together.py",
+   "line": 91,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "mem0/llms/vllm.py",
+   "line": 107,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "mem0/llms/xai.py",
+   "line": 109,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "mem0/proxy/main.py",
+   "line": 107,
+   "api": "litellm.completion",
+   "provider": "unknown",
+   "kind": "chat"
+  },
+  {
+   "file": "mem0/vector_stores/vertex_ai_vector_search.py",
+   "line": 532,
+   "api": "langchain embed_query",
+   "provider": "unknown",
+   "kind": "embed"
+  },
+  {
+   "file": "mem0/vector_stores/vertex_ai_vector_search.py",
+   "line": 621,
+   "api": "langchain embed_query",
+   "provider": "unknown",
+   "kind": "embed"
+  }
+ ],
+ "templates": [
+  {
+   "file": "mem0/configs/prompts.py",
+   "line": 4,
+   "name": "MEMORY_ANSWER_PROMPT",
+   "chars": 547,
+   "placeholders": [],
+   "label": {
+    "task": "rag_answer",
+    "output_format": "free_text",
+    "benchmark_analogue": "LoCoMo",
+    "metric": "F1 score on answer tokens (LLM-judged correctness)",
+    "rationale": "The prompt asks the model to answer a question using retrieved memory snippets as context, which is the retrieval-augmented question answering pattern, and LoCoMo evaluates long-term conversational memory QA with F1 over answers."
+   }
+  },
+  {
+   "file": "mem0/configs/prompts.py",
+   "line": 15,
+   "name": "FACT_RETRIEVAL_PROMPT",
+   "chars": 3212,
+   "placeholders": [],
+   "label": {
+    "task": "extraction_structured",
+    "output_format": "json",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "The prompt asks the model to pull discrete personal facts out of a conversation and return them as a JSON object with a \"facts\" list of strings, which is structured information extraction rather than any established public benchmark task."
+   }
+  },
+  {
+   "file": "mem0/configs/prompts.py",
+   "line": 63,
+   "name": "USER_MEMORY_EXTRACTION_PROMPT",
+   "chars": 4220,
+   "placeholders": [],
+   "label": {
+    "task": "extraction_structured",
+    "output_format": "json",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "The prompt asks the model to pull personal facts and preferences from user messages into a JSON object with a \"facts\" list, which is structured information extraction; no standard public benchmark matches this memory-specific task exactly."
+   }
+  },
+  {
+   "file": "mem0/configs/prompts.py",
+   "line": 124,
+   "name": "AGENT_MEMORY_EXTRACTION_PROMPT",
+   "chars": 3918,
+   "placeholders": [],
+   "label": {
+    "task": "extraction_structured",
+    "output_format": "json",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "The prompt asks the model to pull assistant-only facts from a conversation and return them as a JSON object with a \"facts\" list of strings, which is structured information extraction, though no standard public benchmark matches this assistant-self-memory variant exactly."
+   }
+  },
+  {
+   "file": "mem0/configs/prompts.py",
+   "line": 176,
+   "name": "DEFAULT_UPDATE_MEMORY_PROMPT",
+   "chars": 5310,
+   "placeholders": [],
+   "label": {
+    "task": "classification_routing",
+    "output_format": "json",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "The prompt asks the model to label each retrieved fact against existing memory with one of ADD/UPDATE/DELETE/NONE and emit a structured JSON memory list, which is a multi-way routing decision over memory operations rather than any standard public benchmark task."
+   }
+  },
+  {
+   "file": "mem0/configs/prompts.py",
+   "line": 326,
+   "name": "PROCEDURAL_MEMORY_SYSTEM_PROMPT",
+   "chars": 5101,
+   "placeholders": [],
+   "label": {
+    "task": "summarization",
+    "output_format": "free_text",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "The prompt asks the model to produce a structured, chronological summary of an agent's execution history (with verbatim action results), which is a summarization job, though the verbatim-preservation requirement makes it closer to log compression than abstractive summarization, and no standard public benchmark matches it."
+   }
+  },
+  {
+   "file": "mem0/configs/prompts.py",
+   "line": 468,
+   "name": "ADDITIVE_EXTRACTION_PROMPT",
+   "chars": 33661,
+   "placeholders": [],
+   "label": {
+    "task": "extraction_structured",
+    "output_format": "json",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "The prompt directs the model to extract discrete, attributed memory statements from conversation turns, deduplicate against existing memories, link IDs, and return sequential ADD records, which is structured information extraction with no public benchmark matching this memory-store task."
+   }
+  },
+  {
+   "file": "mem0/configs/prompts.py",
+   "line": 947,
+   "name": "AGENT_CONTEXT_SUFFIX",
+   "chars": 563,
+   "placeholders": [],
+   "label": {
+    "task": "extraction_structured",
+    "output_format": "json",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "The suffix tells the model how to phrase and attribute extracted memory facts (via an attributed_to field), so it configures a structured fact-extraction step rather than a known public benchmark task."
+   }
+  },
+  {
+   "file": "mem0/vector_stores/azure_mysql.py",
+   "line": 367,
+   "name": "query_sql",
+   "chars": 394,
+   "placeholders": [
+    "filter_clause"
+   ],
+   "label": {
+    "task": "other",
+    "output_format": "json",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "This is a parameterized MySQL full-text search query (MATCH...AGAINST in natural language mode) used as a vector store retrieval backend, not an LLM prompt template, so no LLM task category applies."
+   }
+  },
+  {
+   "file": "mem0/vector_stores/neptune_analytics.py",
+   "line": 184,
+   "name": "query_string",
+   "chars": 300,
+   "placeholders": [
+    "top_k",
+    "vectors",
+    "filter_clause"
+   ],
+   "label": {
+    "task": "other",
+    "output_format": "json",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "This is an openCypher query template for Neptune Analytics top-k vector similarity search, not an LLM prompt, so it doesn't map to any LLM task category or benchmark."
+   }
+  }
+ ]
+}

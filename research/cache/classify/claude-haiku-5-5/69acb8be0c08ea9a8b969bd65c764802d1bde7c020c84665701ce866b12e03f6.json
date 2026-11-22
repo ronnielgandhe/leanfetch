@@ -1,0 +1,30 @@
+{
+ "text": "{\"task\": \"rag_answer\", \"output_format\": \"json\", \"benchmark_analogue\": \"none\", \"metric\": \"none\", \"rationale\": \"The prompt has the model answer a question grounded in provided data tables with inline citations, while also emitting a self-assessed relevance score and follow-up queries as JSON, and no public benchmark dataset matches this combined grounded-answer-plus-self-scoring format.\"}",
+ "finish": "end_turn",
+ "input_tokens": 1312,
+ "output_tokens": 133,
+ "reasoning_tokens": null,
+ "served_model": "claude-haiku-5-5",
+ "latency_s": 0.909,
+ "cost_usd": 0.0001977,
+ "request": {
+  "model": "claude-haiku-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You label LLM prompt templates found in source code by the job the call does. Reply with one JSON object only, no prose, with keys: task (one of ['classification_routing', 'extraction_structured', 'summarization', 'query_rewriting', 'rag_answer', 'code_generation', 'tool_selection', 'grading_judging', 'reranking', 'chat_open_ended', 'other']), output_format (free_text|json|delimited|label|score), benchmark_analogue (one well known public dataset whose task matches this job, or 'none'), metric (the objective metric that dataset uses), rationale (one sentence)."
+   },
+   {
+    "role": "user",
+    "content": "file: packages/graphrag/graphrag/prompts/query/drift_search_system_prompt.py\nname: DRIFT_LOCAL_SYSTEM_PROMPT\nplaceholders: ['response_type', 'context_data', 'global_query', 'followups']\n---\n\n---Role---\n\nYou are a helpful assistant responding to questions about data in the tables provided.\n\n\n---Goal---\n\nGenerate a response of the target length and format that responds to the user's question, summarizing all information in the input data tables appropriate for the response length and format, and incorporating any relevant general knowledge.\n\nIf you don't know the answer, just say so. Do not make anything up.\n\nPoints supported by data should list their data references as follows:\n\n\"This is an example sentence supported by multiple data references [Data: <dataset name> (record ids); <dataset name> (record ids)].\"\n\nDo not list more than 5 record ids in a single reference. Instead, list the top 5 most relevant record ids and add \"+more\" to indicate that there are more.\n\nFor example:\n\n\"Person X is the owner of Company Y and subject to many allegations of wrongdoing [Data: Sources (15, 16)].\"\n\nwhere 15, 16, 1, 5, 7, 23, 2, 7, 34, 46, and 64 represent the id (not the index) of the relevant data record.\n\nPay close attention specifically to the Sources tables as it contains the most relevant information for the user query. You will be rewarded for preserving the context of the sources in your response.\n\n---Target response length and format---\n\n{response_type}\n\n\n---Data tables---\n\n{context_data}\n\n\n---Goal---\n\nGenerate a response of the target length and format that responds to the user's question, summarizing all information in the input data tables appropriate for the response length and format, and incorporating any relevant general knowledge.\n\nIf you don't know the answer, just say so. Do not make anything up.\n\nPoints supported by data should list their data references as follows:\n\n\"This is an example sentence supported by multiple data references [Data: <dataset name> (record ids); <dataset name> (record ids)].\"\n\nDo not list more than 5 record ids in a single reference. Instead, list the top 5 most relevant record ids and add \"+more\" to indicate that there are more.\n\nFor example:\n\n\"Person X is the owner of Company Y and subject to many allegations of wrongdoing [Data: Sources (15, 16)].\"\n\nwhere 15, 16, 1, 5, 7, 23, 2, 7, 34, 46, and 64 represent the id (not the index) of the relevant data record.\n\nPay close attention specifically to the Sources tables as it contains the most relevant information for the user query. You will be rewarded for preserving the context of the sources in your response.\n\n---Target response length and format---\n\n{response_type}\n\nAdd sections and commentary to the response as appropriate for the length and format.\n\nAdditionally provide a score between 0 and 100 representing how well the response addresses the overall research question: {global_query}. Based on your response, suggest up to {followups} follow-up questions that could be asked to further explore the topic as it relates to the overall research question. Do not include scores or follow up questions in the 'response' field of the JSON, add them to the respective 'score' and 'follow_up_queries' keys of the JSON output. Format your response in JSON with the following keys and values:\n\n{{'response': str, Put your answer, formatted in markdown, here. Do not answer the global query in this section.\n'score': int,\n'follow_up_queries': List[str]}}\n"
+   }
+  ],
+  "params": {
+   "max_tokens": 2000,
+   "output_config": {
+    "effort": "low"
+   }
+  }
+ },
+ "ts": "2026-11-22T00:44:45"
+}

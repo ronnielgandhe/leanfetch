@@ -1,0 +1,268 @@
+{
+ "repo": "haystack@85b8d4e",
+ "modelDefaults": [
+  {
+   "file": "haystack/components/builders/chat_prompt_builder.py",
+   "line": 77,
+   "name": "model",
+   "model": "gpt-5.6-luna",
+   "text": "llm = OpenAIResponsesChatGenerator(model=\"gpt-5.6-luna\")"
+  },
+  {
+   "file": "haystack/components/classifiers/openai_decisions_document_classifier.py",
+   "line": 89,
+   "name": "model",
+   "model": "gpt-6-luna",
+   "text": "model: str = \"gpt-6-luna\","
+  },
+  {
+   "file": "haystack/components/generators/chat/openai.py",
+   "line": 135,
+   "name": "model",
+   "model": "gpt-5.6-terra",
+   "text": "model: str = \"gpt-5.6-terra\","
+  },
+  {
+   "file": "haystack/components/generators/chat/openai_responses.py",
+   "line": 132,
+   "name": "model",
+   "model": "gpt-5.6-terra",
+   "text": "model: str = \"gpt-5.6-terra\","
+  },
+  {
+   "file": "haystack/components/generators/openai_image_generator.py",
+   "line": 37,
+   "name": "model",
+   "model": "gpt-image-2",
+   "text": "model: str = \"gpt-image-2\","
+  },
+  {
+   "file": "haystack/components/joiners/branch.py",
+   "line": 62,
+   "name": "model",
+   "model": "gpt-5.6-luna",
+   "text": "pipe.add_component(\"generator\", OpenAIResponsesChatGenerator(model=\"gpt-5.6-luna\"))"
+  },
+  {
+   "file": "haystack/components/query/query_expander.py",
+   "line": 73,
+   "name": "model",
+   "model": "gpt-5.6-luna",
+   "text": "model=\"gpt-5.6-luna\","
+  },
+  {
+   "file": "haystack/components/query/query_expander.py",
+   "line": 134,
+   "name": "model",
+   "model": "gpt-4.1-mini",
+   "text": "model=\"gpt-4.1-mini\","
+  },
+  {
+   "file": "haystack/components/rankers/llm_ranker.py",
+   "line": 23,
+   "name": "model",
+   "model": "gpt-4.1-mini",
+   "text": "model=\"gpt-4.1-mini\","
+  },
+  {
+   "file": "haystack/components/rankers/llm_ranker.py",
+   "line": 104,
+   "name": "model",
+   "model": "gpt-5.6-luna",
+   "text": "model=\"gpt-5.6-luna\","
+  },
+  {
+   "file": "haystack/components/routers/openai_decisions_image_router.py",
+   "line": 62,
+   "name": "model",
+   "model": "gpt-6-luna",
+   "text": "model: str = \"gpt-6-luna\","
+  },
+  {
+   "file": "haystack/components/routers/openai_decisions_text_router.py",
+   "line": 54,
+   "name": "model",
+   "model": "gpt-6-luna",
+   "text": "model: str = \"gpt-6-luna\","
+  },
+  {
+   "file": "haystack/hooks/budget/hooks.py",
+   "line": 136,
+   "name": "model",
+   "model": "gpt-5.4-nano",
+   "text": "chat_generator=OpenAIResponsesChatGenerator(model=\"gpt-5.4-nano\"),"
+  },
+  {
+   "file": "haystack/hooks/compaction/hooks.py",
+   "line": 75,
+   "name": "model",
+   "model": "gpt-5.4-nano",
+   "text": "chat_generator=OpenAIResponsesChatGenerator(model=\"gpt-5.4-nano\"),"
+  },
+  {
+   "file": "haystack/hooks/compaction/sliding_window.py",
+   "line": 269,
+   "name": "model",
+   "model": "gpt-5.4-nano",
+   "text": "chat_generator=OpenAIResponsesChatGenerator(model=\"gpt-5.4-nano\"),"
+  },
+  {
+   "file": "haystack/hooks/compaction/summarization.py",
+   "line": 191,
+   "name": "model",
+   "model": "gpt-5.4-nano",
+   "text": "summary_generator = OpenAIResponsesChatGenerator(model=\"gpt-5.4-nano\")"
+  },
+  {
+   "file": "haystack/hooks/compaction/tool_result_offloading.py",
+   "line": 58,
+   "name": "model",
+   "model": "gpt-5.4-nano",
+   "text": "chat_generator=OpenAIResponsesChatGenerator(model=\"gpt-5.4-nano\"),"
+  },
+  {
+   "file": "haystack/hooks/compaction/tool_result_pruning.py",
+   "line": 39,
+   "name": "model",
+   "model": "gpt-5.4-nano",
+   "text": "chat_generator=OpenAIResponsesChatGenerator(model=\"gpt-5.4-nano\"),"
+  },
+  {
+   "file": "haystack/hooks/tool_result_offloading/hooks.py",
+   "line": 111,
+   "name": "model",
+   "model": "gpt-5.6-luna",
+   "text": "chat_generator=OpenAIResponsesChatGenerator(model=\"gpt-5.6-luna\"),"
+  },
+  {
+   "file": "haystack/tools/agent_tool.py",
+   "line": 74,
+   "name": "model",
+   "model": "gpt-5.4-mini",
+   "text": "chat_generator=OpenAIResponsesChatGenerator(model=\"gpt-5.4-mini\"),"
+  },
+  {
+   "file": "haystack/tools/agent_tool.py",
+   "line": 94,
+   "name": "model",
+   "model": "gpt-5.4",
+   "text": "chat_generator=OpenAIResponsesChatGenerator(model=\"gpt-5.4\"),"
+  },
+  {
+   "file": "haystack/tools/pipeline_tool.py",
+   "line": 78,
+   "name": "model",
+   "model": "gpt-5.6-luna",
+   "text": "chat_generator=OpenAIResponsesChatGenerator(model=\"gpt-5.6-luna\"),"
+  }
+ ],
+ "callSites": [
+  {
+   "file": "haystack/components/embedders/openai_document_embedder.py",
+   "line": 267,
+   "api": "embeddings.create",
+   "provider": "openai",
+   "kind": "embed"
+  },
+  {
+   "file": "haystack/components/embedders/openai_document_embedder.py",
+   "line": 312,
+   "api": "embeddings.create",
+   "provider": "openai",
+   "kind": "embed"
+  },
+  {
+   "file": "haystack/components/embedders/openai_text_embedder.py",
+   "line": 230,
+   "api": "embeddings.create",
+   "provider": "openai",
+   "kind": "embed"
+  },
+  {
+   "file": "haystack/components/embedders/openai_text_embedder.py",
+   "line": 252,
+   "api": "embeddings.create",
+   "provider": "openai",
+   "kind": "embed"
+  }
+ ],
+ "templates": [
+  {
+   "file": "haystack/components/extractors/image/llm_document_content_extractor.py",
+   "line": 32,
+   "name": "DEFAULT_PROMPT_TEMPLATE",
+   "chars": 1114,
+   "placeholders": [],
+   "label": {
+    "task": "extraction_structured",
+    "output_format": "json",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "The prompt asks a vision-capable LLM to transcribe an image-based document into markdown with captioned visual elements and returns a JSON object with a document_content key, which is structured content extraction rather than any standard benchmark task."
+   }
+  },
+  {
+   "file": "haystack/components/query/query_expander.py",
+   "line": 22,
+   "name": "DEFAULT_PROMPT_TEMPLATE",
+   "chars": 1308,
+   "placeholders": [
+    "n_expansions",
+    "query"
+   ],
+   "label": {
+    "task": "query_rewriting",
+    "output_format": "json",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "The prompt asks the model to rewrite a user query into several semantically similar variants for improved retrieval recall, a query expansion task with no standard public benchmark dataset matching it directly."
+   }
+  },
+  {
+   "file": "haystack/components/rankers/llm_ranker.py",
+   "line": 53,
+   "name": "DEFAULT_PROMPT_TEMPLATE",
+   "chars": 703,
+   "placeholders": [
+    "query"
+   ],
+   "label": {
+    "task": "reranking",
+    "output_format": "json",
+    "benchmark_analogue": "MS MARCO passage ranking",
+    "metric": "MRR@10",
+    "rationale": "The prompt asks the LLM to order retrieved documents by relevance to a query and return a JSON list of document indices, which is a passage reranking job evaluated by ranking metrics like MRR@10."
+   }
+  },
+  {
+   "file": "haystack/hooks/backup_answer/hooks.py",
+   "line": 21,
+   "name": "_DEFAULT_SYSTEM_PROMPT_TEMPLATE",
+   "chars": 766,
+   "placeholders": [
+    "system_prompt"
+   ],
+   "label": {
+    "task": "chat_open_ended",
+    "output_format": "free_text",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "The template instructs the model to write a free-form final answer to the user from gathered tool-call context when the agent was stopped early, which is open-ended generation with no fixed labels or schema and no standard public benchmark matching it."
+   }
+  },
+  {
+   "file": "haystack/hooks/compaction/summarization.py",
+   "line": 34,
+   "name": "_DEFAULT_SUMMARY_INSTRUCTION",
+   "chars": 2157,
+   "placeholders": [],
+   "label": {
+    "task": "summarization",
+    "output_format": "free_text",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "The prompt asks the model to compress a conversation portion into a fixed-section terse summary that replaces the original, which is a conversation-compaction summarization job with no standard public benchmark matching its exact structure."
+   }
+  }
+ ]
+}

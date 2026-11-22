@@ -1,0 +1,26 @@
+{
+ "text": "{\n  \"statements\": [\n    \"The Gell-Mann\u2013Nishijima formula was proposed by an American physicist.\",\n    \"The American physicist who proposed the Gell-Mann\u2013Nishijima formula received a Nobel Prize in 1969.\"\n  ],\n  \"statement_scores\": [1, 1]\n}",
+ "finish": "stop",
+ "input_tokens": 503,
+ "output_tokens": 70,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4.1-2025-04-14",
+ "latency_s": 1.157,
+ "cost_usd": 0.001566,
+ "request": {
+  "model": "gpt-4.1",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Instructions:\nYour task is to judge the faithfulness or groundedness of statements based on context information. First, please extract statements from a provided predicted answer to a question. Second, calculate a faithfulness score for each statement made in the predicted answer. The score is 1 if the statement can be inferred from the provided context or 0 if it cannot be inferred.\n\nGenerate the response in JSON format with the following keys:\n[\"statements\", \"statement_scores\"]\nConsider the instructions and the examples below to determine those values.\n\nExamples:\nInputs:\n{\"questions\": \"What is the capital of Germany and when was it founded?\", \"contexts\": [\"Berlin is the capital of Germany and was founded in 1244.\"], \"predicted_answers\": \"The capital of Germany, Berlin, was founded in the 13th century.\"}\nOutputs:\n{\"statements\": [\"Berlin is the capital of Germany.\", \"Berlin was founded in 1244.\"], \"statement_scores\": [1, 1]}\nInputs:\n{\"questions\": \"What is the capital of France?\", \"contexts\": [\"Berlin is the capital of Germany.\"], \"predicted_answers\": \"Paris\"}\nOutputs:\n{\"statements\": [\"Paris is the capital of France.\"], \"statement_scores\": [0]}\nInputs:\n{\"questions\": \"What is the capital of Italy?\", \"contexts\": [\"Rome is the capital of Italy.\"], \"predicted_answers\": \"Rome is the capital of Italy with more than 4 million inhabitants.\"}\nOutputs:\n{\"statements\": [\"Rome is the capital of Italy.\", \"Rome has more than 4 million inhabitants.\"], \"statement_scores\": [1, 0]}\n\nInputs:\n{\"questions\": The Gell-Mann\u2013Nishijima formula was proposed by an American physicist who received a Nobel Prize in what year?, \"contexts\": ['The Gell-Mann\u2013Nishijima formula (sometimes known as the NNG formula) relates the baryon number \"B\", the strangeness \"S\", the isospin \"I\" of quarks and hadrons to the electric charge \"Q\". Murray Gell-Mann proposed the formula independently in 1956.Murray Gell-Mann ( ; born September 15, 1929) is an American physicist who received the 1969 Nobel Prize in physics for his work on the theory of elementary particles.'], \"predicted_answers\": 1969}\nOutputs:"
+   }
+  ],
+  "params": {
+   "response_format": {
+    "type": "json_object"
+   },
+   "seed": 42
+  }
+ },
+ "ts": "2026-11-22T01:08:41"
+}

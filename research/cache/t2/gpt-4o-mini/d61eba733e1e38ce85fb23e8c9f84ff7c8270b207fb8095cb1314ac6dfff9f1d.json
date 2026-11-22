@@ -1,0 +1,26 @@
+{
+ "text": "{\"statements\": [\"Harris Yulin earned a Primetime Emmy Award Nomination in 1996 for his role on 'Frasier.'\", \"Harris Yulin appeared in 'Looking for Richard.'\"], \"statement_scores\": [1, 0]}",
+ "finish": "stop",
+ "input_tokens": 553,
+ "output_tokens": 53,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4o-mini-2024-07-18",
+ "latency_s": 0.878,
+ "cost_usd": 0.00011475,
+ "request": {
+  "model": "gpt-4o-mini",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Instructions:\nYour task is to judge the faithfulness or groundedness of statements based on context information. First, please extract statements from a provided predicted answer to a question. Second, calculate a faithfulness score for each statement made in the predicted answer. The score is 1 if the statement can be inferred from the provided context or 0 if it cannot be inferred.\n\nGenerate the response in JSON format with the following keys:\n[\"statements\", \"statement_scores\"]\nConsider the instructions and the examples below to determine those values.\n\nExamples:\nInputs:\n{\"questions\": \"What is the capital of Germany and when was it founded?\", \"contexts\": [\"Berlin is the capital of Germany and was founded in 1244.\"], \"predicted_answers\": \"The capital of Germany, Berlin, was founded in the 13th century.\"}\nOutputs:\n{\"statements\": [\"Berlin is the capital of Germany.\", \"Berlin was founded in 1244.\"], \"statement_scores\": [1, 1]}\nInputs:\n{\"questions\": \"What is the capital of France?\", \"contexts\": [\"Berlin is the capital of Germany.\"], \"predicted_answers\": \"Paris\"}\nOutputs:\n{\"statements\": [\"Paris is the capital of France.\"], \"statement_scores\": [0]}\nInputs:\n{\"questions\": \"What is the capital of Italy?\", \"contexts\": [\"Rome is the capital of Italy.\"], \"predicted_answers\": \"Rome is the capital of Italy with more than 4 million inhabitants.\"}\nOutputs:\n{\"statements\": [\"Rome is the capital of Italy.\", \"Rome has more than 4 million inhabitants.\"], \"statement_scores\": [1, 0]}\n\nInputs:\n{\"questions\": The actor that earned a Primetime Emmy Award Nomination in 1996 for his role on \"Fraiser\" appeared in what 1996 film based on William Shakespeare's \"Richard III\"? , \"contexts\": ['Harris Yulin (born November 5, 1937) is an American actor who has appeared in over a hundred film and television series roles, such as \"Scarface\" (1983), \"Ghostbusters II\" (1989), \"Clear and Present Danger\" (1994), \"Looking for Richard\" (1996), \"The Hurricane\" (1999), \"Training Day\" (2001), and \"Frasier\" which earned him a Primetime Emmy Award Nomination in 1996. It is both a performance of selected scenes of William Shakespeare\\'s \"Richard III\" and a broader examination of Shakespeare\\'s continuing role and relevance in popular culture.'], \"predicted_answers\": Harris Yulin did not appear in \"Looking for Richard.\"}\nOutputs:"
+   }
+  ],
+  "params": {
+   "response_format": {
+    "type": "json_object"
+   },
+   "seed": 42
+  }
+ },
+ "ts": "2026-11-22T01:13:09"
+}

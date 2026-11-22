@@ -1,0 +1,27 @@
+{
+ "text": "German Spitz has more derivative breeds from the original, as several modern breeds have been developed from it and are either registered as separate breeds or as varieties of German Spitz. In contrast, the Norfolk Spaniel is extinct and was used to designate certain spaniels before the development of the English Springer Spaniel, without mention of multiple derivative breeds.",
+ "finish": "stop",
+ "input_tokens": 338,
+ "output_tokens": 67,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4.1-2025-04-14",
+ "latency_s": 0.671,
+ "cost_usd": 0.001212,
+ "request": {
+  "model": "gpt-4.1",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: German Spitz\n\nGerman Spitz is used to refer to both a breed of dog and category or type of dog. Several modern breeds have been developed from the German Spitz, and are either registered as separate breeds or as varieties of German Spitz. All the \"German Spitz type\" dogs are dogs of the Spitz type of German origin. The Gro\u00dfspitz, Mittelspitz, and Kleinspitz breeds of \"German Spitz type\" are also called the German Spitz in English.\n\ntitle: Norfolk Spaniel\n\nThe Norfolk Spaniel or Shropshire Spaniel is an extinct breed of dog since the early 20th century. It was originally thought to have originated from the work of one of the Dukes of Norfolk, but this theory was disproven after being in doubt during the later part of the 19th century. The term was used to designate springer type spaniels that were neither Sussex nor Clumber Spaniels, and attempts were made to use it to specify a breed that would later become known as the English Springer Spaniel.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Which dog breed has more derivative breeds from the original, German Spitz or Norfolk Spaniel?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T00:54:50"
+}

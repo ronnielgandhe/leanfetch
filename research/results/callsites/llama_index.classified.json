@@ -1,0 +1,541 @@
+{
+ "repo": "llama_index@99d7433",
+ "modelDefaults": [
+  {
+   "file": "llama-index-core/llama_index/core/evaluation/multi_modal/faithfulness.py",
+   "line": 100,
+   "name": "model",
+   "model": "gpt-4.1",
+   "text": "model=\"gpt-4.1\", max_output_tokens=1000"
+  },
+  {
+   "file": "llama-index-core/llama_index/core/evaluation/multi_modal/relevancy.py",
+   "line": 79,
+   "name": "model",
+   "model": "gpt-4.1",
+   "text": "model=\"gpt-4.1\", max_output_tokens=1000"
+  },
+  {
+   "file": "llama-index-core/llama_index/core/postprocessor/rankGPT_rerank.py",
+   "line": 20,
+   "name": "model",
+   "model": "gpt-3.5-turbo-16k",
+   "text": "return OpenAI(model=\"gpt-3.5-turbo-16k\")"
+  },
+  {
+   "file": "llama-index-core/llama_index/core/program/multi_modal_llm_program.py",
+   "line": 64,
+   "name": "model",
+   "model": "gpt-4.1",
+   "text": "multi_modal_llm = OpenAIResponses(model=\"gpt-4.1\", temperature=0)"
+  },
+  {
+   "file": "llama-index-core/llama_index/core/query_engine/multi_modal.py",
+   "line": 88,
+   "name": "model",
+   "model": "gpt-4.1",
+   "text": "model=\"gpt-4.1\", max_output_tokens=1000"
+  },
+  {
+   "file": "llama-index-core/llama_index/core/utils.py",
+   "line": 153,
+   "name": "model_name",
+   "model": "gpt-3.5-turbo",
+   "text": "def get_tokenizer(model_name: str = \"gpt-3.5-turbo\") -> Callable[[str], List]:"
+  },
+  {
+   "file": "llama-index-integrations/llms/llama-index-llms-openai/llama_index/llms/openai/base.py",
+   "line": 99,
+   "name": "DEFAULT_OPENAI_MODEL",
+   "model": "gpt-3.5-turbo",
+   "text": "DEFAULT_OPENAI_MODEL = \"gpt-3.5-turbo\""
+  },
+  {
+   "file": "llama-index-integrations/llms/llama-index-llms-openai/llama_index/llms/openai/base.py",
+   "line": 173,
+   "name": "model",
+   "model": "gpt-3.5-turbo",
+   "text": "llm = OpenAI(model=\"gpt-3.5-turbo\")"
+  },
+  {
+   "file": "llama-index-integrations/llms/llama-index-llms-openai/llama_index/llms/openai/responses.py",
+   "line": 105,
+   "name": "DEFAULT_OPENAI_MODEL",
+   "model": "gpt-4o-mini",
+   "text": "DEFAULT_OPENAI_MODEL = \"gpt-4o-mini\""
+  },
+  {
+   "file": "llama-index-integrations/llms/llama-index-llms-openai/llama_index/llms/openai/responses.py",
+   "line": 182,
+   "name": "model",
+   "model": "gpt-4o-mini",
+   "text": "llm = OpenAIResponses(model=\"gpt-4o-mini\", api_key=\"sk-...\")"
+  },
+  {
+   "file": "llama-index-integrations/llms/llama-index-llms-openai/llama_index/llms/openai/utils.py",
+   "line": 821,
+   "name": "model",
+   "model": "o3-mini",
+   "text": "model=\"o3-mini\",  # hardcode to ensure developer messages are used"
+  }
+ ],
+ "callSites": [
+  {
+   "file": "llama-index-integrations/llms/llama-index-llms-openai/llama_index/llms/openai/base.py",
+   "line": 501,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "llama-index-integrations/llms/llama-index-llms-openai/llama_index/llms/openai/base.py",
+   "line": 508,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "llama-index-integrations/llms/llama-index-llms-openai/llama_index/llms/openai/base.py",
+   "line": 549,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "llama-index-integrations/llms/llama-index-llms-openai/llama_index/llms/openai/base.py",
+   "line": 621,
+   "api": "completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "llama-index-integrations/llms/llama-index-llms-openai/llama_index/llms/openai/base.py",
+   "line": 628,
+   "api": "completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "llama-index-integrations/llms/llama-index-llms-openai/llama_index/llms/openai/base.py",
+   "line": 655,
+   "api": "completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "llama-index-integrations/llms/llama-index-llms-openai/llama_index/llms/openai/base.py",
+   "line": 784,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "llama-index-integrations/llms/llama-index-llms-openai/llama_index/llms/openai/base.py",
+   "line": 789,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "llama-index-integrations/llms/llama-index-llms-openai/llama_index/llms/openai/base.py",
+   "line": 831,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "llama-index-integrations/llms/llama-index-llms-openai/llama_index/llms/openai/base.py",
+   "line": 913,
+   "api": "completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "llama-index-integrations/llms/llama-index-llms-openai/llama_index/llms/openai/base.py",
+   "line": 920,
+   "api": "completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "llama-index-integrations/llms/llama-index-llms-openai/llama_index/llms/openai/base.py",
+   "line": 949,
+   "api": "completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "llama-index-integrations/llms/llama-index-llms-openai/llama_index/llms/openai/responses.py",
+   "line": 542,
+   "api": "responses.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "llama-index-integrations/llms/llama-index-llms-openai/llama_index/llms/openai/responses.py",
+   "line": 706,
+   "api": "responses.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "llama-index-integrations/llms/llama-index-llms-openai/llama_index/llms/openai/responses.py",
+   "line": 793,
+   "api": "responses.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "llama-index-integrations/llms/llama-index-llms-openai/llama_index/llms/openai/responses.py",
+   "line": 824,
+   "api": "responses.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "llama-index-integrations/llms/llama-index-llms-openai/llama_index/llms/openai/responses.py",
+   "line": 981,
+   "api": "responses.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "llama-index-integrations/llms/llama-index-llms-openai/llama_index/llms/openai/responses.py",
+   "line": 1010,
+   "api": "responses.create",
+   "provider": "openai",
+   "kind": "chat"
+  }
+ ],
+ "templates": [
+  {
+   "file": "llama-index-core/llama_index/core/agent/workflow/codeact_agent.py",
+   "line": 25,
+   "name": "DEFAULT_CODE_ACT_PROMPT",
+   "chars": 1811,
+   "placeholders": [
+    "tool_descriptions"
+   ],
+   "label": {
+    "task": "code_generation",
+    "output_format": "free_text",
+    "benchmark_analogue": "HumanEval",
+    "metric": "pass@k (functional correctness of generated code on unit tests)",
+    "rationale": "The prompt instructs the model to write Python code inside <execute> tags to solve user tasks and then give a direct final answer, which is code generation with execution, so HumanEval-style functional correctness is the closest analogue."
+   }
+  },
+  {
+   "file": "llama-index-core/llama_index/core/chat_engine/condense_plus_context.py",
+   "line": 42,
+   "name": "DEFAULT_CONTEXT_PROMPT_TEMPLATE",
+   "chars": 489,
+   "placeholders": [
+    "context_str"
+   ],
+   "label": {
+    "task": "rag_answer",
+    "output_format": "free_text",
+    "benchmark_analogue": "Natural Questions",
+    "metric": "exact match and F1 over answer spans (long-answer F1 for open-domain QA)",
+    "rationale": "The template injects retrieved document context into a system prompt and instructs the model to answer the user's question from those documents or say don't know, which is the grounded retrieval-augmented answering job."
+   }
+  },
+  {
+   "file": "llama-index-core/llama_index/core/chat_engine/condense_plus_context.py",
+   "line": 56,
+   "name": "DEFAULT_CONTEXT_REFINE_PROMPT_TEMPLATE",
+   "chars": 546,
+   "placeholders": [
+    "context_msg",
+    "existing_answer"
+   ],
+   "label": {
+    "task": "rag_answer",
+    "output_format": "free_text",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "The template refines an existing answer using retrieved context documents in a conversational RAG chat engine, producing free-form answer text, which has no standard public benchmark dataset analogue."
+   }
+  },
+  {
+   "file": "llama-index-core/llama_index/core/evaluation/correctness.py",
+   "line": 19,
+   "name": "DEFAULT_SYSTEM_TEMPLATE",
+   "chars": 1088,
+   "placeholders": [],
+   "label": {
+    "task": "grading_judging",
+    "output_format": "score",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "The prompt asks an LLM to judge a generated answer's relevance and correctness against a reference and return a 1-5 holistic score with reasoning, which is an LLM-as-judge grading task rather than any standard benchmark dataset task."
+   }
+  },
+  {
+   "file": "llama-index-core/llama_index/core/extractors/metadata_extractors.py",
+   "line": 253,
+   "name": "DEFAULT_QUESTION_GEN_TMPL",
+   "chars": 360,
+   "placeholders": [
+    "context_str",
+    "num_questions"
+   ],
+   "label": {
+    "task": "query_rewriting",
+    "output_format": "free_text",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "The template asks the LLM to generate synthetic questions answerable from a given context, which is question generation for metadata enrichment rather than any standard benchmarked task, so no direct public dataset or metric fits well."
+   }
+  },
+  {
+   "file": "llama-index-core/llama_index/core/graph_stores/prompts.py",
+   "line": 3,
+   "name": "DEFAULT_CYPHER_TEMPALTE_STR",
+   "chars": 505,
+   "placeholders": [
+    "schema",
+    "question"
+   ],
+   "label": {
+    "task": "code_generation",
+    "output_format": "free_text",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "The prompt asks the model to generate a Cypher query from a natural-language question and a graph schema, which is text-to-query code generation; no standard public benchmark matches exactly, though Spider is the closest analogue for text-to-query tasks, with execution accuracy as its metric."
+   }
+  },
+  {
+   "file": "llama-index-core/llama_index/core/indices/knowledge_graph/retrievers.py",
+   "line": 394,
+   "name": "DEFAULT_SYNONYM_EXPAND_TEMPLATE",
+   "chars": 348,
+   "placeholders": [
+    "max_keywords",
+    "question"
+   ],
+   "label": {
+    "task": "query_rewriting",
+    "output_format": "delimited",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "The prompt takes a user question's keywords and asks the model to expand them into a comma-separated list of synonyms and variant forms with a 'SYNONYMS:' prefix, which is query expansion before retrieval in a knowledge graph retriever, and no standard public benchmark matches this exact job."
+   }
+  },
+  {
+   "file": "llama-index-core/llama_index/core/indices/vector_store/retrievers/auto_retriever/prompts.py",
+   "line": 18,
+   "name": "PREFIX",
+   "chars": 823,
+   "placeholders": [
+    "schema_str"
+   ],
+   "label": {
+    "task": "extraction_structured",
+    "output_format": "json",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "The prompt instructs the model to convert a natural-language query into a structured JSON request (query string, metadata filters, top_k) matching a given schema, which is structured extraction rather than any standard benchmarked task."
+   }
+  },
+  {
+   "file": "llama-index-core/llama_index/core/indices/vector_store/retrievers/auto_retriever/prompts.py",
+   "line": 100,
+   "name": "EXAMPLES",
+   "chars": 367,
+   "placeholders": [
+    "example_query",
+    "example_query_2"
+   ],
+   "label": {
+    "task": "extraction_structured",
+    "output_format": "json",
+    "benchmark_analogue": "WikiSQL",
+    "metric": "execution accuracy",
+    "rationale": "The template gives few-shot examples that map a natural-language user query plus a data-source schema to a structured JSON request with metadata filters, which matches semantic parsing into a structured query language."
+   }
+  },
+  {
+   "file": "llama-index-core/llama_index/core/node_parser/relational/base_element.py",
+   "line": 26,
+   "name": "DEFAULT_SUMMARY_QUERY_STR",
+   "chars": 314,
+   "placeholders": [],
+   "label": {
+    "task": "summarization",
+    "output_format": "free_text",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "The prompt asks the model to write a concise caption and summary of a table, along with extracting an existing title/ID and a keep/drop flag, so the core job is table summarization with some ancillary extraction, and no standard public benchmark matches this exact combined task."
+   }
+  },
+  {
+   "file": "llama-index-core/llama_index/core/prompts/default_prompts.py",
+   "line": 216,
+   "name": "DEFAULT_TEXT_TO_SQL_PGVECTOR_TMPL",
+   "chars": 1560,
+   "placeholders": [
+    "dialect",
+    "schema",
+    "query_str"
+   ],
+   "label": {
+    "task": "code_generation",
+    "output_format": "delimited",
+    "benchmark_analogue": "Spider",
+    "metric": "execution accuracy",
+    "rationale": "The prompt asks the model to generate a syntactically correct pgvector SQL query from a natural-language question and schema, which matches text-to-SQL code generation evaluated by execution accuracy on Spider."
+   }
+  },
+  {
+   "file": "llama-index-core/llama_index/core/prompts/system.py",
+   "line": 3,
+   "name": "SHAKESPEARE_WRITING_ASSISTANT",
+   "chars": 533,
+   "placeholders": [],
+   "label": {
+    "task": "chat_open_ended",
+    "output_format": "free_text",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "This is a persona system prompt that sets a Shakespearean writing-assistant role for open-ended creative conversation, with no structured output or fixed-answer task to score against a benchmark."
+   }
+  },
+  {
+   "file": "llama-index-core/llama_index/core/prompts/system.py",
+   "line": 15,
+   "name": "IRS_TAX_CHATBOT",
+   "chars": 2329,
+   "placeholders": [],
+   "label": {
+    "task": "rag_answer",
+    "output_format": "free_text",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "The template is a system prompt for a grounded Q&A chatbot that answers tax questions using supplied 2022 context and a fallback refusal, which matches retrieval-augmented answering rather than any standard labeled benchmark task."
+   }
+  },
+  {
+   "file": "llama-index-core/llama_index/core/prompts/system.py",
+   "line": 54,
+   "name": "MARKETING_WRITING_ASSISTANT",
+   "chars": 420,
+   "placeholders": [],
+   "label": {
+    "task": "chat_open_ended",
+    "output_format": "free_text",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "This is a system prompt setting a persona for open-ended marketing content generation (emails, blog posts, ad copy) with no fixed output structure or labeled answer, so no standard benchmark applies."
+   }
+  },
+  {
+   "file": "llama-index-core/llama_index/core/query_engine/flare/answer_inserter.py",
+   "line": 49,
+   "name": "DEFAULT_ANSWER_INSERT_PROMPT_TMPL",
+   "chars": 2686,
+   "placeholders": [
+    "prev_response",
+    "lookahead_response",
+    "query_answer_pairs"
+   ],
+   "label": {
+    "task": "rag_answer",
+    "output_format": "free_text",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "The prompt fills retrieved query-answer pairs into a lookahead template to produce a grounded continuation of the response, which is a retrieval-augmented answer synthesis step with no standard public benchmark matching it directly."
+   }
+  },
+  {
+   "file": "llama-index-core/llama_index/core/query_engine/knowledge_graph_query_engine.py",
+   "line": 28,
+   "name": "DEFAULT_KG_RESPONSE_ANSWER_PROMPT_TMPL",
+   "chars": 341,
+   "placeholders": [
+    "query_str",
+    "kg_query_str",
+    "kg_response_str"
+   ],
+   "label": {
+    "task": "rag_answer",
+    "output_format": "free_text",
+    "benchmark_analogue": "WebQuestionsSP",
+    "metric": "F1 over answer entities (Hits@1 / answer-set F1)",
+    "rationale": "The prompt asks the model to synthesize a natural-language answer to the user's question from retrieved graph query results, which is grounded answer generation over retrieved context, closest to knowledge-base question answering on WebQuestionsSP."
+   }
+  },
+  {
+   "file": "llama-index-core/llama_index/core/query_engine/sql_join_query_engine.py",
+   "line": 32,
+   "name": "DEFAULT_SQL_JOIN_SYNTHESIS_PROMPT_TMPL",
+   "chars": 683,
+   "placeholders": [
+    "query_str",
+    "sql_query_str",
+    "sql_response_str",
+    "query_engine_query_str",
+    "query_engine_response_str"
+   ],
+   "label": {
+    "task": "rag_answer",
+    "output_format": "free_text",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "The prompt synthesizes a final natural-language answer from retrieved SQL and query-engine results to a user question, which is retrieval-augmented answer generation with no standard public benchmark matching this exact join-synthesis job."
+   }
+  },
+  {
+   "file": "llama-index-core/llama_index/core/query_engine/sql_join_query_engine.py",
+   "line": 55,
+   "name": "DEFAULT_SQL_AUGMENT_TRANSFORM_PROMPT_TMPL",
+   "chars": 1839,
+   "placeholders": [
+    "query_str",
+    "sql_query_str",
+    "sql_response_str"
+   ],
+   "label": {
+    "task": "query_rewriting",
+    "output_format": "free_text",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "The prompt takes an original question plus SQL query and response and asks the model to generate a more specific follow-up question (or None), which is a question-rewriting/generation step rather than a standard benchmark task."
+   }
+  },
+  {
+   "file": "llama-index-core/llama_index/core/query_engine/sql_vector_query_engine.py",
+   "line": 31,
+   "name": "DEFAULT_SQL_VECTOR_SYNTHESIS_PROMPT_TMPL",
+   "chars": 644,
+   "placeholders": [
+    "query_str",
+    "sql_query_str",
+    "sql_response_str",
+    "query_engine_query_str",
+    "query_engine_response_str"
+   ],
+   "label": {
+    "task": "rag_answer",
+    "output_format": "free_text",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "The prompt synthesizes a final free-text answer to a user question from retrieved evidence (SQL results and vector store results), which is a retrieval-augmented answer generation job with no standard public benchmark dataset matching this exact multi-source setup."
+   }
+  },
+  {
+   "file": "llama-index-core/llama_index/core/tools/tool_spec/load_and_search/base.py",
+   "line": 39,
+   "name": "reader_prompt",
+   "chars": 335,
+   "placeholders": [],
+   "label": {
+    "task": "tool_selection",
+    "output_format": "free_text",
+    "benchmark_analogue": "Berkeley Function Calling Leaderboard (BFCL)",
+    "metric": "function-call accuracy (AST match of function name and arguments)",
+    "rationale": "The template is a tool docstring that tells the model when and how to call a reader function with a natural-language query argument, so it serves tool selection and argument filling rather than generating prose."
+   }
+  }
+ ]
+}

@@ -1,0 +1,25 @@
+{
+ "text": "The Clinton Administration.",
+ "finish": "stop",
+ "input_tokens": 280,
+ "output_tokens": 23,
+ "reasoning_tokens": 10,
+ "served_model": "gpt-6-luna",
+ "latency_s": 0.914,
+ "cost_usd": 3.95e-05,
+ "request": {
+  "model": "gpt-6-luna",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Adoption and Safe Families Act\n\nThe Adoption and Safe Families Act (ASFA, Public Law 105-89) was signed into law by President Bill Clinton on November 19, 1997, after having been approved by the United States Congress earlier in the month.\n\ntitle: Adoption 2002\n\nThe Adoption 2002 Initiative was a program instituted in the United States during the late 1990s by the Clinton Administration. Based on the Adoption and Safe Families Act of 1997, the aim of the program was to lower barriers to adoption and double the rate of adoption of children in foster care by 2002 from a 1996 figure of 27,000 to a 2002 figure of 54,000.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: The Adoption and Safe Families Act and the Adoption 2002 Initiative were both instituted under which administration?\nAnswer: "
+   }
+  ],
+  "params": {}
+ },
+ "ts": "2026-11-22T00:58:37"
+}

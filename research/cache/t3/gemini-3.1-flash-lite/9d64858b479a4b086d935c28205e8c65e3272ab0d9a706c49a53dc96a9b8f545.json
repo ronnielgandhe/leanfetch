@@ -1,0 +1,27 @@
+{
+ "text": "The song \"Medicine\" appears in the 2014 re-release of the film *Drive*, which was directed by Nicolas Winding Refn.",
+ "finish": "FinishReason.STOP",
+ "input_tokens": 369,
+ "output_tokens": 32,
+ "reasoning_tokens": 0,
+ "served_model": "gemini-3.1-flash-lite",
+ "latency_s": 0.84,
+ "cost_usd": 0.00014025,
+ "request": {
+  "model": "gemini-3.1-flash-lite",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Medicine (The 1975 song)\n\n\"Medicine\" is a standalone song by the English rock band The 1975, released on 31 October 2014 for the 2014 \"Drive\" re-release. It was written, produced and performed by members Matthew Healy and George Daniel.\n\ntitle: Drive (2011 film)\n\nDrive is a 2011 American neo-noir crime thriller film directed by Danish filmmaker Nicolas Winding Refn. The screenplay by Hossein Amini was based on the eponymous 2005 novel by James Sallis. The film stars Ryan Gosling as an unnamed Hollywood stunt driver moonlighting as a getaway driver. He quickly grows fond of his neighbor, Irene (Carey Mulligan) and her young son, Benicio. Her debt-laden husband, Standard (Oscar Isaac), is released from prison, and hires him to take part in what turns out to be a botched million-dollar heist that endangers their lives. Other members of the ensemble cast include Bryan Cranston, Christina Hendricks, Ron Perlman, and Albert Brooks.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: The song \"Medicine\" by The 1975 appears in a film directed by what Danish filmmaker?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T00:49:26"
+}

@@ -1,0 +1,30 @@
+{
+ "text": "{\"task\": \"rag_answer\", \"output_format\": \"free_text\", \"benchmark_analogue\": \"none\", \"metric\": \"none\", \"rationale\": \"The prompt fills retrieved query-answer pairs into a lookahead template to produce a grounded continuation of the response, which is a retrieval-augmented answer synthesis step with no standard public benchmark matching it directly.\"}",
+ "finish": "end_turn",
+ "input_tokens": 1198,
+ "output_tokens": 121,
+ "reasoning_tokens": null,
+ "served_model": "claude-haiku-5-5",
+ "latency_s": 0.884,
+ "cost_usd": 0.00018030000000000002,
+ "request": {
+  "model": "claude-haiku-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You label LLM prompt templates found in source code by the job the call does. Reply with one JSON object only, no prose, with keys: task (one of ['classification_routing', 'extraction_structured', 'summarization', 'query_rewriting', 'rag_answer', 'code_generation', 'tool_selection', 'grading_judging', 'reranking', 'chat_open_ended', 'other']), output_format (free_text|json|delimited|label|score), benchmark_analogue (one well known public dataset whose task matches this job, or 'none'), metric (the objective metric that dataset uses), rationale (one sentence)."
+   },
+   {
+    "role": "user",
+    "content": "file: llama-index-core/llama_index/core/query_engine/flare/answer_inserter.py\nname: DEFAULT_ANSWER_INSERT_PROMPT_TMPL\nplaceholders: ['prev_response', 'lookahead_response', 'query_answer_pairs']\n---\n\nAn existing 'lookahead response' is given below. The lookahead response\ncontains `[Search(query)]` tags. Some queries have been executed and the\nresponse retrieved. The queries and answers are also given below.\nAlso the previous response (the response before the lookahead response)\nis given below.\nGiven the lookahead template, previous response, and also queries and answers,\nplease 'fill in' the lookahead template with the appropriate answers.\n\nNOTE: Please make sure that the final response grammatically follows\nthe previous response + lookahead template. For example, if the previous\nresponse is \"New York City has a population of \" and the lookahead\ntemplate is \"[Search(What is the population of New York City?)]\", then\nthe final response should be \"8.4 million\".\n\nNOTE: the lookahead template may not be a complete sentence and may\ncontain trailing/leading commas, etc. Please preserve the original\nformatting of the lookahead template if possible.\n\nNOTE:\n\nNOTE: the exception to the above rule is if the answer to a query\nis equivalent to \"I don't know\" or \"I don't have an answer\". In this case,\nmodify the lookahead template to indicate that the answer is not known.\n\nNOTE: the lookahead template may contain multiple `[Search(query)]` tags\n    and only a subset of these queries have been executed.\n    Do not replace the `[Search(query)]` tags that have not been executed.\n\nPrevious Response:\n\n\nLookahead Template:\nRed is for [Search(What is the meaning of Ghana's \\\n    flag being red?)], green for forests, and gold for mineral wealth.\n\nQuery-Answer Pairs:\nQuery: What is the meaning of Ghana's flag being red?\nAnswer: The red represents the blood of those who died in the country's struggle \\\n    for independence\n\nFilled in Answers:\nRed is for the blood of those who died in the country's struggle for independence, \\\n    green for forests, and gold for mineral wealth.\n\nPrevious Response:\nOne of the largest cities in the world\n\nLookahead Template:\n, the city contains a population of [Search(What is the population \\\n    of New York City?)]\n\nQuery-Answer Pairs:\nQuery: What is the population of New York City?\nAnswer: The population of New York City is 8.4 million\n\nSynthesized Response:\n, the city contains a population of 8.4 million\n\nPrevious Response:\nthe city contains a population of\n\nLookahead Template:\n[Search(What is the population of New York City?)]\n\nQuery-Answer Pairs:\nQuery: What is the population of New York City?\nAnswer: The population of New York City is 8.4 million\n\nSynthesized Response:\n8.4 million\n\nPrevious Response:\n{prev_response}\n\nLookahead Template:\n{lookahead_response}\n\nQuery-Answer Pairs:\n{query_answer_pairs}\n\nSynthesized Response:\n"
+   }
+  ],
+  "params": {
+   "max_tokens": 2000,
+   "output_config": {
+    "effort": "low"
+   }
+  }
+ },
+ "ts": "2026-11-22T00:45:10"
+}

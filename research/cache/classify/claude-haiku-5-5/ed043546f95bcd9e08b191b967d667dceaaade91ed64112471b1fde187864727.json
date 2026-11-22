@@ -1,0 +1,30 @@
+{
+ "text": "{\"task\": \"other\", \"output_format\": \"free_text\", \"benchmark_analogue\": \"none\", \"metric\": \"none\", \"rationale\": \"The prompt asks the model to generate a role definition text by imitating a sample pattern for GraphRAG community reporting, which is a prompt-authoring/meta-generation job with no standard public benchmark.\"}",
+ "finish": "end_turn",
+ "input_tokens": 531,
+ "output_tokens": 111,
+ "reasoning_tokens": null,
+ "served_model": "claude-haiku-5-5",
+ "latency_s": 0.877,
+ "cost_usd": 0.0001086,
+ "request": {
+  "model": "claude-haiku-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You label LLM prompt templates found in source code by the job the call does. Reply with one JSON object only, no prose, with keys: task (one of ['classification_routing', 'extraction_structured', 'summarization', 'query_rewriting', 'rag_answer', 'code_generation', 'tool_selection', 'grading_judging', 'reranking', 'chat_open_ended', 'other']), output_format (free_text|json|delimited|label|score), benchmark_analogue (one well known public dataset whose task matches this job, or 'none'), metric (the objective metric that dataset uses), rationale (one sentence)."
+   },
+   {
+    "role": "user",
+    "content": "file: packages/graphrag/graphrag/prompt_tune/prompt/community_reporter_role.py\nname: GENERATE_COMMUNITY_REPORTER_ROLE_PROMPT\nplaceholders: ['persona', 'domain', 'input_text']\n---\n\n{persona}\nGiven a sample text, help the user by creating a role definition that will be tasked with community analysis.\nTake a look at this example, determine its key parts, and using the domain provided and your expertise, create a new role definition for the provided inputs that follows the same pattern as the example.\nRemember, your output should look just like the provided example in structure and content.\n\nExample:\nA technologist reporter that is analyzing Kevin Scott's \"Behind the Tech Podcast\", given a list of entities\nthat belong to the community as well as their relationships and optional associated claims.\nThe report will be used to inform decision-makers about significant developments associated with the community and their potential impact.\n\n\nDomain: {domain}\nText: {input_text}\nRole:"
+   }
+  ],
+  "params": {
+   "max_tokens": 2000,
+   "output_config": {
+    "effort": "low"
+   }
+  }
+ },
+ "ts": "2026-11-22T00:44:27"
+}

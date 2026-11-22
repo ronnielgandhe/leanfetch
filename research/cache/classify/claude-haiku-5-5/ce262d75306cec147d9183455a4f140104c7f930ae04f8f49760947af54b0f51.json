@@ -1,0 +1,30 @@
+{
+ "text": "{\"task\": \"chat_open_ended\", \"output_format\": \"free_text\", \"benchmark_analogue\": \"none\", \"metric\": \"none\", \"rationale\": \"The template instructs the model to write a free-form final answer to the user from gathered tool-call context when the agent was stopped early, which is open-ended generation with no fixed labels or schema and no standard public benchmark matching it.\"}",
+ "finish": "end_turn",
+ "input_tokens": 508,
+ "output_tokens": 121,
+ "reasoning_tokens": null,
+ "served_model": "claude-haiku-5-5",
+ "latency_s": 0.899,
+ "cost_usd": 0.00011130000000000001,
+ "request": {
+  "model": "claude-haiku-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You label LLM prompt templates found in source code by the job the call does. Reply with one JSON object only, no prose, with keys: task (one of ['classification_routing', 'extraction_structured', 'summarization', 'query_rewriting', 'rag_answer', 'code_generation', 'tool_selection', 'grading_judging', 'reranking', 'chat_open_ended', 'other']), output_format (free_text|json|delimited|label|score), benchmark_analogue (one well known public dataset whose task matches this job, or 'none'), metric (the objective metric that dataset uses), rationale (one sentence)."
+   },
+   {
+    "role": "user",
+    "content": "file: haystack/hooks/backup_answer/hooks.py\nname: _DEFAULT_SYSTEM_PROMPT_TEMPLATE\nplaceholders: ['system_prompt']\n---\nYou are given a conversation in which an assistant was working on the user's \\\nrequest using tools, but was stopped before it could write a final answer. Write the final answer to the user's \\\nrequest now, using only the information gathered in the conversation so far. Do not call tools. If parts of the \\\nrequest could not be answered from that information, answer the rest and briefly say which parts are missing. \\\nOtherwise, do not add caveats about missing information or suggestions to check other sources.\n{%- if system_prompt %}\n\nThe assistant was working under the instructions below. Follow them for language, tone, persona and formatting, but \\\nignore anything they say about calling tools.\n<instructions>\n{{ system_prompt }}\n</instructions>\n{%- endif %}"
+   }
+  ],
+  "params": {
+   "max_tokens": 2000,
+   "output_config": {
+    "effort": "low"
+   }
+  }
+ },
+ "ts": "2026-11-22T00:44:55"
+}

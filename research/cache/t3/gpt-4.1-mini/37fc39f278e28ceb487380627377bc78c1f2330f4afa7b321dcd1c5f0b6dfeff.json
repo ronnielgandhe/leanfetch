@@ -1,0 +1,27 @@
+{
+ "text": "The former Indian cricketer who made his ODI debut during the 2000 ICC KnockOut Trophy was born on 7 October 1978.",
+ "finish": "stop",
+ "input_tokens": 291,
+ "output_tokens": 30,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4.1-mini-2025-04-14",
+ "latency_s": 0.875,
+ "cost_usd": 0.0001644,
+ "request": {
+  "model": "gpt-4.1-mini",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: 2000 ICC KnockOut Trophy\n\nThe 2000 ICC KnockOut Trophy was a One Day International cricket tournament held in Kenya (which helped to booster cricket in Kenya). New Zealand were crowned champions and cashed the winner's cheque of US$250 000. It was their first win in a major ICC tournament. Zaheer Khan, Yuvraj Singh and Marlon Samuels made their ODI debuts during the competition.\n\ntitle: Zaheer Khan\n\nZaheer Khan (born 7 October 1978) is a former Indian cricketer who played all forms of the game for Indian national cricket team from 2000 till 2014. He was the second-most successful Indian pace bowler in Test cricket, behind Kapil Dev.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: When was the  former Indian cricketer who made his ODI debuts during the 2000 ICC KnockOut Trophy born? \nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T00:57:17"
+}

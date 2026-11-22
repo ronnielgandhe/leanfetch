@@ -1,0 +1,30 @@
+{
+ "text": "{\"task\": \"code_generation\", \"output_format\": \"json\", \"benchmark_analogue\": \"Spider\", \"metric\": \"execution accuracy\", \"rationale\": \"The prompt generates natural-language questions or statements that a SQL table schema can address, which is the natural-language side of text-to-SQL dataset construction, though the template itself produces synthetic inputs rather than SQL queries.\"}",
+ "finish": "end_turn",
+ "input_tokens": 856,
+ "output_tokens": 125,
+ "reasoning_tokens": null,
+ "served_model": "claude-haiku-5-5",
+ "latency_s": 3.581,
+ "cost_usd": 0.00014810000000000002,
+ "request": {
+  "model": "claude-haiku-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You label LLM prompt templates found in source code by the job the call does. Reply with one JSON object only, no prose, with keys: task (one of ['classification_routing', 'extraction_structured', 'summarization', 'query_rewriting', 'rag_answer', 'code_generation', 'tool_selection', 'grading_judging', 'reranking', 'chat_open_ended', 'other']), output_format (free_text|json|delimited|label|score), benchmark_analogue (one well known public dataset whose task matches this job, or 'none'), metric (the objective metric that dataset uses), rationale (one sentence)."
+   },
+   {
+    "role": "user",
+    "content": "file: deepeval/synthesizer/templates/template.py\nname: prompt\nplaceholders: ['max_goldens_per_context', 'context']\n---\nBased on the given context, which is a SQL table schema, please generate a list of JSON objects with `input` keys.\n        The `input` can either be a question or a statement that can be addressed by the given schema.\n\n        **\n        IMPORTANT: Please make sure to only return in JSON format, with the 'data' key as a list of JSON objects.\n        You MUST TRY to generate {max_goldens_per_context} data points, unless the `input` is getting repetitive.\n\n        Example context: [\n            \"Table: Customers\",\n            \"Column: CustomerID, Type: INT, Description: Unique identifier for each customer\",\n            \"Column: FirstName, Type: VARCHAR, Description: First name of the customer\",\n            \"Column: LastName, Type: VARCHAR, Description: Last name of the customer\",\n            \"Column: Email, Type: VARCHAR, Description: Email address of the customer\",\n            \"Column: PhoneNumber, Type: VARCHAR, Description: Contact number of the customer\",\n            \"Column: City, Type: VARCHAR, Description: City where the customer resides\"\n        ]\n        Example max goldens per context: 2\n        Example JSON:\n        {{\n            \"data\": [\n                {{\n                    \"input\": \"Show me all the customers who live in New York.\",\n                }},\n                {{\n                    \"input\": \"List the first and last names of all customers.\",\n                }}\n            ]  \n        }}\n\n        You should NOT incorporate any prior knowledge you have and take each context at face value.\n        You MUST include at least one statement as the input.\n        `input` MUST be a STRING.\n        You MUST TRY to generate {max_goldens_per_context} data points, unless the generated `input` is getting repetitive.\n        **\n\n        Max Goldens Per Context:\n        {max_goldens_per_context}\n\n        Context:\n        {context}\n\n        JSON:\n        "
+   }
+  ],
+  "params": {
+   "max_tokens": 2000,
+   "output_config": {
+    "effort": "low"
+   }
+  }
+ },
+ "ts": "2026-11-22T00:44:23"
+}

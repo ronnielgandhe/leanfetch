@@ -1,0 +1,27 @@
+{
+ "text": "The telefilm based on the 1977 book was shot in Edmonton, Alberta.",
+ "finish": "stop",
+ "input_tokens": 300,
+ "output_tokens": 17,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4o-mini-2024-07-18",
+ "latency_s": 0.773,
+ "cost_usd": 5.52e-05,
+ "request": {
+  "model": "gpt-4o-mini",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Bridge to Terabithia (1985 film)\n\nBridge to Terabithia was the name of a telefilm for PBS in 1985, starring Annette O'Toole, Julian Coutts, and Julie Beaulieu. It was shot in Edmonton, Alberta. The film is based on the children's novel of the same name by Katherine Paterson.\n\ntitle: Bridge to Terabithia (novel)\n\nBridge to Terabithia is a work of children's literature about two lonely children who create a magical forest kingdom. It was written by Katherine Paterson and was published in 1977 by Thomas Crowell. In 1978, it won the Newbery Medal. Paterson drew inspiration for the novel from a real event that occurred in August 1974 when a friend of her son was struck by lightning.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Where was the telefilm shot that was based on the 1977 Katherine Paterson book?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T00:58:32"
+}

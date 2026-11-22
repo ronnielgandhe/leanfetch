@@ -1,0 +1,30 @@
+{
+ "text": "{\"task\": \"summarization\", \"output_format\": \"free_text\", \"benchmark_analogue\": \"none\", \"metric\": \"none\", \"rationale\": \"The prompt asks the model to write a concise caption and summary of a table, along with extracting an existing title/ID and a keep/drop flag, so the core job is table summarization with some ancillary extraction, and no standard public benchmark matches this exact combined task.\"}",
+ "finish": "end_turn",
+ "input_tokens": 359,
+ "output_tokens": 129,
+ "reasoning_tokens": null,
+ "served_model": "claude-haiku-5-5",
+ "latency_s": 0.962,
+ "cost_usd": 0.0001004,
+ "request": {
+  "model": "claude-haiku-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You label LLM prompt templates found in source code by the job the call does. Reply with one JSON object only, no prose, with keys: task (one of ['classification_routing', 'extraction_structured', 'summarization', 'query_rewriting', 'rag_answer', 'code_generation', 'tool_selection', 'grading_judging', 'reranking', 'chat_open_ended', 'other']), output_format (free_text|json|delimited|label|score), benchmark_analogue (one well known public dataset whose task matches this job, or 'none'), metric (the objective metric that dataset uses), rationale (one sentence)."
+   },
+   {
+    "role": "user",
+    "content": "file: llama-index-core/llama_index/core/node_parser/relational/base_element.py\nname: DEFAULT_SUMMARY_QUERY_STR\nplaceholders: []\n---\n\\\nWhat is this table about? Give a very concise summary (imagine you are adding a new caption and summary for this table), \\\nand output the real/existing table title/caption if context provided.\\\nand output the real/existing table id if context provided.\\\nand also output whether or not the table should be kept.\\\n"
+   }
+  ],
+  "params": {
+   "max_tokens": 2000,
+   "output_config": {
+    "effort": "low"
+   }
+  }
+ },
+ "ts": "2026-11-22T00:45:06"
+}

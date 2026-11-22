@@ -1,0 +1,50 @@
+{
+ "text": "{\"statements\": [\"The English historian who made the 1610 map of Monmouth is best known as a mapmaker of the Victorian era.\"], \"statement_scores\": [0]}",
+ "finish": "end_turn",
+ "input_tokens": 1026,
+ "output_tokens": 57,
+ "reasoning_tokens": null,
+ "served_model": "claude-haiku-5-5",
+ "latency_s": 1.04,
+ "cost_usd": 0.00013110000000000002,
+ "request": {
+  "model": "claude-haiku-5-5",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Instructions:\nYour task is to judge the faithfulness or groundedness of statements based on context information. First, please extract statements from a provided predicted answer to a question. Second, calculate a faithfulness score for each statement made in the predicted answer. The score is 1 if the statement can be inferred from the provided context or 0 if it cannot be inferred.\n\nGenerate the response in JSON format with the following keys:\n[\"statements\", \"statement_scores\"]\nConsider the instructions and the examples below to determine those values.\n\nExamples:\nInputs:\n{\"questions\": \"What is the capital of Germany and when was it founded?\", \"contexts\": [\"Berlin is the capital of Germany and was founded in 1244.\"], \"predicted_answers\": \"The capital of Germany, Berlin, was founded in the 13th century.\"}\nOutputs:\n{\"statements\": [\"Berlin is the capital of Germany.\", \"Berlin was founded in 1244.\"], \"statement_scores\": [1, 1]}\nInputs:\n{\"questions\": \"What is the capital of France?\", \"contexts\": [\"Berlin is the capital of Germany.\"], \"predicted_answers\": \"Paris\"}\nOutputs:\n{\"statements\": [\"Paris is the capital of France.\"], \"statement_scores\": [0]}\nInputs:\n{\"questions\": \"What is the capital of Italy?\", \"contexts\": [\"Rome is the capital of Italy.\"], \"predicted_answers\": \"Rome is the capital of Italy with more than 4 million inhabitants.\"}\nOutputs:\n{\"statements\": [\"Rome is the capital of Italy.\", \"Rome has more than 4 million inhabitants.\"], \"statement_scores\": [1, 0]}\n\nInputs:\n{\"questions\": St James Street appears as a segment of Whitecross Street on the 1610 map of the Monmouth by an English historian best known as a mapmaker of what perior?, \"contexts\": ['St James Street is a historic street in the town centre of Monmouth, Monmouthshire, Wales. It appears as a segment of Whitecross Street on the 1610 map of the town by cartographer John Speed and is within the medieval town walls.John Speed (1551 or 1552 \u2013 28 July 1629) was an English cartographer and historian. He is the best known English mapmaker of the Stuart period.'], \"predicted_answers\": Victorian era}\nOutputs:"
+   }
+  ],
+  "params": {
+   "max_tokens": 16000,
+   "output_config": {
+    "format": {
+     "type": "json_schema",
+     "schema": {
+      "type": "object",
+      "properties": {
+       "statements": {
+        "type": "array",
+        "items": {
+         "type": "string"
+        }
+       },
+       "statement_scores": {
+        "type": "array",
+        "items": {
+         "type": "integer"
+        }
+       }
+      },
+      "required": [
+       "statements",
+       "statement_scores"
+      ],
+      "additionalProperties": false
+     }
+    }
+   }
+  }
+ },
+ "ts": "2026-11-22T01:31:55"
+}

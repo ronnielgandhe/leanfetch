@@ -1,0 +1,27 @@
+{
+ "text": "Robert Mulligan was born earlier.",
+ "finish": "FinishReason.STOP",
+ "input_tokens": 397,
+ "output_tokens": 6,
+ "reasoning_tokens": 0,
+ "served_model": "gemini-3.1-flash-lite",
+ "latency_s": 1.039,
+ "cost_usd": 0.00010825,
+ "request": {
+  "model": "gemini-3.1-flash-lite",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Robert Mulligan\n\nRobert Patrick Mulligan (August 23, 1925 \u2013 December 20, 2008) was an American film and television director best known as the director of humanistic American dramas, including \"To Kill a Mockingbird\" (1962), \"Summer of '42\" (1971), \"The Other\" (1972), \"Same Time, Next Year\" (1978) and \"The Man in the Moon\" (1991). He was also known in the 1960s for his extensive collaborations with producer Alan J. Pakula. He was the elder brother of actor Richard Mulligan.\n\ntitle: James Foley (director)\n\nJames Foley (born December 28, 1953) is an American film director. His 1986 film \"At Close Range\" was entered into the 36th Berlin International Film Festival. Other films he has directed include \"Glengarry Glen Ross\", based on the both Pulitzer Prize and Tony Award winning play of the same name by David Mamet (actor Al Pacino received an Academy Award nomination for his performance in the film), and \"The Chamber\", based on the novel of the same name by best-selling author John Grisham.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Who was born earlier, Robert Mulligan or James Foley?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T01:06:37"
+}

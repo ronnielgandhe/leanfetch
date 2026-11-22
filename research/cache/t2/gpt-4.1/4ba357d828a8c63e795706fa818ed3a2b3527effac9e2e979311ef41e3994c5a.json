@@ -1,0 +1,26 @@
+{
+ "text": "{\n  \"statements\": [\n    \"Onesimus was known for his promotion of inoculation for disease prevention.\",\n    \"Onesimus was owned by a Puritan minister.\"\n  ],\n  \"statement_scores\": [1, 1]\n}",
+ "finish": "stop",
+ "input_tokens": 496,
+ "output_tokens": 51,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4.1-2025-04-14",
+ "latency_s": 1.186,
+ "cost_usd": 0.0014,
+ "request": {
+  "model": "gpt-4.1",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Instructions:\nYour task is to judge the faithfulness or groundedness of statements based on context information. First, please extract statements from a provided predicted answer to a question. Second, calculate a faithfulness score for each statement made in the predicted answer. The score is 1 if the statement can be inferred from the provided context or 0 if it cannot be inferred.\n\nGenerate the response in JSON format with the following keys:\n[\"statements\", \"statement_scores\"]\nConsider the instructions and the examples below to determine those values.\n\nExamples:\nInputs:\n{\"questions\": \"What is the capital of Germany and when was it founded?\", \"contexts\": [\"Berlin is the capital of Germany and was founded in 1244.\"], \"predicted_answers\": \"The capital of Germany, Berlin, was founded in the 13th century.\"}\nOutputs:\n{\"statements\": [\"Berlin is the capital of Germany.\", \"Berlin was founded in 1244.\"], \"statement_scores\": [1, 1]}\nInputs:\n{\"questions\": \"What is the capital of France?\", \"contexts\": [\"Berlin is the capital of Germany.\"], \"predicted_answers\": \"Paris\"}\nOutputs:\n{\"statements\": [\"Paris is the capital of France.\"], \"statement_scores\": [0]}\nInputs:\n{\"questions\": \"What is the capital of Italy?\", \"contexts\": [\"Rome is the capital of Italy.\"], \"predicted_answers\": \"Rome is the capital of Italy with more than 4 million inhabitants.\"}\nOutputs:\n{\"statements\": [\"Rome is the capital of Italy.\", \"Rome has more than 4 million inhabitants.\"], \"statement_scores\": [1, 0]}\n\nInputs:\n{\"questions\": Who was known for his promotion of inoculation for disease prevention and owned the slave Onesimus?, \"contexts\": ['Onesimus (late 1600s\u20131700s) was an African-born man held as a slave by Puritan minister Cotton Mather, who helped mitigate the impact of a smallpox outbreak in Boston by introducing Mather to the principle of inoculation. He left a scientific legacy due to his hybridization experiments and his promotion of inoculation for disease prevention, though he is most frequently remembered today for his vigorous support for the Salem witch trials.'], \"predicted_answers\": Onesimus was known for his promotion of inoculation for disease prevention and was owned by a Puritan minister.}\nOutputs:"
+   }
+  ],
+  "params": {
+   "response_format": {
+    "type": "json_object"
+   },
+   "seed": 42
+  }
+ },
+ "ts": "2026-11-22T01:09:09"
+}

@@ -1,0 +1,30 @@
+{
+ "text": "{\"task\": \"other\", \"output_format\": \"free_text\", \"benchmark_analogue\": \"none\", \"metric\": \"none\", \"rationale\": \"The prompt asks the model to write a short expert persona description (a system-prompt-style role statement) for a given task, which is open-ended generation with no matching public benchmark or objective metric.\"}",
+ "finish": "end_turn",
+ "input_tokens": 420,
+ "output_tokens": 104,
+ "reasoning_tokens": null,
+ "served_model": "claude-haiku-5-5",
+ "latency_s": 0.89,
+ "cost_usd": 9.4e-05,
+ "request": {
+  "model": "claude-haiku-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You label LLM prompt templates found in source code by the job the call does. Reply with one JSON object only, no prose, with keys: task (one of ['classification_routing', 'extraction_structured', 'summarization', 'query_rewriting', 'rag_answer', 'code_generation', 'tool_selection', 'grading_judging', 'reranking', 'chat_open_ended', 'other']), output_format (free_text|json|delimited|label|score), benchmark_analogue (one well known public dataset whose task matches this job, or 'none'), metric (the objective metric that dataset uses), rationale (one sentence)."
+   },
+   {
+    "role": "user",
+    "content": "file: packages/graphrag/graphrag/prompt_tune/prompt/persona.py\nname: GENERATE_PERSONA_PROMPT\nplaceholders: ['role', 'sample_task']\n---\n\nYou are an intelligent assistant that helps a human to analyze the information in a text document.\nGiven a specific type of task and sample text, help the user by generating a 3 to 4 sentence description of an expert who could help solve the problem.\nUse a format similar to the following:\nYou are an expert {{role}}. You are skilled at {{relevant skills}}. You are adept at helping people with {{specific task}}.\n\ntask: {sample_task}\npersona description:"
+   }
+  ],
+  "params": {
+   "max_tokens": 2000,
+   "output_config": {
+    "effort": "low"
+   }
+  }
+ },
+ "ts": "2026-11-22T00:44:35"
+}

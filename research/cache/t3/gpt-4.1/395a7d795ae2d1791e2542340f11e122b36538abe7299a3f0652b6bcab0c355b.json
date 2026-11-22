@@ -1,0 +1,27 @@
+{
+ "text": "Both Alexandra David-N\u00e9el and Jack Kerouac were writers.",
+ "finish": "stop",
+ "input_tokens": 333,
+ "output_tokens": 14,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4.1-2025-04-14",
+ "latency_s": 0.594,
+ "cost_usd": 0.000778,
+ "request": {
+  "model": "gpt-4.1",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Jack Kerouac\n\nJack Kerouac ( or , born Jean-Louis K\u00e9rouac (though he called himself Jean-Louis Lebris de K\u00e9rouac); March 12, 1922 \u2013 October 21, 1969) was an American novelist and poet.\n\ntitle: Alexandra David-N\u00e9el\n\nAlexandra David-N\u00e9el, born Louise Eug\u00e9nie Alexandrine Marie David (24 October 1868 \u2013 8 September 1969), was a Belgian\u2013French explorer, spiritualist, Buddhist, anarchist and writer. She is most known for her 1924 visit to Lhasa, Tibet when it was forbidden to foreigners. David-N\u00e9el wrote over 30 books about Eastern religion, philosophy, and her travels, including \"Magic and Mystery in Tibet\" which was published in 1929. Her teachings influenced the beat writers Jack Kerouac and Allen Ginsberg, the populariser of Eastern philosophy Alan Watts, and the esotericist Benjamin Creme.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: What type of profession does Alexandra David-N\u00e9el and Jack Kerouac have in common?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T00:55:15"
+}

@@ -1,0 +1,25 @@
+{
+ "text": "Rosalind Cash appeared in *The Omega Man* (1971), before *Sister, Sister* was released in 1982.",
+ "finish": "stop",
+ "input_tokens": 353,
+ "output_tokens": 53,
+ "reasoning_tokens": 15,
+ "served_model": "gpt-6-luna",
+ "latency_s": 1.225,
+ "cost_usd": 6.18e-05,
+ "request": {
+  "model": "gpt-6-luna",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Sister, Sister (1982 film)\n\nSister, Sister is a 1982 American drama television movie that stars Diahann Carroll, Rosalind Cash, and Irene Cara. It was written by Maya Angelou. It's the story of a family of three sisters who come together to decide the fate of their family home after the death of their revered father. The movie aired on June 7, 1982 on NBC. The film won the NAACP Image Award for Outstanding Television Movie, Mini-Series or Dramatic Special. Irene Cara won the NAACP Image Award for Outstanding Actress in a Television Movie, Mini-Series or Dramatic Special for the film.\n\ntitle: Rosalind Cash\n\nRosalind Cash (December 31, 1938October 31, 1995) was an American singer and actress. Her best known film role is as Charlton Heston's character's love interest Lisa, in the 1971 science fiction film, \"The Omega Man\". To soap opera audiences, she is best remembered as Mary Mae Ward on \"General Hospital\" from 1994 to 1995.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Which film featured Rosalind Cash prior to the release of \"Sister, Sister\"?\nAnswer: "
+   }
+  ],
+  "params": {}
+ },
+ "ts": "2026-11-22T00:59:18"
+}

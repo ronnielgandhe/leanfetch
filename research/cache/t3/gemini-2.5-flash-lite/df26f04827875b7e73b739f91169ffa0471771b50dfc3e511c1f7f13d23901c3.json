@@ -1,0 +1,27 @@
+{
+ "text": "Doggerland was an area that connected Great Britain to continental Europe. It was submerged around 6,200 BCE, possibly due to a tsunami caused by the Storegga Slide, which involved a collapse of approximately 290 km of coastal shelf.",
+ "finish": "FinishReason.STOP",
+ "input_tokens": 376,
+ "output_tokens": 53,
+ "reasoning_tokens": 0,
+ "served_model": "gemini-2.5-flash-lite",
+ "latency_s": 0.644,
+ "cost_usd": 5.8800000000000006e-05,
+ "request": {
+  "model": "gemini-2.5-flash-lite",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Doggerland\n\nDoggerland was an area now beneath the southern North Sea that connected Great Britain to continental Europe during and after the last glacial period. It was flooded by rising sea levels around 6,500\u20136,200 BCE. Geological surveys have suggested that it stretched from Britain's east coast to the Netherlands and the western coasts of Germany and the peninsula of Jutland. It was probably a rich habitat with human habitation in the Mesolithic period, although rising sea levels gradually reduced it to low-lying islands before its final submergence, possibly following a tsunami caused by the Storegga Slide.\n\ntitle: Storegga Slide\n\nThe three Storegga Slides are considered to be amongst the largest known landslides. They occurred under water, at the edge of Norway's continental shelf in the Norwegian Sea, approximately 6225\u20136170 BCE. The collapse involved an estimated 290 km length of coastal shelf, with a total volume of 3500 km3 of debris, which caused a very large tsunami in the North Atlantic Ocean.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: What area once connected Great Britain to continental Europe, and is thought to have been submerged around 6,200 BCE by a massive landslide along 290 km of the continental shelf?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T01:08:15"
+}

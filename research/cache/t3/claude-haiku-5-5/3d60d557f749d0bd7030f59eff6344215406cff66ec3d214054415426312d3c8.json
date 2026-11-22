@@ -1,0 +1,27 @@
+{
+ "text": "Soha Ali Khan is the lead actress who has also acted in Bengali and English-language films, in addition to her primary work in Hindi cinema.",
+ "finish": "end_turn",
+ "input_tokens": 477,
+ "output_tokens": 50,
+ "reasoning_tokens": null,
+ "served_model": "claude-haiku-5-5",
+ "latency_s": 0.693,
+ "cost_usd": 7.27e-05,
+ "request": {
+  "model": "claude-haiku-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: War Chhod Na Yaar\n\nWar Chhod Na Yaar (English translation: \"Quit the War, Dude\") is a 2013 Hindi Indian war comedy film directed and written by Faraz Haider and dialogues are written by Deepak Kingrani. The film was announced on 30 March 2013 with a launch party at Novotel Hotel in the presence of the lead actors, Sharman Joshi, Soha Ali Khan, Javed Jaffery, Sanjai Mishra, Dalip Tahil and Mukul Dev who play important characters in the film.\n\ntitle: Soha Ali Khan\n\nSoha Ali Khan Khemu (born Soha Ali Khan , 4 October 1978) is an Indian film actress, known primarily for her work in the Hindi film industry, although she has also acted in Bengali and English-language films.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Which lead actor/actress in War Chhod Na Yaar has also acted in Bengali and English-language films?\nAnswer: "
+   }
+  ],
+  "params": {
+   "max_tokens": 16000
+  }
+ },
+ "ts": "2026-11-22T01:06:14"
+}

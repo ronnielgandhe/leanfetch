@@ -1,0 +1,26 @@
+{
+ "text": "{\"statements\":[\"The Moscow Hemp Fest is held in Latah County.\"],\"statement_scores\":[1]}",
+ "finish": "stop",
+ "input_tokens": 470,
+ "output_tokens": 83,
+ "reasoning_tokens": 50,
+ "served_model": "gpt-6-luna",
+ "latency_s": 2.983,
+ "cost_usd": 8.85e-05,
+ "request": {
+  "model": "gpt-6-luna",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Instructions:\nYour task is to judge the faithfulness or groundedness of statements based on context information. First, please extract statements from a provided predicted answer to a question. Second, calculate a faithfulness score for each statement made in the predicted answer. The score is 1 if the statement can be inferred from the provided context or 0 if it cannot be inferred.\n\nGenerate the response in JSON format with the following keys:\n[\"statements\", \"statement_scores\"]\nConsider the instructions and the examples below to determine those values.\n\nExamples:\nInputs:\n{\"questions\": \"What is the capital of Germany and when was it founded?\", \"contexts\": [\"Berlin is the capital of Germany and was founded in 1244.\"], \"predicted_answers\": \"The capital of Germany, Berlin, was founded in the 13th century.\"}\nOutputs:\n{\"statements\": [\"Berlin is the capital of Germany.\", \"Berlin was founded in 1244.\"], \"statement_scores\": [1, 1]}\nInputs:\n{\"questions\": \"What is the capital of France?\", \"contexts\": [\"Berlin is the capital of Germany.\"], \"predicted_answers\": \"Paris\"}\nOutputs:\n{\"statements\": [\"Paris is the capital of France.\"], \"statement_scores\": [0]}\nInputs:\n{\"questions\": \"What is the capital of Italy?\", \"contexts\": [\"Rome is the capital of Italy.\"], \"predicted_answers\": \"Rome is the capital of Italy with more than 4 million inhabitants.\"}\nOutputs:\n{\"statements\": [\"Rome is the capital of Italy.\", \"Rome has more than 4 million inhabitants.\"], \"statement_scores\": [1, 0]}\n\nInputs:\n{\"questions\": What county is the Moscow Hemp Fest held in?, \"contexts\": ['The Moscow Hemp Fest (sometimes Moscow Hempfest) is an annual cannabis event held in Moscow, Idaho, in the United States. It began in 1996 for the University of Idaho\\'s Mom\\'s Weekend.The University of Idaho (officially abbreviated UI, locally referred to as \"the U of I\") is the U.S. state of Idaho\\'s oldest public university, located in the city of Moscow in Latah County in the northern portion of the state.'], \"predicted_answers\": Latah County}\nOutputs:"
+   }
+  ],
+  "params": {
+   "response_format": {
+    "type": "json_object"
+   },
+   "seed": 42
+  }
+ },
+ "ts": "2026-11-22T00:50:54"
+}

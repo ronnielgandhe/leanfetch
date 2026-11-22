@@ -1,0 +1,23 @@
+{
+ "text": "{\n  \"statements\": [\"Nottingham Forest plays their home matches at the City Ground.\"],\n  \"statement_scores\": [1]\n}",
+ "finish": "FinishReason.STOP",
+ "input_tokens": 490,
+ "output_tokens": 31,
+ "reasoning_tokens": 0,
+ "served_model": "gemini-3.1-flash-lite",
+ "latency_s": 0.868,
+ "cost_usd": 0.000169,
+ "request": {
+  "model": "gemini-3.1-flash-lite",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Instructions:\nYour task is to judge the faithfulness or groundedness of statements based on context information. First, please extract statements from a provided predicted answer to a question. Second, calculate a faithfulness score for each statement made in the predicted answer. The score is 1 if the statement can be inferred from the provided context or 0 if it cannot be inferred.\n\nGenerate the response in JSON format with the following keys:\n[\"statements\", \"statement_scores\"]\nConsider the instructions and the examples below to determine those values.\n\nExamples:\nInputs:\n{\"questions\": \"What is the capital of Germany and when was it founded?\", \"contexts\": [\"Berlin is the capital of Germany and was founded in 1244.\"], \"predicted_answers\": \"The capital of Germany, Berlin, was founded in the 13th century.\"}\nOutputs:\n{\"statements\": [\"Berlin is the capital of Germany.\", \"Berlin was founded in 1244.\"], \"statement_scores\": [1, 1]}\nInputs:\n{\"questions\": \"What is the capital of France?\", \"contexts\": [\"Berlin is the capital of Germany.\"], \"predicted_answers\": \"Paris\"}\nOutputs:\n{\"statements\": [\"Paris is the capital of France.\"], \"statement_scores\": [0]}\nInputs:\n{\"questions\": \"What is the capital of Italy?\", \"contexts\": [\"Rome is the capital of Italy.\"], \"predicted_answers\": \"Rome is the capital of Italy with more than 4 million inhabitants.\"}\nOutputs:\n{\"statements\": [\"Rome is the capital of Italy.\", \"Rome has more than 4 million inhabitants.\"], \"statement_scores\": [1, 0]}\n\nInputs:\n{\"questions\": In 2003, James Beaumont joined a professional football football club in West Bridgford, England, which plays their home matches where?, \"contexts\": [' Beaumont joined Nottingham Forest from Newcastle United in 2003, along with Ross Gardner.Nottingham Forest Football Club is a professional football club in West Bridgford, England, which plays in the Championship, the second tier of English football, having been promoted from League One in 2008. The club, often referred to as Forest, have played home matches at the City Ground since 1898.'], \"predicted_answers\": City Ground}\nOutputs:"
+   }
+  ],
+  "params": {
+   "response_mime_type": "application/json"
+  }
+ },
+ "ts": "2026-11-22T01:33:17"
+}

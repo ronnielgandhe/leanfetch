@@ -1,0 +1,27 @@
+{
+ "text": "Miami Gardens",
+ "finish": "FinishReason.STOP",
+ "input_tokens": 425,
+ "output_tokens": 2,
+ "reasoning_tokens": 0,
+ "served_model": "gemini-3.1-flash-lite",
+ "latency_s": 0.884,
+ "cost_usd": 0.00010925,
+ "request": {
+  "model": "gemini-3.1-flash-lite",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Hard Rock Stadium\n\nHard Rock Stadium is a multipurpose football stadium located in Miami Gardens, Florida, a suburb north of Miami. It is the home stadium of the Miami Dolphins of the National Football League (NFL), and the Miami Hurricanes from the University of Miami. The facility also hosts the Orange Bowl, an annual college football bowl game. It was the home to the Florida Marlins of Major League Baseball (MLB) from 1993 to 2011.\n\ntitle: WSCV\n\nWSCV, virtual channel 51 (UHF digital channel 30), is the flagship television station of the Spanish-language Telemundo network, serving Miami, Florida, United States and licensed to Fort Lauderdale. The station is owned by the NBCUniversal Owned Television Stations subsidiary of NBCUniversal (itself a division of Comcast), as part of a duopoly with Miami-licensed NBC owned-and-operated station WTVJ (channel 6). The two stations share studio and office facilities on Southwest 27th Street (off of I-75) in Miramar; WSCV's transmitter is located near Hard Rock Stadium in north Miami-Dade County. WSCV is one of two commercial television stations with a city of license in Broward County (the other being UniM\u00e1s flagship WAMI-DT, licensed to Hollywood). The station also serves as the \"de facto\" Telemundo outlet for the West Palm Beach market.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: WSCV's transmitter is located near this stadium located in which suburb?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T01:07:08"
+}

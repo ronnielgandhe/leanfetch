@@ -1,0 +1,30 @@
+{
+ "text": "{\"task\": \"other\", \"output_format\": \"delimited\", \"benchmark_analogue\": \"none\", \"metric\": \"none\", \"rationale\": \"The prompt asks the model to generate a bulleted list of candidate follow-up questions grounded in provided data tables, which is question generation rather than any standard benchmarked task, so no clean public dataset analogue exists.\"}",
+ "finish": "end_turn",
+ "input_tokens": 493,
+ "output_tokens": 115,
+ "reasoning_tokens": null,
+ "served_model": "claude-haiku-5-5",
+ "latency_s": 0.82,
+ "cost_usd": 0.00010680000000000001,
+ "request": {
+  "model": "claude-haiku-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You label LLM prompt templates found in source code by the job the call does. Reply with one JSON object only, no prose, with keys: task (one of ['classification_routing', 'extraction_structured', 'summarization', 'query_rewriting', 'rag_answer', 'code_generation', 'tool_selection', 'grading_judging', 'reranking', 'chat_open_ended', 'other']), output_format (free_text|json|delimited|label|score), benchmark_analogue (one well known public dataset whose task matches this job, or 'none'), metric (the objective metric that dataset uses), rationale (one sentence)."
+   },
+   {
+    "role": "user",
+    "content": "file: packages/graphrag/graphrag/prompts/query/question_gen_system_prompt.py\nname: QUESTION_SYSTEM_PROMPT\nplaceholders: ['question_count', 'context_data']\n---\n\n---Role---\n\nYou are a helpful assistant generating a bulleted list of {question_count} questions about data in the tables provided.\n\n\n---Data tables---\n\n{context_data}\n\n\n---Goal---\n\nGiven a series of example questions provided by the user, generate a bulleted list of {question_count} candidates for the next question. Use - marks as bullet points.\n\nThese candidate questions should represent the most important or urgent information content or themes in the data tables.\n\nThe candidate questions should be answerable using the data tables provided, but should not mention any specific data fields or data tables in the question text.\n\nIf the user's questions reference several named entities, then each candidate question should reference all named entities.\n\n---Example questions---\n"
+   }
+  ],
+  "params": {
+   "max_tokens": 2000,
+   "output_config": {
+    "effort": "low"
+   }
+  }
+ },
+ "ts": "2026-11-22T00:44:50"
+}

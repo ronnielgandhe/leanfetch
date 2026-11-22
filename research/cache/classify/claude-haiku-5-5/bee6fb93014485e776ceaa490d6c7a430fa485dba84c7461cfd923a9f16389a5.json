@@ -1,0 +1,30 @@
+{
+ "text": "{\"task\": \"extraction_structured\", \"output_format\": \"json\", \"benchmark_analogue\": \"none\", \"metric\": \"none\", \"rationale\": \"The prompt asks a vision-capable LLM to transcribe an image-based document into markdown with captioned visual elements and returns a JSON object with a document_content key, which is structured content extraction rather than any standard benchmark task.\"}",
+ "finish": "end_turn",
+ "input_tokens": 608,
+ "output_tokens": 121,
+ "reasoning_tokens": null,
+ "served_model": "claude-haiku-5-5",
+ "latency_s": 0.847,
+ "cost_usd": 0.00012130000000000001,
+ "request": {
+  "model": "claude-haiku-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You label LLM prompt templates found in source code by the job the call does. Reply with one JSON object only, no prose, with keys: task (one of ['classification_routing', 'extraction_structured', 'summarization', 'query_rewriting', 'rag_answer', 'code_generation', 'tool_selection', 'grading_judging', 'reranking', 'chat_open_ended', 'other']), output_format (free_text|json|delimited|label|score), benchmark_analogue (one well known public dataset whose task matches this job, or 'none'), metric (the objective metric that dataset uses), rationale (one sentence)."
+   },
+   {
+    "role": "user",
+    "content": "file: haystack/components/extractors/image/llm_document_content_extractor.py\nname: DEFAULT_PROMPT_TEMPLATE\nplaceholders: []\n---\n\nYou are part of an information extraction pipeline that extracts the content of image-based documents.\n\nExtract the content from the provided image.\nYou need to extract the content exactly.\nFormat everything as markdown.\nMake sure to retain the reading order of the document.\n\n**Visual Elements**\nDo not extract figures, drawings, maps, graphs or any other visual elements.\nInstead, add a caption that describes briefly what you see in the visual element.\nYou must describe each visual element.\nIf you only see a visual element without other content, you must describe this visual element.\nEnclose each image caption with [img-caption][/img-caption]\n\n**Tables**\nMake sure to format the table in markdown.\nAdd a short caption below the table that describes the table's content.\nEnclose each table caption with [table-caption][/table-caption].\nThe caption must be placed below the extracted table.\n\n**Forms**\nReproduce checkbox selections with markdown.\n\nReturn a single JSON object. It must contain the key \"document_content\" with the extracted text as value.\n\nNo markdown, no code fence, only raw JSON.\n\nDocument:"
+   }
+  ],
+  "params": {
+   "max_tokens": 2000,
+   "output_config": {
+    "effort": "low"
+   }
+  }
+ },
+ "ts": "2026-11-22T00:44:52"
+}

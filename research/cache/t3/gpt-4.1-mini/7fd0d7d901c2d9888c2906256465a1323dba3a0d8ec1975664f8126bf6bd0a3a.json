@@ -1,0 +1,27 @@
+{
+ "text": "Neil B. Shulman was the associate producer of the 1991 American romantic comedy film \"Doc Hollywood\" directed by Michael Caton-Jones.",
+ "finish": "stop",
+ "input_tokens": 342,
+ "output_tokens": 31,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4.1-mini-2025-04-14",
+ "latency_s": 0.557,
+ "cost_usd": 0.0001864,
+ "request": {
+  "model": "gpt-4.1-mini",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Neil B. Shulman\n\nNeil Barnett Shulman is an American doctor and medical writer, who is Associate Professor in the School of Medicine at Emory University. He has conducted and published clinical research on hypertension and is the co-founder of the International Society on Hypertension in Blacks. He is the author of many books promoting medical literacy for both adults and children, as well as humor and children's books. He is the associate producer of the 1991 film \"Doc Hollywood\", based on one of his books.\n\ntitle: Doc Hollywood\n\nDoc Hollywood is a 1991 American romantic comedy film directed by Michael Caton-Jones, and written by Jeffrey Price and Peter S. Seaman, based on Neil B. Shulman's book, \"What? Dead...Again?\". The film stars Michael J. Fox, Julie Warner, and Woody Harrelson, with Bridget Fonda, David Ogden Stiers, Frances Sternhagen, Roberts Blossom, and Barnard Hughes appearing in supporting roles.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Neil B. Shulman was the associate producer of what 1991 American romantic comedy film directed by Michael Caton-Jones?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T00:57:36"
+}

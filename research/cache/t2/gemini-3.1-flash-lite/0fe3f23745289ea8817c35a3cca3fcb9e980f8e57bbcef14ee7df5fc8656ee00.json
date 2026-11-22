@@ -1,0 +1,23 @@
+{
+ "text": "{\n  \"statements\": [\n    \"Both Louis de Berni\u00e8res and Orhan Pamuk have a similar amount of translations of their work.\"\n  ],\n  \"statement_scores\": [\n    0\n  ]\n}",
+ "finish": "FinishReason.STOP",
+ "input_tokens": 513,
+ "output_tokens": 49,
+ "reasoning_tokens": 0,
+ "served_model": "gemini-3.1-flash-lite",
+ "latency_s": 0.825,
+ "cost_usd": 0.00020175,
+ "request": {
+  "model": "gemini-3.1-flash-lite",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Instructions:\nYour task is to judge the faithfulness or groundedness of statements based on context information. First, please extract statements from a provided predicted answer to a question. Second, calculate a faithfulness score for each statement made in the predicted answer. The score is 1 if the statement can be inferred from the provided context or 0 if it cannot be inferred.\n\nGenerate the response in JSON format with the following keys:\n[\"statements\", \"statement_scores\"]\nConsider the instructions and the examples below to determine those values.\n\nExamples:\nInputs:\n{\"questions\": \"What is the capital of Germany and when was it founded?\", \"contexts\": [\"Berlin is the capital of Germany and was founded in 1244.\"], \"predicted_answers\": \"The capital of Germany, Berlin, was founded in the 13th century.\"}\nOutputs:\n{\"statements\": [\"Berlin is the capital of Germany.\", \"Berlin was founded in 1244.\"], \"statement_scores\": [1, 1]}\nInputs:\n{\"questions\": \"What is the capital of France?\", \"contexts\": [\"Berlin is the capital of Germany.\"], \"predicted_answers\": \"Paris\"}\nOutputs:\n{\"statements\": [\"Paris is the capital of France.\"], \"statement_scores\": [0]}\nInputs:\n{\"questions\": \"What is the capital of Italy?\", \"contexts\": [\"Rome is the capital of Italy.\"], \"predicted_answers\": \"Rome is the capital of Italy with more than 4 million inhabitants.\"}\nOutputs:\n{\"statements\": [\"Rome is the capital of Italy.\", \"Rome has more than 4 million inhabitants.\"], \"statement_scores\": [1, 0]}\n\nInputs:\n{\"questions\": Which one of the two authors (Louis de Berni\u00e8res and Orhan Pamuk) have more translations of their work?, \"contexts\": [\" It has been translated into over 11 languages and is an international bestseller.Ferit Orhan Pamuk (generally known simply as Orhan Pamuk; born 7 June 1952) is a Turkish novelist, screenwriter, academic and recipient of the 2006 Nobel Prize in Literature. One of Turkey's most prominent novelists, his work has sold over thirteen million books in sixty-three languages, making him the country's best-selling writer.\"], \"predicted_answers\": Both Louis de Berni\u00e8res and Orhan Pamuk have a similar amount of translations of their work.}\nOutputs:"
+   }
+  ],
+  "params": {
+   "response_mime_type": "application/json"
+  }
+ },
+ "ts": "2026-11-22T01:33:31"
+}

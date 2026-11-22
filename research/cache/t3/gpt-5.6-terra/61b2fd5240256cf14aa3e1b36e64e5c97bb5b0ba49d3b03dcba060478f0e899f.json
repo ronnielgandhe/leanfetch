@@ -1,0 +1,25 @@
+{
+ "text": "Lisa Raymond has won more Grand Slam women\u2019s doubles titles: 6, compared with Liezel Huber\u2019s 5.",
+ "finish": "stop",
+ "input_tokens": 333,
+ "output_tokens": 28,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-5.6-terra",
+ "latency_s": 0.927,
+ "cost_usd": 0.001002,
+ "request": {
+  "model": "gpt-5.6-terra",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Lisa Raymond\n\nLisa Raymond (born August 10, 1973) is an American retired professional tennis player who has achieved notable success in doubles tennis. Raymond has 11 Grand Slam titles to her name: 6 in women's doubles and 5 in mixed doubles. On June 12, 2000, she reached the world number one ranking in doubles. Her career high singles ranking was fifteenth in October 1997.\n\ntitle: Liezel Huber\n\nLiezel Huber (n\u00e9e Horn; born 21 August 1976) is a South African-American retired tennis player who represents the United States internationally. Huber has won four Grand Slam titles in women's doubles with partner Cara Black, one with Lisa Raymond, and two mixed doubles titles with Bob Bryan. On 12 November 2007, she became the co-World No. 1 in doubles with Cara Black. On 19 April 2010, Huber became the sole No. 1 for the first time in her career.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Who has won more Grand Slam women's doubles titles, Lisa Raymond or Liezel Huber?\nAnswer: "
+   }
+  ],
+  "params": {}
+ },
+ "ts": "2026-11-22T00:55:47"
+}

@@ -1,0 +1,27 @@
+{
+ "text": "Keegan Bradley won his first major championship, the 2011 PGA Championship, on the Highlands Course at the Atlanta Athletic Club in Johns Creek, Georgia, which is in Fulton County. He beat Jason Dufner in a three-hole playoff.",
+ "finish": "end_turn",
+ "input_tokens": 442,
+ "output_tokens": 92,
+ "reasoning_tokens": null,
+ "served_model": "claude-sonnet-5-5",
+ "latency_s": 1.33,
+ "cost_usd": 0.001804,
+ "request": {
+  "model": "claude-sonnet-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Johns Creek, Georgia\n\nJohns Creek is a city located in Fulton County in the U.S. state of Georgia. According to the 2010 U.S. Census, the population was 76,728. The city is an affluent northeastern suburb of Atlanta. In 2017 Johns Creek ranked third on the \"USA TODAY\" list of \"50 best cities to live in.\"\n\ntitle: 2011 PGA Championship\n\nThe 2011 PGA Championship was the 93rd PGA Championship, held August 11\u201314 at the Atlanta Athletic Club in Johns Creek, Georgia, a suburb northeast of Atlanta. Keegan Bradley won his first major championship in a three-hole playoff over Jason Dufner on the Highlands Course.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: What golf course, located in Fulton County, Georgia, saw Keegan Bradley win a championship?\nAnswer: "
+   }
+  ],
+  "params": {
+   "max_tokens": 16000
+  }
+ },
+ "ts": "2026-11-22T01:03:07"
+}

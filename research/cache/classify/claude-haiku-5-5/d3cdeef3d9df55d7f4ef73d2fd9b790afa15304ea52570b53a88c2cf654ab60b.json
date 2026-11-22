@@ -1,0 +1,30 @@
+{
+ "text": "{\"task\": \"other\", \"output_format\": \"json\", \"benchmark_analogue\": \"none\", \"metric\": \"none\", \"rationale\": \"This is an openCypher query template for Neptune Analytics top-k vector similarity search, not an LLM prompt, so it doesn't map to any LLM task category or benchmark.\"}",
+ "finish": "end_turn",
+ "input_tokens": 358,
+ "output_tokens": 358,
+ "reasoning_tokens": null,
+ "served_model": "claude-haiku-5-5",
+ "latency_s": 2.273,
+ "cost_usd": 0.00021480000000000002,
+ "request": {
+  "model": "claude-haiku-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You label LLM prompt templates found in source code by the job the call does. Reply with one JSON object only, no prose, with keys: task (one of ['classification_routing', 'extraction_structured', 'summarization', 'query_rewriting', 'rag_answer', 'code_generation', 'tool_selection', 'grading_judging', 'reranking', 'chat_open_ended', 'other']), output_format (free_text|json|delimited|label|score), benchmark_analogue (one well known public dataset whose task matches this job, or 'none'), metric (the objective metric that dataset uses), rationale (one sentence)."
+   },
+   {
+    "role": "user",
+    "content": "file: mem0/vector_stores/neptune_analytics.py\nname: query_string\nplaceholders: ['top_k', 'vectors', 'filter_clause']\n---\n\n            CALL neptune.algo.vectors.topKByEmbeddingWithFiltering({{\n                    topK: {top_k},\n                    embedding: {vectors}\n                    {filter_clause}\n                  }}\n                )\n            YIELD node, score\n            RETURN node as n, score\n            "
+   }
+  ],
+  "params": {
+   "max_tokens": 2000,
+   "output_config": {
+    "effort": "low"
+   }
+  }
+ },
+ "ts": "2026-11-22T00:45:28"
+}

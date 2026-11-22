@@ -1,0 +1,27 @@
+{
+ "text": "No, Minersville School District v. Gobitis and Gravel v. United States did not occur in the same decade. Minersville School District v. Gobitis was decided in 1940, while Gravel v. United States was decided in 1972.",
+ "finish": "stop",
+ "input_tokens": 379,
+ "output_tokens": 54,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4.1-2025-04-14",
+ "latency_s": 0.639,
+ "cost_usd": 0.00119,
+ "request": {
+  "model": "gpt-4.1",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Minersville School District v. Gobitis\n\nMinersville School District v. Gobitis, 310 U.S. 586 (1940) , was a decision by the Supreme Court of the United States involving the religious rights of public school students under the First Amendment to the United States Constitution. The Court ruled that public schools could compel students\u2014in this case, Jehovah's Witnesses\u2014to salute the American Flag and recite the Pledge of Allegiance despite the students' religious objections to these practices. This decision led to increased persecution of Witnesses in the United States. The Supreme Court overruled this decision a mere three years later, in \"West Virginia State Board of Education v. Barnette\", 319 U.S. 624 (1943).\n\ntitle: Gravel v. United States\n\nGravel v. United States, 408 U.S. 606 (1972), was a case regarding the protections offered by the Speech or Debate Clause of the United States Constitution. In the case, the Supreme Court of the United States held that the privileges and immunities of the Constitution's Speech or Debate Clause enjoyed by members of Congress also extend to Congressional aides, but not to activity outside the legislative process.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Did Minersville School District v. Gobitis and Gravel v. United States occur in the same decade?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T00:55:08"
+}

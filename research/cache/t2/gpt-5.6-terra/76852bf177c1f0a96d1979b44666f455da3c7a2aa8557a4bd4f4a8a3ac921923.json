@@ -1,0 +1,26 @@
+{
+ "text": "{\"statements\":[\"The film is named \\\"The Dude\\\".\"],\"statement_scores\":[0]}",
+ "finish": "stop",
+ "input_tokens": 473,
+ "output_tokens": 109,
+ "reasoning_tokens": 78,
+ "served_model": "gpt-5.6-terra",
+ "latency_s": 2.107,
+ "cost_usd": 0.002254,
+ "request": {
+  "model": "gpt-5.6-terra",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Instructions:\nYour task is to judge the faithfulness or groundedness of statements based on context information. First, please extract statements from a provided predicted answer to a question. Second, calculate a faithfulness score for each statement made in the predicted answer. The score is 1 if the statement can be inferred from the provided context or 0 if it cannot be inferred.\n\nGenerate the response in JSON format with the following keys:\n[\"statements\", \"statement_scores\"]\nConsider the instructions and the examples below to determine those values.\n\nExamples:\nInputs:\n{\"questions\": \"What is the capital of Germany and when was it founded?\", \"contexts\": [\"Berlin is the capital of Germany and was founded in 1244.\"], \"predicted_answers\": \"The capital of Germany, Berlin, was founded in the 13th century.\"}\nOutputs:\n{\"statements\": [\"Berlin is the capital of Germany.\", \"Berlin was founded in 1244.\"], \"statement_scores\": [1, 1]}\nInputs:\n{\"questions\": \"What is the capital of France?\", \"contexts\": [\"Berlin is the capital of Germany.\"], \"predicted_answers\": \"Paris\"}\nOutputs:\n{\"statements\": [\"Paris is the capital of France.\"], \"statement_scores\": [0]}\nInputs:\n{\"questions\": \"What is the capital of Italy?\", \"contexts\": [\"Rome is the capital of Italy.\"], \"predicted_answers\": \"Rome is the capital of Italy with more than 4 million inhabitants.\"}\nOutputs:\n{\"statements\": [\"Rome is the capital of Italy.\", \"Rome has more than 4 million inhabitants.\"], \"statement_scores\": [1, 0]}\n\nInputs:\n{\"questions\": What is the name of this 1998 British-American crime comedy film, whose soundtrack included Lujon?, \"contexts\": ['\"Lujon\" (also known as \"Slow Hot Wind\") is a musical piece by Henry Mancini. It was included in the soundtracks for the films \"The Big Lebowski\", \"Sexy Beast\", \"W.E.\", and \"Two Lovers\".The Big Lebowski is a 1998 British-American crime comedy film written, produced, and directed by Joel and Ethan Coen.'], \"predicted_answers\": The Coen Brothers' classic, The Dude.}\nOutputs:"
+   }
+  ],
+  "params": {
+   "response_format": {
+    "type": "json_object"
+   },
+   "seed": 42
+  }
+ },
+ "ts": "2026-11-22T01:11:19"
+}

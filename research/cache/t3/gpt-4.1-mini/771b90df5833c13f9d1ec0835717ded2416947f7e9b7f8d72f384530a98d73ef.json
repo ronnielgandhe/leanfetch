@@ -1,0 +1,27 @@
+{
+ "text": "The 4-D film attraction at Walt Disney World based off a 2004 computer-animated Christmas movie is Mickey's PhilharMagic.",
+ "finish": "stop",
+ "input_tokens": 420,
+ "output_tokens": 28,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4.1-mini-2025-04-14",
+ "latency_s": 0.866,
+ "cost_usd": 0.00021280000000000002,
+ "request": {
+  "model": "gpt-4.1-mini",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Mickey's Twice Upon a Christmas\n\nMickey's Twice Upon a Christmas is a 2004 computer-animated direct-to-video fantasy comedy anthology film produced by Disney Toon Studios and the sequel to 1999's \"Mickey's Once Upon a Christmas\". The segments in this video feature Mickey Mouse, Minnie Mouse, Pluto, Goofy, Max, Donald Duck, Daisy Duck, Huey, Dewey and Louie, and Scrooge McDuck in five different segments. Along with the Mickey's PhilharMagic theme park attraction, this production was one of the first to depict the Mickey Mouse series characters with 3D computer animation. It is the final direct-to-video film to feature both Wayne Allwine and Alan Young, who both died in different years.\n\ntitle: Mickey's PhilharMagic\n\nMickey's PhilharMagic is a 4-D film attraction found at the Magic Kingdom theme park in the Walt Disney World Resort, Hong Kong Disneyland, and at Tokyo Disneyland. The film was directed by George Scribner, who is best known for directing Disney's 1988 animated film, \"Oliver & Company\". \"Mickey's PhilharMagic\" is a 12-minute-long show featuring 3D effects, scents, and water, as well as a number of characters from Disney movies. It is shown on the largest purpose-built 3D screen ever made, at 150 feet wide.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: What 4-D film attraction at Walt Disney World is based off a 2004 computer-animated Christmas movie? \nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T00:57:09"
+}

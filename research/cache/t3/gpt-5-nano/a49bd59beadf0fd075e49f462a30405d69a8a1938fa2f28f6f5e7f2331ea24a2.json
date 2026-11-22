@@ -1,0 +1,25 @@
+{
+ "text": "Man Haron Monis.",
+ "finish": "stop",
+ "input_tokens": 283,
+ "output_tokens": 207,
+ "reasoning_tokens": 192,
+ "served_model": "gpt-5-nano-2025-08-07",
+ "latency_s": 1.531,
+ "cost_usd": 9.695000000000001e-05,
+ "request": {
+  "model": "gpt-5-nano",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: 2014 Sydney hostage crisis\n\nThe 2014 Sydney hostage crisis, also known as the Sydney siege and Lindt Cafe siege, occurred on 15\u201316 December 2014 when a lone gunman, Man Haron Monis, held hostage ten customers and eight employees of a Lindt chocolate caf\u00e9 located at Martin Place in Sydney, Australia. Police treated the event as a terrorist attack at the time but Monis' motives have subsequently been debated.\n\ntitle: Chris Reason\n\nChris Reason is a senior reporter and presenter for \"Seven News\" in Sydney, Australia. He was awarded the Graham Perkin Australian Journalist of the Year Award for his coverage of the Lindt Cafe siege in December 2014.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Who was the gunman of the hostage crisis which Chris Reason was awarded the Graham Perkin Australian Journalist of the Year Award for his coverage of?\nAnswer: "
+   }
+  ],
+  "params": {}
+ },
+ "ts": "2026-11-22T01:00:57"
+}

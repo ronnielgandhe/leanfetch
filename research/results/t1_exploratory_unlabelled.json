@@ -1,0 +1,73 @@
+{
+ "note": "exploratory sensitivity, not preregistered and deliberately generous to models that extract more: a predicted name that is not a gold entity but appears verbatim in the source text is ignored (neither true nor false positive), in case Few-NERD simply missed it.",
+ "n": 150,
+ "models": {
+  "gpt-4.1": {
+   "f1_unlabelled_verbatim_ignored": 0.7324690630524455,
+   "ignored_per_doc": 4.926666666666667
+  },
+  "gpt-4o-mini": {
+   "f1_unlabelled_verbatim_ignored": 0.6346010439970171,
+   "ignored_per_doc": 1.9533333333333334,
+   "diff_vs_default": -0.09786801905542841,
+   "diff_ci_99_44": [
+    -0.1335457676103155,
+    -0.06113312053181053
+   ]
+  },
+  "gpt-6-luna": {
+   "f1_unlabelled_verbatim_ignored": 0.767763764995386,
+   "ignored_per_doc": 2.82,
+   "diff_vs_default": 0.03529470194294049,
+   "diff_ci_99_44": [
+    0.010291396827598876,
+    0.06175148792077275
+   ]
+  },
+  "gemini-2.5-flash-lite": {
+   "f1_unlabelled_verbatim_ignored": 0.7376026272577997,
+   "ignored_per_doc": 2.6666666666666665,
+   "diff_vs_default": 0.0051335642053541575,
+   "diff_ci_99_44": [
+    -0.026610738669414036,
+    0.03641059557768947
+   ]
+  },
+  "claude-haiku-5-5": {
+   "f1_unlabelled_verbatim_ignored": 0.7380952380952381,
+   "ignored_per_doc": 3.1333333333333333,
+   "diff_vs_default": 0.005626175042792614,
+   "diff_ci_99_44": [
+    -0.020049901111007396,
+    0.0335900254104586
+   ]
+  },
+  "gemini-3.1-flash-lite": {
+   "f1_unlabelled_verbatim_ignored": 0.7955801104972375,
+   "ignored_per_doc": 2.9066666666666667,
+   "diff_vs_default": 0.06311104744479201,
+   "diff_ci_99_44": [
+    0.039115599839971746,
+    0.08874216559534692
+   ]
+  },
+  "gpt-4.1-mini": {
+   "f1_unlabelled_verbatim_ignored": 0.7546675401244677,
+   "ignored_per_doc": 2.98,
+   "diff_vs_default": 0.02219847707202216,
+   "diff_ci_99_44": [
+    -0.002308840296136624,
+    0.04950832554718175
+   ]
+  },
+  "gpt-5-nano": {
+   "f1_unlabelled_verbatim_ignored": 0.7491211249600511,
+   "ignored_per_doc": 2.06,
+   "diff_vs_default": 0.016652061907605598,
+   "diff_ci_99_44": [
+    -0.01605347119450993,
+    0.04824198537725019
+   ]
+  }
+ }
+}

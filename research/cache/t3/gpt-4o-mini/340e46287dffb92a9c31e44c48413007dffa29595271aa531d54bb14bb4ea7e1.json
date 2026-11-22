@@ -1,0 +1,27 @@
+{
+ "text": "William Tubman served as President of Liberia from 1944 until his death in 1971.",
+ "finish": "stop",
+ "input_tokens": 244,
+ "output_tokens": 20,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4o-mini-2024-07-18",
+ "latency_s": 1.018,
+ "cost_usd": 4.86e-05,
+ "request": {
+  "model": "gpt-4o-mini",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Tubman University\n\nWilliam V. S. Tubman University, commonly known as Tubman University, is a public university located in Harper, Maryland County, Liberia. The university is named after William Tubman, the 19th President of Liberia.\n\ntitle: William Tubman\n\nWilliam Vacanarat Shadrach Tubman (November 29, 1895 \u2013 July 23, 1971) was a Liberian politician. He was the 19th President of Liberia, serving from his election in 1944 until his death in 1971.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: When did the person for whom Tubman University was named serve as President of his country?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T00:57:55"
+}

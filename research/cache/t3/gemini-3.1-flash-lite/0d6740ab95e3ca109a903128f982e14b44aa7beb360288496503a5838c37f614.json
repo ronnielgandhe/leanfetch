@@ -1,0 +1,27 @@
+{
+ "text": "Konstant\u012bns Raudive",
+ "finish": "FinishReason.STOP",
+ "input_tokens": 310,
+ "output_tokens": 7,
+ "reasoning_tokens": 0,
+ "served_model": "gemini-3.1-flash-lite",
+ "latency_s": 0.912,
+ "cost_usd": 8.8e-05,
+ "request": {
+  "model": "gemini-3.1-flash-lite",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Konstant\u012bns Raudive\n\nRaudive studied parapsychology all his life, and was especially interested in the possibility of the afterlife. He and German parapsychologist Hans Bender investigated electronic voice phenomena (EVP). He published a book on EVP, \"Breakthrough\", in 1971. Raudive was a scientist as well as a practising Roman Catholic.\n\ntitle: Electronic voice phenomenon\n\nWithin ghost hunting and parapsychology, electronic voice phenomena (EVP) are sounds found on electronic recordings that are interpreted as spirit voices that have been either unintentionally recorded or intentionally requested and recorded. Parapsychologist Konstant\u012bns Raudive, who popularized the idea in the 1970s, described EVP as typically brief, usually the length of a word or short phrase.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: What scientist as well as a practising Roman Cathloic described the electronic voice phenomena as typically brief, usually the length of a work or short phrase?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T01:06:47"
+}

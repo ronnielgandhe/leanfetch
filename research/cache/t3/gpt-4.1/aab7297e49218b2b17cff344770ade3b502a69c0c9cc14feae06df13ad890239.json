@@ -1,0 +1,27 @@
+{
+ "text": "She helped found the National Association for the Advancement of Colored People (NAACP).",
+ "finish": "stop",
+ "input_tokens": 284,
+ "output_tokens": 16,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4.1-2025-04-14",
+ "latency_s": 0.447,
+ "cost_usd": 0.000696,
+ "request": {
+  "model": "gpt-4.1",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Bolling\u2013Gatewood House\n\nThe Bolling\u2013Gatewood House is a historic cottage in Holly Springs, Mississippi, USA. It is home to the Ida B. Wells-Barnett Museum, named for former slave, journalist, and suffragist Ida B. Wells.\n\ntitle: Ida B. Wells\n\nIda Bell Wells-Barnett (July 16, 1862 \u2013 March 25, 1931), more commonly known as Ida B. Wells, was an African-American journalist, newspaper editor, suffragist, sociologist, feminist, Georgist, and an early leader in the Civil Rights Movement. She was one of the founders of the National Association for the Advancement of Colored People (NAACP) in 1909.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: What association did the woman whose museum is located in the Bolling\u2013Gatewood House help found?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T00:54:47"
+}

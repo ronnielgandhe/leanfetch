@@ -1,0 +1,30 @@
+{
+ "text": "{\"task\": \"extraction_structured\", \"output_format\": \"json\", \"benchmark_analogue\": \"CoNLL-2003\", \"metric\": \"entity-level F1\", \"rationale\": \"The prompt asks the model to pull named entities and their relationships out of a document and return them as a JSON list, which is structured information extraction; CoNLL-2003 is the standard named entity recognition benchmark, scored by entity-level F1.\"}",
+ "finish": "end_turn",
+ "input_tokens": 854,
+ "output_tokens": 137,
+ "reasoning_tokens": null,
+ "served_model": "claude-haiku-5-5",
+ "latency_s": 0.993,
+ "cost_usd": 0.0001539,
+ "request": {
+  "model": "claude-haiku-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You label LLM prompt templates found in source code by the job the call does. Reply with one JSON object only, no prose, with keys: task (one of ['classification_routing', 'extraction_structured', 'summarization', 'query_rewriting', 'rag_answer', 'code_generation', 'tool_selection', 'grading_judging', 'reranking', 'chat_open_ended', 'other']), output_format (free_text|json|delimited|label|score), benchmark_analogue (one well known public dataset whose task matches this job, or 'none'), metric (the objective metric that dataset uses), rationale (one sentence)."
+   },
+   {
+    "role": "user",
+    "content": "file: packages/graphrag/graphrag/prompt_tune/template/extract_graph.py\nname: GRAPH_EXTRACTION_JSON_PROMPT\nplaceholders: ['entity_types', 'language', 'examples', 'input_text']\n---\n\n-Goal-\nGiven a text document that is potentially relevant to this activity and a list of entity types, identify all entities of those types from the text and all relationships among the identified entities.\n\n-Steps-\n1. Identify all entities. For each identified entity, extract the following information:\n- entity_name: Name of the entity, capitalized\n- entity_type: One of the following types: [{entity_types}]\n- entity_description: Comprehensive description of the entity's attributes and activities\nFormat each entity output as a JSON entry with the following format:\n\n{{\"name\": <entity name>, \"type\": <type>, \"description\": <entity description>}}\n\n2. From the entities identified in step 1, identify all pairs of (source_entity, target_entity) that are *clearly related* to each other.\nFor each pair of related entities, extract the following information:\n- source_entity: name of the source entity, as identified in step 1\n- target_entity: name of the target entity, as identified in step 1\n- relationship_description: explanation as to why you think the source entity and the target entity are related to each other\n- relationship_strength: an integer score between 1 to 10, indicating strength of the relationship between the source entity and target entity\nFormat each relationship as a JSON entry with the following format:\n\n{{\"source\": <source_entity>, \"target\": <target_entity>, \"relationship\": <relationship_description>, \"relationship_strength\": <relationship_strength>}}\n\n3. Return output in {language} as a single list of all JSON entities and relationships identified in steps 1 and 2.\n\n4. If you have to translate into {language}, just translate the descriptions, nothing else!\n\n-Examples-\n######################\n{examples}\n\n-Real Data-\n######################\nentity_types: {entity_types}\ntext: {{input_text}}\n######################\noutput:"
+   }
+  ],
+  "params": {
+   "max_tokens": 2000,
+   "output_config": {
+    "effort": "low"
+   }
+  }
+ },
+ "ts": "2026-11-22T00:44:38"
+}

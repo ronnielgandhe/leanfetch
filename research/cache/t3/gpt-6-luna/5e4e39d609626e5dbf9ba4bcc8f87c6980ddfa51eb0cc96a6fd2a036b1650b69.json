@@ -1,0 +1,25 @@
+{
+ "text": "247 Cherry.",
+ "finish": "stop",
+ "input_tokens": 339,
+ "output_tokens": 6,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-6-luna",
+ "latency_s": 0.793,
+ "cost_usd": 3.6899999999999996e-05,
+ "request": {
+  "model": "gpt-6-luna",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: General Motors Building (Manhattan)\n\nThe General Motors Building is a 50-story, 705 ft office tower at 767 Fifth Avenue in Manhattan, New York City. The building, which is bound by Fifth Avenue and Madison Avenue between 59th Street and 58th Street, is one of the few structures in Manhattan to occupy a full city block. With 1,774,000 net leasable square feet, the tower sits on the site of the former Savoy-Plaza Hotel and affords views of Central Park. It was designed in the international style by Edward Durell Stone & Associates with Emery Roth & Sons and completed in 1968.\n\ntitle: 247 Cherry\n\n247 Cherry is a seventy seven story residential building under development in the Lower East Side neighborhood of Manhattan, in New York City. The building was designed by SHoP Architects, and is being developed by JDS Development Group. Renderings for the building were first released in April 2016. The building will be adjacent One Manhattan Square.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Which of the following buildings was designed by SHoP Architects: 247 Cherry or General Motors Building?\nAnswer: "
+   }
+  ],
+  "params": {}
+ },
+ "ts": "2026-11-22T00:59:00"
+}

@@ -1,0 +1,27 @@
+{
+ "text": "Tysons Galleria is located in Fairfax County.",
+ "finish": "FinishReason.STOP",
+ "input_tokens": 413,
+ "output_tokens": 10,
+ "reasoning_tokens": 0,
+ "served_model": "gemini-3.1-flash-lite",
+ "latency_s": 1.1,
+ "cost_usd": 0.00011825,
+ "request": {
+  "model": "gemini-3.1-flash-lite",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: McLean, Virginia\n\nMcLean ( ) is a census-designated place (CDP) in Fairfax County in Northern Virginia. McLean is home to many diplomats, businessmen, members of Congress, and high-ranking government officials partially due to its proximity to Washington, D.C. and the Central Intelligence Agency. It is the location of Hickory Hill, the former home of Ethel Kennedy, the widow of Robert F. Kennedy. It is also the location of Salona, the former home of Light-Horse Harry Lee, the Revolutionary War hero. The community had an estimated total population of 53,673 in 2015, according to estimates prepared by the United States Census Bureau. It is located between the Potomac River and the town of Vienna. McLean is known for its luxury homes and its high-end shopping destinations: the Tysons Corner Center and the Tysons Galleria. The two McLean zip codes - 22101 and 22102 - are among the most expensive ZIP Codes in Virginia and the United States.\n\ntitle: Tysons Galleria\n\nTysons Galleria is a three-level super-regional mall owned by General Growth Properties located at 2001 International Drive, McLean, Virginia, in Tysons Corner. It is the second-largest mall in McLean/Tysons Corner, and one of the largest in the Washington metropolitan area.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Tysons Galleria is located in what county?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T01:06:48"
+}

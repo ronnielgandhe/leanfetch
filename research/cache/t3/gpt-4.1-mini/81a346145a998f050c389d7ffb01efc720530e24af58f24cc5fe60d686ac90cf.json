@@ -1,0 +1,27 @@
+{
+ "text": "He founded the Salon d'Automne in Paris, France.",
+ "finish": "stop",
+ "input_tokens": 357,
+ "output_tokens": 13,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4.1-mini-2025-04-14",
+ "latency_s": 0.61,
+ "cost_usd": 0.00016360000000000002,
+ "request": {
+  "model": "gpt-4.1-mini",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Salon d'Automne\n\nThe Salon d'Automne (Autumn Salon), or Soci\u00e9t\u00e9 du Salon d'automne, is an annual art exhibition held in Paris, France since 1903; it is currently held on the Champs-\u00c9lys\u00e9es, between the Grand Palais and the Petit Palais, in mid October . The first Salon d'Automne was created under the initiative of the Belgian architect, literary man and art collector Frantz Jourdain, along with the architect Hector Guimard, the painters Georges Desvalli\u00e8res, Eug\u00e8ne Carri\u00e8re, F\u00e9lix Vallotton, \u00c9douard Vuillard and the Maison Jansen, a Paris-based interior decoration office (the first truly global design firm) founded in 1880 by Dutch-born Jean-Henri Jansen.\n\ntitle: F\u00e9lix Vallotton\n\nF\u00e9lix Edouard Vallotton (December 28, 1865December 29, 1925) was a Swiss/French painter and printmaker associated with \"Les Nabis\". He was an important figure in the development of the modern woodcut.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: In which city did he painter and printmaker associated with \"Les Nabis\" found Salon d'Automne?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T00:57:33"
+}

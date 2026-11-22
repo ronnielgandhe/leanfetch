@@ -1,0 +1,26 @@
+{
+ "text": "{\"statements\": [\"The University of Massachusetts Amherst and the University of C\u00e1diz are located on different continents.\"], \"statement_scores\": [0]}",
+ "finish": "stop",
+ "input_tokens": 484,
+ "output_tokens": 29,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4.1-mini-2025-04-14",
+ "latency_s": 0.617,
+ "cost_usd": 0.00024000000000000003,
+ "request": {
+  "model": "gpt-4.1-mini",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Instructions:\nYour task is to judge the faithfulness or groundedness of statements based on context information. First, please extract statements from a provided predicted answer to a question. Second, calculate a faithfulness score for each statement made in the predicted answer. The score is 1 if the statement can be inferred from the provided context or 0 if it cannot be inferred.\n\nGenerate the response in JSON format with the following keys:\n[\"statements\", \"statement_scores\"]\nConsider the instructions and the examples below to determine those values.\n\nExamples:\nInputs:\n{\"questions\": \"What is the capital of Germany and when was it founded?\", \"contexts\": [\"Berlin is the capital of Germany and was founded in 1244.\"], \"predicted_answers\": \"The capital of Germany, Berlin, was founded in the 13th century.\"}\nOutputs:\n{\"statements\": [\"Berlin is the capital of Germany.\", \"Berlin was founded in 1244.\"], \"statement_scores\": [1, 1]}\nInputs:\n{\"questions\": \"What is the capital of France?\", \"contexts\": [\"Berlin is the capital of Germany.\"], \"predicted_answers\": \"Paris\"}\nOutputs:\n{\"statements\": [\"Paris is the capital of France.\"], \"statement_scores\": [0]}\nInputs:\n{\"questions\": \"What is the capital of Italy?\", \"contexts\": [\"Rome is the capital of Italy.\"], \"predicted_answers\": \"Rome is the capital of Italy with more than 4 million inhabitants.\"}\nOutputs:\n{\"statements\": [\"Rome is the capital of Italy.\", \"Rome has more than 4 million inhabitants.\"], \"statement_scores\": [1, 0]}\n\nInputs:\n{\"questions\": Is the University of Massachusetts Amherst and the University of C\u00e1diz located on the same continent?, \"contexts\": ['The University of Massachusetts Amherst (abbreviated UMass Amherst and colloquially referred to as UMass or Massachusetts) is a public research and land-grant university in Amherst, Massachusetts, United States, and the flagship campus of the University of Massachusetts system.The University of C\u00e1diz (in Spanish: Universidad de C\u00e1diz), commonly referred to as UCA, is a public university located in the province of C\u00e1diz, Andalusia, Spain, noted for its medicine and marine sciences curricula.'], \"predicted_answers\": Yes, they are located on different continents.}\nOutputs:"
+   }
+  ],
+  "params": {
+   "response_format": {
+    "type": "json_object"
+   },
+   "seed": 42
+  }
+ },
+ "ts": "2026-11-22T01:12:19"
+}

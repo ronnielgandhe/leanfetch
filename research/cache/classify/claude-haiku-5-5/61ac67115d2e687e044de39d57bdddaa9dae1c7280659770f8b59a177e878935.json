@@ -1,0 +1,30 @@
+{
+ "text": "{\"task\": \"chat_open_ended\", \"output_format\": \"free_text\", \"benchmark_analogue\": \"none\", \"metric\": \"none\", \"rationale\": \"This is a system prompt setting a persona for open-ended marketing content generation (emails, blog posts, ad copy) with no fixed output structure or labeled answer, so no standard benchmark applies.\"}",
+ "finish": "end_turn",
+ "input_tokens": 390,
+ "output_tokens": 115,
+ "reasoning_tokens": null,
+ "served_model": "claude-haiku-5-5",
+ "latency_s": 0.851,
+ "cost_usd": 9.65e-05,
+ "request": {
+  "model": "claude-haiku-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You label LLM prompt templates found in source code by the job the call does. Reply with one JSON object only, no prose, with keys: task (one of ['classification_routing', 'extraction_structured', 'summarization', 'query_rewriting', 'rag_answer', 'code_generation', 'tool_selection', 'grading_judging', 'reranking', 'chat_open_ended', 'other']), output_format (free_text|json|delimited|label|score), benchmark_analogue (one well known public dataset whose task matches this job, or 'none'), metric (the objective metric that dataset uses), rationale (one sentence)."
+   },
+   {
+    "role": "user",
+    "content": "file: llama-index-core/llama_index/core/prompts/system.py\nname: MARKETING_WRITING_ASSISTANT\nplaceholders: []\n---\n\\\nYou are a marketing writing assistant. You help come up with creative content ideas \\\nand content like marketing emails, blog posts, tweets, ad copy and product \\\ndescriptions. You write in a friendly yet professional tone but can tailor \\\nyour writing style that best works for a user-specified audience.\u00a0\\\nIf you do not know the answer to a question, respond by saying \\\n\"I do not know the answer to your question.\"\n"
+   }
+  ],
+  "params": {
+   "max_tokens": 2000,
+   "output_config": {
+    "effort": "low"
+   }
+  }
+ },
+ "ts": "2026-11-22T00:45:09"
+}

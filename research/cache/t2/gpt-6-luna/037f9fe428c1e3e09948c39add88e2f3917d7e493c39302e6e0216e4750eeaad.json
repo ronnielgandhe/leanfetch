@@ -1,0 +1,26 @@
+{
+ "text": "{\"statements\":[\"Edward III's most trusted captain received titles after his father's death.\"],\"statement_scores\":[0]}",
+ "finish": "stop",
+ "input_tokens": 536,
+ "output_tokens": 512,
+ "reasoning_tokens": 477,
+ "served_model": "gpt-6-luna",
+ "latency_s": 4.669,
+ "cost_usd": 0.00030960000000000004,
+ "request": {
+  "model": "gpt-6-luna",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Instructions:\nYour task is to judge the faithfulness or groundedness of statements based on context information. First, please extract statements from a provided predicted answer to a question. Second, calculate a faithfulness score for each statement made in the predicted answer. The score is 1 if the statement can be inferred from the provided context or 0 if it cannot be inferred.\n\nGenerate the response in JSON format with the following keys:\n[\"statements\", \"statement_scores\"]\nConsider the instructions and the examples below to determine those values.\n\nExamples:\nInputs:\n{\"questions\": \"What is the capital of Germany and when was it founded?\", \"contexts\": [\"Berlin is the capital of Germany and was founded in 1244.\"], \"predicted_answers\": \"The capital of Germany, Berlin, was founded in the 13th century.\"}\nOutputs:\n{\"statements\": [\"Berlin is the capital of Germany.\", \"Berlin was founded in 1244.\"], \"statement_scores\": [1, 1]}\nInputs:\n{\"questions\": \"What is the capital of France?\", \"contexts\": [\"Berlin is the capital of Germany.\"], \"predicted_answers\": \"Paris\"}\nOutputs:\n{\"statements\": [\"Paris is the capital of France.\"], \"statement_scores\": [0]}\nInputs:\n{\"questions\": \"What is the capital of Italy?\", \"contexts\": [\"Rome is the capital of Italy.\"], \"predicted_answers\": \"Rome is the capital of Italy with more than 4 million inhabitants.\"}\nOutputs:\n{\"statements\": [\"Rome is the capital of Italy.\", \"Rome has more than 4 million inhabitants.\"], \"statement_scores\": [1, 0]}\n\nInputs:\n{\"questions\": Whose son's death brought titles to Edward III's most trusted captain?, \"contexts\": [\" When Edmund's son Thomas, 2nd Earl of Lancaster, inherited his father-in-law's estates and title of Earl of Lincoln he became at a stroke the most powerful nobleman in England, with lands throughout the kingdom and the ability to raise vast private armies to wield power at national and local levels. Henry inherited Thomas's titles and he and his son, who was also called Henry, gave loyal service to Edward's sonEdward III of England. The son and heir of Henry, 3rd Earl of Lancaster, and Maud Chaworth, he became one of Edward III's most trusted captains in the early phases of the Hundred Years' War and distinguished himself with victory in the Battle of Auberoche.\"], \"predicted_answers\": Edward III's most trusted captain received titles after the death of his father.}\nOutputs:"
+   }
+  ],
+  "params": {
+   "response_format": {
+    "type": "json_object"
+   },
+   "seed": 42
+  }
+ },
+ "ts": "2026-11-22T00:51:00"
+}

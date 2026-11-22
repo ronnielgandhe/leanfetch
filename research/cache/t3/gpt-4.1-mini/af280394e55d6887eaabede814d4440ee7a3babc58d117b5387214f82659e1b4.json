@@ -1,0 +1,27 @@
+{
+ "text": "Chuck E. Cheese's headquarters is farther south, as it is located in Irving, Texas, while Jet's Pizza is headquartered in Sterling Heights, Michigan.",
+ "finish": "stop",
+ "input_tokens": 281,
+ "output_tokens": 31,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4.1-mini-2025-04-14",
+ "latency_s": 0.596,
+ "cost_usd": 0.000162,
+ "request": {
+  "model": "gpt-4.1-mini",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Jet's Pizza\n\nJet's Pizza is an American pizza franchise restaurant. It was founded in 1978 in Sterling Heights, Michigan, and operates primarily in the state of Michigan.\n\ntitle: Chuck E. Cheese's\n\nChuck E. Cheese's (officially Chuck E. Cheese Pizzeria & Games) is a chain of American family entertainment centers and restaurants. The chain is the primary brand of CEC Entertainment, Inc. and is headquartered in Irving, Texas. The establishment serves pizza and other menu items, complemented by arcade games, amusement rides, and animatronic displays as a focus of entertainment for the entire family. The brand derives its name from its main animatronic character Chuck E. Cheese, a comedic mouse who sings and interacts with guests.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Which is headquarter farther south, Jet's Pizza or Chuck E. Cheese's?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T00:57:15"
+}

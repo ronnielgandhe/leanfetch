@@ -1,0 +1,27 @@
+{
+ "text": "The 7.92\u00d757mm Mauser rifle cartridge was used by the German military in the 20th century.",
+ "finish": "stop",
+ "input_tokens": 418,
+ "output_tokens": 25,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4.1-2025-04-14",
+ "latency_s": 0.433,
+ "cost_usd": 0.001036,
+ "request": {
+  "model": "gpt-4.1",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: World war\n\nA world war, as it is commonly understood, is a large-scale war involving many of the countries of the world or many of the most powerful and populous ones. World wars span multiple countries on multiple continents, with battles fought in many theaters. While a variety of global conflicts have been subjectively deemed \"world wars\", such as the Cold War and the War on Terror, the term is widely and generally accepted only as it is retrospectively applied to two major international conflicts that occurred during the 20th century: World War I (1914\u20131918) and World War II (1939\u20131945).\n\ntitle: 7.92\u00d757mm Mauser\n\nThe 7.92\u00d757mm Mauser (designated as the 8mm Mauser or 8\u00d757mm by the SAAMI and 8 \u00d7 57 IS by the C.I.P.) is a rimless bottlenecked rifle cartridge. The 7.92\u00d757mm Mauser cartridge was adopted by the German Empire in 1903/1905, and was the German service cartridge in both World Wars. In its day, the 7.92\u00d757mm Mauser cartridge was one of the world\u2019s most popular military cartridges. In the 21st century it is still a popular sport and hunting cartridge that is factory-produced in Europe and the United States.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Q:The 7.92\u00d757mm Mauser rifle cartridge was used by which country's military in the 20th century?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T00:54:43"
+}

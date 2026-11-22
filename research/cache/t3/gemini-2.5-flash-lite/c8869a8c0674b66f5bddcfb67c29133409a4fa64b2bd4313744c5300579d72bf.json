@@ -1,0 +1,27 @@
+{
+ "text": "The academy is located in Kings Point, New York.",
+ "finish": "FinishReason.STOP",
+ "input_tokens": 362,
+ "output_tokens": 11,
+ "reasoning_tokens": 0,
+ "served_model": "gemini-2.5-flash-lite",
+ "latency_s": 0.537,
+ "cost_usd": 4.0600000000000004e-05,
+ "request": {
+  "model": "gemini-2.5-flash-lite",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Joseph D. Stewart\n\nJoseph D. Stewart, also known affectionately by the midshipmen of the United States Merchant Marine Academy as \"Joey D,\" (born July 9, 1942) is a retired United States Marine Corps major general, who after his retirement from the Marine Corps, was appointed as Superintendent of the United States Merchant Marine Academy (USMMA) on August 1, 1998. He retired from the U.S. Maritime Service with the rank of vice admiral on September 30, 2008.\n\ntitle: United States Merchant Marine Academy\n\nThe United States Merchant Marine Academy (also known as USMMA or Kings Point) is one of the five United States service academies, located in Kings Point, New York. It is charged with training officers for the United States Merchant Marine, branches of the military, and the transportation industry. Midshipmen (as students at the Academy are called) are trained in marine engineering, navigation, ship's administration, maritime law, personnel management, international law, customs, and many other subjects important to the task of running a large ship.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Where is the academy, for which Joseph D. Stewart was appointed Superintendent, located?\nAnswer: "
+   }
+  ],
+  "params": {
+   "temperature": 0.1
+  }
+ },
+ "ts": "2026-11-22T01:07:48"
+}

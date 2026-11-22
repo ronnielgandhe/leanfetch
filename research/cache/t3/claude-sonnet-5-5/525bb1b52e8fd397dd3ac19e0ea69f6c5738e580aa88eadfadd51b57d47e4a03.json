@@ -1,0 +1,27 @@
+{
+ "text": "The reality television series is *Ice Road Truckers*, which premiered on History on June 17, 2007.",
+ "finish": "end_turn",
+ "input_tokens": 478,
+ "output_tokens": 35,
+ "reasoning_tokens": null,
+ "served_model": "claude-sonnet-5-5",
+ "latency_s": 4.712,
+ "cost_usd": 0.001306,
+ "request": {
+  "model": "claude-sonnet-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Ice Road Truckers\n\nIce Road Truckers (commercially abbreviated IRT) is a reality television series that premiered on History, on June 17, 2007. It features the activities of drivers who operate trucks on seasonal routes crossing frozen lakes and rivers, in remote Arctic territories in Canada and Alaska. Later series focused on Alaska's improved but still remote Dalton Highway, which is mainly snow-covered solid ground. The newest seasons are based on Manitoba's winter roads.\n\ntitle: Michael Lent (writer and producer)\n\nMichael Lent is a mixed media writer and producer based in Los Angeles. He is best known as the co-writer of \"On Thin Ice\", the memoirs of Hugh Rowland, one of the stars of the long-running series Ice Road Truckers.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Michael Lent is best known as the co-writer of the memoirs of Hugh Rowland, a star on a reality television series that premiered on what date?\nAnswer: "
+   }
+  ],
+  "params": {
+   "max_tokens": 16000
+  }
+ },
+ "ts": "2026-11-22T01:03:14"
+}

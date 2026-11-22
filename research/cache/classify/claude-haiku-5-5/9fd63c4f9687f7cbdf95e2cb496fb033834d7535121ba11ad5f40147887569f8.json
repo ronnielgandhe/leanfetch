@@ -1,0 +1,30 @@
+{
+ "text": "{\"task\": \"rag_answer\", \"output_format\": \"free_text\", \"benchmark_analogue\": \"LoCoMo\", \"metric\": \"F1 score on answer tokens (LLM-judged correctness)\", \"rationale\": \"The prompt asks the model to answer a question using retrieved memory snippets as context, which is the retrieval-augmented question answering pattern, and LoCoMo evaluates long-term conversational memory QA with F1 over answers.\"}",
+ "finish": "end_turn",
+ "input_tokens": 400,
+ "output_tokens": 148,
+ "reasoning_tokens": null,
+ "served_model": "claude-haiku-5-5",
+ "latency_s": 1.116,
+ "cost_usd": 0.000114,
+ "request": {
+  "model": "claude-haiku-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You label LLM prompt templates found in source code by the job the call does. Reply with one JSON object only, no prose, with keys: task (one of ['classification_routing', 'extraction_structured', 'summarization', 'query_rewriting', 'rag_answer', 'code_generation', 'tool_selection', 'grading_judging', 'reranking', 'chat_open_ended', 'other']), output_format (free_text|json|delimited|label|score), benchmark_analogue (one well known public dataset whose task matches this job, or 'none'), metric (the objective metric that dataset uses), rationale (one sentence)."
+   },
+   {
+    "role": "user",
+    "content": "file: mem0/configs/prompts.py\nname: MEMORY_ANSWER_PROMPT\nplaceholders: []\n---\n\nYou are an expert at answering questions based on the provided memories. Your task is to provide accurate and concise answers to the questions by leveraging the information given in the memories.\n\nGuidelines:\n- Extract relevant information from the memories based on the question.\n- If no relevant information is found, make sure you don't say no information is found. Instead, accept the question and provide a general response.\n- Ensure that the answers are clear, concise, and directly address the question.\n\nHere are the details of the task:\n"
+   }
+  ],
+  "params": {
+   "max_tokens": 2000,
+   "output_config": {
+    "effort": "low"
+   }
+  }
+ },
+ "ts": "2026-11-22T00:45:18"
+}

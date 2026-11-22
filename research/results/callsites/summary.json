@@ -1,0 +1,38 @@
+{
+ "deepeval@aeb529e": {
+  "code_generation": 1,
+  "other": 1
+ },
+ "graphrag@34b2b67": {
+  "other": 4,
+  "grading_judging": 2,
+  "classification_routing": 2,
+  "extraction_structured": 10,
+  "summarization": 6,
+  "rag_answer": 6
+ },
+ "haystack@85b8d4e": {
+  "extraction_structured": 1,
+  "query_rewriting": 1,
+  "reranking": 1,
+  "chat_open_ended": 1,
+  "summarization": 1
+ },
+ "llama_index@99d7433": {
+  "code_generation": 3,
+  "rag_answer": 7,
+  "grading_judging": 1,
+  "query_rewriting": 3,
+  "extraction_structured": 2,
+  "summarization": 1,
+  "chat_open_ended": 2,
+  "tool_selection": 1
+ },
+ "mem0@fff8a64": {
+  "rag_answer": 1,
+  "extraction_structured": 5,
+  "classification_routing": 1,
+  "summarization": 1,
+  "other": 2
+ }
+}

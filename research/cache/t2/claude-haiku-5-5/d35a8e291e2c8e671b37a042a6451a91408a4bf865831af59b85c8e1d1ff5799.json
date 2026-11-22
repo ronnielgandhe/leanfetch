@@ -1,0 +1,50 @@
+{
+ "text": "{\"statements\": [\"The play used the figure from a Christmas pantomime in the United Kingdom as its theme.\", \"The play was described as Marxism.\", \"The play was featured at a popular New York City theater.\"], \"statement_scores\": [1, 1, 0]}",
+ "finish": "end_turn",
+ "input_tokens": 1145,
+ "output_tokens": 413,
+ "reasoning_tokens": null,
+ "served_model": "claude-haiku-5-5",
+ "latency_s": 2.248,
+ "cost_usd": 0.000321,
+ "request": {
+  "model": "claude-haiku-5-5",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Instructions:\nYour task is to judge the faithfulness or groundedness of statements based on context information. First, please extract statements from a provided predicted answer to a question. Second, calculate a faithfulness score for each statement made in the predicted answer. The score is 1 if the statement can be inferred from the provided context or 0 if it cannot be inferred.\n\nGenerate the response in JSON format with the following keys:\n[\"statements\", \"statement_scores\"]\nConsider the instructions and the examples below to determine those values.\n\nExamples:\nInputs:\n{\"questions\": \"What is the capital of Germany and when was it founded?\", \"contexts\": [\"Berlin is the capital of Germany and was founded in 1244.\"], \"predicted_answers\": \"The capital of Germany, Berlin, was founded in the 13th century.\"}\nOutputs:\n{\"statements\": [\"Berlin is the capital of Germany.\", \"Berlin was founded in 1244.\"], \"statement_scores\": [1, 1]}\nInputs:\n{\"questions\": \"What is the capital of France?\", \"contexts\": [\"Berlin is the capital of Germany.\"], \"predicted_answers\": \"Paris\"}\nOutputs:\n{\"statements\": [\"Paris is the capital of France.\"], \"statement_scores\": [0]}\nInputs:\n{\"questions\": \"What is the capital of Italy?\", \"contexts\": [\"Rome is the capital of Italy.\"], \"predicted_answers\": \"Rome is the capital of Italy with more than 4 million inhabitants.\"}\nOutputs:\n{\"statements\": [\"Rome is the capital of Italy.\", \"Rome has more than 4 million inhabitants.\"], \"statement_scores\": [1, 0]}\n\nInputs:\n{\"questions\": In which theatre of New York City did a play, described as Marxism but using the figure from a Christmas pantomime in the United Kingdom, perform?, \"contexts\": ['Revolt of the Beavers was a children\\'s play put on by the Federal Theater Project by Oscar Saul and Louis Lantz. One critic described the play as \"Marxism a la Mother Goose\". The show ran at the Adelphi Theatre in New York City from May 20, 1937, to June 19 of that year.The figure of Mother Goose is the imaginary author of a collection of fairy tales and nursery rhymes often published as \"Old Mother Goose\\'s Rhymes\", as illustrated by Arthur Rackham in 1913. A Christmas pantomime called \"Mother Goose\" is often performed in the United Kingdom.'], \"predicted_answers\": The play that used the figure from a Christmas pantomime in the United Kingdom as its theme and described as Marxism was featured at a popular New York City theater.}\nOutputs:"
+   }
+  ],
+  "params": {
+   "max_tokens": 16000,
+   "output_config": {
+    "format": {
+     "type": "json_schema",
+     "schema": {
+      "type": "object",
+      "properties": {
+       "statements": {
+        "type": "array",
+        "items": {
+         "type": "string"
+        }
+       },
+       "statement_scores": {
+        "type": "array",
+        "items": {
+         "type": "integer"
+        }
+       }
+      },
+      "required": [
+       "statements",
+       "statement_scores"
+      ],
+      "additionalProperties": false
+     }
+    }
+   }
+  }
+ },
+ "ts": "2026-11-22T01:32:06"
+}

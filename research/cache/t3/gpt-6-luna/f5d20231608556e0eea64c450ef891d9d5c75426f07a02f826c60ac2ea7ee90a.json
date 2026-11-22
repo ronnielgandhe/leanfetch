@@ -1,0 +1,25 @@
+{
+ "text": "The International Boxing Federation is recognized by the International Boxing Hall of Fame.",
+ "finish": "stop",
+ "input_tokens": 271,
+ "output_tokens": 17,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-6-luna",
+ "latency_s": 0.87,
+ "cost_usd": 3.5600000000000005e-05,
+ "request": {
+  "model": "gpt-6-luna",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Vince Phillips\n\nVincent Edwards \"Vince\" Phillips (born July 23, 1963) is an American former professional boxer who competed from 1989 to 2007. He held the IBF junior welterweight title from 1997 to 1999, notably scoring an upset victory against then-undefeated Kostya Tszyu to become champion.\n\ntitle: International Boxing Federation\n\nThe International Boxing Federation (IBF) is one of four major organizations recognized by the International Boxing Hall of Fame (IBHOF) which sanction world championship boxing bouts, alongside the World Boxing Association (WBA), World Boxing Council (WBC) and World Boxing Organization (WBO).\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Vince Phillips held a junior welterweight title by an organization recognized by what larger Hall of Fame?\nAnswer: "
+   }
+  ],
+  "params": {}
+ },
+ "ts": "2026-11-22T00:59:38"
+}

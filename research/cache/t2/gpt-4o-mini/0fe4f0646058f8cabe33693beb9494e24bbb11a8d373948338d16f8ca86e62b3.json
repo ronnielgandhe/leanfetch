@@ -1,0 +1,26 @@
+{
+ "text": "{\n  \"statements\": [\n    \"Friedrich Klose's opera 'Ilsebill' (1903) was inspired by the music of Richard Wagner.\",\n    \"Friedrich Klose's opera 'Ilsebill' (1903) was inspired by the music of Ludwig van Beethoven.\"\n  ],\n  \"statement_scores\": [\n    1,\n    0\n  ]\n}",
+ "finish": "stop",
+ "input_tokens": 515,
+ "output_tokens": 81,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4o-mini-2024-07-18",
+ "latency_s": 1.821,
+ "cost_usd": 0.00012585,
+ "request": {
+  "model": "gpt-4o-mini",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Instructions:\nYour task is to judge the faithfulness or groundedness of statements based on context information. First, please extract statements from a provided predicted answer to a question. Second, calculate a faithfulness score for each statement made in the predicted answer. The score is 1 if the statement can be inferred from the provided context or 0 if it cannot be inferred.\n\nGenerate the response in JSON format with the following keys:\n[\"statements\", \"statement_scores\"]\nConsider the instructions and the examples below to determine those values.\n\nExamples:\nInputs:\n{\"questions\": \"What is the capital of Germany and when was it founded?\", \"contexts\": [\"Berlin is the capital of Germany and was founded in 1244.\"], \"predicted_answers\": \"The capital of Germany, Berlin, was founded in the 13th century.\"}\nOutputs:\n{\"statements\": [\"Berlin is the capital of Germany.\", \"Berlin was founded in 1244.\"], \"statement_scores\": [1, 1]}\nInputs:\n{\"questions\": \"What is the capital of France?\", \"contexts\": [\"Berlin is the capital of Germany.\"], \"predicted_answers\": \"Paris\"}\nOutputs:\n{\"statements\": [\"Paris is the capital of France.\"], \"statement_scores\": [0]}\nInputs:\n{\"questions\": \"What is the capital of Italy?\", \"contexts\": [\"Rome is the capital of Italy.\"], \"predicted_answers\": \"Rome is the capital of Italy with more than 4 million inhabitants.\"}\nOutputs:\n{\"statements\": [\"Rome is the capital of Italy.\", \"Rome has more than 4 million inhabitants.\"], \"statement_scores\": [1, 0]}\n\nInputs:\n{\"questions\": Friedrich Klose (1862\u20131942) was a German composer, his opera \"Ilsebill\" (1903) is inspired by the music of Richard Wagner and which leading German composer of the late Romantic and early modern eras? , \"contexts\": [' His opera \"Ilsebill\" (1903) is inspired by the music of Richard Wagner and Richard Strauss, and the plot is based on the Brothers Grimm tale of a fisherman who catches a huge fish which grants wishes.Richard Georg Strauss (11 June 1864 \u2013 8 September 1949) was a leading German composer of the late Romantic and early modern eras.'], \"predicted_answers\": Friedrich Klose's opera \"Ilsebill\" (1903) was inspired by the music of Ludwig van Beethoven and Richard Wagner.}\nOutputs:"
+   }
+  ],
+  "params": {
+   "response_format": {
+    "type": "json_object"
+   },
+   "seed": 42
+  }
+ },
+ "ts": "2026-11-22T01:13:26"
+}

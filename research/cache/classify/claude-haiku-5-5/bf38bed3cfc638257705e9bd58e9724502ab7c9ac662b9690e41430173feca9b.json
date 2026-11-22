@@ -1,0 +1,30 @@
+{
+ "text": "{\"task\": \"extraction_structured\", \"output_format\": \"delimited\", \"benchmark_analogue\": \"none\", \"metric\": \"none\", \"rationale\": \"The prompt asks the model to read a text and emit a comma-separated list of entity type labels relevant to a task, which is schema induction for structured extraction rather than any standard public benchmark task.\"}",
+ "finish": "end_turn",
+ "input_tokens": 1075,
+ "output_tokens": 111,
+ "reasoning_tokens": null,
+ "served_model": "claude-haiku-5-5",
+ "latency_s": 0.932,
+ "cost_usd": 0.000163,
+ "request": {
+  "model": "claude-haiku-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You label LLM prompt templates found in source code by the job the call does. Reply with one JSON object only, no prose, with keys: task (one of ['classification_routing', 'extraction_structured', 'summarization', 'query_rewriting', 'rag_answer', 'code_generation', 'tool_selection', 'grading_judging', 'reranking', 'chat_open_ended', 'other']), output_format (free_text|json|delimited|label|score), benchmark_analogue (one well known public dataset whose task matches this job, or 'none'), metric (the objective metric that dataset uses), rationale (one sentence)."
+   },
+   {
+    "role": "user",
+    "content": "file: packages/graphrag/graphrag/prompt_tune/prompt/entity_types.py\nname: ENTITY_TYPE_GENERATION_PROMPT\nplaceholders: ['task', 'input_text']\n---\n\nThe goal is to study the connections and relations between the entity types and their features in order to understand all available information from the text.\nThe user's task is to {task}.\nAs part of the analysis, you want to identify the entity types present in the following text.\nThe entity types must be relevant to the user task.\nAvoid general entity types such as \"other\" or \"unknown\".\nThis is VERY IMPORTANT: Do not generate redundant or overlapping entity types. For example, if the text contains \"company\" and \"organization\" entity types, you should return only one of them.\nDon't worry about quantity, always choose quality over quantity. And make sure EVERYTHING in your answer is relevant to the context of entity extraction.\nAnd remember, it is ENTITY TYPES what we need.\nReturn the entity types in as a list of comma sepparated of strings.\n=====================================================================\nEXAMPLE SECTION: The following section includes example output. These examples **must be excluded from your answer**.\n\nEXAMPLE 1\nTask: Determine the connections and organizational hierarchy within the specified community.\nText: Example_Org_A is a company in Sweden. Example_Org_A's director is Example_Individual_B.\nRESPONSE:\norganization, person\nEND OF EXAMPLE 1\n\nEXAMPLE 2\nTask: Identify the key concepts, principles, and arguments shared among different philosophical schools of thought, and trace the historical or ideological influences they have on each other.\nText: Rationalism, epitomized by thinkers such as Ren\u00e9 Descartes, holds that reason is the primary source of knowledge. Key concepts within this school include the emphasis on the deductive method of reasoning.\nRESPONSE:\nconcept, person, school of thought\nEND OF EXAMPLE 2\n\nEXAMPLE 3\nTask: Identify the full range of basic forces, factors, and trends that would indirectly shape an issue.\nText: Industry leaders such as Panasonic are vying for supremacy in the battery production sector. They are investing heavily in research and development and are exploring new technologies to gain a competitive edge.\nRESPONSE:\norganization, technology, sectors, investment strategies\nEND OF EXAMPLE 3\n======================================================================\n\n======================================================================\nREAL DATA: The following section is the real data. You should use only this real data to prepare your answer. Generate Entity Types only.\nTask: {task}\nText: {input_text}\nRESPONSE:\n{{<entity_types>}}\n"
+   }
+  ],
+  "params": {
+   "max_tokens": 2000,
+   "output_config": {
+    "effort": "low"
+   }
+  }
+ },
+ "ts": "2026-11-22T00:44:32"
+}

@@ -1,0 +1,30 @@
+{
+ "text": "{\"task\": \"other\", \"output_format\": \"json\", \"benchmark_analogue\": \"none\", \"metric\": \"none\", \"rationale\": \"This is a parameterized MySQL full-text search query (MATCH...AGAINST in natural language mode) used as a vector store retrieval backend, not an LLM prompt template, so no LLM task category applies.\"}",
+ "finish": "end_turn",
+ "input_tokens": 404,
+ "output_tokens": 111,
+ "reasoning_tokens": null,
+ "served_model": "claude-haiku-5-5",
+ "latency_s": 0.774,
+ "cost_usd": 9.59e-05,
+ "request": {
+  "model": "claude-haiku-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You label LLM prompt templates found in source code by the job the call does. Reply with one JSON object only, no prose, with keys: task (one of ['classification_routing', 'extraction_structured', 'summarization', 'query_rewriting', 'rag_answer', 'code_generation', 'tool_selection', 'grading_judging', 'reranking', 'chat_open_ended', 'other']), output_format (free_text|json|delimited|label|score), benchmark_analogue (one well known public dataset whose task matches this job, or 'none'), metric (the objective metric that dataset uses), rationale (one sentence)."
+   },
+   {
+    "role": "user",
+    "content": "file: mem0/vector_stores/azure_mysql.py\nname: query_sql\nplaceholders: ['filter_clause']\n---\n\n                    SELECT id, payload,\n                           MATCH(text_lemmatized) AGAINST(%s IN NATURAL LANGUAGE MODE) AS score\n                    FROM `{self.collection_name}`\n                    WHERE MATCH(text_lemmatized) AGAINST(%s IN NATURAL LANGUAGE MODE)\n                    {filter_clause}\n                    ORDER BY score DESC\n                    LIMIT %s\n                "
+   }
+  ],
+  "params": {
+   "max_tokens": 2000,
+   "output_config": {
+    "effort": "low"
+   }
+  }
+ },
+ "ts": "2026-11-22T00:45:26"
+}

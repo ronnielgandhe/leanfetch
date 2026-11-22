@@ -1,0 +1,27 @@
+{
+ "text": "The American electronic music duo from Orlando, Florida, was formed in 2006.",
+ "finish": "end_turn",
+ "input_tokens": 776,
+ "output_tokens": 89,
+ "reasoning_tokens": null,
+ "served_model": "claude-haiku-5-5",
+ "latency_s": 0.743,
+ "cost_usd": 0.0001221,
+ "request": {
+  "model": "claude-haiku-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You are an expert Q&A system that is trusted around the world.\nAlways answer the query using the provided context information, and not prior knowledge.\nSome rules to follow:\n1. Never directly reference the given context in your answer.\n2. Avoid statements like 'Based on the context, ...' or 'The context information ...' or anything along those lines."
+   },
+   {
+    "role": "user",
+    "content": "Context information is below.\n---------------------\ntitle: Blood on the Dance Floor (band)\n\nBlood on the Dance Floor is an American electronic music duo from Orlando, Florida, formed in 2006. The group's former line-up consisted of Dahvie Vanity and Jayy Von Monroe. As of 2017, the current members of the group are Dahvie Vanity and Fallon Vendetta. The group released eight studio albums: \"Let's Start A Riot\" in 2008, \"It's Hard to Be A Diamond In A Rhinestone World\" in 2008, \"Epic\" in 2010, \"All the Rage in 2011\", \"Evolution\" in 2012, \"Bad Blood\" in 2013, \"Bitchcraft\" in 2014, and \"Scissors\" in 2016. The group released several EPs and a remix album as well before announcing they will be disbanding in 2016.\n\ntitle: Angelspit\n\nAngelspit is an electronic music band originally from Sydney, Australia and currently based in the United States. The band was formed in 2004 by vocalists/synthesists Destroyx (Amelia Tan) and ZooG (Karl Learmont). The band's music combines stylistic elements of horror, punk, pop and electronic music. Their work contains imagery revolving around medical experiments and grotesque societies. The band is currently based in Chicago. Angelspit has toured with Angel Theory, Ayria, Ikon, KMFDM, Tankt and The Cr\u00fcxshadows, and have also shared the stage with bands such as The Sisters of Mercy, Nitzer Ebb, Skinny Puppy and Front Line Assembly. They performed with Lords of Acid during a 22-date U.S. tour in March 2011 and toured the United States with Blood on the Dance Floor in October 2011.\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: Angelspit toured the United States with an American electronic music duo from Orlando, Florida, that formed in what year?\nAnswer: "
+   }
+  ],
+  "params": {
+   "max_tokens": 16000
+  }
+ },
+ "ts": "2026-11-22T01:05:42"
+}
