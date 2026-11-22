@@ -1,104 +1,75 @@
-# LeanFetch
+# leanfetch
 
-**LLM API cost auditor. scans codebases for inefficiency patterns before they hit production.**
+a tool that stops startups from losing cash to unnecessary api calls. paste a public github repo or drop your code, get a report of the wasteful llm and api patterns in it, with a savings estimate you can poke at.
 
-<p align="center">
-  <img src="public/readme/leanfetch-splash.png" width="100%" />
-</p>
-
-<p align="center">
-  <img src="public/readme/leanfetch-inputs.png" width="100%" />
-</p>
-
----
-
-## why this exists
-
-we kept seeing the same thing across every AI project we looked at - devs shipping code that's burning 2-3x what it needs to on API costs. N+1 calls inside loops, full conversation histories resent every turn, using opus for stuff haiku could handle in its sleep. the patterns are obvious once you know what to look for, but nobody had built a proper tool to catch them automatically.
-
-so we built one. paste a github repo, upload files, or submit a design doc before you even write code. LeanFetch runs a multi-phase analysis and gives you a prioritized report - what's wrong, how bad it is, and how to fix it.
-
----
+![leanfetch](docs/screenshot.png)
 
 ## how it works
 
-the backend runs a 7-phase pipeline. each phase is intentional - we wanted the scanner itself to be as cost-efficient as the patterns it catches.
-
-```
-GitHub Repo / Files / Design Doc
-        ↓
-   1. FETCH     git clone --depth 1
-   2. FILTER    smart file selection (skip vendor, tests, configs)
-   3. KEYWORD   40+ regex patterns across 15+ LLM providers
-   4. TRIAGE    hybrid regex + LLM classification
-   5. DEEP SCAN per-file analysis with Sonnet
-   6. SYNTHESIS final report generation with Opus
-        ↓
-   Prioritized Report + Cost Savings
-```
-
----
-
-## design decisions
-
-**hybrid triage was the big one.** we could have thrown every file at an LLM and called it a day, but that defeats the point of a cost-efficiency tool being wasteful itself. so regex handles the first pass - it catches ~80% of direct SDK calls instantly, for free. haiku only steps in for the edge cases that regex can't see - wrapper functions, indirect imports, custom abstractions around API calls. speed where we can get it, intelligence where we need it.
-
-**model routing by task complexity.** haiku for triage because it's cheap and fast. sonnet for deep per-file analysis because it's smart enough to understand code patterns in context. opus for the final synthesis because it's the best at consolidating findings across files into a coherent report. each model earns its spot in the pipeline. the scanner practices what it preaches.
-
-**NDJSON streaming instead of a loading spinner.** a full scan can take a couple minutes on a big repo. we didn't want users staring at a spinner wondering if it was working. the backend streams progress updates in real-time - what phase you're in, how many files have been scanned, what's been found so far. it made the whole experience feel alive instead of just waiting.
-
-**capping and chunking for scale.** we tested this on 4000+ file monorepos and learned fast that you can't just scan everything. files get ranked by keyword density, capped at 200 for triage and top 20 for deep scan. files over 500 lines get chunked with header preservation so the LLM keeps cross-file context without overflowing. it's a tradeoff between thoroughness and not timing out, and we'd rather give you a fast accurate scan of the most relevant files than a slow scan that tries to cover everything.
-
-**plan analysis as a separate pipeline.** this was the most recent addition. design docs aren't code - there's no files to scan, no imports to regex against. it's about intent. the prompts are completely different because you're catching patterns that haven't been written yet. "you're planning to resend full conversation history every turn - here's why that's going to cost you."
-
----
+1. **fetch.** repos come in as a tarball from codeload.github.com (default branch looked up through the github api), unpacked in memory. capped at 25mb compressed and the 600 most relevant source files. vendor, build, lock, minified and test files are skipped. uploads are read in your browser (plain files or a .zip) and only the source text is sent.
+2. **analyze.** static detectors written in typescript run over js, ts and python. regex plus light structure parsing: comments and strings are stripped before matching, loops and functions are found with bracket and indent matching, and wrapper functions are tracked across files so a loop that calls your own `summarize()` still counts. no model is involved, so this part is free and gives the same answer every time.
+3. **estimate.** every finding gets a dollar range from a pricing table and assumptions you can change on the page.
+4. **deep read (optional).** if the server has an anthropic key, "scan + deep read" sends only the top flagged snippets (capped) to claude, which confirms or rejects each one and writes the assessment. the system prompt is cached and output is capped, so the tool practices what it preaches.
 
 ## what it catches
 
-| pattern | severity | what's happening |
-|---------|----------|-----------------|
-| N+1 API calls | critical | API call inside a loop instead of batching |
-| missing max_tokens | warning | unbounded output = unbounded cost |
-| no prompt caching | info | resending large system prompts every call |
-| wrong model tier | info | using opus for simple classification |
-| full history resend | warning | entire conversation context every turn |
-| unbounded concurrency | warning | parallel API calls with no rate limit |
-| misconfigured caching | critical | cache_control at wrong API level |
-| oversized context | warning | entire documents injected as context |
-| redundant embeddings | warning | duplicate embedding calls without dedup |
+| pattern | what it looks for |
+|---|---|
+| llm call inside a loop | a chat call in a loop over a collection, directly or through a wrapper defined in the repo |
+| no output cap | chat calls with no max_tokens / max_completion_tokens / max_output_tokens (skips anthropic, which requires it) |
+| retry storm | hand-rolled retry loops with no attempt cap or no backoff, tenacity/backoff decorators with no stop, manual retries stacked on sdk retries |
+| top-tier model on a simple task | opus / gpt-4o / pro class models where the prompt reads like classification or extraction, or the output cap is tiny |
+| big static prompt, no caching | anthropic calls with a 512+ token static system prompt and no cache_control, or a timestamp near the top of a big prompt |
+| full history resent every turn | a messages array that only grows (push/append) and is sent whole, with no slicing, windowing or summarizing |
+| whole file or table in the prompt | file reads, `select *`, `fetchall()`, dumps of rows interpolated into a prompt with no truncation or chunking |
+| embeddings one at a time | embedding calls inside a loop instead of one batched request |
+| identical call, no cache | requests built only from literals that run in a loop or a shared function, and the same call made twice in a row |
+| offline job on the sync api | loops of llm calls in scripts, cron jobs, evals and pipelines that could use a batch api |
+| tight polling loop | setInterval or while-true loops that hit an api on a short fixed interval |
+| duplicate fetch | a fetch in a loop that does not use the loop variable, the same request twice in a function, useEffect with no dependency array |
 
-11 patterns across 15+ LLM providers (Anthropic, OpenAI, Gemini, Bedrock, Cohere, Groq, Mistral, and more) in Python, JavaScript, TypeScript, Go, Java, Rust, C#, and more.
+every finding shows a confidence level. it only reports things it can point to in the code, and it says so when a repo has no llm usage at all instead of calling it clean. if a scan step fails, the report says it is incomplete.
 
----
+honest limits: it is pattern matching, not a type checker. it can miss calls hidden behind dynamic dispatch or config, and it can flag a loop that only ever runs three times. go and other languages are not covered yet.
 
-## three input modes
+## the savings math
 
-- **github repo** - paste a URL, leanfetch clones and scans it
-- **file upload** - drag-and-drop source files for targeted analysis
-- **plan analysis** - upload a design doc (PDF, DOCX, markdown) and catch cost antipatterns before writing a single line of code
+```
+monthly cost of a call site = calls/day x 30 x (input tokens x input price + output tokens x output price) / 1m
+waste = that cost x a pattern-specific share
+```
 
----
+the share depends on the pattern: batch apis are a flat 50%, a model swap uses the real price gap between the two models, prompt caching uses the measured prompt size and the cache read price at a 50 to 90% hit rate, and the rest use a stated range (for example 30 to 60% of input tokens for batching items into one request). each finding shows its own math.
 
-## tech
+the totals count each call site once and leave out low confidence findings. we cannot see your traffic, so calls per day, tokens per call and the model are assumptions you set in the simulator. prices live in `lib/pricing.ts` with a `PRICING_AS_OF` date and source links (anthropic, openai, google). models that are not in the table get no dollar figure instead of a guess. embedding batching and generic http findings are counted in requests, not dollars.
 
-**backend:** node.js, express, anthropic SDK  
-**frontend:** react 19, vite 6, tailwind CSS  
-**analysis:** claude haiku / sonnet / opus (multi-model pipeline)  
-**parsing:** pdf-parse, mammoth (DOCX)  
-
----
-
-## run locally
+## run it locally
 
 ```bash
 git clone https://github.com/ronnielgandhe/leanfetch.git
 cd leanfetch
-npm install && cd client && npm install && cd ../server && npm install && cd ..
+npm install
 npm run dev
 ```
 
-opens at `http://localhost:5173`
+opens at `http://localhost:3000`. `npm test` runs the detector tests against the fixtures in `tests/fixtures`.
 
----
+## env vars
+
+all optional. names are in `.env.example`.
+
+| name | what it does |
+|---|---|
+| `ANTHROPIC_API_KEY` | turns on deep read. never sent to the browser |
+| `DEEP_READ_MODEL` | model for deep read, defaults to `claude-sonnet-5-5` |
+| `GITHUB_TOKEN` | raises the github api rate limit for default branch lookups |
+| `UPSTASH_REDIS_REST_URL`, `UPSTASH_REDIS_REST_TOKEN` | shared rate limiting. without them limits are in memory per instance, which is best effort on serverless |
+| `SCAN_LIMIT_PER_10_MIN` | scans per ip per 10 minutes, default 10 |
+| `DEEP_READ_LIMIT_PER_IP_PER_DAY` | deep reads per ip per day, default 3 |
+| `DEEP_READ_LIMIT_PER_DAY` | deep reads per day for everyone, default 150 |
+
+## built with
+
+next.js, typescript, tailwind, the anthropic sdk, fflate for zips in the browser, vitest.
 
 built by [ronniel gandhe](https://github.com/ronnielgandhe) and [violet li](https://github.com/violetliie)
