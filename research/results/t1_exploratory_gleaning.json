@@ -85,6 +85,18 @@
    "usd_per_1m_docs_first_only": 2137.082666666667,
    "usd_per_1m_docs_default": 3954.8933333333343,
    "entities_added_by_gleaning_per_doc": 5.053333333333334
+  },
+  "gpt-5-nano": {
+   "f1_first_request_only": 0.6870364876891131,
+   "f1_default_with_gleaning": 0.6837806301050176,
+   "diff_first_minus_default": 0.003255857584095523,
+   "diff_ci95": [
+    -0.0017765530623348928,
+    0.007711354293630819
+   ],
+   "usd_per_1m_docs_first_only": 4552.106666666666,
+   "usd_per_1m_docs_default": 7174.48,
+   "entities_added_by_gleaning_per_doc": 1.5133333333333334
   }
  }
 }

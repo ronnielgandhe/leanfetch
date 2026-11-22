@@ -4,7 +4,11 @@ ronniel gandhe. draft, november 2026.
 
 ## tl;dr
 
-RESULTS_TLDR
+- **graphrag picked wrong for this job.** at commit `34b2b67` it defaults to `gpt-4.1` for entity extraction. on Few-NERD (150 documents), 6 of the 7 cheaper models on my ladder beat it outright, whole 99.44% interval above zero. same provider, `gpt-6-luna`: +7.7 F1 points (+5.3 to +10.5) at 7% of the cost, $1,755 vs $24,049 per million documents. `gemini-3.1-flash-lite`: +11.7 points at 11%.
+- **haystack picked fine.** its faithfulness judge defaults to `gpt-5.6-terra`, which came second of ten and nothing cheaper cleared the bar. `gpt-6-luna` tied it at 6% of the cost, but the interval is too wide to call it.
+- **llamaindex's cheap default is fine.** `gpt-4o-mini` for rag answers: the only two cheaper models were worse.
+- **bonus:** llamaindex's plain `OpenAI` class still defaults to `gpt-3.5-turbo`, which openai shut down. zero-config users get a 404.
+- total api spend for everything, pilots included: 12.81 usd. every number has a saved raw output behind it and the rules were committed before the runs.
 
 ## the question
 

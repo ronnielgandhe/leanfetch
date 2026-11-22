@@ -77,10 +77,10 @@ def _client(name):
         return _clients[name]
     if name == "openai":
         from openai import OpenAI
-        c = OpenAI(max_retries=4, timeout=180)
+        c = OpenAI(max_retries=4, timeout=150)
     elif name == "anthropic":
         import anthropic
-        c = anthropic.Anthropic(max_retries=4, timeout=300)
+        c = anthropic.Anthropic(max_retries=4, timeout=200)
     else:
         raise ValueError(name)
     _clients[name] = c

@@ -58,6 +58,11 @@
 <line x1="417.4" y1="151.0" x2="425.4" y2="151.0" stroke="#6B7280" stroke-width="1"/>
 <rect x="417.4" y="178.8" width="8" height="8" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1"/>
 <text x="429.4" y="172.8" font-family="Manrope, -apple-system, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#6B7280" text-anchor="start" stroke="#FFFFFF" stroke-width="3" paint-order="stroke">gpt-4.1-mini</text>
+<line x1="478.3" y1="190.5" x2="478.3" y2="124.4" stroke="#6B7280" stroke-width="1"/>
+<line x1="474.3" y1="190.5" x2="482.3" y2="190.5" stroke="#6B7280" stroke-width="1"/>
+<line x1="474.3" y1="124.4" x2="482.3" y2="124.4" stroke="#6B7280" stroke-width="1"/>
+<rect x="474.3" y="153.4" width="8" height="8" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1"/>
+<text x="486.3" y="147.4" font-family="Manrope, -apple-system, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#6B7280" text-anchor="start" stroke="#FFFFFF" stroke-width="3" paint-order="stroke">gpt-5-nano</text>
 <line x1="593.8" y1="297.6" x2="593.8" y2="235.0" stroke="#1A1A1A" stroke-width="1"/>
 <line x1="589.8" y1="297.6" x2="597.8" y2="297.6" stroke="#1A1A1A" stroke-width="1"/>
 <line x1="589.8" y1="235.0" x2="597.8" y2="235.0" stroke="#1A1A1A" stroke-width="1"/>

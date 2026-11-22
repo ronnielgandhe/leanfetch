@@ -17,7 +17,8 @@
   "gpt-6-luna",
   "gemini-3.1-flash-lite",
   "claude-haiku-5-5",
-  "gpt-4.1-mini"
+  "gpt-4.1-mini",
+  "gpt-5-nano"
  ],
  "prices_verified_on": "2026-11-22",
  "models": {
@@ -343,6 +344,56 @@
     "cost_ratio": 0.16444873191569576,
     "materially_cheaper": true,
     "usd_saved_per_1m_calls": 20094.506666666664,
+    "qualifies": true
+   }
+  },
+  "gpt-5-nano": {
+   "primary": 0.6837806301050176,
+   "primary_ci95": [
+    0.6586744340261858,
+    0.7087976166266792
+   ],
+   "secondary": {
+    "untyped_f1": 0.7277502188503064,
+    "typed_f1_normalizer_v1": 0.6822157434402333,
+    "precision": 0.6518353726362626,
+    "recall": 0.7190184049079754
+   },
+   "cost": {
+    "usd_per_call": 0.0071744800000000004,
+    "usd_per_1k_calls": 7.174480000000001,
+    "usd_per_1m_calls": 7174.4800000000005,
+    "mean_input_tokens": 4718.1866666666665,
+    "mean_output_tokens": 17346.426666666666,
+    "mean_reasoning_tokens": 16317.44,
+    "latency_median_s": 71.3075,
+    "latency_p90_s": 97.42830000000001,
+    "errors": 0,
+    "missing": 0
+   },
+   "vs_repo": {
+    "diff": 0.0818435841001749,
+    "diff_ci95": [
+     0.05834730245553293,
+     0.10443274716784454
+    ],
+    "diff_ci_decision": [
+     0.04929893807379078,
+     0.11443029035910647
+    ],
+    "non_inferior": true,
+    "strictly_better": true,
+    "sensitivity_normalizer_v1": {
+     "diff_ci_decision": [
+      0.04958501720408699,
+      0.11440331921832106
+     ],
+     "non_inferior": true,
+     "strictly_better": true
+    },
+    "cost_ratio": 0.298322619275325,
+    "materially_cheaper": true,
+    "usd_saved_per_1m_calls": 16874.92,
     "qualifies": true
    }
   }
