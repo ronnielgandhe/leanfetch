@@ -1,0 +1,350 @@
+{
+ "task": "t1",
+ "repo": "microsoft/graphrag",
+ "job": "entity + relationship extraction",
+ "dataset": "Few-NERD (supervised test)",
+ "metric": "typed entity micro-F1",
+ "split": "main",
+ "n": 150,
+ "repo_model": "gpt-4.1",
+ "delta": 0.03,
+ "bootstrap": 10000,
+ "seed": 7,
+ "decision_interval": "99.44%",
+ "verdict": "default is the wrong pick on this job and dataset",
+ "qualifying_alternatives": [
+  "gemini-2.5-flash-lite",
+  "gpt-6-luna",
+  "gemini-3.1-flash-lite",
+  "claude-haiku-5-5",
+  "gpt-4.1-mini"
+ ],
+ "prices_verified_on": "2026-11-22",
+ "models": {
+  "gpt-4.1": {
+   "primary": 0.6019370460048427,
+   "primary_ci95": [
+    0.5775635589609365,
+    0.6249711265103056
+   ],
+   "secondary": {
+    "untyped_f1": 0.6488975042403683,
+    "typed_f1_normalizer_v1": 0.600241837968561,
+    "precision": 0.4972,
+    "recall": 0.7625766871165645
+   },
+   "cost": {
+    "usd_per_call": 0.0240494,
+    "usd_per_1k_calls": 24.0494,
+    "usd_per_1m_calls": 24049.399999999998,
+    "mean_input_tokens": 5026.966666666666,
+    "mean_output_tokens": 1749.4333333333334,
+    "mean_reasoning_tokens": 0.0,
+    "latency_median_s": 7.733,
+    "latency_p90_s": 10.6985,
+    "errors": 0,
+    "missing": 0
+   }
+  },
+  "gpt-4o-mini": {
+   "primary": 0.5722932078009415,
+   "primary_ci95": [
+    0.5450750082445919,
+    0.5988191360094088
+   ],
+   "secondary": {
+    "untyped_f1": 0.615539858728557,
+    "typed_f1_normalizer_v1": 0.570181329751511,
+    "precision": 0.6331845238095238,
+    "recall": 0.5220858895705521
+   },
+   "cost": {
+    "usd_per_call": 0.0011923489999999999,
+    "usd_per_1k_calls": 1.1923489999999999,
+    "usd_per_1m_calls": 1192.349,
+    "mean_input_tokens": 4501.5,
+    "mean_output_tokens": 861.8733333333333,
+    "mean_reasoning_tokens": 0.0,
+    "latency_median_s": 11.849499999999999,
+    "latency_p90_s": 17.0221,
+    "errors": 0,
+    "missing": 0
+   },
+   "vs_repo": {
+    "diff": -0.02964383820390115,
+    "diff_ci95": [
+     -0.05279983536894741,
+     -0.006827627492197911
+    ],
+    "diff_ci_decision": [
+     -0.06234177556114868,
+     0.003418462806980302
+    ],
+    "non_inferior": false,
+    "strictly_better": false,
+    "sensitivity_normalizer_v1": {
+     "diff_ci_decision": [
+      -0.06294353894327344,
+      0.0024058052735450976
+     ],
+     "non_inferior": false,
+     "strictly_better": false
+    },
+    "cost_ratio": 0.049579157899989186,
+    "materially_cheaper": true,
+    "usd_saved_per_1m_calls": 22857.051,
+    "qualifies": false
+   }
+  },
+  "gpt-6-luna": {
+   "primary": 0.6793685356559608,
+   "primary_ci95": [
+    0.6558356559415294,
+    0.7025075386949248
+   ],
+   "secondary": {
+    "untyped_f1": 0.7193030220528178,
+    "typed_f1_normalizer_v1": 0.677182485722056,
+    "precision": 0.6105675146771037,
+    "recall": 0.7656441717791411
+   },
+   "cost": {
+    "usd_per_call": 0.0017552993333333333,
+    "usd_per_1k_calls": 1.7552993333333333,
+    "usd_per_1m_calls": 1755.2993333333332,
+    "mean_input_tokens": 4769.493333333333,
+    "mean_output_tokens": 2556.7,
+    "mean_reasoning_tokens": 1390.32,
+    "latency_median_s": 22.5445,
+    "latency_p90_s": 30.8376,
+    "errors": 0,
+    "missing": 0
+   },
+   "vs_repo": {
+    "diff": 0.07743148965111812,
+    "diff_ci95": [
+     0.059846390913905166,
+     0.09544538462946976
+    ],
+    "diff_ci_decision": [
+     0.053189139848794115,
+     0.10454533676996919
+    ],
+    "non_inferior": true,
+    "strictly_better": true,
+    "sensitivity_normalizer_v1": {
+     "diff_ci_decision": [
+      0.05232121697287004,
+      0.10394192122419818
+     ],
+     "non_inferior": true,
+     "strictly_better": true
+    },
+    "cost_ratio": 0.07298724015290749,
+    "materially_cheaper": true,
+    "usd_saved_per_1m_calls": 22294.100666666665,
+    "qualifies": true
+   }
+  },
+  "gemini-2.5-flash-lite": {
+   "primary": 0.6623414921851961,
+   "primary_ci95": [
+    0.6357684942781162,
+    0.6869800051583189
+   ],
+   "secondary": {
+    "untyped_f1": 0.7066115702479339,
+    "typed_f1_normalizer_v1": 0.6609720176730486,
+    "precision": 0.6377058489494606,
+    "recall": 0.688957055214724
+   },
+   "cost": {
+    "usd_per_call": 0.0008926800000000002,
+    "usd_per_1k_calls": 0.8926800000000001,
+    "usd_per_1m_calls": 892.6800000000002,
+    "mean_input_tokens": 4498.746666666667,
+    "mean_output_tokens": 1107.0133333333333,
+    "mean_reasoning_tokens": 0.0,
+    "latency_median_s": 3.224,
+    "latency_p90_s": 5.1514,
+    "errors": 0,
+    "missing": 0
+   },
+   "vs_repo": {
+    "diff": 0.060404446180353455,
+    "diff_ci95": [
+     0.03902034608562784,
+     0.0815312247993185
+    ],
+    "diff_ci_decision": [
+     0.029760325269470308,
+     0.09049131534276844
+    ],
+    "non_inferior": true,
+    "strictly_better": true,
+    "sensitivity_normalizer_v1": {
+     "diff_ci_decision": [
+      0.03047495562919175,
+      0.09074361025330134
+     ],
+     "non_inferior": true,
+     "strictly_better": true
+    },
+    "cost_ratio": 0.037118597553369326,
+    "materially_cheaper": true,
+    "usd_saved_per_1m_calls": 23156.719999999998,
+    "qualifies": true
+   }
+  },
+  "claude-haiku-5-5": {
+   "primary": 0.6475195822454308,
+   "primary_ci95": [
+    0.6246178057618555,
+    0.6696661927394966
+   ],
+   "secondary": {
+    "untyped_f1": 0.6884303995821364,
+    "typed_f1_normalizer_v1": 0.6461377870563675,
+    "precision": 0.5636363636363636,
+    "recall": 0.7607361963190185
+   },
+   "cost": {
+    "usd_per_call": 0.003009463333333333,
+    "usd_per_1k_calls": 3.009463333333333,
+    "usd_per_1m_calls": 3009.463333333333,
+    "mean_input_tokens": 7699.466666666666,
+    "mean_output_tokens": 4479.033333333334,
+    "mean_reasoning_tokens": 0.0,
+    "latency_median_s": 17.413,
+    "latency_p90_s": 22.1232,
+    "errors": 0,
+    "missing": 0
+   },
+   "vs_repo": {
+    "diff": 0.04558253624058817,
+    "diff_ci95": [
+     0.02785197124388926,
+     0.06444304436754673
+    ],
+    "diff_ci_decision": [
+     0.02074699438133259,
+     0.07162712525407613
+    ],
+    "non_inferior": true,
+    "strictly_better": true,
+    "sensitivity_normalizer_v1": {
+     "diff_ci_decision": [
+      0.021096522850437522,
+      0.07166336948179287
+     ],
+     "non_inferior": true,
+     "strictly_better": true
+    },
+    "cost_ratio": 0.12513673244793355,
+    "materially_cheaper": true,
+    "usd_saved_per_1m_calls": 21039.936666666665,
+    "qualifies": true
+   }
+  },
+  "gemini-3.1-flash-lite": {
+   "primary": 0.7187316500293599,
+   "primary_ci95": [
+    0.6950945924164887,
+    0.7409399033358134
+   ],
+   "secondary": {
+    "untyped_f1": 0.7687334704672348,
+    "typed_f1_normalizer_v1": 0.7169257846875917,
+    "precision": 0.6891891891891891,
+    "recall": 0.750920245398773
+   },
+   "cost": {
+    "usd_per_call": 0.0026249949999999998,
+    "usd_per_1k_calls": 2.6249949999999997,
+    "usd_per_1m_calls": 2624.995,
+    "mean_input_tokens": 4403.58,
+    "mean_output_tokens": 1016.0666666666667,
+    "mean_reasoning_tokens": 0.0,
+    "latency_median_s": 4.0285,
+    "latency_p90_s": 5.1833,
+    "errors": 0,
+    "missing": 0
+   },
+   "vs_repo": {
+    "diff": 0.11679460402451725,
+    "diff_ci95": [
+     0.09888702254283249,
+     0.13481533977363644
+    ],
+    "diff_ci_decision": [
+     0.09136951913186887,
+     0.1425894509886742
+    ],
+    "non_inferior": true,
+    "strictly_better": true,
+    "sensitivity_normalizer_v1": {
+     "diff_ci_decision": [
+      0.0914236540684231,
+      0.14227914566880748
+     ],
+     "non_inferior": true,
+     "strictly_better": true
+    },
+    "cost_ratio": 0.10915012432742605,
+    "materially_cheaper": true,
+    "usd_saved_per_1m_calls": 21424.405,
+    "qualifies": true
+   }
+  },
+  "gpt-4.1-mini": {
+   "primary": 0.6645514854340929,
+   "primary_ci95": [
+    0.639500012397187,
+    0.6886534036337283
+   ],
+   "secondary": {
+    "untyped_f1": 0.7116883116883117,
+    "typed_f1_normalizer_v1": 0.6622478386167147,
+    "precision": 0.6271094175285792,
+    "recall": 0.7067484662576687
+   },
+   "cost": {
+    "usd_per_call": 0.003954893333333333,
+    "usd_per_1k_calls": 3.954893333333333,
+    "usd_per_1m_calls": 3954.8933333333334,
+    "mean_input_tokens": 4718.566666666667,
+    "mean_output_tokens": 1292.1666666666667,
+    "mean_reasoning_tokens": 0.0,
+    "latency_median_s": 8.584,
+    "latency_p90_s": 12.4895,
+    "errors": 0,
+    "missing": 0
+   },
+   "vs_repo": {
+    "diff": 0.06261443942925027,
+    "diff_ci95": [
+     0.04544008388738117,
+     0.0805322342004346
+    ],
+    "diff_ci_decision": [
+     0.0377468593241722,
+     0.08874096645153647
+    ],
+    "non_inferior": true,
+    "strictly_better": true,
+    "sensitivity_normalizer_v1": {
+     "diff_ci_decision": [
+      0.037267901815048264,
+      0.08783399529785987
+     ],
+     "non_inferior": true,
+     "strictly_better": true
+    },
+    "cost_ratio": 0.16444873191569576,
+    "materially_cheaper": true,
+    "usd_saved_per_1m_calls": 20094.506666666664,
+    "qualifies": true
+   }
+  }
+ }
+}

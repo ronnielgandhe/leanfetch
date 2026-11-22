@@ -1,0 +1,90 @@
+{
+ "note": "exploratory, not preregistered: graphrag's default runs one extra 'gleaning' request (max_gleanings = 1). this compares the first request alone against the default two-request flow, on the same documents.",
+ "n": 150,
+ "models": {
+  "gpt-4.1": {
+   "f1_first_request_only": 0.6872498570611778,
+   "f1_default_with_gleaning": 0.6019370460048427,
+   "diff_first_minus_default": 0.08531281105633515,
+   "diff_ci95": [
+    0.07325000529358613,
+    0.09748042909791896
+   ],
+   "usd_per_1m_docs_first_only": 13152.560000000001,
+   "usd_per_1m_docs_default": 24049.399999999987,
+   "entities_added_by_gleaning_per_doc": 5.56
+  },
+  "gpt-4o-mini": {
+   "f1_first_request_only": 0.5795287187039765,
+   "f1_default_with_gleaning": 0.5722932078009415,
+   "diff_first_minus_default": 0.007235510903034981,
+   "diff_ci95": [
+    -0.003996665509038183,
+    0.0176936452043638
+   ],
+   "usd_per_1m_docs_first_only": 671.1620000000003,
+   "usd_per_1m_docs_default": 1192.3489999999995,
+   "entities_added_by_gleaning_per_doc": 3.14
+  },
+  "gpt-6-luna": {
+   "f1_first_request_only": 0.7117765620501008,
+   "f1_default_with_gleaning": 0.6793685356559608,
+   "diff_first_minus_default": 0.03240802639413998,
+   "diff_ci95": [
+    0.02501857042372365,
+    0.0399279498310967
+   ],
+   "usd_per_1m_docs_first_only": 1028.1273333333331,
+   "usd_per_1m_docs_default": 1755.2993333333327,
+   "entities_added_by_gleaning_per_doc": 2.3466666666666667
+  },
+  "gemini-2.5-flash-lite": {
+   "f1_first_request_only": 0.6882825040128411,
+   "f1_default_with_gleaning": 0.6623414921851961,
+   "diff_first_minus_default": 0.025941011827644966,
+   "diff_ci95": [
+    0.013372303286554452,
+    0.039030403826555767
+   ],
+   "usd_per_1m_docs_first_only": 460.56800000000004,
+   "usd_per_1m_docs_default": 892.6800000000002,
+   "entities_added_by_gleaning_per_doc": 5.92
+  },
+  "claude-haiku-5-5": {
+   "f1_first_request_only": 0.717918037690697,
+   "f1_default_with_gleaning": 0.6475195822454308,
+   "diff_first_minus_default": 0.07039845544526613,
+   "diff_ci95": [
+    0.05851751419982277,
+    0.08231091415620782
+   ],
+   "usd_per_1m_docs_first_only": 1379.4966666666667,
+   "usd_per_1m_docs_default": 3009.4633333333327,
+   "entities_added_by_gleaning_per_doc": 4.36
+  },
+  "gemini-3.1-flash-lite": {
+   "f1_first_request_only": 0.7261904761904762,
+   "f1_default_with_gleaning": 0.7187316500293599,
+   "diff_first_minus_default": 0.007458826161116261,
+   "diff_ci95": [
+    -0.004823409480787113,
+    0.01923621151324374
+   ],
+   "usd_per_1m_docs_first_only": 1347.8666666666668,
+   "usd_per_1m_docs_default": 2624.995,
+   "entities_added_by_gleaning_per_doc": 7.526666666666666
+  },
+  "gpt-4.1-mini": {
+   "f1_first_request_only": 0.6878740157480315,
+   "f1_default_with_gleaning": 0.6645514854340929,
+   "diff_first_minus_default": 0.023322530313938605,
+   "diff_ci95": [
+    0.013069320036002807,
+    0.03422762051389245
+   ],
+   "usd_per_1m_docs_first_only": 2137.082666666667,
+   "usd_per_1m_docs_default": 3954.8933333333343,
+   "entities_added_by_gleaning_per_doc": 5.053333333333334
+  }
+ }
+}

@@ -1,0 +1,7 @@
+## what it means if you ship llm calls
+
+- **a default is a decision somebody made for a different job, on a different date.** graphrag's default is a general purpose model applied to a narrow extraction job. haystack's and llamaindex's are recent and cheap-ish and they held up. "old default" and "wrong default" aren't the same thing, but old defaults are where the gap shows up.
+- **measure the job, not the leaderboard.** the model that wins a general benchmark lost here, and the cheapest model didn't win either. a few hundred items of your own job with a real metric beats any leaderboard, and it cost me a few dollars per target.
+- **count reasoning tokens.** gpt-5-nano lists at $0.05 / $0.40 per million and still cost more per call than gpt-4.1-mini on the judge job, because it wrote about 2,000 tokens of reasoning to output 40. list price is not the price.
+- **the prompt and the plumbing can matter more than the model.** graphrag's "MANY entities were missed" second pass and haystack's score threshold each moved quality more than swapping models did. check those before you shop for a model.
+- **write the bar down before you look.** i nearly published a wrong haystack result. a race in my own spend ledger made 29 of the default model's requests error out on my side, and with those counted as misses the default looked clearly beaten. the preregistration said failed calls get re-run once, so i re-ran them, and the default came out second best. without the rule i'd have had a nicer story and a false one.
