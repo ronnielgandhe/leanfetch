@@ -1,0 +1,21 @@
+{
+ "text": "OK",
+ "finish": "stop",
+ "input_tokens": 14,
+ "output_tokens": 1,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4.1-2025-04-14",
+ "latency_s": 2.113,
+ "cost_usd": 3.6e-05,
+ "request": {
+  "model": "gpt-4.1",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Reply with the single word OK."
+   }
+  ],
+  "params": {}
+ },
+ "ts": "2026-11-22T00:40:06"
+}

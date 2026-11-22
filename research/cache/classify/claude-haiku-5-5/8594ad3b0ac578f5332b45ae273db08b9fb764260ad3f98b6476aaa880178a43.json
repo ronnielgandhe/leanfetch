@@ -1,0 +1,30 @@
+{
+ "text": "{\"task\": \"rag_answer\", \"output_format\": \"free_text\", \"benchmark_analogue\": \"Natural Questions\", \"metric\": \"exact match / F1 on answer span (or human-graded answer faithfulness)\", \"rationale\": \"The prompt answers a user question using retrieved data tables as context, with inline citations to record ids and instructions not to fabricate, which is a retrieval-augmented generation answer task producing markdown free text.\"}",
+ "finish": "end_turn",
+ "input_tokens": 1128,
+ "output_tokens": 143,
+ "reasoning_tokens": null,
+ "served_model": "claude-haiku-5-5",
+ "latency_s": 1.053,
+ "cost_usd": 0.0001843,
+ "request": {
+  "model": "claude-haiku-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You label LLM prompt templates found in source code by the job the call does. Reply with one JSON object only, no prose, with keys: task (one of ['classification_routing', 'extraction_structured', 'summarization', 'query_rewriting', 'rag_answer', 'code_generation', 'tool_selection', 'grading_judging', 'reranking', 'chat_open_ended', 'other']), output_format (free_text|json|delimited|label|score), benchmark_analogue (one well known public dataset whose task matches this job, or 'none'), metric (the objective metric that dataset uses), rationale (one sentence)."
+   },
+   {
+    "role": "user",
+    "content": "file: packages/graphrag/graphrag/prompts/query/basic_search_system_prompt.py\nname: BASIC_SEARCH_SYSTEM_PROMPT\nplaceholders: ['response_type', 'context_data']\n---\n\n---Role---\n\nYou are a helpful assistant responding to questions about data in the tables provided.\n\n\n---Goal---\n\nGenerate a response of the target length and format that responds to the user's question, summarizing all relevant information in the input data tables appropriate for the response length and format.\n\nYou should use the data provided in the data tables below as the primary context for generating the response.\n\nIf you don't know the answer or if the input data tables do not contain sufficient information to provide an answer, just say so. Do not make anything up.\n\nPoints supported by data should list their data references as follows:\n\n\"This is an example sentence supported by multiple data references [Data: Sources (record ids)].\"\n\nDo not list more than 5 record ids in a single reference. Instead, list the top 5 most relevant record ids and add \"+more\" to indicate that there are more.\n\nFor example:\n\n\"Person X is the owner of Company Y and subject to many allegations of wrongdoing [Data: Sources (2, 7, 64, 46, 34, +more)]. He is also CEO of company X [Data: Sources (1, 3)]\"\n\nwhere 1, 2, 3, 7, 34, 46, and 64 represent the source id taken from the \"id\" column in the provided tables.\n\nDo not include information where the supporting evidence for it is not provided.\n\n\n---Target response length and format---\n\n{response_type}\n\n\n---Data tables---\n\n{context_data}\n\n\n---Goal---\n\nGenerate a response of the target length and format that responds to the user's question, summarizing all relevant information in the input data appropriate for the response length and format.\n\nYou should use the data provided in the data tables below as the primary context for generating the response.\n\nIf you don't know the answer or if the input data tables do not contain sufficient information to provide an answer, just say so. Do not make anything up.\n\nPoints supported by data should list their data references as follows:\n\n\"This is an example sentence supported by multiple data references [Data: Sources (record ids)].\"\n\nDo not list more than 5 record ids in a single reference. Instead, list the top 5 most relevant record ids and add \"+more\" to indicate that there are more.\n\nFor example:\n\n\"Person X is the owner of Company Y and subject to many allegations of wrongdoing [Data: Sources (2, 7, 64, 46, 34, +more)]. He is also CEO of company X [Data: Sources (1, 3)]\"\n\nwhere 1, 2, 3, 7, 34, 46, and 64 represent the source id taken from the \"id\" column in the provided tables.\n\nDo not include information where the supporting evidence for it is not provided.\n\n\n---Target response length and format---\n\n{response_type}\n\nAdd sections and commentary to the response as appropriate for the length and format. Style the response in markdown.\n"
+   }
+  ],
+  "params": {
+   "max_tokens": 2000,
+   "output_config": {
+    "effort": "low"
+   }
+  }
+ },
+ "ts": "2026-11-22T00:44:44"
+}

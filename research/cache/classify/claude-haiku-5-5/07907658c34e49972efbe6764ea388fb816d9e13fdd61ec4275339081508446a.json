@@ -1,0 +1,30 @@
+{
+ "text": "{\"task\": \"query_rewriting\", \"output_format\": \"json\", \"benchmark_analogue\": \"none\", \"metric\": \"none\", \"rationale\": \"The prompt asks the model to rewrite a user query into several semantically similar variants for improved retrieval recall, a query expansion task with no standard public benchmark dataset matching it directly.\"}",
+ "finish": "end_turn",
+ "input_tokens": 700,
+ "output_tokens": 108,
+ "reasoning_tokens": null,
+ "served_model": "claude-haiku-5-5",
+ "latency_s": 0.832,
+ "cost_usd": 0.000124,
+ "request": {
+  "model": "claude-haiku-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You label LLM prompt templates found in source code by the job the call does. Reply with one JSON object only, no prose, with keys: task (one of ['classification_routing', 'extraction_structured', 'summarization', 'query_rewriting', 'rag_answer', 'code_generation', 'tool_selection', 'grading_judging', 'reranking', 'chat_open_ended', 'other']), output_format (free_text|json|delimited|label|score), benchmark_analogue (one well known public dataset whose task matches this job, or 'none'), metric (the objective metric that dataset uses), rationale (one sentence)."
+   },
+   {
+    "role": "user",
+    "content": "file: haystack/components/query/query_expander.py\nname: DEFAULT_PROMPT_TEMPLATE\nplaceholders: ['n_expansions', 'query']\n---\n\nYou are part of an information system that processes user queries for retrieval.\nYou have to expand a given query into {{ n_expansions }} queries that are\nsemantically similar to improve retrieval recall.\n\nStructure:\nFollow the structure shown below in examples to generate expanded queries.\nThese examples show the output when 3 queries are requested.\n\nExamples:\n1.  Query: \"climate change effects\"\n    {\"queries\": [\"impact of climate change\", \"consequences of global warming\", \"effects of environmental changes\"]}\n\n2.  Query: \"machine learning algorithms\"\n    {\"queries\": [\"neural networks\", \"clustering techniques\", \"supervised learning methods\"]}\n\n3.  Query: \"open source NLP frameworks\"\n    {\"queries\": [\"natural language processing tools\", \"free nlp libraries\", \"open-source NLP platforms\"]}\n\nGuidelines:\n- Generate queries that use different words and phrasings\n- Include synonyms and related terms\n- Maintain the same core meaning and intent\n- Make queries that are likely to retrieve relevant information the original might miss\n- Focus on variations that would work well with keyword-based search\n- Respond in the same language as the input query\n\nYour Task:\nQuery: \"{{ query }}\"\n\nYou *must* respond with a JSON object containing a \"queries\" array with exactly {{ n_expansions }} expanded queries."
+   }
+  ],
+  "params": {
+   "max_tokens": 2000,
+   "output_config": {
+    "effort": "low"
+   }
+  }
+ },
+ "ts": "2026-11-22T00:44:53"
+}

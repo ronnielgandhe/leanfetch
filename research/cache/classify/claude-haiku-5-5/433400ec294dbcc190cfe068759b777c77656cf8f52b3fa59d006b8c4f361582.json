@@ -1,0 +1,30 @@
+{
+ "text": "{\"task\": \"reranking\", \"output_format\": \"json\", \"benchmark_analogue\": \"MS MARCO passage ranking\", \"metric\": \"MRR@10\", \"rationale\": \"The prompt asks the LLM to order retrieved documents by relevance to a query and return a JSON list of document indices, which is a passage reranking job evaluated by ranking metrics like MRR@10.\"}",
+ "finish": "end_turn",
+ "input_tokens": 511,
+ "output_tokens": 124,
+ "reasoning_tokens": null,
+ "served_model": "claude-haiku-5-5",
+ "latency_s": 0.806,
+ "cost_usd": 0.0001131,
+ "request": {
+  "model": "claude-haiku-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You label LLM prompt templates found in source code by the job the call does. Reply with one JSON object only, no prose, with keys: task (one of ['classification_routing', 'extraction_structured', 'summarization', 'query_rewriting', 'rag_answer', 'code_generation', 'tool_selection', 'grading_judging', 'reranking', 'chat_open_ended', 'other']), output_format (free_text|json|delimited|label|score), benchmark_analogue (one well known public dataset whose task matches this job, or 'none'), metric (the objective metric that dataset uses), rationale (one sentence)."
+   },
+   {
+    "role": "user",
+    "content": "file: haystack/components/rankers/llm_ranker.py\nname: DEFAULT_PROMPT_TEMPLATE\nplaceholders: ['query']\n---\n\nYou are ranking retrieved documents for relevance to a query.\n\nReturn valid JSON only, with this structure:\n{\n  \"documents\": [\n    {\"index\": 1}\n  ]\n}\n\nRules:\n- Rank documents from most relevant to least relevant for answering the query.\n- Only include documents that are relevant to the query.\n- Do not return or rank documents that are not relevant.\n- If none are relevant, return {\"documents\": []}.\n- Use only document indices from the provided documents.\n- Do not repeat document indices.\n- Do not include explanations or any text outside the JSON object.\n\nQuery:\n{{ query }}\n\nDocuments:\n{% for document in documents %}\nDocument {{ loop.index }}:\ncontent: {{ document.content or \"\" }}\n\n{% endfor %}\n"
+   }
+  ],
+  "params": {
+   "max_tokens": 2000,
+   "output_config": {
+    "effort": "low"
+   }
+  }
+ },
+ "ts": "2026-11-22T00:44:54"
+}

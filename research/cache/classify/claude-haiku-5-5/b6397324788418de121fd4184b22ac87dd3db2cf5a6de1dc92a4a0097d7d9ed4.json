@@ -1,0 +1,30 @@
+{
+ "text": "{\"task\": \"rag_answer\", \"output_format\": \"free_text\", \"benchmark_analogue\": \"none\", \"metric\": \"none\", \"rationale\": \"The prompt synthesizes a markdown answer to a user query from retrieved GraphRAG community reports, with inline data citations and a general-knowledge fallback, which is a RAG answer-generation job without a standard public benchmark dataset mapping cleanly to it.\"}",
+ "finish": "end_turn",
+ "input_tokens": 1122,
+ "output_tokens": 136,
+ "reasoning_tokens": null,
+ "served_model": "claude-haiku-5-5",
+ "latency_s": 0.926,
+ "cost_usd": 0.0001802,
+ "request": {
+  "model": "claude-haiku-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You label LLM prompt templates found in source code by the job the call does. Reply with one JSON object only, no prose, with keys: task (one of ['classification_routing', 'extraction_structured', 'summarization', 'query_rewriting', 'rag_answer', 'code_generation', 'tool_selection', 'grading_judging', 'reranking', 'chat_open_ended', 'other']), output_format (free_text|json|delimited|label|score), benchmark_analogue (one well known public dataset whose task matches this job, or 'none'), metric (the objective metric that dataset uses), rationale (one sentence)."
+   },
+   {
+    "role": "user",
+    "content": "file: packages/graphrag/graphrag/prompts/query/drift_search_system_prompt.py\nname: DRIFT_REDUCE_PROMPT\nplaceholders: ['context_data', 'response_type']\n---\n\n---Role---\n\nYou are a helpful assistant responding to questions about data in the reports provided.\n\n---Goal---\n\nGenerate a response of the target length and format that responds to the user's question, summarizing all information in the input reports appropriate for the response length and format, and incorporating any relevant general knowledge while being as specific, accurate and concise as possible.\n\nIf you don't know the answer, just say so. Do not make anything up.\n\nPoints supported by data should list their data references as follows:\n\n\"This is an example sentence supported by multiple data references [Data: <dataset name> (record ids); <dataset name> (record ids)].\"\n\nDo not list more than 5 record ids in a single reference. Instead, list the top 5 most relevant record ids and add \"+more\" to indicate that there are more.\n\nFor example:\n\n\"Person X is the owner of Company Y and subject to many allegations of wrongdoing [Data: Sources (1, 5, 15)].\"\n\nDo not include information where the supporting evidence for it is not provided.\n\nIf you decide to use general knowledge, you should add a delimiter stating that the information is not supported by the data tables. For example:\n\n\"Person X is the owner of Company Y and subject to many allegations of wrongdoing. [Data: General Knowledge (href)]\"\n\n---Data Reports---\n\n{context_data}\n\n---Target response length and format---\n\n{response_type}\n\n\n---Goal---\n\nGenerate a response of the target length and format that responds to the user's question, summarizing all information in the input reports appropriate for the response length and format, and incorporating any relevant general knowledge while being as specific, accurate and concise as possible.\n\nIf you don't know the answer, just say so. Do not make anything up.\n\nPoints supported by data should list their data references as follows:\n\n\"This is an example sentence supported by multiple data references [Data: <dataset name> (record ids); <dataset name> (record ids)].\"\n\nDo not list more than 5 record ids in a single reference. Instead, list the top 5 most relevant record ids and add \"+more\" to indicate that there are more.\n\nFor example:\n\n\"Person X is the owner of Company Y and subject to many allegations of wrongdoing [Data: Sources (1, 5, 15)].\"\n\nDo not include information where the supporting evidence for it is not provided.\n\nIf you decide to use general knowledge, you should add a delimiter stating that the information is not supported by the data tables. For example:\n\n\"Person X is the owner of Company Y and subject to many allegations of wrongdoing. [Data: General Knowledge (href)]\".\n\nAdd sections and commentary to the response as appropriate for the length and format. Style the response in markdown. Now answer the following query using the data above:\n\n"
+   }
+  ],
+  "params": {
+   "max_tokens": 2000,
+   "output_config": {
+    "effort": "low"
+   }
+  }
+ },
+ "ts": "2026-11-22T00:44:46"
+}

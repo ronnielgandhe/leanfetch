@@ -1,0 +1,30 @@
+{
+ "text": "{\"task\": \"tool_selection\", \"output_format\": \"free_text\", \"benchmark_analogue\": \"Berkeley Function Calling Leaderboard (BFCL)\", \"metric\": \"function-call accuracy (AST match of function name and arguments)\", \"rationale\": \"The template is a tool docstring that tells the model when and how to call a reader function with a natural-language query argument, so it serves tool selection and argument filling rather than generating prose.\"}",
+ "finish": "end_turn",
+ "input_tokens": 340,
+ "output_tokens": 315,
+ "reasoning_tokens": null,
+ "served_model": "claude-haiku-5-5",
+ "latency_s": 1.934,
+ "cost_usd": 0.0001915,
+ "request": {
+  "model": "claude-haiku-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You label LLM prompt templates found in source code by the job the call does. Reply with one JSON object only, no prose, with keys: task (one of ['classification_routing', 'extraction_structured', 'summarization', 'query_rewriting', 'rag_answer', 'code_generation', 'tool_selection', 'grading_judging', 'reranking', 'chat_open_ended', 'other']), output_format (free_text|json|delimited|label|score), benchmark_analogue (one well known public dataset whose task matches this job, or 'none'), metric (the objective metric that dataset uses), rationale (one sentence)."
+   },
+   {
+    "role": "user",
+    "content": "file: llama-index-core/llama_index/core/tools/tool_spec/load_and_search/base.py\nname: reader_prompt\nplaceholders: []\n---\n\n        Once data has been loaded from {} it can then be read using a natural\n        language query from this function.\n\n        You are required to pass the natural language query argument when calling this endpoint\n\n        Args:\n            query (str): The natural language query used to retreieve information from the index\n    "
+   }
+  ],
+  "params": {
+   "max_tokens": 2000,
+   "output_config": {
+    "effort": "low"
+   }
+  }
+ },
+ "ts": "2026-11-22T00:45:16"
+}

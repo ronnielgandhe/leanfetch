@@ -1,0 +1,21 @@
+{
+ "text": "OK",
+ "finish": "stop",
+ "input_tokens": 14,
+ "output_tokens": 1,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-4o-mini-2024-07-18",
+ "latency_s": 0.376,
+ "cost_usd": 2.7e-06,
+ "request": {
+  "model": "gpt-4o-mini",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Reply with the single word OK."
+   }
+  ],
+  "params": {}
+ },
+ "ts": "2026-11-22T00:40:07"
+}

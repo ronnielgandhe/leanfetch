@@ -1,0 +1,30 @@
+{
+ "text": "{\"task\": \"extraction_structured\", \"output_format\": \"json\", \"benchmark_analogue\": \"WikiSQL\", \"metric\": \"execution accuracy\", \"rationale\": \"The template gives few-shot examples that map a natural-language user query plus a data-source schema to a structured JSON request with metadata filters, which matches semantic parsing into a structured query language.\"}",
+ "finish": "end_turn",
+ "input_tokens": 442,
+ "output_tokens": 333,
+ "reasoning_tokens": null,
+ "served_model": "claude-haiku-5-5",
+ "latency_s": 1.915,
+ "cost_usd": 0.0002107,
+ "request": {
+  "model": "claude-haiku-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You label LLM prompt templates found in source code by the job the call does. Reply with one JSON object only, no prose, with keys: task (one of ['classification_routing', 'extraction_structured', 'summarization', 'query_rewriting', 'rag_answer', 'code_generation', 'tool_selection', 'grading_judging', 'reranking', 'chat_open_ended', 'other']), output_format (free_text|json|delimited|label|score), benchmark_analogue (one well known public dataset whose task matches this job, or 'none'), metric (the objective metric that dataset uses), rationale (one sentence)."
+   },
+   {
+    "role": "user",
+    "content": "file: llama-index-core/llama_index/core/indices/vector_store/retrievers/auto_retriever/prompts.py\nname: EXAMPLES\nplaceholders: ['example_query', 'example_query_2']\n---\n\\\n<< Example 1. >>\nData Source:\n```json\n{example_info.model_dump_json(indent=4)}\n```\n\nUser Query:\n{example_query}\n\nStructured Request:\n```json\n{example_output.model_dump_json()}\n\n\n<< Example 2. >>\nData Source:\n```json\n{example_info_2.model_dump_json(indent=4)}\n```\n\nUser Query:\n{example_query_2}\n\nStructured Request:\n```json\n{example_output_2.model_dump_json()}\n\n```\n"
+   }
+  ],
+  "params": {
+   "max_tokens": 2000,
+   "output_config": {
+    "effort": "low"
+   }
+  }
+ },
+ "ts": "2026-11-22T00:45:05"
+}

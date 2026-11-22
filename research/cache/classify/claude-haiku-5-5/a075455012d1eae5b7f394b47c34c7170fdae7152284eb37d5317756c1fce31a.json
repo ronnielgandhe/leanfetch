@@ -1,0 +1,30 @@
+{
+ "text": "{\"task\": \"code_generation\", \"output_format\": \"free_text\", \"benchmark_analogue\": \"none\", \"metric\": \"none\", \"rationale\": \"The prompt asks the model to generate a Cypher query from a natural-language question and a graph schema, which is text-to-query code generation; no standard public benchmark matches exactly, though Spider is the closest analogue for text-to-query tasks, with execution accuracy as its metric.\"}",
+ "finish": "end_turn",
+ "input_tokens": 433,
+ "output_tokens": 138,
+ "reasoning_tokens": null,
+ "served_model": "claude-haiku-5-5",
+ "latency_s": 0.924,
+ "cost_usd": 0.0001123,
+ "request": {
+  "model": "claude-haiku-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You label LLM prompt templates found in source code by the job the call does. Reply with one JSON object only, no prose, with keys: task (one of ['classification_routing', 'extraction_structured', 'summarization', 'query_rewriting', 'rag_answer', 'code_generation', 'tool_selection', 'grading_judging', 'reranking', 'chat_open_ended', 'other']), output_format (free_text|json|delimited|label|score), benchmark_analogue (one well known public dataset whose task matches this job, or 'none'), metric (the objective metric that dataset uses), rationale (one sentence)."
+   },
+   {
+    "role": "user",
+    "content": "file: llama-index-core/llama_index/core/graph_stores/prompts.py\nname: DEFAULT_CYPHER_TEMPALTE_STR\nplaceholders: ['schema', 'question']\n---\nTask:Generate Cypher statement to query a graph database.\nInstructions:\nUse only the provided relationship types and properties in the schema.\nDo not use any other relationship types or properties that are not provided.\nSchema:\n{schema}\nNote: Do not include any explanations or apologies in your responses.\nDo not respond to any questions that might ask anything else than for you to construct a Cypher statement.\nDo not include any text except the generated Cypher statement.\n\nThe question is:\n{question}"
+   }
+  ],
+  "params": {
+   "max_tokens": 2000,
+   "output_config": {
+    "effort": "low"
+   }
+  }
+ },
+ "ts": "2026-11-22T00:45:01"
+}

@@ -1,0 +1,30 @@
+{
+ "text": "{\"task\": \"rag_answer\", \"output_format\": \"free_text\", \"benchmark_analogue\": \"none\", \"metric\": \"none\", \"rationale\": \"The prompt synthesizes a final free-text answer to a user question from retrieved evidence (SQL results and vector store results), which is a retrieval-augmented answer generation job with no standard public benchmark dataset matching this exact multi-source setup.\"}",
+ "finish": "end_turn",
+ "input_tokens": 528,
+ "output_tokens": 129,
+ "reasoning_tokens": null,
+ "served_model": "claude-haiku-5-5",
+ "latency_s": 0.9,
+ "cost_usd": 0.0001173,
+ "request": {
+  "model": "claude-haiku-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You label LLM prompt templates found in source code by the job the call does. Reply with one JSON object only, no prose, with keys: task (one of ['classification_routing', 'extraction_structured', 'summarization', 'query_rewriting', 'rag_answer', 'code_generation', 'tool_selection', 'grading_judging', 'reranking', 'chat_open_ended', 'other']), output_format (free_text|json|delimited|label|score), benchmark_analogue (one well known public dataset whose task matches this job, or 'none'), metric (the objective metric that dataset uses), rationale (one sentence)."
+   },
+   {
+    "role": "user",
+    "content": "file: llama-index-core/llama_index/core/query_engine/sql_vector_query_engine.py\nname: DEFAULT_SQL_VECTOR_SYNTHESIS_PROMPT_TMPL\nplaceholders: ['query_str', 'sql_query_str', 'sql_response_str', 'query_engine_query_str', 'query_engine_response_str']\n---\n\nThe original question is given below.\nThis question has been translated into a SQL query. \\\nBoth the SQL query and the response are given below.\nGiven the SQL response, the question has also been translated into a vector store query.\nThe vector store query and response is given below.\nGiven SQL query, SQL response, transformed vector store query, and vector store \\\nresponse, please synthesize a response to the original question.\n\nOriginal question: {query_str}\nSQL query: {sql_query_str}\nSQL response: {sql_response_str}\nTransformed vector store query: {query_engine_query_str}\nVector store response: {query_engine_response_str}\nResponse:\n"
+   }
+  ],
+  "params": {
+   "max_tokens": 2000,
+   "output_config": {
+    "effort": "low"
+   }
+  }
+ },
+ "ts": "2026-11-22T00:45:14"
+}

@@ -1,0 +1,30 @@
+{
+ "text": "{\"task\": \"summarization\", \"output_format\": \"free_text\", \"benchmark_analogue\": \"none\", \"metric\": \"none\", \"rationale\": \"The prompt asks the model to merge a list of entity descriptions into one concise, coherent third-person summary, which is a multi-document summarization job with no standard public benchmark dataset matching this exact setup.\"}",
+ "finish": "end_turn",
+ "input_tokens": 557,
+ "output_tokens": 113,
+ "reasoning_tokens": null,
+ "served_model": "claude-haiku-5-5",
+ "latency_s": 0.826,
+ "cost_usd": 0.0001122,
+ "request": {
+  "model": "claude-haiku-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You label LLM prompt templates found in source code by the job the call does. Reply with one JSON object only, no prose, with keys: task (one of ['classification_routing', 'extraction_structured', 'summarization', 'query_rewriting', 'rag_answer', 'code_generation', 'tool_selection', 'grading_judging', 'reranking', 'chat_open_ended', 'other']), output_format (free_text|json|delimited|label|score), benchmark_analogue (one well known public dataset whose task matches this job, or 'none'), metric (the objective metric that dataset uses), rationale (one sentence)."
+   },
+   {
+    "role": "user",
+    "content": "file: packages/graphrag/graphrag/prompt_tune/template/entity_summarization.py\nname: ENTITY_SUMMARIZATION_PROMPT\nplaceholders: ['persona', 'language', 'entity_name', 'description_list']\n---\n\n{persona}\nUsing your expertise, you're asked to generate a comprehensive summary of the data provided below.\nGiven one or two entities, and a list of descriptions, all related to the same entity or group of entities.\nPlease concatenate all of these into a single, concise description in {language}. Make sure to include information collected from all the descriptions.\nIf the provided descriptions are contradictory, please resolve the contradictions and provide a single, coherent summary.\nMake sure it is written in third person, and include the entity names so we have the full context.\n\nEnrich it as much as you can with relevant information from the nearby text, this is very important.\n\nIf no answer is possible, or the description is empty, only convey information that is provided within the text.\n#######\n-Data-\nEntities: {{entity_name}}\nDescription List: {{description_list}}\n#######\nOutput:"
+   }
+  ],
+  "params": {
+   "max_tokens": 2000,
+   "output_config": {
+    "effort": "low"
+   }
+  }
+ },
+ "ts": "2026-11-22T00:44:36"
+}

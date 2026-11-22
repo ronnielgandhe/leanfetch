@@ -1,0 +1,30 @@
+{
+ "text": "{\"task\": \"rag_answer\", \"output_format\": \"free_text\", \"benchmark_analogue\": \"none\", \"metric\": \"none\", \"rationale\": \"The template is a system prompt for a grounded Q&A chatbot that answers tax questions using supplied 2022 context and a fallback refusal, which matches retrieval-augmented answering rather than any standard labeled benchmark task.\"}",
+ "finish": "end_turn",
+ "input_tokens": 1089,
+ "output_tokens": 124,
+ "reasoning_tokens": null,
+ "served_model": "claude-haiku-5-5",
+ "latency_s": 0.877,
+ "cost_usd": 0.0001709,
+ "request": {
+  "model": "claude-haiku-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You label LLM prompt templates found in source code by the job the call does. Reply with one JSON object only, no prose, with keys: task (one of ['classification_routing', 'extraction_structured', 'summarization', 'query_rewriting', 'rag_answer', 'code_generation', 'tool_selection', 'grading_judging', 'reranking', 'chat_open_ended', 'other']), output_format (free_text|json|delimited|label|score), benchmark_analogue (one well known public dataset whose task matches this job, or 'none'), metric (the objective metric that dataset uses), rationale (one sentence)."
+   },
+   {
+    "role": "user",
+    "content": "file: llama-index-core/llama_index/core/prompts/system.py\nname: IRS_TAX_CHATBOT\nplaceholders: []\n---\n\\\n\u2022\tYou are an IRS chatbot whose primary goal is to help users with filing their tax \\\nreturns for the 2022 year.\n\u2022\tProvide concise replies that are polite and professional.\n\u2022\tAnswer questions truthfully based on official government information, with \\\nconsideration to context provided below on changes for 2022 that can affect \\\ntax refund.\n\u2022\tDo not answer questions that are not related to United States tax procedures and \\\nrespond with \"I can only help with any tax-related questions you may have.\".\n\u2022\tIf you do not know the answer to a question, respond by saying \u201cI do not know the \\\nanswer to your question. You may be able to find your answer at www.irs.gov/faqs\u201d\n\nChanges for 2022 that can affect tax refund:\n\u2022\tChanges in the number of dependents, employment or self-employment income and \\\ndivorce, among other factors, may affect your tax-filing status and refund. \\\nNo additional stimulus payments. Unlike 2020 and 2021, there were no new \\\nstimulus payments for 2022 so taxpayers should not expect to get an \\\nadditional payment.\n\u2022\tSome tax credits return to 2019 levels.  This means that taxpayers will likely \\\nreceive a significantly smaller refund compared with the previous tax year. \\\nChanges include amounts for the Child Tax Credit (CTC), the Earned Income \\\nTax Credit (EITC) and the Child and Dependent Care Credit will revert \\\nto pre-COVID levels.\n\u2022\tFor 2022, the CTC is worth $2,000 for each qualifying child. A child must be \\\nunder age 17 at the end of 2022 to be a qualifying child.For the EITC, eligible \\\ntaxpayers with no children will get $560 for the 2022 tax year.The Child and \\\nDependent Care Credit returns to a maximum of $2,100 in 2022.\n\u2022\tNo above-the-line charitable deductions. During COVID, taxpayers were able to take \\\nup to a $600 charitable donation tax deduction on their tax returns. However, for \\\ntax year 2022, taxpayers who don\u2019t itemize and who take the standard deduction, \\\nwon\u2019t be able to deduct their charitable contributions.\n\u2022\tMore people may be eligible for the Premium Tax Credit. For tax year 2022, \\\ntaxpayers may qualify for temporarily expanded eligibility for the premium \\\ntax credit.\n\u2022\tEligibility rules changed to claim a tax credit for clean vehicles. Review the \\\nchanges under the Inflation Reduction Act of 2022 to qualify for a \\\nClean Vehicle Credit.\n"
+   }
+  ],
+  "params": {
+   "max_tokens": 2000,
+   "output_config": {
+    "effort": "low"
+   }
+  }
+ },
+ "ts": "2026-11-22T00:45:08"
+}

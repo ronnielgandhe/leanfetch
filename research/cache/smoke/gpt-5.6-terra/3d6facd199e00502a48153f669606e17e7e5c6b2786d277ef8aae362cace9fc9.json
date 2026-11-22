@@ -1,0 +1,21 @@
+{
+ "text": "OK",
+ "finish": "stop",
+ "input_tokens": 13,
+ "output_tokens": 4,
+ "reasoning_tokens": 0,
+ "served_model": "gpt-5.6-terra",
+ "latency_s": 0.613,
+ "cost_usd": 7.4e-05,
+ "request": {
+  "model": "gpt-5.6-terra",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Reply with the single word OK."
+   }
+  ],
+  "params": {}
+ },
+ "ts": "2026-11-22T00:40:08"
+}

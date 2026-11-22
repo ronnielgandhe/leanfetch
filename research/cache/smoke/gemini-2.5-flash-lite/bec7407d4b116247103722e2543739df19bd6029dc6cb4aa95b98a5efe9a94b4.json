@@ -1,0 +1,21 @@
+{
+ "text": "OK",
+ "finish": "FinishReason.STOP",
+ "input_tokens": 8,
+ "output_tokens": 1,
+ "reasoning_tokens": 0,
+ "served_model": "gemini-2.5-flash-lite",
+ "latency_s": 0.466,
+ "cost_usd": 1.2000000000000002e-06,
+ "request": {
+  "model": "gemini-2.5-flash-lite",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Reply with the single word OK."
+   }
+  ],
+  "params": {}
+ },
+ "ts": "2026-11-22T00:40:22"
+}

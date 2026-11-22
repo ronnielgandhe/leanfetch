@@ -1,0 +1,570 @@
+{
+ "repo": "graphrag@34b2b67",
+ "modelDefaults": [
+  {
+   "file": "packages/graphrag/graphrag/config/defaults.py",
+   "line": 33,
+   "name": "DEFAULT_COMPLETION_MODEL",
+   "model": "gpt-4.1",
+   "text": "DEFAULT_COMPLETION_MODEL = \"gpt-4.1\""
+  }
+ ],
+ "callSites": [
+  {
+   "file": "packages/graphrag-llm/graphrag_llm/completion/lite_llm_completion.py",
+   "line": 265,
+   "api": "litellm.completion",
+   "provider": "unknown",
+   "kind": "chat"
+  },
+  {
+   "file": "packages/graphrag-llm/graphrag_llm/completion/lite_llm_completion.py",
+   "line": 291,
+   "api": "litellm.completion",
+   "provider": "unknown",
+   "kind": "chat"
+  },
+  {
+   "file": "packages/graphrag-llm/graphrag_llm/embedding/lite_llm_embedding.py",
+   "line": 188,
+   "api": "litellm.embedding",
+   "provider": "unknown",
+   "kind": "embed"
+  },
+  {
+   "file": "packages/graphrag-llm/graphrag_llm/embedding/lite_llm_embedding.py",
+   "line": 195,
+   "api": "litellm.embedding",
+   "provider": "unknown",
+   "kind": "embed"
+  }
+ ],
+ "templates": [
+  {
+   "file": "packages/graphrag/graphrag/config/init_content.py",
+   "line": 12,
+   "name": "INIT_YAML",
+   "chars": 5319,
+   "placeholders": [
+    "GRAPHRAG_API_KEY"
+   ],
+   "label": {
+    "task": "other",
+    "output_format": "free_text",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "This is a YAML configuration template for the GraphRAG CLI's init command, not a prompt that asks an LLM to perform a task, so it has no LLM job to classify and no matching benchmark."
+   }
+  },
+  {
+   "file": "packages/graphrag/graphrag/prompt_tune/prompt/community_report_rating.py",
+   "line": 6,
+   "name": "GENERATE_REPORT_RATING_PROMPT",
+   "chars": 6299,
+   "placeholders": [
+    "domain",
+    "persona",
+    "input_text"
+   ],
+   "label": {
+    "task": "grading_judging",
+    "output_format": "score",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "The prompt asks the model to assign a 0-10 float relevance/importance score to a given text under a domain and persona, which is a rating/judging job with no standard public benchmark dataset matching it directly."
+   }
+  },
+  {
+   "file": "packages/graphrag/graphrag/prompt_tune/prompt/community_reporter_role.py",
+   "line": 6,
+   "name": "GENERATE_COMMUNITY_REPORTER_ROLE_PROMPT",
+   "chars": 807,
+   "placeholders": [
+    "persona",
+    "domain",
+    "input_text"
+   ],
+   "label": {
+    "task": "other",
+    "output_format": "free_text",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "The prompt asks the model to generate a role definition text by imitating a sample pattern for GraphRAG community reporting, which is a prompt-authoring/meta-generation job with no standard public benchmark."
+   }
+  },
+  {
+   "file": "packages/graphrag/graphrag/prompt_tune/prompt/domain.py",
+   "line": 6,
+   "name": "GENERATE_DOMAIN_PROMPT",
+   "chars": 332,
+   "placeholders": [
+    "input_text"
+   ],
+   "label": {
+    "task": "classification_routing",
+    "output_format": "free_text",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "The prompt asks the model to assign a short descriptive domain label to a sample text, which is topic classification, but the open-ended 'Domain:' completion with no fixed label set and no evaluation dataset means no standard benchmark applies."
+   }
+  },
+  {
+   "file": "packages/graphrag/graphrag/prompt_tune/prompt/entity_relationship.py",
+   "line": 6,
+   "name": "ENTITY_RELATIONSHIPS_GENERATION_PROMPT",
+   "chars": 6566,
+   "placeholders": [
+    "entity_types",
+    "language",
+    "input_text"
+   ],
+   "label": {
+    "task": "extraction_structured",
+    "output_format": "delimited",
+    "benchmark_analogue": "CoNLL-2003",
+    "metric": "entity-level F1",
+    "rationale": "The prompt asks the model to extract typed entities and relationships from a text into a fixed delimiter-based record format, which is structured information extraction (CoNLL-2003 named entity recognition uses entity-level F1 as its metric)."
+   }
+  },
+  {
+   "file": "packages/graphrag/graphrag/prompt_tune/prompt/entity_relationship.py",
+   "line": 130,
+   "name": "ENTITY_RELATIONSHIPS_GENERATION_JSON_PROMPT",
+   "chars": 7501,
+   "placeholders": [
+    "entity_types",
+    "language",
+    "input_text"
+   ],
+   "label": {
+    "task": "extraction_structured",
+    "output_format": "json",
+    "benchmark_analogue": "CoNLL-2003",
+    "metric": "entity-level F1 (exact match span and type)",
+    "rationale": "The prompt asks the model to extract named entities of given types and relationships between them as a JSON list, which is structured information extraction (GraphRAG entity/relation extraction) rather than summarization or QA."
+   }
+  },
+  {
+   "file": "packages/graphrag/graphrag/prompt_tune/prompt/entity_relationship.py",
+   "line": 235,
+   "name": "UNTYPED_ENTITY_RELATIONSHIPS_GENERATION_PROMPT",
+   "chars": 6571,
+   "placeholders": [
+    "language",
+    "input_text"
+   ],
+   "label": {
+    "task": "extraction_structured",
+    "output_format": "delimited",
+    "benchmark_analogue": "CoNLL-2003",
+    "metric": "entity-level F1",
+    "rationale": "The prompt asks the model to extract entities with types and descriptions plus relationships with strengths from raw text into a fixed delimiter-based record format, which is structured information extraction (GraphRAG's knowledge-graph entity and relation extraction)."
+   }
+  },
+  {
+   "file": "packages/graphrag/graphrag/prompt_tune/prompt/entity_types.py",
+   "line": 6,
+   "name": "ENTITY_TYPE_GENERATION_PROMPT",
+   "chars": 2524,
+   "placeholders": [
+    "task",
+    "input_text"
+   ],
+   "label": {
+    "task": "extraction_structured",
+    "output_format": "delimited",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "The prompt asks the model to read a text and emit a comma-separated list of entity type labels relevant to a task, which is schema induction for structured extraction rather than any standard public benchmark task."
+   }
+  },
+  {
+   "file": "packages/graphrag/graphrag/prompt_tune/prompt/entity_types.py",
+   "line": 49,
+   "name": "ENTITY_TYPE_GENERATION_JSON_PROMPT",
+   "chars": 2634,
+   "placeholders": [
+    "task",
+    "input_text"
+   ],
+   "label": {
+    "task": "extraction_structured",
+    "output_format": "json",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "The prompt asks the model to read a text and return a JSON array of entity type labels under an \"entities\" key, which is structured extraction, but no public benchmark dataset matches this schema-induction task closely enough to name one."
+   }
+  },
+  {
+   "file": "packages/graphrag/graphrag/prompt_tune/prompt/language.py",
+   "line": 6,
+   "name": "DETECT_LANGUAGE_PROMPT",
+   "chars": 340,
+   "placeholders": [
+    "input_text"
+   ],
+   "label": {
+    "task": "classification_routing",
+    "output_format": "label",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "The prompt asks the model to pick the primary language of a text and reply with only the language name, which is a single-label classification whose output routes downstream prompt tuning; language identification benchmarks like FLORES-200 or Tatoeba exist but do not match this exact job closely."
+   }
+  },
+  {
+   "file": "packages/graphrag/graphrag/prompt_tune/prompt/persona.py",
+   "line": 6,
+   "name": "GENERATE_PERSONA_PROMPT",
+   "chars": 456,
+   "placeholders": [
+    "role",
+    "sample_task"
+   ],
+   "label": {
+    "task": "other",
+    "output_format": "free_text",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "The prompt asks the model to write a short expert persona description (a system-prompt-style role statement) for a given task, which is open-ended generation with no matching public benchmark or objective metric."
+   }
+  },
+  {
+   "file": "packages/graphrag/graphrag/prompt_tune/template/community_report_summarization.py",
+   "line": 6,
+   "name": "COMMUNITY_REPORT_SUMMARIZATION_PROMPT",
+   "chars": 6042,
+   "placeholders": [
+    "persona",
+    "role",
+    "report_rating_description",
+    "language",
+    "input_text"
+   ],
+   "label": {
+    "task": "summarization",
+    "output_format": "json",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "The prompt asks the model to condense a community's entities and relationships into a structured report with title, summary, rating, and grounded findings, which is a structured summarization job with no standard public benchmark matching it directly."
+   }
+  },
+  {
+   "file": "packages/graphrag/graphrag/prompt_tune/template/entity_summarization.py",
+   "line": 6,
+   "name": "ENTITY_SUMMARIZATION_PROMPT",
+   "chars": 902,
+   "placeholders": [
+    "persona",
+    "language",
+    "entity_name",
+    "description_list"
+   ],
+   "label": {
+    "task": "summarization",
+    "output_format": "free_text",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "The prompt asks the model to merge a list of entity descriptions into one concise, coherent third-person summary, which is a multi-document summarization job with no standard public benchmark dataset matching this exact setup."
+   }
+  },
+  {
+   "file": "packages/graphrag/graphrag/prompt_tune/template/extract_graph.py",
+   "line": 6,
+   "name": "GRAPH_EXTRACTION_PROMPT",
+   "chars": 1788,
+   "placeholders": [
+    "entity_types",
+    "language",
+    "examples",
+    "input_text"
+   ],
+   "label": {
+    "task": "extraction_structured",
+    "output_format": "delimited",
+    "benchmark_analogue": "CoNLL-2003",
+    "metric": "entity-level micro F1 (exact span and type match)",
+    "rationale": "The prompt asks the model to pull named entities of given types and their pairwise relationships out of raw text into a delimited, tuple-formatted list, which is information extraction rather than generation or QA."
+   }
+  },
+  {
+   "file": "packages/graphrag/graphrag/prompt_tune/template/extract_graph.py",
+   "line": 42,
+   "name": "GRAPH_EXTRACTION_JSON_PROMPT",
+   "chars": 1858,
+   "placeholders": [
+    "entity_types",
+    "language",
+    "examples",
+    "input_text"
+   ],
+   "label": {
+    "task": "extraction_structured",
+    "output_format": "json",
+    "benchmark_analogue": "CoNLL-2003",
+    "metric": "entity-level F1",
+    "rationale": "The prompt asks the model to pull named entities and their relationships out of a document and return them as a JSON list, which is structured information extraction; CoNLL-2003 is the standard named entity recognition benchmark, scored by entity-level F1."
+   }
+  },
+  {
+   "file": "packages/graphrag/graphrag/prompt_tune/template/extract_graph.py",
+   "line": 106,
+   "name": "UNTYPED_GRAPH_EXTRACTION_PROMPT",
+   "chars": 1864,
+   "placeholders": [
+    "language",
+    "examples",
+    "input_text"
+   ],
+   "label": {
+    "task": "extraction_structured",
+    "output_format": "delimited",
+    "benchmark_analogue": "CoNLL-2003",
+    "metric": "entity-level F1",
+    "rationale": "The prompt asks the model to pull named entities and relationships from a document into a delimited tuple format, which is an information extraction task whose closest public benchmark is named entity recognition scored by entity-level F1."
+   }
+  },
+  {
+   "file": "packages/graphrag/graphrag/prompts/index/community_report.py",
+   "line": 5,
+   "name": "COMMUNITY_REPORT_PROMPT",
+   "chars": 8856,
+   "placeholders": [
+    "max_report_length",
+    "input_text"
+   ],
+   "label": {
+    "task": "summarization",
+    "output_format": "json",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "The prompt asks the model to write a structured community report (title, summary, rating, findings) from entity and relationship records, which is a generation-style summarization task with no standard public benchmark matching its grounded JSON report format."
+   }
+  },
+  {
+   "file": "packages/graphrag/graphrag/prompts/index/community_report_text_units.py",
+   "line": 6,
+   "name": "COMMUNITY_REPORT_TEXT_PROMPT",
+   "chars": 7802,
+   "placeholders": [
+    "max_report_length",
+    "input_text"
+   ],
+   "label": {
+    "task": "summarization",
+    "output_format": "json",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "The prompt asks the model to write a structured community report (title, summary, findings) from a set of entities, relationships, and claims, which is a generative summarization job with no standard public benchmark matching its exact format."
+   }
+  },
+  {
+   "file": "packages/graphrag/graphrag/prompts/index/extract_claims.py",
+   "line": 6,
+   "name": "EXTRACT_CLAIMS_PROMPT",
+   "chars": 4612,
+   "placeholders": [
+    "entity_specs",
+    "claim_description",
+    "input_text"
+   ],
+   "label": {
+    "task": "extraction_structured",
+    "output_format": "delimited",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "The prompt asks the model to pull named entities and structured claim tuples (subject, object, type, status, dates, source quotes) out of a document, emitted as delimited records with a completion token, which is information extraction rather than any of the other listed jobs."
+   }
+  },
+  {
+   "file": "packages/graphrag/graphrag/prompts/index/extract_graph.py",
+   "line": 6,
+   "name": "GRAPH_EXTRACTION_PROMPT",
+   "chars": 6483,
+   "placeholders": [
+    "entity_types",
+    "input_text"
+   ],
+   "label": {
+    "task": "extraction_structured",
+    "output_format": "delimited",
+    "benchmark_analogue": "CoNLL-2003",
+    "metric": "entity-level F1",
+    "rationale": "The prompt extracts named entities (with types) and relationships from raw text into a delimiter-formatted list, which matches structured information extraction benchmarks scored by entity-level F1."
+   }
+  },
+  {
+   "file": "packages/graphrag/graphrag/prompts/index/summarize_descriptions.py",
+   "line": 6,
+   "name": "SUMMARIZE_PROMPT",
+   "chars": 733,
+   "placeholders": [
+    "max_length",
+    "entity_name",
+    "description_list"
+   ],
+   "label": {
+    "task": "summarization",
+    "output_format": "free_text",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "The prompt asks the model to merge multiple entity descriptions into one comprehensive, length-limited free-text summary, with no standard public benchmark matching this entity-description consolidation job."
+   }
+  },
+  {
+   "file": "packages/graphrag/graphrag/prompts/query/basic_search_system_prompt.py",
+   "line": 6,
+   "name": "BASIC_SEARCH_SYSTEM_PROMPT",
+   "chars": 2750,
+   "placeholders": [
+    "response_type",
+    "context_data"
+   ],
+   "label": {
+    "task": "rag_answer",
+    "output_format": "free_text",
+    "benchmark_analogue": "Natural Questions",
+    "metric": "exact match / F1 on answer span (or human-graded answer faithfulness)",
+    "rationale": "The prompt answers a user question using retrieved data tables as context, with inline citations to record ids and instructions not to fabricate, which is a retrieval-augmented generation answer task producing markdown free text."
+   }
+  },
+  {
+   "file": "packages/graphrag/graphrag/prompts/query/drift_search_system_prompt.py",
+   "line": 6,
+   "name": "DRIFT_LOCAL_SYSTEM_PROMPT",
+   "chars": 3288,
+   "placeholders": [
+    "response_type",
+    "context_data",
+    "global_query",
+    "followups"
+   ],
+   "label": {
+    "task": "rag_answer",
+    "output_format": "json",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "The prompt has the model answer a question grounded in provided data tables with inline citations, while also emitting a self-assessed relevance score and follow-up queries as JSON, and no public benchmark dataset matches this combined grounded-answer-plus-self-scoring format."
+   }
+  },
+  {
+   "file": "packages/graphrag/graphrag/prompts/query/drift_search_system_prompt.py",
+   "line": 76,
+   "name": "DRIFT_REDUCE_PROMPT",
+   "chars": 2798,
+   "placeholders": [
+    "context_data",
+    "response_type"
+   ],
+   "label": {
+    "task": "rag_answer",
+    "output_format": "free_text",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "The prompt synthesizes a markdown answer to a user query from retrieved GraphRAG community reports, with inline data citations and a general-knowledge fallback, which is a RAG answer-generation job without a standard public benchmark dataset mapping cleanly to it."
+   }
+  },
+  {
+   "file": "packages/graphrag/graphrag/prompts/query/drift_search_system_prompt.py",
+   "line": 139,
+   "name": "DRIFT_PRIMER_PROMPT",
+   "chars": 1880,
+   "placeholders": [
+    "query",
+    "community_reports"
+   ],
+   "label": {
+    "task": "rag_answer",
+    "output_format": "json",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "The prompt has the model answer a user query from retrieved community report summaries, returning a JSON with an intermediate answer, a relevance score, and follow-up queries, which is retrieval-augmented answering with extra self-scoring and query generation rather than a standard benchmark task."
+   }
+  },
+  {
+   "file": "packages/graphrag/graphrag/prompts/query/global_search_map_system_prompt.py",
+   "line": 6,
+   "name": "MAP_SYSTEM_PROMPT",
+   "chars": 3970,
+   "placeholders": [
+    "max_length",
+    "context_data"
+   ],
+   "label": {
+    "task": "rag_answer",
+    "output_format": "json",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "This is the map step of GraphRAG global search: it asks the model to answer a user question from provided data report tables as scored, citation-backed key points in JSON, which is a retrieval-grounded answer generation job with no standard public benchmark dataset."
+   }
+  },
+  {
+   "file": "packages/graphrag/graphrag/prompts/query/global_search_reduce_system_prompt.py",
+   "line": 6,
+   "name": "REDUCE_SYSTEM_PROMPT",
+   "chars": 3707,
+   "placeholders": [
+    "max_length",
+    "response_type",
+    "report_data"
+   ],
+   "label": {
+    "task": "summarization",
+    "output_format": "free_text",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "The prompt asks the model to merge multiple analyst reports into one markdown answer to a user question with citations and a word limit, which is multi-document synthesis in a RAG-style pipeline rather than a standard public benchmark task."
+   }
+  },
+  {
+   "file": "packages/graphrag/graphrag/prompts/query/local_search_system_prompt.py",
+   "line": 6,
+   "name": "LOCAL_SEARCH_SYSTEM_PROMPT",
+   "chars": 2551,
+   "placeholders": [
+    "response_type",
+    "context_data"
+   ],
+   "label": {
+    "task": "rag_answer",
+    "output_format": "free_text",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "The prompt supplies retrieved data tables as context and asks the model to answer a user question in markdown with inline citations to those records, which is grounded retrieval-augmented answering rather than any standard benchmark task."
+   }
+  },
+  {
+   "file": "packages/graphrag/graphrag/prompts/query/question_gen_system_prompt.py",
+   "line": 6,
+   "name": "QUESTION_SYSTEM_PROMPT",
+   "chars": 786,
+   "placeholders": [
+    "question_count",
+    "context_data"
+   ],
+   "label": {
+    "task": "other",
+    "output_format": "delimited",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "The prompt asks the model to generate a bulleted list of candidate follow-up questions grounded in provided data tables, which is question generation rather than any standard benchmarked task, so no clean public dataset analogue exists."
+   }
+  },
+  {
+   "file": "packages/graphrag/graphrag/query/context_builder/rate_prompt.py",
+   "line": 6,
+   "name": "RATE_QUERY",
+   "chars": 708,
+   "placeholders": [
+    "description",
+    "question"
+   ],
+   "label": {
+    "task": "grading_judging",
+    "output_format": "score",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "The prompt asks the model to rate relevance of a provided information passage to a question on a 0-5 scale with a JSON reason and rating, which is an LLM-as-judge relevance grading task rather than a standard public benchmark task (MS MARCO passage relevance judgments are the closest analogue, measured with nDCG@10 or MRR)."
+   }
+  }
+ ]
+}

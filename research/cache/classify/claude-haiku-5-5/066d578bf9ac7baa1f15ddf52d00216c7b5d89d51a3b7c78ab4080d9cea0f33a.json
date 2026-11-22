@@ -1,0 +1,30 @@
+{
+ "text": "{\"task\": \"rag_answer\", \"output_format\": \"free_text\", \"benchmark_analogue\": \"Natural Questions\", \"metric\": \"exact match and F1 over answer spans (long-answer F1 for open-domain QA)\", \"rationale\": \"The template injects retrieved document context into a system prompt and instructs the model to answer the user's question from those documents or say don't know, which is the grounded retrieval-augmented answering job.\"}",
+ "finish": "end_turn",
+ "input_tokens": 428,
+ "output_tokens": 139,
+ "reasoning_tokens": null,
+ "served_model": "claude-haiku-5-5",
+ "latency_s": 1.02,
+ "cost_usd": 0.0001123,
+ "request": {
+  "model": "claude-haiku-5-5",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You label LLM prompt templates found in source code by the job the call does. Reply with one JSON object only, no prose, with keys: task (one of ['classification_routing', 'extraction_structured', 'summarization', 'query_rewriting', 'rag_answer', 'code_generation', 'tool_selection', 'grading_judging', 'reranking', 'chat_open_ended', 'other']), output_format (free_text|json|delimited|label|score), benchmark_analogue (one well known public dataset whose task matches this job, or 'none'), metric (the objective metric that dataset uses), rationale (one sentence)."
+   },
+   {
+    "role": "user",
+    "content": "file: llama-index-core/llama_index/core/chat_engine/condense_plus_context.py\nname: DEFAULT_CONTEXT_PROMPT_TEMPLATE\nplaceholders: ['context_str']\n---\n\n  The following is a friendly conversation between a user and an AI assistant.\n  The assistant is talkative and provides lots of specific details from its context.\n  If the assistant does not know the answer to a question, it truthfully says it\n  does not know.\n\n  Here are the relevant documents for the context:\n\n  {context_str}\n\n  Instruction: Based on the above documents, provide a detailed answer for the user question below.\n  Answer \"don't know\" if not present in the document.\n  "
+   }
+  ],
+  "params": {
+   "max_tokens": 2000,
+   "output_config": {
+    "effort": "low"
+   }
+  }
+ },
+ "ts": "2026-11-22T00:44:58"
+}

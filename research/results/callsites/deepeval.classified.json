@@ -1,0 +1,512 @@
+{
+ "repo": "deepeval@aeb529e",
+ "modelDefaults": [
+  {
+   "file": "deepeval/models/llms/constants.py",
+   "line": 5,
+   "name": "DEFAULT_GPT_MODEL",
+   "model": "gpt-5.4",
+   "text": "DEFAULT_GPT_MODEL = \"gpt-5.4\""
+  },
+  {
+   "file": "deepeval/models/llms/constants.py",
+   "line": 6,
+   "name": "DEFAULT_ANTHROPIC_MODEL",
+   "model": "claude-opus-5",
+   "text": "DEFAULT_ANTHROPIC_MODEL = \"claude-opus-5\""
+  },
+  {
+   "file": "deepeval/models/llms/constants.py",
+   "line": 7,
+   "name": "DEFAULT_GEMINI_MODEL",
+   "model": "gemini-3.6-flash",
+   "text": "DEFAULT_GEMINI_MODEL = \"gemini-3.6-flash\""
+  },
+  {
+   "file": "deepeval/models/llms/gemini_model.py",
+   "line": 57,
+   "name": "model",
+   "model": "gemini-3.6-flash",
+   "text": "model=\"gemini-3.6-flash\","
+  },
+  {
+   "file": "deepeval/models/stt/openai/openai.py",
+   "line": 20,
+   "name": "DEFAULT_STT_MODEL",
+   "model": "gpt-4o-transcribe",
+   "text": "DEFAULT_STT_MODEL = \"gpt-4o-transcribe\""
+  },
+  {
+   "file": "deepeval/models/system_one/constants.py",
+   "line": 29,
+   "name": "DEFAULT_OPENAI_DECISION_MODEL",
+   "model": "gpt-6-luna",
+   "text": "DEFAULT_OPENAI_DECISION_MODEL = \"gpt-6-luna\""
+  },
+  {
+   "file": "deepeval/models/tts/openai/openai.py",
+   "line": 16,
+   "name": "DEFAULT_TTS_MODEL",
+   "model": "gpt-4o-mini-tts",
+   "text": "DEFAULT_TTS_MODEL = \"gpt-4o-mini-tts\""
+  },
+  {
+   "file": "deepeval/optimizer/algorithms/gepa/gepa.py",
+   "line": 97,
+   "name": "reflection_model",
+   "model": "gpt-4o-mini",
+   "text": "reflection_model: Optional[DeepEvalBaseLLM] = \"gpt-4o-mini\","
+  },
+  {
+   "file": "deepeval/optimizer/algorithms/gepa/gepa.py",
+   "line": 98,
+   "name": "mutation_model",
+   "model": "gpt-4o",
+   "text": "mutation_model: Optional[DeepEvalBaseLLM] = \"gpt-4o\","
+  }
+ ],
+ "callSites": [
+  {
+   "file": "deepeval/models/embedding_models/azure_embedding_model.py",
+   "line": 102,
+   "api": "embeddings.create",
+   "provider": "openai",
+   "kind": "embed"
+  },
+  {
+   "file": "deepeval/models/embedding_models/azure_embedding_model.py",
+   "line": 110,
+   "api": "embeddings.create",
+   "provider": "openai",
+   "kind": "embed"
+  },
+  {
+   "file": "deepeval/models/embedding_models/azure_embedding_model.py",
+   "line": 118,
+   "api": "embeddings.create",
+   "provider": "openai",
+   "kind": "embed"
+  },
+  {
+   "file": "deepeval/models/embedding_models/azure_embedding_model.py",
+   "line": 126,
+   "api": "embeddings.create",
+   "provider": "openai",
+   "kind": "embed"
+  },
+  {
+   "file": "deepeval/models/embedding_models/local_embedding_model.py",
+   "line": 67,
+   "api": "embeddings.create",
+   "provider": "openai",
+   "kind": "embed"
+  },
+  {
+   "file": "deepeval/models/embedding_models/local_embedding_model.py",
+   "line": 75,
+   "api": "embeddings.create",
+   "provider": "openai",
+   "kind": "embed"
+  },
+  {
+   "file": "deepeval/models/embedding_models/local_embedding_model.py",
+   "line": 83,
+   "api": "embeddings.create",
+   "provider": "openai",
+   "kind": "embed"
+  },
+  {
+   "file": "deepeval/models/embedding_models/local_embedding_model.py",
+   "line": 91,
+   "api": "embeddings.create",
+   "provider": "openai",
+   "kind": "embed"
+  },
+  {
+   "file": "deepeval/models/embedding_models/openai_embedding_model.py",
+   "line": 70,
+   "api": "embeddings.create",
+   "provider": "openai",
+   "kind": "embed"
+  },
+  {
+   "file": "deepeval/models/embedding_models/openai_embedding_model.py",
+   "line": 78,
+   "api": "embeddings.create",
+   "provider": "openai",
+   "kind": "embed"
+  },
+  {
+   "file": "deepeval/models/embedding_models/openai_embedding_model.py",
+   "line": 86,
+   "api": "embeddings.create",
+   "provider": "openai",
+   "kind": "embed"
+  },
+  {
+   "file": "deepeval/models/embedding_models/openai_embedding_model.py",
+   "line": 94,
+   "api": "embeddings.create",
+   "provider": "openai",
+   "kind": "embed"
+  },
+  {
+   "file": "deepeval/models/llms/amazon_bedrock_model.py",
+   "line": 187,
+   "api": "bedrock",
+   "provider": "other",
+   "kind": "chat"
+  },
+  {
+   "file": "deepeval/models/llms/anthropic_model.py",
+   "line": 204,
+   "api": "messages.create",
+   "provider": "anthropic",
+   "kind": "chat"
+  },
+  {
+   "file": "deepeval/models/llms/anthropic_model.py",
+   "line": 213,
+   "api": "messages.create",
+   "provider": "anthropic",
+   "kind": "chat"
+  },
+  {
+   "file": "deepeval/models/llms/anthropic_model.py",
+   "line": 230,
+   "api": "messages.create",
+   "provider": "anthropic",
+   "kind": "chat"
+  },
+  {
+   "file": "deepeval/models/llms/anthropic_model.py",
+   "line": 237,
+   "api": "messages.create",
+   "provider": "anthropic",
+   "kind": "chat"
+  },
+  {
+   "file": "deepeval/models/llms/azure_model.py",
+   "line": 194,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "deepeval/models/llms/azure_model.py",
+   "line": 215,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "deepeval/models/llms/azure_model.py",
+   "line": 238,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "deepeval/models/llms/azure_model.py",
+   "line": 275,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "deepeval/models/llms/azure_model.py",
+   "line": 296,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "deepeval/models/llms/azure_model.py",
+   "line": 319,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "deepeval/models/llms/azure_model.py",
+   "line": 357,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "deepeval/models/llms/azure_model.py",
+   "line": 390,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "deepeval/models/llms/deepseek_model.py",
+   "line": 120,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "deepeval/models/llms/deepseek_model.py",
+   "line": 136,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "deepeval/models/llms/deepseek_model.py",
+   "line": 160,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "deepeval/models/llms/deepseek_model.py",
+   "line": 176,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "deepeval/models/llms/gateway_model.py",
+   "line": 222,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "deepeval/models/llms/gateway_model.py",
+   "line": 247,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "deepeval/models/llms/gateway_model.py",
+   "line": 294,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "deepeval/models/llms/gateway_model.py",
+   "line": 316,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "deepeval/models/llms/gateway_model.py",
+   "line": 348,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "deepeval/models/llms/gemini_model.py",
+   "line": 268,
+   "api": "generate_content",
+   "provider": "google",
+   "kind": "chat"
+  },
+  {
+   "file": "deepeval/models/llms/gemini_model.py",
+   "line": 281,
+   "api": "generate_content",
+   "provider": "google",
+   "kind": "chat"
+  },
+  {
+   "file": "deepeval/models/llms/gemini_model.py",
+   "line": 314,
+   "api": "generate_content",
+   "provider": "google",
+   "kind": "chat"
+  },
+  {
+   "file": "deepeval/models/llms/gemini_model.py",
+   "line": 327,
+   "api": "generate_content",
+   "provider": "google",
+   "kind": "chat"
+  },
+  {
+   "file": "deepeval/models/llms/kimi_model.py",
+   "line": 118,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "deepeval/models/llms/kimi_model.py",
+   "line": 134,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "deepeval/models/llms/kimi_model.py",
+   "line": 162,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "deepeval/models/llms/kimi_model.py",
+   "line": 178,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "deepeval/models/llms/litellm_model.py",
+   "line": 135,
+   "api": "litellm completion",
+   "provider": "unknown",
+   "kind": "chat"
+  },
+  {
+   "file": "deepeval/models/llms/litellm_model.py",
+   "line": 149,
+   "api": "litellm completion",
+   "provider": "unknown",
+   "kind": "chat"
+  },
+  {
+   "file": "deepeval/models/llms/litellm_model.py",
+   "line": 186,
+   "api": "litellm completion",
+   "provider": "unknown",
+   "kind": "chat"
+  },
+  {
+   "file": "deepeval/models/llms/litellm_model.py",
+   "line": 199,
+   "api": "litellm completion",
+   "provider": "unknown",
+   "kind": "chat"
+  },
+  {
+   "file": "deepeval/models/llms/litellm_model.py",
+   "line": 222,
+   "api": "litellm completion",
+   "provider": "unknown",
+   "kind": "chat"
+  },
+  {
+   "file": "deepeval/models/llms/local_model.py",
+   "line": 100,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "deepeval/models/llms/local_model.py",
+   "line": 130,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "deepeval/models/llms/openai_model.py",
+   "line": 169,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "deepeval/models/llms/openai_model.py",
+   "line": 187,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "deepeval/models/llms/openai_model.py",
+   "line": 205,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "deepeval/models/llms/openai_model.py",
+   "line": 239,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "deepeval/models/llms/openai_model.py",
+   "line": 257,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "deepeval/models/llms/openai_model.py",
+   "line": 275,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "deepeval/models/llms/openai_model.py",
+   "line": 325,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "deepeval/models/llms/openai_model.py",
+   "line": 364,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  },
+  {
+   "file": "deepeval/models/llms/openai_model.py",
+   "line": 394,
+   "api": "chat.completions.create",
+   "provider": "openai",
+   "kind": "chat"
+  }
+ ],
+ "templates": [
+  {
+   "file": "deepeval/synthesizer/templates/template.py",
+   "line": 9,
+   "name": "prompt",
+   "chars": 1892,
+   "placeholders": [
+    "max_goldens_per_context",
+    "context"
+   ],
+   "label": {
+    "task": "code_generation",
+    "output_format": "json",
+    "benchmark_analogue": "Spider",
+    "metric": "execution accuracy",
+    "rationale": "The prompt generates natural-language questions or statements that a SQL table schema can address, which is the natural-language side of text-to-SQL dataset construction, though the template itself produces synthetic inputs rather than SQL queries."
+   }
+  },
+  {
+   "file": "deepeval/synthesizer/templates/template.py",
+   "line": 317,
+   "name": "source_files_section",
+   "chars": 1029,
+   "placeholders": [
+    "available_source_files",
+    "cross_file_strength_section"
+   ],
+   "label": {
+    "task": "other",
+    "output_format": "json",
+    "benchmark_analogue": "none",
+    "metric": "none",
+    "rationale": "The template asks the model to synthesize cross-file conversation scenarios and return them as a JSON data array with source attributions, which is synthetic data generation rather than any of the listed task types."
+   }
+  }
+ ]
+}
