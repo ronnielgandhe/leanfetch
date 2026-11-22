@@ -80,7 +80,7 @@
    ],
    "secondary": {
     "accuracy": 0.74,
-    "parse_fail_rate": 0.03,
+    "parse_fail_rate": 0.0,
     "balanced_accuracy_lenient_parse": 0.74,
     "exploratory_balanced_accuracy_all_statements_rule": 0.8333333333333333,
     "faithful_recall": 0.8933333333333333,
@@ -278,7 +278,7 @@
    ],
    "secondary": {
     "accuracy": 0.7333333333333333,
-    "parse_fail_rate": 0.03666666666666667,
+    "parse_fail_rate": 0.02666666666666667,
     "balanced_accuracy_lenient_parse": 0.7333333333333334,
     "exploratory_balanced_accuracy_all_statements_rule": 0.8200000000000001,
     "faithful_recall": 0.9133333333333333,

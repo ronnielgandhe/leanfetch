@@ -29,13 +29,16 @@ def load(task, split):
     for r in rows:
         if "text" in r:
             r["score"] = tasks.SCORE[task](items[r["id"]], {"text": r["text"]})
+            if task == "t1":
+                v1 = tasks.score_t1(items[r["id"]], {"text": r["text"]}, norm="v1")
+                r["score"].update({"v1" + k: v for k, v in v1.items()})
         by.setdefault(r["model"], {})[r["id"]] = r
     return by
 
 
 def item_arrays(task, rows, ids):
     if task == "t1":
-        keys = ["tp", "fp", "fn", "utp", "ufp", "ufn"]
+        keys = ["tp", "fp", "fn", "utp", "ufp", "ufn", "v1tp", "v1fp", "v1fn"]
         return {k: np.array([rows[i]["score"][k] if i in rows and "score" in rows[i] else (0 if k[-2:] != "fn" else None) for i in ids], dtype=float) for k in keys}
     if task == "t2":
         label = np.array([rows[i]["score"]["label"] if "score" in rows.get(i, {}) else np.nan for i in ids])
@@ -70,7 +73,10 @@ def bal(c, l):
 
 def secondary(task, a, idx, labels=None):
     if task == "t1":
-        return {"untyped_f1": micro_f1(a["utp"][idx].sum(), a["ufp"][idx].sum(), a["ufn"][idx].sum())}
+        return {"untyped_f1": micro_f1(a["utp"][idx].sum(), a["ufp"][idx].sum(), a["ufn"][idx].sum()),
+                "typed_f1_normalizer_v1": micro_f1(a["v1tp"][idx].sum(), a["v1fp"][idx].sum(), a["v1fn"][idx].sum()),
+                "precision": a["tp"][idx].sum() / max(1, a["tp"][idx].sum() + a["fp"][idx].sum()),
+                "recall": a["tp"][idx].sum() / max(1, a["tp"][idx].sum() + a["fn"][idx].sum())}
     if task == "t2":
         c, l = a["correct_lenient"][idx], labels[idx]
         return {"accuracy": a["correct"][idx].mean(), "parse_fail_rate": a["parse_fail"][idx].mean(),
@@ -124,7 +130,7 @@ def analyze(task, split="main"):
             for i in ids:
                 r = rows.get(i)
                 if r is None or "error" in r:
-                    rows[i] = {"score": {"tp": 0, "fp": 0, "fn": gold_n[i], "utp": 0, "ufp": 0, "ufn": gold_n[i]}, "error": (r or {}).get("error", "missing")}
+                    rows[i] = {"score": {"tp": 0, "fp": 0, "fn": gold_n[i], "utp": 0, "ufp": 0, "ufn": gold_n[i], "v1tp": 0, "v1fp": 0, "v1fn": gold_n[i]}, "error": (r or {}).get("error", "missing")}
     arrays = {m: item_arrays(task, rows, ids) for m, rows in by.items()}
     rng = np.random.default_rng(SEED)
     boot = rng.integers(0, n, size=(B, n))
@@ -150,6 +156,10 @@ def analyze(task, split="main"):
             }
             if task in ("t2", "t3"):
                 entry["vs_repo"]["mcnemar"] = mcnemar(a["correct"], base["correct"])
+            if task == "t1":
+                v1d = np.array([micro_f1(a["v1tp"][b].sum(), a["v1fp"][b].sum(), a["v1fn"][b].sum()) - micro_f1(base["v1tp"][b].sum(), base["v1fp"][b].sum(), base["v1fn"][b].sum()) for b in boot])
+                lo1, hi1 = np.percentile(v1d, [100 * ALPHA_DECISION / 2, 100 - 100 * ALPHA_DECISION / 2])
+                entry["vs_repo"]["sensitivity_normalizer_v1"] = {"diff_ci_decision": [float(lo1), float(hi1)], "non_inferior": bool(lo1 > -DELTA), "strictly_better": bool(lo1 > 0)}
             if task == "t2":
                 ex = np.array([bal(a["correct_all"][b], labels[b]) - bal(base["correct_all"][b], labels[b]) for b in boot])
                 entry["vs_repo"]["exploratory_all_statements_rule"] = {

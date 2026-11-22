@@ -71,8 +71,8 @@ TYPE_MAP = {"PERSON": "person", "ORGANIZATION": "organization", "GEO": "location
 TARGET_TYPES = set(TYPE_MAP.values())
 
 
-def norm_name(s):
-    s = s.upper().replace("“", '"').replace("”", '"').replace("’", "'").replace("‘", "'")
+def norm_name_v1(s):
+    s = s.upper().replace("\u201c", '"').replace("\u201d", '"').replace("\u2019", "'").replace("\u2018", "'")
     s = re.sub(r"[^\w&.'\- ]", " ", s)
     s = re.sub(r"\s+", " ", s).strip(" .'-\"")
     s = re.sub(r"\s*'\s*S$", "", s)
@@ -80,6 +80,21 @@ def norm_name(s):
     if s.startswith("THE "):
         s = s[4:]
     return s
+
+
+def norm_name(s):
+    s = s.upper().replace("\u201c", '"').replace("\u201d", '"').replace("\u2019", "'").replace("\u2018", "'")
+    s = re.sub(r"&\s*AMP\s*;?", "&", s)
+    s = re.sub(r"\s*'\s*S\b", "", s)
+    s = re.sub(r"[^\w&. ]", " ", s)
+    s = re.sub(r"\s+", " ", s)
+    s = re.sub(r"\s+\.", ".", s).strip(" .&")
+    if s.startswith("THE "):
+        s = s[4:]
+    return s
+
+
+NORM = {"v1": norm_name_v1, "v2": norm_name}
 
 
 def graphrag_entities(text):
@@ -96,7 +111,8 @@ def graphrag_entities(text):
     return out
 
 
-def score_t1(item, out):
+def score_t1(item, out, norm="v2"):
+    norm_name = NORM[norm]
     gold = {(norm_name(g["text"]), g["type"]) for g in item["gold"] if g["type"] in TARGET_TYPES}
     excluded = {norm_name(g["text"]) for g in item["gold"] if g["type"] not in TARGET_TYPES}
     pred = set()
@@ -135,8 +151,8 @@ def t2_pred(text, lenient=False, threshold=0.5):
     if d is None:
         return None
     scores = d["statement_scores"]
-    if not scores:
-        return None
+    if not d["statements"]:
+        return int(0 >= threshold)
     try:
         s = sum(float(x) for x in scores) / len(scores)
     except (TypeError, ValueError):

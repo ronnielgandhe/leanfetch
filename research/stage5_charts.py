@@ -97,7 +97,7 @@ def forest(results, path):
             rows.append(("row", m, e["vs_repo"]))
     W, rh, L, R, T = 760, 18, 260, 140, 56
     H = T + rh * len(rows) + 50
-    lo, hi = -0.30, 0.30
+    lo, hi = -0.20, 0.20
     pw = W - L - R
 
     def X(v):
@@ -108,7 +108,7 @@ def forest(results, path):
          text(20, 26, "alternative minus repo default, primary metric", 15, INK, weight=600),
          text(20, 44, "bars = 99.44% paired bootstrap interval (the decision interval). dashed = -0.03 margin. right column = cost vs default.", 11, MID)]
     y = T
-    for v in (-0.3, -0.2, -0.1, 0.0, 0.1, 0.2, 0.3):
+    for v in (-0.2, -0.1, 0.0, 0.1, 0.2):
         s.append(line(X(v), T, X(v), T + rh * len(rows), INK if v == 0 else RULE))
         s.append(text(X(v), T + rh * len(rows) + 16, f"{v:+.1f}" if v else "0", 10, MID, "middle"))
     s.append(line(X(-0.03), T, X(-0.03), T + rh * len(rows), LIGHT, "3,3"))
