@@ -284,6 +284,8 @@ const SITE_RULES: SiteRule[] = [
   { re: /\.embeddings\.create\s*\(/g, kind: "embed", provider: "openai", api: "embeddings.create" },
   { re: /\bEmbedding\.a?create\s*\(/g, kind: "embed", provider: "openai", api: "Embedding.create", needs: /openai/ },
   { re: /\blitellm\.a?completion\s*\(/g, kind: "chat", provider: "unknown", api: "litellm.completion" },
+  { re: /(?<![\w.])a?completion\s*\(/g, kind: "chat", provider: "unknown", api: "litellm completion", needs: /from\s+litellm\s+import[^\n]*\ba?completion\b/ },
+  { re: /(?<![\w.])a?embedding\s*\(/g, kind: "embed", provider: "unknown", api: "litellm embedding", needs: /from\s+litellm\s+import[^\n]*\ba?embedding\b/ },
   { re: /\blitellm\.a?embedding\s*\(/g, kind: "embed", provider: "unknown", api: "litellm.embedding" },
   { re: /\.(?:generate_content(?:_async)?|generateContent(?:Stream)?)\s*\(/g, kind: "chat", provider: "google", api: "generate_content" },
   { re: /\.(?:embed_content|embedContent)\s*\(/g, kind: "embed", provider: "google", api: "embed_content" },
@@ -313,6 +315,23 @@ export function findSites(p: Parsed, consts: Map<string, StrConst>): { llm: Site
       let provider = rule.provider;
       if (rule.api === "bedrock" && !/anthropic|claude/i.test(p.code)) provider = "other";
       llm.push({ kind: rule.kind, provider, api: rule.api, start: m.index, argsStart: open + 1, argsEnd: close, args, line: lineOf(p, m.index), endLine: lineOf(p, close) });
+    }
+  }
+  const aliasRe = /^[ \t]*(?:const|let|var)?\s*([A-Za-z_$][\w$]*)\s*(?::[^=\n]+)?=\s*((?:[\w$]+\.)*(chat\.completions\.create|messages\.create|embeddings\.create)|litellm\.a?(completion|embedding))\s*;?\s*$/gm;
+  let am: RegExpExecArray | null;
+  while ((am = aliasRe.exec(b))) {
+    const name = am[1];
+    const target = am[2];
+    if (/messages\.create$/.test(target) && !/anthropic/i.test(p.code)) continue;
+    const kind: CallKind = /embed/.test(target) ? "embed" : "chat";
+    const provider: Provider = /messages\.create$/.test(target) ? "anthropic" : /litellm/.test(target) ? "unknown" : "openai";
+    const callRe = new RegExp(`(?<![\\w$.])${name.replace(/\$/g, "\\$")}\\s*\\(`, "g");
+    let cm: RegExpExecArray | null;
+    while ((cm = callRe.exec(b))) {
+      if (/(def|function)\s*$/.test(b.slice(Math.max(0, cm.index - 10), cm.index))) continue;
+      const open = cm.index + cm[0].length - 1;
+      const close = matchClose(b, open);
+      llm.push({ kind, provider, api: `${target.replace(/^(?:[\w$]+\.)*(?=chat|messages|embeddings)/, "")} via ${name}`, start: cm.index, argsStart: open + 1, argsEnd: close, args: p.code.slice(open + 1, close), line: lineOf(p, cm.index), endLine: lineOf(p, close) });
     }
   }
   const httpRe = p.lang === "js" ? HTTP_RE_JS : HTTP_RE_PY;

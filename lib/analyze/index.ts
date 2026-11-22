@@ -428,8 +428,10 @@ function detectLoops(c: Ctx, invs: Invocation[], add: Add) {
     if (!loop || loops.some((l) => l.kind === "stream")) continue;
     const kind = inv.site.kind;
     const model = inv.siteCtx.models.get(inv.site);
-    const conf = invConfidence(inv);
+    const chunked = kind !== "embed" && /chunk|batch|split|segment|window|pages?\b|parts?\b/i.test(loop.header);
+    const conf: Level = chunked ? "low" : invConfidence(inv);
     const ev = [`loop: ${loop.header} (line ${loop.line})`, invEvidence(inv)];
+    if (chunked) ev.push("the items look like chunks of one big input, so batching may not apply; the shared prompt still repeats per chunk");
     const base = { start: loop.line, end: inv.endLine, hot: [loop.line, ...range(inv.line, Math.min(inv.endLine, inv.line + 2))], kind, provider: inv.site.provider, model, siteKey: siteKey(inv.siteCtx, inv.site) };
     if (kind === "embed") {
       if (BATCH_USE.test(bodyOf(c, loop))) continue;
